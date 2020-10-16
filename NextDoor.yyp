@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"Object1","path":"objects/Object1/Object1.yy",},"order":0,},
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},"order":1,},
+    {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
