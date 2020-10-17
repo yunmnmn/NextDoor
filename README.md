@@ -1,2 +1,2 @@
 # NextDoor
-Mini Gamu Sijbren ILTG
+Mini Gamu Sijbren
