@@ -21,7 +21,6 @@
     {"id":{"name":"script_globalFunctions","path":"scripts/script_globalFunctions/script_globalFunctions.yy",},"order":1,},
     {"id":{"name":"object_textBox","path":"objects/object_textBox/object_textBox.yy",},"order":4,},
     {"id":{"name":"sprite_placeholder","path":"sprites/sprite_placeholder/sprite_placeholder.yy",},"order":10,},
-    {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":16,},
     {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
     {"id":{"name":"room_test2","path":"rooms/room_test2/room_test2.yy",},"order":1,},
     {"id":{"name":"background_test","path":"sprites/background_test/background_test.yy",},"order":1,},
