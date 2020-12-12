@@ -1,2 +1,1 @@
-# NextDoor
-Mini Gamu Sijbren
+# NextDoor(WIP)
