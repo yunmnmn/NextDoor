@@ -7,6 +7,8 @@
     {"id":{"name":"background_combinedTest","path":"sprites/background_combinedTest/background_combinedTest.yy",},"order":9,},
     {"id":{"name":"object_player","path":"objects/object_player/object_player.yy",},"order":3,},
     {"id":{"name":"sprite_anim_mimi_listen_right","path":"sprites/sprite_anim_mimi_listen_right/sprite_anim_mimi_listen_right.yy",},"order":5,},
+    {"id":{"name":"object_roomTrigger","path":"objects/object_roomTrigger/object_roomTrigger.yy",},"order":7,},
+    {"id":{"name":"script_roomFunctions","path":"scripts/script_roomFunctions/script_roomFunctions.yy",},"order":2,},
     {"id":{"name":"__GMA_BREAKPOINT__","path":"scripts/__GMA_BREAKPOINT__/__GMA_BREAKPOINT__.yy",},"order":0,},
     {"id":{"name":"background_shadingTest","path":"sprites/background_shadingTest/background_shadingTest.yy",},"order":8,},
     {"id":{"name":"sprite_mimi_avatar","path":"sprites/sprite_mimi_avatar/sprite_mimi_avatar.yy",},"order":6,},
@@ -18,9 +20,12 @@
     {"id":{"name":"font_textBoxFont","path":"fonts/font_textBoxFont/font_textBoxFont.yy",},"order":0,},
     {"id":{"name":"script_globalFunctions","path":"scripts/script_globalFunctions/script_globalFunctions.yy",},"order":1,},
     {"id":{"name":"object_textBox","path":"objects/object_textBox/object_textBox.yy",},"order":4,},
+    {"id":{"name":"sprite_placeholder","path":"sprites/sprite_placeholder/sprite_placeholder.yy",},"order":10,},
+    {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":16,},
     {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
+    {"id":{"name":"room_test2","path":"rooms/room_test2/room_test2.yy",},"order":1,},
     {"id":{"name":"background_test","path":"sprites/background_test/background_test.yy",},"order":1,},
-    {"id":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},"order":0,},
+    {"id":{"name":"room_test1","path":"rooms/room_test1/room_test1.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
@@ -34,7 +39,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
+    {"roomId":{"name":"room_test1","path":"rooms/room_test1/room_test1.yy",},},
+    {"roomId":{"name":"room_test2","path":"rooms/room_test2/room_test2.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":13,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

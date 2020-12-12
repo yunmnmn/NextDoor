@@ -31,6 +31,20 @@ function SetBackgroundInstance(p_instance)
 	global.backgroundInstance = p_instance;
 }
 
+function GetBackgroundInstance()
+{
+	// Check if the background instance is valid
+	assert_fail(global.backgroundInstance == 0, "backgroundInstance variable should be initialized by the object_global to 0 first");
+	
+	return global.backgroundInstance;
+}
+
+// Resets the backgroundInstance
+function ResetBackgroundInstance()
+{
+	global.backgroundInstance = 0;
+}
+
 // Returns the BackgroundSpriteIndex
 function GetBackgroundSpriteIndex()
 {
