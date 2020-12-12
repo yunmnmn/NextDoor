@@ -1,16 +1,14 @@
 // Get the background's Sprite from the backgroundObjectIndex
-var backgroundSpriteIndex = GetBackgroundSpriteIndex()
+var backgroundSpriteIndex = GetBackgroundSpriteIndex();
 var backgroundInstance = GetBackgroundInstance();
 
 // Get the width and height of the background sprite
-var backgroundWidth = sprite_get_width(backgroundSpriteIndex);
-var backgroundHeight = sprite_get_height(backgroundSpriteIndex);
+var backgroundSize = GetSpriteSize(backgroundSpriteIndex);
 
 // Calculate the normalized position of Mimi's topleft relative to the Background
-var backgroundWorldPosX = backgroundInstance.x;
-var backgroundWorldPosY = backgroundInstance.y;
-var normalizedX = (worldSpaceTopLeftX - backgroundWorldPosX) / (backgroundWidth - backgroundWorldPosX);
-var normalizedY = (worldSpaceTopLeftY - backgroundWorldPosY) / (backgroundHeight - backgroundWorldPosY);
+var backgroundWorldPosition = GetWorldPosition(backgroundInstance);
+var normalizedX = (worldSpaceTopLeftX - backgroundWorldPosition.m_x) / (backgroundSize.m_x - backgroundWorldPosition.m_x);
+var normalizedY = (worldSpaceTopLeftY - backgroundWorldPosition.m_y) / (backgroundSize.m_y - backgroundWorldPosition.m_y);
 
 // Get Mimi's current texture that is used
 // sprite_index = sprite handle

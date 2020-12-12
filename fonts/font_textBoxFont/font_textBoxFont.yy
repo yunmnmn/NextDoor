@@ -194,7 +194,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "font_textBoxFont",
+  "name": "font_textboxFont",
   "tags": [],
   "resourceType": "GMFont",
 }
