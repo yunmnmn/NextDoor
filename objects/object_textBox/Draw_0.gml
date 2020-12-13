@@ -1,6 +1,3 @@
-//// Draw TextBox
-//draw_sprite(sprite_textBox, 0, x, y);
-
 // Draw the text
 draw_set_font(font_textboxFont);
 
@@ -31,8 +28,20 @@ if(m_state == TextboxState.RenderingContext)
 	else
 	{
 		stringToRender = m_text;
+		m_state = TextboxState.Waiting;
 	}
 	
 	var textHeight = string_height(stringToRender);
 	draw_text_ext(x, y, stringToRender, textHeight, sprite_width);
+}
+else if(m_state == TextboxState.Waiting)
+{
+	// Draw the full text
+	var textHeight = string_height(m_text);
+	draw_text_ext(x, y, m_text, textHeight, sprite_width);
+	
+	// Draw a small white box on the bottom right corner to indicate that the text is finished
+	var boxSize = new Vector2(10.0, 10.0);
+	var boxPosition = new Vector2(x + sprite_width - boxSize.m_x, y + sprite_height - boxSize.m_y);
+	draw_rectangle(boxPosition.m_x, boxPosition.m_y, boxPosition.m_x + boxSize.m_x, boxPosition.m_y + boxSize.m_y, false);
 }
