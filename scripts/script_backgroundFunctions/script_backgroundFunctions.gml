@@ -18,39 +18,39 @@ sprite: Resource that references 1 or multiple textures. GM calls them subimages
 */
 
 // Sets the backgroundInstance, this must be called once per level by the background instance
-function RegosterBackgroundInstance(p_instance)
+function RegisterBackgroundInstance(p_instance)
 {
 	// Check if the background instance is 0 first
-	assert_fail(global.backgroundInstance != noone, "backgroundInstance variable should be initialized by the object_global to 0 first. Make sure that object_global is initialized first in the room order");
+	assert_fail(global.g_backgroundInstance != noone, "backgroundInstance variable should be initialized by the object_global to 0 first. Make sure that object_global is initialized first in the room order");
 	
 	// Check if the background instance's sprite has two frames (0 = background, 1 = shadowmap)
 	var backgroundSpriteIndex = object_get_sprite(p_instance.object_index);
 	var backgroundSpriteImageCount = sprite_get_number(backgroundSpriteIndex);
 	assert_fail(backgroundSpriteImageCount != 2, "The sprite needs to have 2 images, 0 = background, and 1 = shadowmap.");
 	
-	global.backgroundInstance = p_instance;
+	global.g_backgroundInstance = p_instance;
 }
 
 function GetBackgroundInstance()
 {
 	// Check if the background instance is valid
-	assert_fail(global.backgroundInstance == noone, "backgroundInstance variable should be initialized by the object_global to 0 first");
+	assert_fail(global.g_backgroundInstance == noone, "backgroundInstance variable should be initialized by the object_global to 0 first");
 	
-	return global.backgroundInstance;
+	return global.g_backgroundInstance;
 }
 
 // Resets the backgroundInstance
 function ResetBackgroundInstance()
 {
-	global.backgroundInstance = noone;
+	global.g_backgroundInstance = noone;
 }
 
 // Returns the BackgroundSpriteIndex
 function GetBackgroundSpriteIndex()
 {
-	assert_fail(global.backgroundInstance == noone, "backgroundInstance cannot be 0");
+	assert_fail(global.g_backgroundInstance == noone, "backgroundInstance cannot be 0");
 	
-	var backgroundSpriteIndex = object_get_sprite(global.backgroundInstance.object_index);
+	var backgroundSpriteIndex = object_get_sprite(global.g_backgroundInstance.object_index);
 	assert_fail(backgroundSpriteIndex == -1, "This shouldn't be -1, this means that the object did not have a sprite assigned to it");
 	
 	return backgroundSpriteIndex;
@@ -59,7 +59,7 @@ function GetBackgroundSpriteIndex()
 // Returns the Background texture (the one the player sees)
 function GetBackgroundTexture()
 {
-	assert_fail(global.backgroundInstance == noone, "backgroundInstance cannot be 0");
+	assert_fail(global.g_backgroundInstance == noone, "backgroundInstance cannot be 0");
 	var backgroundTexture = sprite_get_texture(GetBackgroundSpriteIndex(), 0);
 	return backgroundTexture;
 }
@@ -67,7 +67,7 @@ function GetBackgroundTexture()
 // Returns the ShadowMap texture
 function GetShadowMapTexture()
 {
-	assert_fail(global.backgroundInstance == noone, "backgroundInstance cannot be 0");
+	assert_fail(global.g_backgroundInstance == noone, "backgroundInstance cannot be 0");
 	var shadowMapTexture = sprite_get_texture(GetBackgroundSpriteIndex(), 1);
 	return shadowMapTexture;
 }

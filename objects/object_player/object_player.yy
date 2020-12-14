@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_anim_mimi_listen_right",
-    "path": "sprites/sprite_anim_mimi_listen_right/sprite_anim_mimi_listen_right.yy",
+    "name": "anim_mimiListen",
+    "path": "sprites/anim_mimiListen/anim_mimiListen.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,6 +27,7 @@
     {"isDnD":false,"eventNum":37,"eventType":5,"collisionObjectId":null,"parent":{"name":"object_player","path":"objects/object_player/object_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"parent":{"name":"object_player","path":"objects/object_player/object_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"object_player","path":"objects/object_player/object_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_player","path":"objects/object_player/object_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

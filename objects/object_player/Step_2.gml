@@ -26,15 +26,15 @@ if(m_movementState != m_cachedMovementState)
 {
 	if(m_movementState == MimiMovementState.Walking)
 	{
-		sprite_index = sprite_anim_mimi_walk_right;
+		sprite_index = anim_mimiWalk;
 	}
 	else if(m_movementState = MimiMovementState.Idle)
 	{
-		sprite_index = sprite_mimi_idle_right;
+		sprite_index = sprite_mimiIdle;
 	}
 	else
 	{
-		// Don't handle default for now
+		assert_fail(true, "Movement state can't be default");
 	}
 }
 
@@ -50,7 +50,7 @@ if(m_direction != m_cachedDirection)
 	}
 	else
 	{
-		// Don't handle default case for now
+		assert_fail(true, "Direction has to be Right or Left");
 	}
 }
 

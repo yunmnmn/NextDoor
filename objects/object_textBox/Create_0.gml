@@ -6,9 +6,6 @@ enum TextboxState
 	Waiting
 }
 
-// Register this instance to the global textbox instance
-RegisterTextboxInstance(id);
-
 function RenderText(p_textContext)
 {
 	if(m_state != TextboxState.Idle)
@@ -37,6 +34,9 @@ function Reset()
 	m_text = "";
 	m_sameFrame = false;
 }
+
+// Register this instance to the global textbox instance
+RegisterTextboxInstance(id);
 
 m_state = TextboxState.Idle;
 

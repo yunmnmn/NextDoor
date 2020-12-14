@@ -1,6 +1,7 @@
 // Draw the text
 draw_set_font(font_textboxFont);
 
+// TODO: Move this logic to a step event, instead of a draw
 if(m_state == TextboxState.RenderingContext)
 {	
 	var stringToRender = "";
@@ -18,7 +19,7 @@ if(m_state == TextboxState.RenderingContext)
 		stringToRender = m_text + subString;
 		
 		// If it reached the end of the subText, go to the next one
-		if(string_length(text) == m_textPosition)
+		if(m_textPosition == string_length(text) + 1)
 		{
 			m_text = stringToRender;
 			m_subTextIndex++;
