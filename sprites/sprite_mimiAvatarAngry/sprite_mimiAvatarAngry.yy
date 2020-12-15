@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9065ed7b-ebc0-47a9-aa29-d27dc39617c4","path":"sprites/sprite_mimiAvatar/sprite_mimiAvatar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9065ed7b-ebc0-47a9-aa29-d27dc39617c4","path":"sprites/sprite_mimiAvatar/sprite_mimiAvatar.yy",},"LayerId":{"name":"0b551aca-dba9-4740-a04c-bf0ee227dfc9","path":"sprites/sprite_mimiAvatar/sprite_mimiAvatar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprite_mimiAvatar","path":"sprites/sprite_mimiAvatar/sprite_mimiAvatar.yy",},"resourceVersion":"1.0","name":"9065ed7b-ebc0-47a9-aa29-d27dc39617c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"588f6629-0ef8-4fe2-b060-461f8165504e","path":"sprites/sprite_mimiAvatarAngry/sprite_mimiAvatarAngry.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"588f6629-0ef8-4fe2-b060-461f8165504e","path":"sprites/sprite_mimiAvatarAngry/sprite_mimiAvatarAngry.yy",},"LayerId":{"name":"72946a69-1b55-4b7c-836d-621d2310b30b","path":"sprites/sprite_mimiAvatarAngry/sprite_mimiAvatarAngry.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprite_mimiAvatarAngry","path":"sprites/sprite_mimiAvatarAngry/sprite_mimiAvatarAngry.yy",},"resourceVersion":"1.0","name":"588f6629-0ef8-4fe2-b060-461f8165504e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprite_mimiAvatar","path":"sprites/sprite_mimiAvatar/sprite_mimiAvatar.yy",},
+    "spriteId": {"name":"sprite_mimiAvatarAngry","path":"sprites/sprite_mimiAvatarAngry/sprite_mimiAvatarAngry.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"26f897d9-20e1-4833-84bf-5a70c5f385d6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9065ed7b-ebc0-47a9-aa29-d27dc39617c4","path":"sprites/sprite_mimiAvatar/sprite_mimiAvatar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b3220d47-5e31-4b59-bc90-704966707c17","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"588f6629-0ef8-4fe2-b060-461f8165504e","path":"sprites/sprite_mimiAvatarAngry/sprite_mimiAvatarAngry.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprite_mimiAvatar","path":"sprites/sprite_mimiAvatar/sprite_mimiAvatar.yy",},
+    "parent": {"name":"sprite_mimiAvatarAngry","path":"sprites/sprite_mimiAvatarAngry/sprite_mimiAvatarAngry.yy",},
     "resourceVersion": "1.3",
-    "name": "sprite_mimiAvatar",
+    "name": "sprite_mimiAvatarAngry",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0b551aca-dba9-4740-a04c-bf0ee227dfc9","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"72946a69-1b55-4b7c-836d-621d2310b30b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprite_mimiAvatar",
+  "name": "sprite_mimiAvatarAngry",
   "tags": [],
   "resourceType": "GMSprite",
 }
