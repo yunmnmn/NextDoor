@@ -1,6 +1,6 @@
 function RegisterPlayerInstance(p_player)
 {
-	assert_fail(p_player == noone, "player instance is invalid");
+	assert_fail(p_player == noone, "Player instance is invalid");
 	global.g_playerInstance = p_player;
 }
 
@@ -16,4 +16,10 @@ function PlayerPlayAnimation(p_spriteIndex, p_callbackEnd)
 	assert_fail(global.g_playerInstance == noone, "Registered sprite is invalid");
 	
 	global.g_playerInstance.PlayAnimation(p_spriteIndex, p_callbackEnd);
+}
+
+function GetPlayerInstance()
+{
+	assert_fail(global.g_playerInstance == noone, "Player is invalid");
+	return global.g_playerInstance;
 }

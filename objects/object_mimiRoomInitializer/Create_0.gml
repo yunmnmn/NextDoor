@@ -2,7 +2,7 @@
 SetControlState(PlayerControlState.PlayerNoControl);
 
 // Set Mimi on the path
-PlayerSetPath(path_mimiRoomPath);
+PlayerSetPath(path_mimiRoom);
 
 // When the animation is finished playing, call this callback funciton
 var animationEndCallback = function()
