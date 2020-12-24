@@ -1,3 +1,4 @@
+// Changes the room to the one provided room name (as string)
 function ChangeRooms(p_roomName)
 {
 	// Get the roomIndex from the roomName
@@ -9,4 +10,20 @@ function ChangeRooms(p_roomName)
 	
 	// Change room
 	room_goto(room2Index);
+}
+
+// Reloads the current room
+function ReloadRoom()
+{
+	ResetBackgroundInstance();
+	room_goto(room);
+}
+
+function CreateFader(p_fadeState, p_fadeSpeed, p_callback)
+{
+	// TODO: check if layer exists
+	var roomFader = instance_create_layer(x, y, "layer_ui", object_roomFader);
+	roomFader.SetFadeState(p_fadeState);
+	roomFader.SetFadingSpeed(p_fadeSpeed);
+	roomFader.SetCallback(p_callback);
 }

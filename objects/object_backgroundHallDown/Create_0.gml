@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+// Fade into the level
+CreateFader(FadeState.FadeIn, 0.01, noone);
 
 // Set the id of the background in the global
 RegisterBackgroundInstance(id);

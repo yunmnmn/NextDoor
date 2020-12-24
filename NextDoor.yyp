@@ -28,6 +28,7 @@
     {"id":{"name":"object_backgroundHallDown","path":"objects/object_backgroundHallDown/object_backgroundHallDown.yy",},"order":9,},
     {"id":{"name":"object_textbox","path":"objects/object_textbox/object_textbox.yy",},"order":4,},
     {"id":{"name":"sprite_placeholder","path":"sprites/sprite_placeholder/sprite_placeholder.yy",},"order":10,},
+    {"id":{"name":"object_roomFader","path":"objects/object_roomFader/object_roomFader.yy",},"order":11,},
     {"id":{"name":"GMAssert","path":"extensions/GMAssert/GMAssert.yy",},"order":0,},
     {"id":{"name":"script_helperFunctions","path":"scripts/script_helperFunctions/script_helperFunctions.yy",},"order":5,},
     {"id":{"name":"object_mimiRoomInitializer","path":"objects/object_mimiRoomInitializer/object_mimiRoomInitializer.yy",},"order":8,},

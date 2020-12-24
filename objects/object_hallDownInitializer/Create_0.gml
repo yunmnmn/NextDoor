@@ -9,7 +9,6 @@ m_viewport = view_camera[0];
 
 m_viewportHalfWidth = camera_get_view_width(m_viewport) * 0.5;
 
-
 // When the animation is finished playing, call this callback funciton
 //var animationEndCallback = function()
 //{

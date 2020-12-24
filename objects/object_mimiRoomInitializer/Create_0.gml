@@ -1,3 +1,6 @@
+// Fade into the level
+CreateFader(FadeState.FadeIn, 0.01, noone);
+
 // Don't give the control to the player at the beginning
 SetControlState(PlayerControlState.PlayerNoControl);
 
