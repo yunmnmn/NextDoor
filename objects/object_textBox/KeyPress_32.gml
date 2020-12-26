@@ -4,7 +4,7 @@ if(m_textContext != noone)
 	if(m_state == TextboxState.RenderingContext)
 	{
 		// HACK: Don't register space twice because of ordering of events
-		if(m_sameFrame = false)
+		if(m_sameFrame == 0)
 		{
 			m_text = "";
 		
@@ -16,7 +16,6 @@ if(m_textContext != noone)
 	
 			m_state = TextboxState.Waiting;
 		}
-
 	}
 	else if(m_state == TextboxState.Waiting)
 	{
@@ -31,7 +30,9 @@ if(m_textContext != noone)
 		{
 			tempTextContext.m_callback();
 		}
+		
+		m_sameFrame = 2;
 	}
 }
 
-m_sameFrame = false;
+

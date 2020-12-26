@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_placeholder",
-    "path": "sprites/sprite_placeholder/sprite_placeholder.yy",
+    "name": "sprite_youngsterIdle",
+    "path": "sprites/sprite_youngsterIdle/sprite_youngsterIdle.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,7 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"object_mimi","path":"objects/object_mimi/object_mimi.yy",},"parent":{"name":"object_roomTrigger","path":"objects/object_roomTrigger/object_roomTrigger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_youngster","path":"objects/object_youngster/object_youngster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"object_mimi","path":"objects/object_mimi/object_mimi.yy",},"parent":{"name":"object_youngster","path":"objects/object_youngster/object_youngster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_roomTrigger",
+  "name": "object_youngster",
   "tags": [],
   "resourceType": "GMObject",
 }

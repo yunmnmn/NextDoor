@@ -58,3 +58,6 @@ if(m_textContext != noone)
 		draw_sprite(m_textContext.m_avatarSpriteIndex, 0, x - sprite_get_width(m_textContext.m_avatarSpriteIndex) - offset, y);
 	}
 }
+
+m_sameFrame -= 1;
+m_sameFrame = clamp(m_sameFrame, 0, 1);

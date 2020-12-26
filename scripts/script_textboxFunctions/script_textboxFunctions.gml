@@ -14,5 +14,5 @@ function RenderText(p_textContext)
 	// Check if the background instance is 0 first
 	assert_fail(global.g_textboxInstance == noone, "No textbox instance is registered");
 	
-	global.g_textboxInstance.RenderText(p_textContext);
+	return global.g_textboxInstance.RenderText(p_textContext);
 }

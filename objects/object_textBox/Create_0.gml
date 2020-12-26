@@ -8,9 +8,10 @@ enum TextboxState
 
 function RenderText(p_textContext)
 {
-	if(m_state != TextboxState.Idle)
+	// Don't render text if it's already rendering something, or if it's registering the space twice
+	if(m_state != TextboxState.Idle || m_sameFrame > 0)
 	{
-		return;
+		return false;
 	}
 	// Only allow rendering to the textbox when nothing is being rendered
 	//assert_fail(m_state != TextboxState.Idle, "Can't have multiple active rendering textboxes");
@@ -23,7 +24,9 @@ function RenderText(p_textContext)
 	m_text = "";
 	
 	// HACK: Used to avoid registering the space twice, resulting in skipping the text
-	m_sameFrame = true;
+	m_sameFrame = 2;
+	
+	return true;
 }
 
 function Reset()
@@ -34,7 +37,7 @@ function Reset()
 	m_playSpeed = 0.0;
 	m_textPosition = 0.0;
 	m_text = "";
-	m_sameFrame = false;
+	m_sameFrame = 0;
 }
 
 // Register this instance to the global textbox instance
@@ -51,4 +54,4 @@ m_textPosition = 0.0;
 m_text = "";
 
 // HACK: to not register the space twice
-m_sameFrame = false;
+m_sameFrame = 0;

@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3cac359f-fad3-4f54-8c43-8d6698e66c0c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Mimi",
+    "path": "folders/Sprites/Mimi.yy",
   },
   "resourceVersion": "1.0",
   "name": "anim_mimiWalk",

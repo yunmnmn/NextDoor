@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5d14b582-1cac-463e-8120-542bd44fef87","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Mimi",
+    "path": "folders/Sprites/Mimi.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprite_mimiAvatarNormal",

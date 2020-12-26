@@ -35,7 +35,11 @@ function PlayAnimation(p_spriteIndex, p_callbackEnd)
 	m_callbackAnimationEnd = p_callbackEnd;
 }
 
+// Register mimi to the global object
 RegisterPlayerInstance(id);
+
+// By default, set Mimi into a idle sprite
+PlayAnimation(sprite_mimiIdle, noone);
 
 // These variables are set by the instance manager
 m_speed = 2.0;
@@ -44,7 +48,7 @@ m_path = noone;
 m_callbackAnimationEnd = noone;
 
 // These variables are set by the player object itself
-m_direction = MimiDirection.Left;
+m_direction = MimiDirection.Right;
 m_movementState = MimiMovementState.Idle;
 
 // Cached position is used to determine the animation to play
