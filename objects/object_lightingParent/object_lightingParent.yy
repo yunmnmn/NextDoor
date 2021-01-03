@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "background_mimiRoom",
-    "path": "sprites/background_mimiRoom/background_mimiRoom.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -21,16 +18,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_mimiRoomInitializer","path":"objects/object_mimiRoomInitializer/object_mimiRoomInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"object_lightingParent","path":"objects/object_lightingParent/object_lightingParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "MimiRoom",
-    "path": "folders/Objects/MimiRoom.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_mimiRoomInitializer",
+  "name": "object_lightingParent",
   "tags": [],
   "resourceType": "GMObject",
 }

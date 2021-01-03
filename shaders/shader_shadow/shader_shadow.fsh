@@ -14,6 +14,7 @@ void main()
 {
 	float shadowGradient = 1.0;
 	// Only calculate the gradient is within 0-1, and only if it's within the bounds of the ShadowMap's UV
+	// This is only necessary for sprites that need to be mirrored
 	if(v_shadowMapTexCoord.x > 0.0 && v_shadowMapTexCoord.x < 1.0 &&
 		v_shadowMapTexCoord.x > u_shadowMapUvBounds.x && v_shadowMapTexCoord.x < u_shadowMapUvBounds.z &&
 		v_shadowMapTexCoord.y > u_shadowMapUvBounds.y && v_shadowMapTexCoord.y < u_shadowMapUvBounds.w)

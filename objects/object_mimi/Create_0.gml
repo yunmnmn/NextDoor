@@ -10,10 +10,21 @@ enum MimiMovementState
 	Walking
 }
 
-function SetPath(p_pathIndex)
+function SetPath(p_pathIndex, p_position)
 {
 	m_path = p_pathIndex;
+	m_position = p_position;
 	path_start(p_pathIndex, 0, path_action_stop, true);
+}
+
+function GetPath()
+{
+	return m_path;
+}
+
+function SetPathEndCallback(p_pathEndCallback)
+{
+	m_callbackPathEnd = p_pathEndCallback;
 }
 
 function SetSpeed(p_speed)
@@ -46,6 +57,7 @@ m_speed = 2.0;
 m_position = 0.0;
 m_path = noone;
 m_callbackAnimationEnd = noone;
+m_callbackPathEnd = noone;
 
 // These variables are set by the player object itself
 m_direction = MimiDirection.Right;

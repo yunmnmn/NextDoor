@@ -1,3 +1,8 @@
+// Calculate the topleft origin in world space
+// TODO: this expects the origin to be in the bottom-center, make this independent
+var worldSpaceTopLeftX = x - sprite_get_width(sprite_index)/2;
+var worldSpaceTopLeftY = y - sprite_get_height(sprite_index);
+
 // Get the background's Sprite from the backgroundObjectIndex
 var backgroundSpriteIndex = GetBackgroundSpriteIndex();
 var backgroundInstance = GetBackgroundInstance();
@@ -26,15 +31,6 @@ var shadowMapImageUv = sprite_get_uvs(backgroundSpriteIndex, 1); // 1 = shadowma
 
 // Set the ShadowMapUv offset depending if Mimi's texture is mirrored
 var shadowMapUvOffsetX = 0;
-// If the sprite is mirrored, the shadowmap UVs also need to be mirrored
-if(m_direction == MimiDirection.Left)
-{
-	// Calculate the min and max UV to sample from the ShadowMap
-	var shadowMapUvWidth = shadowMapImageUv[2] - shadowMapImageUv[0];
-	var offsetMin = shadowMapImageUv[0] + (normalizedX * shadowMapUvWidth)
-	var offsetMax = shadowMapImageUv[0] + (normalizedX * shadowMapUvWidth) + (mimiImageUv[2] - mimiImageUv[0]);
-	shadowMapUvOffsetX = offsetMin + offsetMax;
-}
 
 // Set the shader
 shader_set(shader_shadow);

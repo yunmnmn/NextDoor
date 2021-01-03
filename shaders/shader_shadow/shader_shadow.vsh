@@ -24,7 +24,8 @@ void main()
     v_vColour = in_Colour;
     v_vTexcoord = in_TextureCoord;
 	
-	// test
-	v_shadowMapTexCoord = u_shadowMapUv.xy + vec2(u_ratio.x * u_shadowMapUv.z, u_ratio.y * u_shadowMapUv.w)  + (in_TextureCoord - u_texCoordOrigin);
-					//(in_TextureCoord * u_mimiTranslation.zw);
+	// (ShadowMap UV in TextureMapSpace) + Offset of sprites position in uv cordinate space + offset of the uv vertex (multiplied with the ratio of uv difference of the sprite and background)
+	v_shadowMapTexCoord =	u_shadowMapUv.xy + 
+							vec2(u_ratio.x * u_shadowMapUv.z, u_ratio.y * u_shadowMapUv.w) + 
+							((in_TextureCoord - u_texCoordOrigin) * u_ratio.zw);
 }

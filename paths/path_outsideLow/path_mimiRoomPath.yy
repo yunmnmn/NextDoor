@@ -7,11 +7,11 @@
     {"speed":100.0,"x":888.0,"y":348.0,},
   ],
   "parent": {
-    "name": "MimiRoom",
-    "path": "folders/Paths/MimiRoom.yy",
+    "name": "Paths",
+    "path": "folders/Paths.yy",
   },
   "resourceVersion": "1.0",
-  "name": "path_mimiRoom",
+  "name": "path_mimiRoomPath",
   "tags": [],
   "resourceType": "GMPath",
 }

@@ -1,3 +1,9 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Set the id of the background in the global
+RegisterBackgroundInstance(id);
+
 // Fade into the level
 CreateFader(FadeState.FadeIn, 0.01, noone);
 
@@ -5,7 +11,7 @@ CreateFader(FadeState.FadeIn, 0.01, noone);
 SetControlState(PlayerControlState.PlayerNoControl);
 
 // Set Mimi on the path
-PlayerSetPath(path_mimiRoom);
+PlayerSetPath(path_mimiRoom, 0.0);
 
 // When the animation is finished playing, call this callback funciton
 var animationEndCallback = function()

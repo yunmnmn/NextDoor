@@ -1,1 +1,1 @@
-ChangeRooms("room_test1");
+ChangeRooms("room_mimiRoom");

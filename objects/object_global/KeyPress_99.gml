@@ -1,0 +1,1 @@
+ChangeRooms("room_outside");

@@ -1,6 +1,6 @@
 var callback = function()
 {
-	ChangeRooms("room_test2");
+	ChangeRooms("room_hallwayDown");
 }
 
 // Fade, and when finished, load the hall

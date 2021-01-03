@@ -4,10 +4,20 @@ function RegisterPlayerInstance(p_player)
 	global.g_playerInstance = p_player;
 }
 
-function PlayerSetPath(p_pathIndex)
+function PlayerSetPath(p_pathIndex, p_position)
 {
 	assert_fail(p_pathIndex == noone, "Path is invalid");
-	global.g_playerInstance.SetPath(p_pathIndex);
+	global.g_playerInstance.SetPath(p_pathIndex, p_position);
+}
+
+function PlayerSetPathEndCallback(p_callback)
+{
+	global.g_playerInstance.SetPathEndCallback(p_callback);
+}
+
+function PlayerGetPath()
+{
+	global.g_playerInstance.GetPath();
 }
 
 function PlayerPlayAnimation(p_spriteIndex, p_callbackEnd)

@@ -55,3 +55,5 @@ m_text = "";
 
 // HACK: to not register the space twice
 m_sameFrame = 0;
+
+m_xOffset = x;
