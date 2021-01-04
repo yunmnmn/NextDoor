@@ -18,16 +18,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"object_lightingParent","path":"objects/object_lightingParent/object_lightingParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"object_parentLighting","path":"objects/object_parentLighting/object_parentLighting.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "ParentObjects",
+    "path": "folders/Objects/ParentObjects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_lightingParent",
+  "name": "object_parentLighting",
   "tags": [],
   "resourceType": "GMObject",
 }

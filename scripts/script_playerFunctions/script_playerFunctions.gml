@@ -15,6 +15,11 @@ function PlayerSetPathEndCallback(p_callback)
 	global.g_playerInstance.SetPathEndCallback(p_callback);
 }
 
+function PlayerAddPathCallback(p_pathIndex, p_position, p_callback, p_persistant)
+{
+	global.g_playerInstance.AddPathCallback(new PathCallback(p_pathIndex, p_position, p_callback, p_persistant));
+}
+
 function PlayerGetPath()
 {
 	global.g_playerInstance.GetPath();

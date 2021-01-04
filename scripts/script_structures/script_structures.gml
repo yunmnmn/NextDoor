@@ -18,7 +18,7 @@ function SubText(p_text, p_playSpeed) constructor
 	m_playSpeed = p_playSpeed;
 }
 
-// TextContext is used 
+// TextContext is used to chain texts
 function TextContext(p_avatarSpriteIndex, p_callback) constructor
 {
 	m_avatarSpriteIndex = p_avatarSpriteIndex;
@@ -29,5 +29,13 @@ function TextContext(p_avatarSpriteIndex, p_callback) constructor
 	{
 		ds_list_add(m_subTexts, p_subText);
 	}
+}
+
+function PathCallback(p_pathIndex, p_position, p_callback, p_persistant) constructor
+{
+	m_pathIndex = p_pathIndex;
+	m_position = p_position;
+	m_callback = p_callback;
+	m_persistant = p_persistant;
 }
 

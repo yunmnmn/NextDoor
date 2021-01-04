@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "object_lightingParent",
-    "path": "objects/object_lightingParent/object_lightingParent.yy",
+    "name": "object_parentLighting",
+    "path": "objects/object_parentLighting/object_parentLighting.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "HallwayDown",
+    "path": "folders/Objects/HallwayDown.yy",
   },
   "resourceVersion": "1.0",
   "name": "object_youngster",

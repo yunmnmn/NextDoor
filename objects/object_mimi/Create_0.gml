@@ -12,9 +12,17 @@ enum MimiMovementState
 
 function SetPath(p_pathIndex, p_position)
 {
+	var tempX = x;
+	var tempY = y;
 	m_path = p_pathIndex;
+	path_start(p_pathIndex, 0, path_action_reverse, true);
 	m_position = p_position;
-	path_start(p_pathIndex, 0, path_action_stop, true);
+	path_position = p_position;
+	path_positionprevious = p_position;
+	
+	// HACK: This is here because path_start actually moves the object in the function
+	x = tempX;
+	y = tempY;
 }
 
 function GetPath()
@@ -25,6 +33,11 @@ function GetPath()
 function SetPathEndCallback(p_pathEndCallback)
 {
 	m_callbackPathEnd = p_pathEndCallback;
+}
+
+function AddPathCallback(p_pathCallback)
+{
+	ds_list_add(m_pathCallbacks, p_pathCallback);
 }
 
 function SetSpeed(p_speed)
@@ -53,11 +66,15 @@ RegisterPlayerInstance(id);
 PlayAnimation(sprite_mimiIdle, noone);
 
 // These variables are set by the instance manager
-m_speed = 2.0;
+m_speed = 4.0; // TODO: original 2
 m_position = 0.0;
 m_path = noone;
+
+// Path callbacks
 m_callbackAnimationEnd = noone;
 m_callbackPathEnd = noone;
+
+m_pathCallbacks = ds_list_create();
 
 // These variables are set by the player object itself
 m_direction = MimiDirection.Right;
