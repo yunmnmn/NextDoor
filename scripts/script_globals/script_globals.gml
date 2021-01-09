@@ -6,6 +6,7 @@ enum PlayerControlState
 	Talking,			// When this state is set, the player has no control of Mimi, and is in a talking state
 }
 
+// TODO: remove the s
 enum GlobalGameStates
 {
 	MimiRoomSits,

@@ -1,1 +1,1 @@
-ChangeRooms("room_hallwayDown", path_hallwayDown, 0.001);
+ChangeRoomsAndSetPath("room_hallwayDown", path_hallwayDown, 0.001);

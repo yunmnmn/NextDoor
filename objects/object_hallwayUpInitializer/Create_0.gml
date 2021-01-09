@@ -9,7 +9,7 @@ var pathEndCallback = function()
 		var fadeEndCallback = function()
 		{
 			SetControlState(PlayerControlState.PlayerControl);
-			ChangeRooms("room_outside", path_outsideHigh, 0.001);
+			ChangeRoomsAndSetPath("room_outside", path_outsideHigh, 0.001);
 		}
 		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
 	}

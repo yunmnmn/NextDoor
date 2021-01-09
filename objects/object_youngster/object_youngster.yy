@@ -4,7 +4,7 @@
     "path": "sprites/sprite_youngsterIdle/sprite_youngsterIdle.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

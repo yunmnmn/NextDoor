@@ -9,7 +9,7 @@ var pathStartCallback = function()
 		var fadeEndCallback = function()
 		{
 			SetControlState(PlayerControlState.PlayerControl);
-			ChangeRooms("room_mimiRoom", path_mimiRoom, 0.999);
+			ChangeRoomsAndSetPath("room_mimiRoom", path_mimiRoom, 0.999);
 		}
 		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
 	}
@@ -27,7 +27,7 @@ var pathEndCallback = function()
 		var fadeEndCallback = function()
 		{
 			SetControlState(PlayerControlState.PlayerControl);
-			ChangeRooms("room_outside", path_outsideLow, 0.001);
+			ChangeRoomsAndSetPath("room_outside", path_outsideLow, 0.001);
 		}
 		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
 	}

@@ -18,7 +18,7 @@ var pathLowCallback = function()
 		var fadeEndCallback = function()
 		{
 			SetControlState(PlayerControlState.PlayerControl);
-			ChangeRooms("room_hallwayDown", path_hallwayDown, 0.999);
+			ChangeRoomsAndSetPath("room_hallwayDown", path_hallwayDown, 0.999);
 		}
 		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
 	}
@@ -48,7 +48,7 @@ var pathHighCallback = function()
 		var fadeEndCallback = function()
 		{
 			SetControlState(PlayerControlState.PlayerControl);
-			ChangeRooms("room_hallwayUp", path_hallwayUp, 0.999);
+			ChangeRoomsAndSetPath("room_hallwayUp", path_hallwayUp, 0.999);
 		}
 		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
 	}

@@ -1,6 +1,3 @@
-/// @description Insert description here
-// You can write your code in this 
-
 function PlayAnimation(p_spriteIndex, p_callbackEnd)
 {
 	sprite_index = p_spriteIndex;

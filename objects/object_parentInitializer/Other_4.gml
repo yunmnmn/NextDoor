@@ -8,5 +8,5 @@ CreateFader(FadeState.FadeIn, 0.01, noone);
 m_viewport = view_camera[0];
 m_viewportHalfSize = new Vector2(camera_get_view_width(m_viewport) * 0.5, camera_get_view_height(m_viewport) * 0.5);
 
-// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoom())
+// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomsAndSetPath())
 PostRoomLoadCallback();
