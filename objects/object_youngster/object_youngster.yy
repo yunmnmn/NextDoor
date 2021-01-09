@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "HallwayDown",
-    "path": "folders/Objects/HallwayDown.yy",
+    "name": "HallwayUp",
+    "path": "folders/Objects/HallwayUp.yy",
   },
   "resourceVersion": "1.0",
   "name": "object_youngster",

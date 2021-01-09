@@ -24,16 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_hallwayDownInitializer","path":"objects/object_hallwayDownInitializer/object_hallwayDownInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_hallwayUpInitializer","path":"objects/object_hallwayUpInitializer/object_hallwayUpInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "HallwayDown",
-    "path": "folders/Objects/HallwayDown.yy",
+    "name": "HallwayUp",
+    "path": "folders/Objects/HallwayUp.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_hallwayDownInitializer",
+  "name": "object_hallwayUpInitializer",
   "tags": [],
   "resourceType": "GMObject",
 }

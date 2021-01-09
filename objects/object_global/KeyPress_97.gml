@@ -1,1 +1,1 @@
-ChangeRooms("room_mimiRoom");
+ChangeRooms("room_mimiRoom", path_mimiRoom, 0.001);

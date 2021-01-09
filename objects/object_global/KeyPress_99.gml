@@ -1,1 +1,1 @@
-ChangeRooms("room_outside");
+ChangeRooms("room_outside", path_outsideLow, 0.001);

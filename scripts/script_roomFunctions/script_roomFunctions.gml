@@ -1,5 +1,5 @@
 // Changes the room to the one provided room name (as string)
-function ChangeRooms(p_roomName)
+function ChangeRooms(p_roomName, p_path, p_position)
 {
 	// Get the roomIndex from the roomName
 	var room2Index = asset_get_index(p_roomName);
@@ -10,6 +10,15 @@ function ChangeRooms(p_roomName)
 	
 	// Change room
 	room_goto(room2Index);
+	
+	// Set the PlayerPath when all objects are created.
+	m_path = p_path;
+	m_position = p_position;
+	var postRoomLoadCallback = function()
+	{
+		PlayerSetPath(m_path, m_position);
+	}
+	SetPostRoomLoadCallback(postRoomLoadCallback);
 }
 
 // Reloads the current room

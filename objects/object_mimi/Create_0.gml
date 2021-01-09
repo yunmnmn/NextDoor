@@ -30,9 +30,14 @@ function GetPath()
 	return m_path;
 }
 
-function SetPathEndCallback(p_pathEndCallback)
+function SetPathEndCallback(p_callback)
 {
-	m_callbackPathEnd = p_pathEndCallback;
+	m_callbackPathEnd = p_callback;
+}
+
+function SetPathStartCallback(p_callback)
+{
+	m_callbackPathStart = p_callback;
 }
 
 function AddPathCallback(p_pathCallback)
@@ -73,6 +78,7 @@ m_path = noone;
 // Path callbacks
 m_callbackAnimationEnd = noone;
 m_callbackPathEnd = noone;
+m_callbackPathStart = noone;
 
 m_pathCallbacks = ds_list_create();
 

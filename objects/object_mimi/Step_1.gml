@@ -5,6 +5,19 @@ m_position = clamp(m_position, 0.0, 1.0);
 path_positionprevious = path_position; 
 path_position = m_position;
 
+// Check if the start callback is met
+if(m_callbackPathStart != noone && m_position == 0.0)
+{
+	var tempCallback = m_callbackPathStart;
+	m_callbackPathStart();
+	
+	// If the callbacks are the same, set it to noone, else leave it alone (meaning it got changed by the callback)
+	if(tempCallback == m_callbackPathStart)
+	{
+		m_callbackPathStart = noone;	
+	}
+}
+
 // Check if the end callback is met
 if(m_callbackPathEnd != noone && m_position == 1.0)
 {
@@ -18,7 +31,7 @@ if(m_callbackPathEnd != noone && m_position == 1.0)
 	}
 }
 
-// Check if the normalized callback is met
+// Check if the there are registered path callbacks
 var pathCallbackCount = ds_list_size(m_pathCallbacks);
 for(i = 0; i < pathCallbackCount; i++)
 {

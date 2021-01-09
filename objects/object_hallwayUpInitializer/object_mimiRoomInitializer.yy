@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "background_mimiRoom",
-    "path": "sprites/background_mimiRoom/background_mimiRoom.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "object_parentInitializer",
-    "path": "objects/object_parentInitializer/object_parentInitializer.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -29,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "MimiRoom",
-    "path": "folders/Objects/MimiRoom.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "object_mimiRoomInitializer",
