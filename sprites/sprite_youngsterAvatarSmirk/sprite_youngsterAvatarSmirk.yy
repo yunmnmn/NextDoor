@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bf86c59c-59e8-47b1-878f-b2e01df63db1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Youngster",
-    "path": "folders/Sprites/Youngster.yy",
+    "name": "Avatars",
+    "path": "folders/Sprites/Youngster/Avatars.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprite_youngsterAvatarSmirk",
