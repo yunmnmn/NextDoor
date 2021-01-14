@@ -63,3 +63,7 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 	m_cachedDirection = m_direction;
 	m_cachedMovementState = m_movementState;
 }
+else
+{
+	image_xscale = 1.0;
+}
