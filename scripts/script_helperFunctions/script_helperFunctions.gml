@@ -11,3 +11,9 @@ function GetWorldPosition(p_instanceIndex)
 	assert_fail(p_instanceIndex == noone, "instanceIndex is invalid");
 	return new Vector2(p_instanceIndex.x, p_instanceIndex.y);
 }
+
+// Returns the delta time in miliseconds rather than the default (microsecond)
+function DeltaTimeInMiliseconds()
+{
+	return delta_time / 1000;
+}

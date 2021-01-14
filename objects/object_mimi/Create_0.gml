@@ -11,12 +11,15 @@ enum MimiMovementState
 }
 
 function SetPath(p_pathIndex, p_position)
-{
+{	
+	assert(((p_position >= 0.0) && (p_position <= 1.0)), "Position out of range");
+		
 	var tempX = x;
 	var tempY = y;
 	m_path = p_pathIndex;
-	path_start(p_pathIndex, 0, path_action_reverse, true);
+	path_start(p_pathIndex, 0, path_action_stop, true);
 	m_position = p_position;
+	m_cachedPosition = p_position;
 	path_position = p_position;
 	path_positionprevious = p_position;
 	
@@ -51,11 +54,10 @@ function SetSpeed(p_speed)
 }
 
 // Calcultes the movement depending on the path's length and the speed
-// TODO: add delta time
 function GetMovementSpeed()
 {
 	var pathLength = path_get_length(m_path);
-	return (1.0 / pathLength) * m_speed;
+	return (1.0 / pathLength) * m_speed * DeltaTimeInMiliseconds();
 }
 
 function PlayAnimation(p_spriteIndex, p_callbackEnd)
@@ -71,7 +73,7 @@ RegisterPlayerInstance(id);
 PlayAnimation(sprite_mimiIdle, noone);
 
 // These variables are set by the instance manager
-m_speed = 4.0; // TODO: original 2
+m_speed = 0.5; 
 m_position = 0.0;
 m_path = noone;
 

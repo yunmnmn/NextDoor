@@ -18,6 +18,11 @@ function SetControlState(p_controlState)
 	global.g_playerControlState = p_controlState;
 }
 
+function GetControlState()
+{
+	return global.g_playerControlState;
+}
+
 function GetGlobalGameState()
 {
 	return global.m_globalGameState;

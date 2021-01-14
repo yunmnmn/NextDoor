@@ -20,6 +20,7 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"object_mimi","path":"objects/object_mimi/object_mimi.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":252.0,"y":360.0,"resourceVersion":"1.0","name":"inst_A569CA2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"object_global","path":"objects/object_global/object_global.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-12.0,"y":-12.0,"resourceVersion":"1.0","name":"inst_714F864","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"object_roomToHallwayDownTrigger","path":"objects/object_roomToHallwayDownTrigger/object_roomToHallwayDownTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":672.0,"y":264.0,"resourceVersion":"1.0","name":"inst_764A560","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":12,"gridY":12,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_levelObjects","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"object_mimiRoomInitializer","path":"objects/object_mimiRoomInitializer/object_mimiRoomInitializer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_72E68C36","tags":[],"resourceType":"GMRInstance",},
@@ -34,6 +35,7 @@
     {"name":"inst_A569CA2","path":"rooms/room_mimiRoom/room_mimiRoom.yy",},
     {"name":"inst_5A60AC27","path":"rooms/room_mimiRoom/room_mimiRoom.yy",},
     {"name":"inst_72E68C36","path":"rooms/room_mimiRoom/room_mimiRoom.yy",},
+    {"name":"inst_764A560","path":"rooms/room_mimiRoom/room_mimiRoom.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

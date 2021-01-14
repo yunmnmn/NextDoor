@@ -1,6 +1,3 @@
-// Clamp the positions between 0-1
-m_position = clamp(m_position, 0.0, 1.0);
-
 // Set the position on the path
 path_positionprevious = path_position; 
 path_position = m_position;
@@ -32,8 +29,7 @@ if(m_callbackPathEnd != noone && m_position == 1.0)
 }
 
 // Check if the there are registered path callbacks
-var pathCallbackCount = ds_list_size(m_pathCallbacks);
-for(i = 0; i < pathCallbackCount; i++)
+for(i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 {
 	var pathCallback = ds_list_find_value(m_pathCallbacks, i);
 	
@@ -44,10 +40,19 @@ for(i = 0; i < pathCallbackCount; i++)
 		var tempCallback = pathCallback.m_callback;
 		pathCallback.m_callback();
 		
+		// Remove the callback if it's not persistant. Add i when something isn't removed
 		if(!pathCallback.m_persistant)
 		{
-			// TODO: remove from list
+			ds_list_delete(m_pathCallbacks, i);
 		}
+		else
+		{
+			i++;
+		}
+	}
+	else
+	{
+		i++;
 	}
 }
 

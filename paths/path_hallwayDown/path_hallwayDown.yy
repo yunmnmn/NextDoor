@@ -3,8 +3,8 @@
   "closed": false,
   "precision": 4,
   "points": [
-    {"speed":100.0,"x":210.0,"y":343.0,},
-    {"speed":100.0,"x":1470.0,"y":343.0,},
+    {"speed":100.0,"x":84.0,"y":348.0,},
+    {"speed":100.0,"x":1476.0,"y":348.0,},
   ],
   "parent": {
     "name": "HallwayDown",

@@ -26,21 +26,3 @@ if(GetGlobalGameState() == GlobalGameStates.MimiRoomSits)
 		PlayerPlayAnimation(anim_mimiSit, animationEndCallback);
 	}
 }
-
-// Transition the room when Mimi reaches the end of the hall
-{
-	var pathEndCallback = function()
-	{
-		// Don't give the control to the player while transitioning
-		SetControlState(PlayerControlState.PlayerNoControl);
-	
-		// Fade, and when finished, load the hallway
-		var fadeEndCallback = function()
-		{
-			SetControlState(PlayerControlState.PlayerControl);
-			ChangeRoomsAndSetPath("room_hallwayDown", path_hallwayDown, 0.01);
-		}
-		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
-	}
-	PlayerSetPathEndCallback(pathEndCallback);
-}

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "background_hallwayDown",
-    "path": "sprites/background_hallwayDown/background_hallwayDown.yy",
+    "name": "background_hallwayUp",
+    "path": "sprites/background_hallwayUp/background_hallwayUp.yy",
   },
   "solid": false,
   "visible": true,
