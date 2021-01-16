@@ -1,9 +1,18 @@
 if(keyboard_check(vk_space) && m_dirtyFlag == false)
 {
 	m_dirtyFlag = true;
+	// TODO: remove the extra node from the HallwayUp path
+	instance_find(object_youngster, 0).visible = true;
+	var doorTriggerIndex = instance_find(object_doorKnockTrigger, 0);
+	knockPositionX = doorTriggerIndex.x;
 	
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
+	
+	// Set Mimi to a fixed position
+	player = GetPlayerInstance();
+	var position = SnapToClosestPosition(knockPositionX, player.y);
+	player.m_position = position;
 	
 	// Play the knocking animation, and set the callback when the animation is finished
 	{
@@ -11,11 +20,15 @@ if(keyboard_check(vk_space) && m_dirtyFlag == false)
 		var animationEndCallback = function()
 		{
 			PlayerPlayAnimation(sprite_mimiIdle, noone);
+			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
+			var position = SnapToClosestPosition(knockPositionX - 60, player.y);
+			player.m_position = position;
 			
 			// TODO: set the door open sprite visible
 			// TODO: set the youngster sprite visible
 			instance_find(object_youngster, 0).visible = true;
 			instance_find(object_openDoor, 0).visible = true;
+
 			MimiAndYoungsterConversation();
 		}
 
