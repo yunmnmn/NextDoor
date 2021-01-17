@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_placeholder",
-    "path": "sprites/sprite_placeholder/sprite_placeholder.yy",
+    "name": "sprite_placeholderWhite",
+    "path": "sprites/sprite_placeholderWhite/sprite_placeholderWhite.yy",
   },
   "solid": false,
   "visible": true,

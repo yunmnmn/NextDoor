@@ -21,8 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"object_mimi","path":"objects/object_mimi/object_mimi.yy",},"parent":{"name":"object_hallwayUpToOutside","path":"objects/object_hallwayUpToOutside/object_hallwayUpToOutside.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_hallwayUpToOutside","path":"objects/object_hallwayUpToOutside/object_hallwayUpToOutside.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"object_mimi","path":"objects/object_mimi/object_mimi.yy",},"parent":{"name":"object_doorKnockYoungsterTrigger","path":"objects/object_doorKnockYoungsterTrigger/object_doorKnockYoungsterTrigger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_doorKnockYoungsterTrigger","path":"objects/object_doorKnockYoungsterTrigger/object_doorKnockYoungsterTrigger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +31,7 @@
     "path": "folders/Objects/HallwayUp.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_hallwayUpToOutside",
+  "name": "object_doorKnockYoungsterTrigger",
   "tags": [],
   "resourceType": "GMObject",
 }

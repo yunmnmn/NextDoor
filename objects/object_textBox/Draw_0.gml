@@ -22,7 +22,7 @@ if(m_textContext != noone)
 			stringToRender = m_text + subString;
 		
 			// If it reached the end of the subText, go to the next one
-			if(m_textPosition == string_length(text) + 1)
+			if(m_textPosition >= string_length(text) + 1)
 			{
 				m_text = stringToRender;
 				m_subTextIndex++;
