@@ -18,11 +18,11 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 
 	if(m_cachedPosition > m_position)
 	{
-		m_direction = MimiDirection.Left;
+		m_direction = Direction.Left;
 	}
 	else if(m_cachedPosition < m_position)
 	{
-		m_direction = MimiDirection.Right;
+		m_direction = Direction.Right;
 	}
 
 	// Set the animations depending on the states from previous to now
@@ -44,13 +44,15 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 
 	if(m_direction != m_cachedDirection)
 	{
-		if(m_direction == MimiDirection.Right)
+		if(m_direction == Direction.Right)
 		{
 			image_xscale = 1.0;
+			m_mirrored = false;
 		}
-		else if(m_direction == MimiDirection.Left)
+		else if(m_direction == Direction.Left)
 		{
 			image_xscale = -1.0;
+			m_mirrored = true;
 		}
 		else
 		{
@@ -65,5 +67,7 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 }
 else
 {
+	// TODO: create a function for mirroring
 	image_xscale = 1.0;
+	m_mirrored = false;
 }

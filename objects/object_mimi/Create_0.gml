@@ -1,13 +1,13 @@
-enum MimiDirection
-{
-	Right,
-	Left
-}
-
 enum MimiMovementState
 {
 	Idle,
 	Walking
+}
+
+enum Direction
+{
+	Left,
+	Right
 }
 
 function SetPath(p_pathIndex, p_position)
@@ -73,7 +73,7 @@ RegisterPlayerInstance(id);
 PlayAnimation(sprite_mimiIdle, noone);
 
 // These variables are set by the instance manager
-m_speed = 0.5; 
+m_speed = 0.1; 
 m_position = 0.0;
 m_path = noone;
 
@@ -85,7 +85,8 @@ m_callbackPathStart = noone;
 m_pathCallbacks = ds_list_create();
 
 // These variables are set by the player object itself
-m_direction = MimiDirection.Right;
+m_mirrored = false;
+m_direction = Direction.Right;
 m_movementState = MimiMovementState.Idle;
 
 // Cached position is used to determine the animation to play

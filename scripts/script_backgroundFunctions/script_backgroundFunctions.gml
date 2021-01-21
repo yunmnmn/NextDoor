@@ -71,3 +71,18 @@ function GetShadowMapTexture()
 	var shadowMapTexture = sprite_get_texture(GetBackgroundSpriteIndex(), 1);
 	return shadowMapTexture;
 }
+
+function SetFollowInstance(p_instance)
+{
+	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
+	assert(p_instance != noone, "Instance can't be invalid");
+	
+	global.g_backgroundInstance.m_followInstance = p_instance;
+}
+
+function SetFollowSpeed(p_followSpeed)
+{
+	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
+	
+	global.g_backgroundInstance.m_followSpeed = p_followSpeed;
+}

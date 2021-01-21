@@ -10,7 +10,10 @@ enum PlayerControlState
 enum GlobalGameStates
 {
 	MimiRoomSits,
-	MimiGoingToYoungster
+	MimiGoingToYoungster, 
+	MimiGoingToKnockAtNeighbour,
+	MimiGointToYoungsterAgain,
+	MimiWalksIntoWoman,
 }
 
 function SetControlState(p_controlState)

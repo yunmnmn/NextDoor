@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"151e984d-1acd-4fd5-a6b8-e595568f12e3","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"151e984d-1acd-4fd5-a6b8-e595568f12e3","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"LayerId":{"name":"49b2a316-7757-4aa9-9f8a-1b718100cc63","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprite_womanAvatar","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"resourceVersion":"1.0","name":"151e984d-1acd-4fd5-a6b8-e595568f12e3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"34c4e106-600d-4d51-a1f9-423b3f90f686","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"34c4e106-600d-4d51-a1f9-423b3f90f686","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"LayerId":{"name":"e409bb27-7579-4289-856f-ac8593d0ff2c","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprite_womanAvatar","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"resourceVersion":"1.0","name":"34c4e106-600d-4d51-a1f9-423b3f90f686","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sprite_womanAvatar","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d456fa28-b7b2-4275-ad9a-0db30db8858d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"151e984d-1acd-4fd5-a6b8-e595568f12e3","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f43c2b48-20cd-4061-83c6-697691f6ddbc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34c4e106-600d-4d51-a1f9-423b3f90f686","path":"sprites/sprite_womanAvatar/sprite_womanAvatar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"49b2a316-7757-4aa9-9f8a-1b718100cc63","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e409bb27-7579-4289-856f-ac8593d0ff2c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Avatars",

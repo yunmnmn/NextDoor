@@ -1,41 +1,46 @@
-if(keyboard_check(vk_space) && m_dirtyFlag == false)
+function MimiToYoungster()
 {
-	m_dirtyFlag = true;
-	// TODO: remove the extra node from the HallwayUp path
-	var doorTriggerIndex = instance_find(object_doorKnockYoungsterTrigger, 0);
-	knockPositionX = doorTriggerIndex.x;
-	
-	m_youngster = instance_find(object_youngster, 0);
-	
-	// Disable the control the player has
-	SetControlState(PlayerControlState.PlayerNoControl);
-	
-	// Set Mimi to a fixed position
-	player = GetPlayerInstance();
-	var position = SnapToClosestPosition(knockPositionX, player.y);
-	player.m_position = position;
-	
-	// Play the knocking animation, and set the callback when the animation is finished
+	if(keyboard_check(vk_space) && m_dirtyFlag == false)
 	{
-		// When the knocking animation is finished, execute this callback
+		m_dirtyFlag = true;
+
+		// Disable the control the player has
+		SetControlState(PlayerControlState.PlayerNoControl);
+
+		// Set Mimi to a fixed position
+		var position = SnapToClosestPosition(m_knockPositionX, m_player.y);
+		m_player.m_position = position;
+	
+		// Play the knocking animation, and set the callback when the animation is finished
 		var animationEndCallback = function()
 		{
 			PlayerPlayAnimation(sprite_mimiIdle, noone);
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			var position = SnapToClosestPosition(knockPositionX - 60, player.y);
-			player.m_position = position;
+			var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
+			m_player.m_position = position;
 			
-			// TODO: set the door open sprite visible
-			// TODO: set the youngster sprite visible
 			m_youngster.visible = true;
-			instance_find(object_openDoor, 0).visible = true;
-
+			m_openDoorMask.visible = true;
+			
 			MimiAndYoungsterConversation();
 		}
-
 		// Play the knocking animation
 		PlayerPlayAnimation(anim_mimiKnock, animationEndCallback);
 	}
+}
+
+// --------- Entry Point -------------
+switch(GetGlobalGameState())
+{
+	case GlobalGameStates.MimiRoomSits:
+	case GlobalGameStates.MimiGoingToYoungster:
+		MimiToYoungster();
+		break;
+	//case GlobalGameStates.MimiGoingToAskNeighbours:
+	default:
+		m_youngster.visible = true;
+		m_openDoorMask.visible = true;
+		break;
 }
 
 function MimiAndYoungsterConversation()
@@ -59,7 +64,10 @@ function MimiAndYoungsterConversation()
 		m_youngster.image_speed = -1;
 		
 		// Set the player image speed back
-		player.image_speed = 1;
+		m_player.image_speed = 1;
+		
+		// Set the next global state after the conversation is finished
+		SetGlobalGameState(GlobalGameStates.MimiGoingToKnockAtNeighbour);
 	}
 	
 	cb2_10 = function()
@@ -67,6 +75,20 @@ function MimiAndYoungsterConversation()
 		var c2_10 = new TextContext(sprite_mimiAvatarAngry, conversationFinished);
 		c2_10.AddSubText(new SubText("Watch me! You wait right here!", 0.2));
 		RenderText(c2_10);
+		
+		// Play the angry animation
+		var callbackAngryEnd = function()
+		{
+			// Only set the imgae speed to 0 if the angry animation is still set
+			if(m_player.sprite_index == anim_mimiAngry)
+			{
+				m_player.image_speed = 0;
+				m_player.image_index = 4;
+			}
+		}
+		m_player.image_speed = 1;
+		m_player.image_index = 0;
+		PlayerPlayAnimation(anim_mimiAngry, callbackAngryEnd);
 	}
 	
 	cb2_9 = function()
@@ -107,11 +129,10 @@ function MimiAndYoungsterConversation()
 		var callbackAngryEnd = function()
 		{
 			// Only set the imgae speed to 0 if the angry animation is still set
-			var player = GetPlayerInstance();
-			if(player.sprite_index == anim_mimiAngry)
+			if(m_player.sprite_index == anim_mimiAngry)
 			{
-				player.image_speed = 0;
-				player.image_index = 4;
+				m_player.image_speed = 0;
+				m_player.image_index = 4;
 			}
 		}
 		PlayerPlayAnimation(anim_mimiAngry, callbackAngryEnd);
