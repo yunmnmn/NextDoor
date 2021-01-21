@@ -19,8 +19,8 @@ var backgroundSize = GetSpriteSize(backgroundSpriteIndex);
 
 // Calculate the normalized position of Sprite's topleft relative to the Background
 var backgroundWorldPosition = GetWorldPosition(backgroundInstance);
-var normalizedX = (worldSpaceTopLeftX - backgroundWorldPosition.m_x) / (backgroundSize.m_x - backgroundWorldPosition.m_x);
-var normalizedY = (worldSpaceTopLeftY - backgroundWorldPosition.m_y) / (backgroundSize.m_y - backgroundWorldPosition.m_y);
+var normalizedX = (worldSpaceTopLeftX - backgroundWorldPosition.m_x) / backgroundSize.m_x;
+var normalizedY = (worldSpaceTopLeftY - backgroundWorldPosition.m_y) / backgroundSize.m_y;
 
 // Get sprite's current texture that is used
 // sprite_index = sprite handle
