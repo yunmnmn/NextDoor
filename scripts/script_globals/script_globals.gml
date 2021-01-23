@@ -9,11 +9,16 @@ enum PlayerControlState
 // TODO: remove the s
 enum GlobalGameStates
 {
+	// Sequence 1 states
 	MimiRoomSits,
 	MimiGoingToYoungster, 
 	MimiGoingToKnockAtNeighbour,
 	MimiGointToYoungsterAgain,
 	MimiWalksIntoWoman,
+	MimiWalksToOldtimer,
+	MimiWalksBackToRoom
+	
+	// Sequence 2 states 
 }
 
 function SetControlState(p_controlState)

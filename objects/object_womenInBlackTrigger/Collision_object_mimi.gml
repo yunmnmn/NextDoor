@@ -36,29 +36,40 @@ function WomenInBlackConversation()
 {
 	conversationFinished = function()
 	{
+		// Set the oldtimer to be the following object
+		SetViewportFollowInstance(GetPlayerInstance());
+		// Set the following speed
+		// NOTE: the followspeed will be set back again when the player hits the green trigger
+		SetViewportFollowSpeed(0.005);
+		
 		// Set the idle animation
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 		
 		// Give control to the player after the conversation is over
 		SetControlState(PlayerControlState.PlayerControl);
+		
+		// Advance the state
+		SetGlobalGameState(GlobalGameStates.MimiWalksToOldtimer);
 	}
 	
 	cb6_2 = function()
 	{
-		// Make the youngster and door invisible again
-		instance_hallwayUpMemory.SetDoorYoungsterVisible(false);
-		instance_hallwayUpMemory.SetYoungsterVisible(false);
-		
-		// Do the panning
-		// TODO
+		// Set the oldtimer to be the following object
+		SetViewportFollowInstance(instance_oldtimer);
+		// Set the following speed
+		SetViewportFollowSpeed(0.005);
 		
 		var c6_2 = new TextContext(sprite_oldtimerAvatar, true, conversationFinished);
-		c6_2.AddSubText(new SubText("Could you argue somewhere else, please ?", 0.2));
+		c6_2.AddSubText(new SubText("Could you argue somewhere else, please?", 0.2));
 		RenderText(c6_2);
 	}
 	
 	cb6_1 = function()
 	{
+		// Set the oldtimer visible
+		instance_hallwayUpMemory.SetDoorOldtimerVisible(true);
+		instance_hallwayUpMemory.SetOldtimerVisible(true);
+		
 		var c6_1 = new TextContext(sprite_oldtimerAvatar, true, cb6_2);
 		c6_1.AddSubText(new SubText("What's going on?", 0.2));
 		RenderText(c6_1);
