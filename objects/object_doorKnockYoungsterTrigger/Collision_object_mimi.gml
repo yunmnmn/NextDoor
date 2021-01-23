@@ -10,22 +10,8 @@ function MimiToYoungster()
 		// Set Mimi to a fixed position
 		var position = SnapToClosestPosition(m_knockPositionX, m_player.y);
 		m_player.m_position = position;
-	
-		// Play the knocking animation, and set the callback when the animation is finished
-		var animationEndCallback = function()
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, noone);
-			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
-			m_player.m_position = position;
 			
-			instance_hallwayUpMemory.SetDoorYoungsterVisible(true);
-			instance_hallwayUpMemory.SetYoungsterVisible(true);
-			
-			MimiAndYoungsterConversation();
-		}
-		// Play the knocking animation
-		PlayerPlayAnimation(anim_mimiKnock, animationEndCallback);
+		MimiAndYoungsterConversation();
 	}
 }
 
@@ -49,8 +35,6 @@ function MimiAndYoungsterConversation()
 	{
 		// Give control to the player after the conversation is over
 		SetControlState(PlayerControlState.PlayerControl);
-		
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
 		
 		// Set the youngster back to idle
 		var animationEndCallback = function()
@@ -161,6 +145,9 @@ function MimiAndYoungsterConversation()
 	
 	cb2_2 = function()
 	{
+		instance_hallwayUpMemory.SetDoorYoungsterVisible(true);
+		instance_hallwayUpMemory.SetYoungsterVisible(true);
+		
 		var c2_2 = new TextContext(sprite_mimiAvatarAngry, cb2_3);
 		c2_2.AddSubText(new SubText("Could you please lower the volume?!", 0.2));
 		RenderText(c2_2);
@@ -175,5 +162,18 @@ function MimiAndYoungsterConversation()
 	{
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		var SetIdleWhenKnockingFinish = function()
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, noone);
+			
+			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
+			var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
+			m_player.m_position = position;
+			
+		}
+		
+		// Play the knocking animation
+		PlayerPlayAnimation(anim_mimiKnock, SetIdleWhenKnockingFinish);
 	}
 }

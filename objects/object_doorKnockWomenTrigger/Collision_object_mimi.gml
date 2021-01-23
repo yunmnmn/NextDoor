@@ -10,26 +10,8 @@ function MimiKnockOnWomenDoor()
 		// Set Mimi to a fixed position
 		var pathPosition = SnapToClosestPosition(m_knockPositionX, m_player.y);
 		m_player.m_position = pathPosition;
-	
-		// Play the knocking animation, and set the callback when the animation is finished
-		{
-			// When the knocking animation is finished, execute this callback
-			var animationEndCallback = function()
-			{				
-				// Set the animation back to idle
-				PlayerPlayAnimation(sprite_mimiIdle, noone);
-				
-				// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-				var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
-				m_player.m_position = position;
-
-				MimiConversation();
-			}
-
-			// Play the knocking animation
-			PlayerPlayAnimation(anim_mimiKnock, animationEndCallback);
-			SetFollowSpeed(0.01);
-		}
+		
+		MimiConversation();
 	}
 }
 
@@ -80,5 +62,20 @@ function MimiConversation()
 	{
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		// When the knocking animation is finished, execute this callback
+		var animationEndCallback = function()
+		{				
+			// Set the animation back to idle
+			PlayerPlayAnimation(sprite_mimiIdle, noone);
+				
+			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
+			var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
+			m_player.m_position = position;
+		}
+
+		// Play the knocking animation
+		PlayerPlayAnimation(anim_mimiKnock, animationEndCallback);
+		SetFollowSpeed(0.01);
 	}
 }
