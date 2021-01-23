@@ -13,23 +13,6 @@ function ChangeRooms(p_roomName)
 	room_goto(room2Index);
 }
 
-// Changes the room to the one provided room name (as string), and set the path and position
-global.m_path = noone;
-global.m_position = 0.0;
-// TODO: remove the s
-function ChangeRoomsAndSetPath(p_roomName, p_path, p_position)
-{
-	ChangeRooms(p_roomName);
-	// Set the PlayerPath when all objects are created.
-	global.m_path = p_path;
-	global.m_position = p_position;
-	var postRoomLoadCallback = function()
-	{
-		PlayerSetPath(global.m_path, global.m_position);
-	}
-	SetPostRoomLoadCallback(postRoomLoadCallback);
-}
-
 // Reloads the current room
 function ReloadRoom()
 {
