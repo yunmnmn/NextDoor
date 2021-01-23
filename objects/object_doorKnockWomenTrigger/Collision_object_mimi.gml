@@ -15,10 +15,7 @@ function MimiKnockOnWomenDoor()
 		{
 			// When the knocking animation is finished, execute this callback
 			var animationEndCallback = function()
-			{
-				// Set the follow speed back to an instant speed
-				SetFollowSpeed(1.0);
-				
+			{				
 				// Set the animation back to idle
 				PlayerPlayAnimation(sprite_mimiIdle, noone);
 				
@@ -50,6 +47,9 @@ function MimiConversation()
 {
 	conversationFinished = function()
 	{
+		// Set the follow speed back to an instant speed
+		SetFollowSpeed(1.0);
+		
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerControl);
 		

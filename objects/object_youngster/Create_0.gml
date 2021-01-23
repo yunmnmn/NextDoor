@@ -8,4 +8,3 @@ m_callbackAnimationEnd = noone;
 
 m_dirtyFlag = false;
 m_player = GetPlayerInstance();
-m_mirrored = false;

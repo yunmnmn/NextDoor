@@ -19,8 +19,8 @@ function MimiToYoungster()
 			var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
 			m_player.m_position = position;
 			
-			m_youngster.visible = true;
-			m_openDoorMask.visible = true;
+			instance_hallwayUpMemory.SetDoorYoungsterVisible(true);
+			instance_hallwayUpMemory.SetYoungsterVisible(true);
 			
 			MimiAndYoungsterConversation();
 		}

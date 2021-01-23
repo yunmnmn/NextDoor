@@ -3,6 +3,9 @@ function MimiConversationYoungster()
 	if(keyboard_check(vk_space) && m_dirtyFlag == false)
 	{
 		m_dirtyFlag = true;
+		
+		// Set Mimi to idle
+		PlayerPlayAnimation(sprite_mimiIdle, noone);
 
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerNoControl);
@@ -26,9 +29,10 @@ function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
 	{
-		// Set the player control back
-		m_player.image_speed = 0;
-		m_player.image_index = 4;
+		// Set idle animation again
+		PlayerPlayAnimation(sprite_mimiIdle, noone);
+		m_player.image_speed = 1;
+		m_player.image_index = 0;
 		
 		// Give control back to the player again
 		SetControlState(PlayerControlState.PlayerControl);
@@ -67,7 +71,7 @@ function MimiAndYoungsterConversation()
 		// Play the angry animation
 		var callbackAngryEnd = function()
 		{
-			// Only set the imgae speed to 0 if the angry animation is still set
+			// Only set the image speed to 0 if the angry animation is still set
 			if(m_player.sprite_index == anim_mimiAngry)
 			{
 				m_player.image_speed = 0;
