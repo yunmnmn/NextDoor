@@ -30,7 +30,7 @@ function MimiConversation()
 	conversationFinished = function()
 	{
 		// Set the follow speed back to an instant speed
-		SetFollowSpeed(1.0);
+		SetViewportFollowSpeed(1.0);
 		
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerControl);
@@ -76,6 +76,6 @@ function MimiConversation()
 
 		// Play the knocking animation
 		PlayerPlayAnimation(anim_mimiKnock, false, animationEndCallback);
-		SetFollowSpeed(0.01);
+		SetViewportFollowSpeed(0.01);
 	}
 }

@@ -72,7 +72,8 @@ function GetShadowMapTexture()
 	return shadowMapTexture;
 }
 
-function SetFollowInstance(p_instance)
+// Set the instance that the viewport follows
+function SetViewportFollowInstance(p_instance)
 {
 	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	assert(p_instance != noone, "Instance can't be invalid");
@@ -80,7 +81,7 @@ function SetFollowInstance(p_instance)
 	global.g_backgroundInstance.m_followInstance = p_instance;
 }
 
-function SetFollowSpeed(p_followSpeed)
+function SetViewportFollowSpeed(p_followSpeed)
 {
 	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	
