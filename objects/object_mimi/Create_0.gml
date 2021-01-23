@@ -58,10 +58,12 @@ function SetMirrored(p_mirrored)
 	if(p_mirrored)
 	{
 		image_xscale = -1.0;
+		m_mirrored = true;
 	}
 	else
 	{
 		image_xscale = 1.0;
+		m_mirrored = false;
 	}
 }
 

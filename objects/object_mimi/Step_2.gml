@@ -46,13 +46,11 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 	{
 		if(m_direction == Direction.Right)
 		{
-			image_xscale = 1.0;
-			m_mirrored = false;
+			SetMirrored(false);
 		}
 		else if(m_direction == Direction.Left)
 		{
-			image_xscale = -1.0;
-			m_mirrored = true;
+			SetMirrored(true);
 		}
 		else
 		{
