@@ -19,11 +19,13 @@ function SubText(p_text, p_playSpeed) constructor
 }
 
 // TextContext is used to chain texts
-function TextContext(p_avatarSpriteIndex, p_callback) constructor
+function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 {
 	m_avatarSpriteIndex = p_avatarSpriteIndex;
 	m_callback = p_callback;
 	m_subTexts = ds_list_create();
+	m_skippable = p_skippable;
+	m_progressable = true;
 	
 	AddSubText = function(p_subText)
 	{

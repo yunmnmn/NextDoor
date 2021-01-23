@@ -4,7 +4,8 @@ if(m_textContext != noone)
 	if(m_state == TextboxState.RenderingContext)
 	{
 		// HACK: Don't register space twice because of ordering of events
-		if(m_sameFrame == 0)
+		// Only allow skipping if it's true
+		if(m_sameFrame == 0 && m_textContext.m_skippable)
 		{
 			m_text = "";
 		
@@ -19,19 +20,23 @@ if(m_textContext != noone)
 	}
 	else if(m_state == TextboxState.Waiting)
 	{
-		// Make a cached copy because this one will be deleted
-		var tempTextContext = m_textContext;
-	
-		// Reset all the states back to default
-		Reset();
-	
-		// Call the callback if there is one
-		if(tempTextContext.m_callback != noone)
+		// Only allow existing the current TextContext if it's progressable
+		if(m_textContext.m_progressable)
 		{
-			tempTextContext.m_callback();
+			// Make a cached copy because this one will be deleted
+			var tempTextContext = m_textContext;
+	
+			// Reset all the states back to default
+			Reset();
+	
+			// Call the callback if there is one
+			if(tempTextContext.m_callback != noone)
+			{
+				tempTextContext.m_callback();
+			}
+			
+			m_sameFrame = 2;
 		}
-		
-		m_sameFrame = 2;
 	}
 }
 

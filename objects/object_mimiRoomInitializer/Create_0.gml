@@ -10,20 +10,20 @@ function MimiConversation()
 	
 	cb2_3 = function()
 	{
-		var c2_3 = new TextContext(sprite_mimiAvatarAngry, conversationFinished);
+		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
 		c2_3.AddSubText(new SubText("I can't study with this noise all the time! ", 0.2));
 		RenderText(c2_3);
 	}
 	
 	cb2_2 = function()
 	{
-		var c2_2 = new TextContext(sprite_mimiAvatarAngry, cb2_3);
+		var c2_2 = new TextContext(sprite_mimiAvatarAngry, true, cb2_3);
 		c2_2.AddSubText(new SubText("Oh, come on!", 0.2));
 		RenderText(c2_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
-	var c2_1 = new TextContext(sprite_mimiAvatarNormal, cb2_2);
+	var c2_1 = new TextContext(sprite_mimiAvatarNormal, true, cb2_2);
 	c2_1.AddSubText(new SubText("...", 0.6));
 
 	// Call the parent text context

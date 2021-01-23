@@ -16,3 +16,10 @@ function RenderText(p_textContext)
 	
 	return global.g_textboxInstance.RenderText(p_textContext);
 }
+
+function GetCurrentTextContext()
+{
+	assert(global.g_textboxInstance != noone, "No textbox instance is registered");
+	assert(global.g_textboxInstance.m_textContext != noone, "the current textContext is invalid");
+	return global.g_textboxInstance.m_textContext;
+}

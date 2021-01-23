@@ -44,10 +44,14 @@ if(m_textContext != noone)
 		var textHeight = string_height(m_text);
 		draw_text_ext(x, y, m_text, textHeight, sprite_width);
 	
-		// Draw a small white box on the bottom right corner to indicate that the text is finished
-		var boxSize = new Vector2(10.0, 10.0);
-		var boxPosition = new Vector2(x + sprite_width - boxSize.m_x, y + sprite_height - boxSize.m_y);
-		draw_rectangle(boxPosition.m_x, boxPosition.m_y, boxPosition.m_x + boxSize.m_x, boxPosition.m_y + boxSize.m_y, false);
+		// Only allow progressing when the current TextContext is progressable
+		if(m_textContext.m_progressable)
+		{
+			// Draw a small white box on the bottom right corner to indicate that the text is finished
+			var boxSize = new Vector2(10.0, 10.0);
+			var boxPosition = new Vector2(x + sprite_width - boxSize.m_x, y + sprite_height - boxSize.m_y);
+			draw_rectangle(boxPosition.m_x, boxPosition.m_y, boxPosition.m_x + boxSize.m_x, boxPosition.m_y + boxSize.m_y, false);
+		}
 	}
 	
 	// Draw the sprite if it's valid
