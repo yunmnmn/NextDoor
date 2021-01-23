@@ -18,7 +18,7 @@ function SetFadeState(p_fadeState)
 	}
 	else
 	{
-		assert_fail(true, "Invalid fading state");
+		assert(false, "Invalid fading state");
 	}
 }
 

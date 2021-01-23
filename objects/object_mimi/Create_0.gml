@@ -85,7 +85,7 @@ RegisterPlayerInstance(id);
 PlayAnimation(sprite_mimiIdle, noone);
 
 // These variables are set by the instance manager
-m_speed = 0.4; 
+SetSpeed(0.4); 
 m_position = 0.0;
 m_path = noone;
 

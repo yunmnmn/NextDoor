@@ -38,7 +38,7 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 		}
 		else
 		{
-			assert_fail(true, "Movement state can't be default");
+			assert(false, "Movement state can't be default");
 		}
 	}
 
@@ -56,7 +56,7 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 		}
 		else
 		{
-			assert_fail(true, "Direction has to be Right or Left");
+			assert(false, "Direction has to be Right or Left");
 		}
 	}
 

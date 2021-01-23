@@ -28,5 +28,5 @@ else if(m_fadeState == FadeState.FadeOut)
 }
 else
 {
-	assert_fail(true, "Invalid fading state");
+	assert(false, "Invalid fading state");
 }
