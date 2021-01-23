@@ -53,6 +53,18 @@ function SetSpeed(p_speed)
 	m_speed = p_speed;
 }
 
+function SetMirrored(p_mirrored)
+{
+	if(p_mirrored)
+	{
+		image_xscale = -1.0;
+	}
+	else
+	{
+		image_xscale = 1.0;
+	}
+}
+
 // Calcultes the movement depending on the path's length and the speed
 function GetMovementSpeed()
 {

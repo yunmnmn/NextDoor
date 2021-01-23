@@ -8,7 +8,7 @@ function MimiToWomenInBlack()
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
 		// Set the idle animation
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 		
 		// Make Women and door visible
 		instance_hallwayUpMemory.SetDoorWomenVisible(true);
@@ -36,10 +36,11 @@ function WomenInBlackConversation()
 {
 	conversationFinished = function()
 	{
+		// Set the idle animation
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		
 		// Give control to the player after the conversation is over
 		SetControlState(PlayerControlState.PlayerControl);
-		
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
 	}
 	
 	cb6_2 = function()

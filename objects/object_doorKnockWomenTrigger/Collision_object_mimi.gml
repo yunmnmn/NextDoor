@@ -67,7 +67,7 @@ function MimiConversation()
 		var animationEndCallback = function()
 		{				
 			// Set the animation back to idle
-			PlayerPlayAnimation(sprite_mimiIdle, noone);
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 				
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
 			var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
@@ -75,7 +75,7 @@ function MimiConversation()
 		}
 
 		// Play the knocking animation
-		PlayerPlayAnimation(anim_mimiKnock, animationEndCallback);
+		PlayerPlayAnimation(anim_mimiKnock, false, animationEndCallback);
 		SetFollowSpeed(0.01);
 	}
 }

@@ -45,13 +45,17 @@ if(GetGlobalGameState() == GlobalGameStates.MimiRoomSits)
 	// Set the sitting animation
 	var animationEndCallback = function()
 	{
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
+		// Play the idle animation
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		
+		// Give the control back to the player
 		SetControlState(PlayerControlState.PlayerControl);
 		
 		// Set the next global state after the animation is finished playing
 		SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);
 	}
-	PlayerPlayAnimation(anim_mimiSit, animationEndCallback);
+	
+	PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
 	// Set the animation speed to 0
 	m_cachedAnimationSpeed = GetPlayerInstance().image_speed;
 	GetPlayerInstance().image_speed = 0;

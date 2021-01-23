@@ -4,7 +4,7 @@
 	var animationEndCallback = function()
 	{
 		// Go back to the idle animation when the animation is finished playing
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 		// Give the control back to the player
 		SetControlState(PlayerControlState.PlayerControl);
 	}
@@ -13,5 +13,5 @@
 	SetControlState(PlayerControlState.PlayerControl);
 	
 	// Play the Leaping animation
-	PlayerPlayAnimation(anim_mimiLeap, animationEndCallback);
+	PlayerPlayAnimation(anim_mimiLeap, false, animationEndCallback);
 }

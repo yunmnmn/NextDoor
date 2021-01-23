@@ -3,12 +3,19 @@ function MimiConversationYoungster()
 	if(keyboard_check(vk_space) && m_dirtyFlag == false)
 	{
 		m_dirtyFlag = true;
-		
-		// Set Mimi to idle
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
-
+	
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		// Set Mimi to idle
+		if(GetPlayerInstance().x > x)
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+		}
+		else
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		}
 		
 		// Play the conversation
 		MimiAndYoungsterConversation();
@@ -28,11 +35,20 @@ switch(GetGlobalGameState())
 function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
-	{
-		// Set idle animation again
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
+	{	
+		// Set the image properties back to normal
 		m_player.image_speed = 1;
 		m_player.image_index = 0;
+		
+		// Set Mimi to idle
+		if(GetPlayerInstance().x > x)
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+		}
+		else
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		}
 		
 		// Give control back to the player again
 		SetControlState(PlayerControlState.PlayerControl);
@@ -78,7 +94,15 @@ function MimiAndYoungsterConversation()
 				m_player.image_index = 4;
 			}
 		}
-		PlayerPlayAnimation(anim_mimiAngry, callbackAngryEnd);
+		if(GetPlayerInstance().x > x)
+		{
+			PlayerPlayAnimation(anim_mimiAngry, true, callbackAngryEnd);
+		}
+		else
+		{
+			PlayerPlayAnimation(anim_mimiAngry, false, callbackAngryEnd);
+		}
+
 	}
 	
 	cb4_4 = function()

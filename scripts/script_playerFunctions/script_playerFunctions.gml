@@ -21,6 +21,11 @@ function PlayerSetPathEndCallback(p_callback)
 	global.g_playerInstance.SetPathEndCallback(p_callback);
 }
 
+function PlayerSetMirrored(p_mirrored)
+{
+	global.g_playerInstance.SetMirrored(p_mirrored);
+}
+
 function PlayerSetPathStartCallback(p_callback)
 {
 	global.g_playerInstance.SetPathStartCallback(p_callback);
@@ -36,12 +41,13 @@ function PlayerGetPath()
 	return global.g_playerInstance.GetPath();
 }
 
-function PlayerPlayAnimation(p_spriteIndex, p_callbackEnd)
+function PlayerPlayAnimation(p_spriteIndex, p_mirrored, p_callbackEnd)
 {
 	assert_fail(p_spriteIndex == noone, "Passed sprite index is invalid");
 	assert_fail(global.g_playerInstance == noone, "Registered sprite is invalid");
 	
 	global.g_playerInstance.PlayAnimation(p_spriteIndex, p_callbackEnd);
+	PlayerSetMirrored(p_mirrored);
 }
 
 function SnapToClosestPosition(p_positionX, p_positionY)

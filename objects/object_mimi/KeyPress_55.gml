@@ -4,7 +4,7 @@
 	var animationEndCallback = function()
 	{
 		// Go back to the idle animation when the animation is finished playing
-		PlayerPlayAnimation(sprite_mimiIdle, noone);
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 		// Give the control back to the player
 		SetControlState(PlayerControlState.PlayerControl);
 	}
@@ -13,5 +13,5 @@
 	SetControlState(PlayerControlState.PlayerControl);
 	
 	// Play the Peeping animation
-	PlayerPlayAnimation(anim_mimiPeep, animationEndCallback);
+	PlayerPlayAnimation(anim_mimiPeep, false, animationEndCallback);
 }

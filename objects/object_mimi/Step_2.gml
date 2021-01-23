@@ -67,7 +67,7 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 }
 else
 {
-	// TODO: create a function for mirroring
-	image_xscale = 1.0;
-	m_mirrored = false;
+	m_cachedPosition = m_position;
+	m_cachedDirection = m_direction;
+	m_cachedMovementState = m_movementState;
 }
