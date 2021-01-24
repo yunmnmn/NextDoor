@@ -1,37 +1,3 @@
-function MimiToWomenInBlack()
-{
-	if(m_dirtyFlag == false)
-	{
-		m_dirtyFlag = true;
-
-		// Disable the control the player has
-		SetControlState(PlayerControlState.PlayerNoControl);
-		
-		// Set the idle animation
-		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		
-		// Make Women and door visible
-		instance_hallwayUpMemory.SetDoorWomenVisible(true);
-		instance_hallwayUpMemory.SetWomenVisible(true);
-		
-		// Set the Women in black to the Path
-		instance_women.SetPath(path_hallwayUpWomen, 0.0, 0.0);
-		
-		// Play the conversation with the women in black
-		WomenInBlackConversation();
-	}
-}
-
-// --------- Entry Point -------------
-switch(GetGlobalGameState())
-{
-	case GlobalGameStates.MimiWalksIntoWoman:
-		MimiToWomenInBlack();
-		break;
-	default:
-		break;
-}
-
 function WomenInBlackConversation()
 {
 	conversationFinished = function()
@@ -141,4 +107,38 @@ function WomenInBlackConversation()
 	var c5_1 = new TextContext(sprite_womanAvatar, true, womenAppearsCallback);
 	c5_1.AddSubText(new SubText("...", 0.2));
 	RenderText(c5_1);
+}
+
+function MimiToWomenInBlack()
+{
+	if(m_dirtyFlag == false)
+	{
+		m_dirtyFlag = true;
+
+		// Disable the control the player has
+		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		// Set the idle animation
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		
+		// Make Women and door visible
+		instance_hallwayUpMemory.SetDoorWomenVisible(true);
+		instance_hallwayUpMemory.SetWomenVisible(true);
+		
+		// Set the Women in black to the Path
+		instance_women.SetPath(path_hallwayUpWomen, 0.0, 0.0);
+		
+		// Play the conversation with the women in black
+		WomenInBlackConversation();
+	}
+}
+
+// --------- Entry Point -------------
+switch(GetGlobalGameState())
+{
+	case GlobalGameStates.MimiWalksIntoWoman:
+		MimiToWomenInBlack();
+		break;
+	default:
+		break;
 }

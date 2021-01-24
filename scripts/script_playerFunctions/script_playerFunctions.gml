@@ -41,12 +41,17 @@ function PlayerGetPath()
 	return global.g_playerInstance.GetPath();
 }
 
-function PlayerPlayAnimation(p_spriteIndex, p_mirrored, p_callbackEnd)
+function PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd)
 {
 	assert(p_spriteIndex != noone, "Passed sprite index is invalid");
 	assert(global.g_playerInstance != noone, "Registered sprite is invalid");
 	
 	global.g_playerInstance.PlayAnimation(p_spriteIndex, p_callbackEnd);
+}
+
+function PlayerPlayAnimation(p_spriteIndex, p_mirrored, p_callbackEnd)
+{
+	PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd);
 	PlayerSetMirrored(p_mirrored);
 }
 

@@ -1,34 +1,3 @@
-function MimiToYoungster()
-{
-	if(keyboard_check(vk_space) && m_dirtyFlag == false)
-	{
-		m_dirtyFlag = true;
-
-		// Disable the control the player has
-		SetControlState(PlayerControlState.PlayerNoControl);
-
-		// Set Mimi to a fixed position
-		var position = SnapToClosestPosition(m_knockPositionX, m_player.y);
-		m_player.m_position = position;
-			
-		MimiAndYoungsterConversation();
-	}
-}
-
-// --------- Entry Point -------------
-switch(GetGlobalGameState())
-{
-	case GlobalGameStates.MimiRoomSits:
-	case GlobalGameStates.MimiGoingToYoungster:
-		MimiToYoungster();
-		break;
-	//case GlobalGameStates.MimiGoingToAskNeighbours:
-	default:
-		m_youngster.visible = true;
-		m_openDoorMask.visible = true;
-		break;
-}
-
 function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
@@ -185,4 +154,35 @@ function MimiAndYoungsterConversation()
 		// Play the knocking animation
 		PlayerPlayAnimation(anim_mimiKnock, false, SetIdleWhenKnockingFinish);
 	}
+}
+
+function MimiToYoungster()
+{
+	if(keyboard_check(vk_space) && m_dirtyFlag == false)
+	{
+		m_dirtyFlag = true;
+
+		// Disable the control the player has
+		SetControlState(PlayerControlState.PlayerNoControl);
+
+		// Set Mimi to a fixed position
+		var position = SnapToClosestPosition(m_knockPositionX, m_player.y);
+		m_player.m_position = position;
+			
+		MimiAndYoungsterConversation();
+	}
+}
+
+// --------- Entry Point -------------
+switch(GetGlobalGameState())
+{
+	case GlobalGameStates.MimiRoomSits:
+	case GlobalGameStates.MimiGoingToYoungster:
+		MimiToYoungster();
+		break;
+	//case GlobalGameStates.MimiGoingToAskNeighbours:
+	default:
+		m_youngster.visible = true;
+		m_openDoorMask.visible = true;
+		break;
 }

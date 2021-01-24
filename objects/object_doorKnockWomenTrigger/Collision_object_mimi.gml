@@ -1,30 +1,3 @@
-function MimiKnockOnWomenDoor()
-{
-	if(keyboard_check(vk_space) && m_dirtyFlag == false)
-	{
-		m_dirtyFlag = true;
-
-		// Disable the control the player has
-		SetControlState(PlayerControlState.PlayerNoControl);
-	
-		// Set Mimi to a fixed position
-		var pathPosition = SnapToClosestPosition(m_knockPositionX, m_player.y);
-		m_player.m_position = pathPosition;
-		
-		MimiConversation();
-	}
-}
-
-// --------- Entry Point -------------
-switch(GetGlobalGameState())
-{
-	case GlobalGameStates.MimiGoingToKnockAtNeighbour:
-		MimiKnockOnWomenDoor();
-		break;
-	default:
-		break;
-}
-
 function MimiConversation()
 {
 	conversationFinished = function()
@@ -60,12 +33,18 @@ function MimiConversation()
 	// Call the parent text context
 	if(RenderText(c3_1))
 	{
+		// Disable progressing this TextContext untill Mimi's knocking animation has finished playing
+		GetCurrentTextContext().m_progressable = false;
+		
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
 		// When the knocking animation is finished, execute this callback
 		var animationEndCallback = function()
 		{				
+			// Enable progressing this TextContext 
+			GetCurrentTextContext().m_progressable = true;
+			
 			// Set the animation back to idle
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 				
@@ -78,4 +57,31 @@ function MimiConversation()
 		PlayerPlayAnimation(anim_mimiKnock, false, animationEndCallback);
 		SetViewportFollowSpeed(0.01);
 	}
+}
+
+function MimiKnockOnWomenDoor()
+{
+	if(keyboard_check(vk_space) && m_dirtyFlag == false)
+	{
+		m_dirtyFlag = true;
+
+		// Disable the control the player has
+		SetControlState(PlayerControlState.PlayerNoControl);
+	
+		// Set Mimi to a fixed position
+		var pathPosition = SnapToClosestPosition(m_knockPositionX, m_player.y);
+		m_player.m_position = pathPosition;
+		
+		MimiConversation();
+	}
+}
+
+// --------- Entry Point -------------
+switch(GetGlobalGameState())
+{
+	case GlobalGameStates.MimiGoingToKnockAtNeighbour:
+		MimiKnockOnWomenDoor();
+		break;
+	default:
+		break;
 }

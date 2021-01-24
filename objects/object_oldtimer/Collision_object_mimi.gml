@@ -1,50 +1,11 @@
-function MimiConversationOldtimer()
-{
-	if(keyboard_check(vk_space) && m_dirtyFlag == false)
-	{
-		m_dirtyFlag = true;
-	
-		// Disable the control the player has
-		SetControlState(PlayerControlState.PlayerNoControl);
-		
-		// Set Mimi to idle
-		if(GetPlayerInstance().x > x)
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
-		}
-		else
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		}
-		
-		// Play the conversation
-		MimiAndOldtimerConversation();
-	}
-}
-
-// --------- Entry Point -------------
-switch(GetGlobalGameState())
-{
-	case GlobalGameStates.MimiWalksToOldtimer:
-		MimiConversationOldtimer();
-		break;
-	default:
-		break;
-}
-
 function MimiAndOldtimerConversation()
 {
 	conversationFinished = function()
-	{			
+	{		
 		// Set Mimi to idle
-		if(GetPlayerInstance().x > x)
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
-		}
-		else
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		}
+		PlayerPlayAnimation2(sprite_mimiIdle, noone);
+		m_player.image_speed = 1;
+		m_player.image_index = 0;
 		
 		// Give control back to the player again
 		SetControlState(PlayerControlState.PlayerControl);
@@ -118,6 +79,13 @@ function MimiAndOldtimerConversation()
 	
 	cb7_9 = function()
 	{
+		var animationEndCallback = function()
+		{
+			image_speed = 0;
+			image_index = 5;
+		};
+		PlayAnimation(anim_oldtimerThink, animationEndCallback);
+		
 		var c8_9 = new TextContext(sprite_oldtimerAvatar, true, cb7_10);
 		c8_9.AddSubText(new SubText("I'm pretty sure more women are living there", 0.2));
 		RenderText(c8_9);
@@ -179,5 +147,51 @@ function MimiAndOldtimerConversation()
 	{
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		// Play the thinking animation
+		// Play the angry animation
+		var callbackAngryEnd = function()
+		{
+			// Freeze at the last frame
+			m_player.image_speed = 0;
+			m_player.image_index = 2;
+		}
+		PlayerPlayAnimation2(anim_mimiListen, callbackAngryEnd);
+		m_player.image_speed = 1;
+		m_player.image_index = 0;
 	}
+}
+
+function MimiConversationOldtimer()
+{
+	if(keyboard_check(vk_space) && m_dirtyFlag == false)
+	{
+		m_dirtyFlag = true;
+	
+		// Disable the control the player has
+		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		// Set Mimi to idle
+		if(GetPlayerInstance().x > x)
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+		}
+		else
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		}
+		
+		// Play the conversation
+		MimiAndOldtimerConversation();
+	}
+}
+
+// --------- Entry Point -------------
+switch(GetGlobalGameState())
+{
+	case GlobalGameStates.MimiWalksToOldtimer:
+		MimiConversationOldtimer();
+		break;
+	default:
+		break;
 }

@@ -1,37 +1,3 @@
-function MimiConversationYoungster()
-{
-	if(keyboard_check(vk_space) && m_dirtyFlag == false)
-	{
-		m_dirtyFlag = true;
-	
-		// Disable the control the player has
-		SetControlState(PlayerControlState.PlayerNoControl);
-		
-		// Set Mimi to idle
-		if(GetPlayerInstance().x > x)
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
-		}
-		else
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		}
-		
-		// Play the conversation
-		MimiAndYoungsterConversation();
-	}
-}
-
-// --------- Entry Point -------------
-switch(GetGlobalGameState())
-{
-	case GlobalGameStates.MimiGointToYoungsterAgain:
-		MimiConversationYoungster();
-		break;
-	default:
-		break;
-}
-
 function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
@@ -134,4 +100,38 @@ function MimiAndYoungsterConversation()
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
 	}
+}
+
+function MimiConversationYoungster()
+{
+	if(keyboard_check(vk_space) && m_dirtyFlag == false)
+	{
+		m_dirtyFlag = true;
+	
+		// Disable the control the player has
+		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		// Set Mimi to idle
+		if(GetPlayerInstance().x > x)
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+		}
+		else
+		{
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		}
+		
+		// Play the conversation
+		MimiAndYoungsterConversation();
+	}
+}
+
+// --------- Entry Point -------------
+switch(GetGlobalGameState())
+{
+	case GlobalGameStates.MimiGointToYoungsterAgain:
+		MimiConversationYoungster();
+		break;
+	default:
+		break;
 }
