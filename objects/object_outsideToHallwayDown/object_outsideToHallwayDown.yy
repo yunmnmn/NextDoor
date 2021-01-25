@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Outside",
-    "path": "folders/Objects/Outside.yy",
+    "name": "OutsideDay",
+    "path": "folders/Objects/OutsideDay.yy",
   },
   "resourceVersion": "1.0",
   "name": "object_outsideToHallwayDown",

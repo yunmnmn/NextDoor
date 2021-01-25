@@ -25,7 +25,7 @@ function WomenInBlackConversation()
 		// Set the following speed
 		SetViewportFollowSpeed(0.005);
 		
-		var c6_2 = new TextContext(sprite_oldtimerAvatar, true, conversationFinished);
+		var c6_2 = new TextContext(sprite_oldtimerAvatarAngry, true, conversationFinished);
 		c6_2.AddSubText(new SubText("Could you argue somewhere else, please?", 0.2));
 		RenderText(c6_2);
 	}
@@ -36,7 +36,7 @@ function WomenInBlackConversation()
 		instance_hallwayUpMemory.SetDoorOldtimerVisible(true);
 		instance_hallwayUpMemory.SetOldtimerVisible(true);
 		
-		var c6_1 = new TextContext(sprite_oldtimerAvatar, true, cb6_2);
+		var c6_1 = new TextContext(sprite_oldtimerAvatarAngry, true, cb6_2);
 		c6_1.AddSubText(new SubText("What's going on?", 0.2));
 		RenderText(c6_1);
 	}
