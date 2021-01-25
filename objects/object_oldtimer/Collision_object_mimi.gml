@@ -30,16 +30,16 @@ function MimiAndOldtimerConversation()
 	
 	cb8_1 = function()
 	{
+		instance_hallwayUpMemory.SetDoorOldtimerVisible(false);
+		instance_hallwayUpMemory.SetOldtimerVisible(false);
+		
 		var c8_1 = new TextContext(sprite_mimiAvatarNormal, true, cb8_2);
 		c8_1.AddSubText(new SubText("That is weird and all", 0.2));
 		RenderText(c8_1);
 	}
 	
 	cb7_18 = function()
-	{
-		SetDoorOldtimerVisible(false);
-		SetOldtimerVisible(false);
-		
+	{		
 		var c8_18 = new TextContext(sprite_mimiAvatarNormal, true, cb8_1);
 		c8_18.AddSubText(new SubText("Thank you, have a nice day", 0.2));
 		RenderText(c8_18);
@@ -47,14 +47,14 @@ function MimiAndOldtimerConversation()
 	
 	cb7_17 = function()
 	{
-		var c8_17 = new TextContext(sprite_mimiAvatarNormal, true, cb7_18);
+		var c8_17 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_18);
 		c8_17.AddSubText(new SubText("Have a nice day", 0.2));
 		RenderText(c8_17);
 	}
 	
 	cb7_16 = function()
 	{
-		var c8_16 = new TextContext(sprite_mimiAvatarNormal, true, cb7_17);
+		var c8_16 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_17);
 		c8_16.AddSubText(new SubText("If that's all, I still have some laundry to do", 0.2));
 		RenderText(c8_16);
 	}
