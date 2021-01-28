@@ -157,7 +157,7 @@ function MimiConversation()
 		RenderText(c11_2);
 	}
 	
-	var c11_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb11_2);
+	var c11_1 = new TextContext(sprite_mimiAvatarTroubled, false, cb11_2);
 	c11_1.AddSubText(new SubText("It's that guy from upstairs", 0.2));
 	
 	// Call the parent text context
