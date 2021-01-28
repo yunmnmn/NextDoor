@@ -16,9 +16,12 @@ enum GlobalGameStates
 	MimiGointToYoungsterAgain,
 	MimiWalksIntoWoman,
 	MimiWalksToOldtimer,
-	MimiWalksBackToRoom
+	MimiWalksBackToRoom,
 	
 	// Sequence 2 states 
+	MimiRoomSits2,
+	MimiGetsDrink
+	
 }
 
 function SetControlState(p_controlState)
