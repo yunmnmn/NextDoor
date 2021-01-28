@@ -172,8 +172,7 @@ function MimiAndOldtimerConversation()
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
-		// Play the thinking animation
-		// Play the angry animation
+		// Play the listen animation
 		var callbackAngryEnd = function()
 		{
 			// Freeze at the last frame
