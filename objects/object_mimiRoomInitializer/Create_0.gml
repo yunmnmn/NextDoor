@@ -78,9 +78,6 @@ function MimiConversation2()
 		
 			// Give the control back to the player
 			SetControlState(PlayerControlState.PlayerControl);
-		
-			// Set the next global state after the animation is finished playing
-			SetGlobalGameState(GlobalGameStates.MimiGetsDrink);
 		}
 		// Set the animation speed back when it's finished playing the conversation
 		// Play the sitting animation
@@ -112,6 +109,9 @@ function MimiGetsDrink()
 {
 	// Don't give the control to the player at the beginning
 	SetControlState(PlayerControlState.PlayerNoControl);
+	
+	// Set the next global state after the animation is finished playing
+	SetGlobalGameState(GlobalGameStates.MimiGetsDrink);
 	
 	// Play the sitting animation
 	PlayerPlayAnimation(anim_mimiSit, false, noone);

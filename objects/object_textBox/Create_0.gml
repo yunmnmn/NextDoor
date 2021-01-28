@@ -56,4 +56,6 @@ m_text = "";
 // HACK: to not register the space twice
 m_sameFrame = 0;
 
+// TODO: find a better solution for this
 m_xOffset = x;
+m_yOffset = y;
