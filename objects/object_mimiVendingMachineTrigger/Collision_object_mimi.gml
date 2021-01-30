@@ -89,7 +89,7 @@ function MimiConversation()
 
 	cb11_20 = function()
 	{
-		var c11_20 = new TextContext(sprite_womanAvatar, true, womenWalk);
+		var c11_20 = new TextContext(sprite_womanTallAvatar, true, womenWalk);
 		c11_20.AddSubText(new SubText("…", 0.2));
 		RenderText(c11_20);
 	}
