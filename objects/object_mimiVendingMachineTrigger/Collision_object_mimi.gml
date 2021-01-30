@@ -4,6 +4,11 @@ function MimiConversation()
 	{
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerControl);
+		
+		// Set mimi back to idle
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		GetPlayerInstance().image_index = 0;
+		GetPlayerInstance().image_speed = 1;
 	}
 	
 	cb12_7 = function()
@@ -51,9 +56,9 @@ function MimiConversation()
 	cb12_1 = function()
 	{
 		// Set the women invisible again
-		instance_outsideMemory.SetWomenOutsideVisible(true);
+		instance_outsideMemory.SetWomenOutsideVisible(false);
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
-		instance_womenOutside.PlayAnimation(sprite_womenIdleTall);
+		instance_womenOutside.PlayAnimation(sprite_womenIdle);
 		
 		// Play the youngster crawl animation
 		instance_youngsterOutside.PlayAnimation(anim_youngsterCornerGrasp, noone);
