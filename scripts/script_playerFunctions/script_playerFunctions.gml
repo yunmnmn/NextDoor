@@ -23,12 +23,12 @@ function PlayerSetMirrored(p_mirrored)
 
 function PlayerSetPathStartCallback(p_pathIndex, p_callback, p_persistant, p_pathType)
 {
-	global.g_playerInstance.AddPathCallback(new PathCallback(p_pathIndex, 0.9999, p_callback, p_persistant, p_pathType));
+	global.g_playerInstance.AddPathCallback(new PathCallback(p_pathIndex, 0.999, p_callback, p_persistant, p_pathType));
 }
 
 function PlayerSetPathEndCallback(p_pathIndex, p_callback, p_persistant, p_pathType)
 {
-	global.g_playerInstance.AddPathCallback(new PathCallback(p_pathIndex, 0.9999, p_callback, p_persistant, p_pathType));
+	global.g_playerInstance.AddPathCallback(new PathCallback(p_pathIndex, 0.999, p_callback, p_persistant, p_pathType));
 }
 
 function PlayerAddPathCallback(p_pathIndex, p_position, p_callback, p_persistant, p_pathType)

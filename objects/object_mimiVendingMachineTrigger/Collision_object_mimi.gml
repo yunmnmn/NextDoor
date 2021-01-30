@@ -49,7 +49,12 @@ function MimiConversation()
 	}
 	
 	cb12_1 = function()
-	{	
+	{
+		// Set the women invisible again
+		instance_outsideMemory.SetWomenOutsideVisible(true);
+		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
+		instance_womenOutside.PlayAnimation(sprite_womenIdleTall);
+		
 		// Play the youngster crawl animation
 		instance_youngsterOutside.PlayAnimation(anim_youngsterCornerGrasp, noone);
 		
