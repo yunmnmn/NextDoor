@@ -2,29 +2,41 @@
 path_positionprevious = path_position; 
 path_position = m_position;
 
-// Check if the start callback is met
-if(m_callbackPathStart != noone && m_position == 0.0)
+function PathTypeCheck(p_callbackType, p_position)
 {
-	var tempCallback = m_callbackPathStart;
-	m_callbackPathStart();
-	
-	// If the callbacks are the same, set it to noone, else leave it alone (meaning it got changed by the callback)
-	if(tempCallback == m_callbackPathStart)
+	if(p_callbackType == PathCallbackType.LowToHigh)
 	{
-		m_callbackPathStart = noone;	
+		if(path_positionprevious <= p_position && path_position >= p_position)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-}
-
-// Check if the end callback is met
-if(m_callbackPathEnd != noone && m_position == 1.0)
-{
-	var tempCallback = m_callbackPathEnd;
-	m_callbackPathEnd();
-	
-	// If the callbacks are the same, set it to noone, else leave it alone (meaning it got changed by the callback)
-	if(tempCallback == m_callbackPathEnd)
+	else if(p_callbackType == PathCallbackType.HighToLow)
 	{
-		m_callbackPathEnd = noone;	
+		if(path_positionprevious >= p_position && path_position <= p_position)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		if((path_positionprevious < p_position && path_position > p_position) ||
+			(path_positionprevious > p_position && path_positionprevious < p_position))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
 
@@ -33,11 +45,9 @@ for(i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 {
 	var pathCallback = ds_list_find_value(m_pathCallbacks, i);
 	
-	if(pathCallback.m_callback != noone && path_index == pathCallback.m_pathIndex &&
-	((pathCallback.m_position < path_positionprevious && pathCallback.m_position > path_position) || 
-	(pathCallback.m_position < path_position && pathCallback.m_position > path_positionprevious)))
+	if(pathCallback.m_callback != noone && path_index == pathCallback.m_pathIndex && 
+		PathTypeCheck(pathCallback.m_callbackType, pathCallback.m_position))
 	{
-		var tempCallback = pathCallback.m_callback;
 		pathCallback.m_callback();
 		
 		// Remove the callback if it's not persistant. Add i when something isn't removed

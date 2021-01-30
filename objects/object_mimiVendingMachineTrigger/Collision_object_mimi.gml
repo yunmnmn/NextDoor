@@ -1,26 +1,117 @@
 function MimiConversation()
 {		
-	conversationFinished = function()
+	cb12ConversationFinished = function()
 	{
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerControl);
 	}
+	
+	cb12_7 = function()
+	{
+		var c11_7 = new TextContext(sprite_mimiAvatarNormal, true, cb12ConversationFinished);
+		c11_7.AddSubText(new SubText("See you around", 0.2));
+		RenderText(c11_7);
+	}
+	
+	cb12_6 = function()
+	{		
+		var c12_6 = new TextContext(sprite_mimiAvatarNormal, true, cb12_7)
+		c12_6.AddSubText(new SubText("I'm going back to my room", 0.2));
+		RenderText(c12_6);
+	}
+	
+	cb12_5 = function()
+	{
+		var c12_5 = new TextContext(sprite_mimiAvatarTroubled, true, cb12_6);
+		c12_5.AddSubText(new SubText("… ", 0.2));
+		RenderText(c12_5);
+	}
+	
+	cb12_4 = function()
+	{
+		var c12_4 = new TextContext(sprite_youngsterAvatarScared, true, cb12_5);
+		c12_4.AddSubText(new SubText("leaks through those walls? ", 0.2));
+		RenderText(c12_4);
+	}
+	
+	cb12_3 = function()
+	{
+		var c12_3 = new TextContext(sprite_youngsterAvatarScared, true, cb12_4);
+		c12_3.AddSubText(new SubText("What things are they doing nextdoor? What are they doing that not a single sound", 0.2));
+		RenderText(c12_3);
+	}
+	
+	cb12_2 = function()
+	{
+		var c12_2 = new TextContext(sprite_youngsterAvatarScared, true, cb12_3);
+		c12_2.AddSubText(new SubText("Who are they?", 0.2));
+		RenderText(c12_2);
+	}
+	
+	cb12_1 = function()
+	{	
+		// Play the youngster crawl animation
+		instance_youngsterOutside.PlayAnimation(anim_youngsterCornerGrasp, noone);
+		
+		// Play Mimi's shock animation
+		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		
+		var c12_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb12_2);
+		c12_2.AddSubText(new SubText("?", 0.2));
+		RenderText(c12_2);
+	}
+	
+	womenWalk = function()
+	{
+		// Set the path for the women to walk out of the screen
+		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 1.3);
+		// Play the walking animation
+		instance_womenOutside.PlayAnimation(anim_womenWalkTall);
+		// Mirror the animation, the Women's walk is by default to the left
+		instance_womenOutside.Mirror(true);
+		
+		// When the women is at the stairs, make her turn around
+		var womenAtStairs = function()
+		{
+			instance_womenOutside.Mirror(false);
+			instance_stairs.visible = true;
+		}
+		instance_womenOutside.AddPathPointCallback(1, womenAtStairs, false);
+		
+		// When the women is at the end of the path
+		instance_womenOutside.AddPathEndCallback(cb12_1, false);
+	}
 
 	cb11_20 = function()
 	{
-		var c11_20 = new TextContext(sprite_womanAvatar, true, conversationFinished);
+		var c11_20 = new TextContext(sprite_womanAvatar, true, womenWalk);
 		c11_20.AddSubText(new SubText("…", 0.2));
 		RenderText(c11_20);
 	}
 
 	cb11_19 = function()
 	{
+		// Play the Youngster grasp animation
 		var animationEndCallback = function()
 		{
 			instance_youngsterOutside.image_speed = 0;
 			instance_youngsterOutside.image_index = 7;
 		};
 		instance_youngsterOutside.PlayAnimation(anim_youngsterCornerGrasp, animationEndCallback);
+		
+		// Set the women in black visible
+		instance_womenOutside.PlayAnimation(sprite_womenIdleTall);
+		instance_womenOutside.Mirror(true);
+		instance_outsideMemory.SetWomenOutsideVisible(true);
+		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
+		
+		// Play Mimi's shock animation
+		var SetIdleWHenShockFinish = function()
+		{
+			// Set mimi back to idle
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		}
+		PlayerPlayAnimation(anim_mimiShock, false, SetIdleWHenShockFinish);
 		
 		var c11_19 = new TextContext(sprite_youngsterAvatarScared, true, cb11_20);
 		c11_19.AddSubText(new SubText("AH!", 0.2));
@@ -189,16 +280,31 @@ function MimiBuysDrink()
 	{
 		m_dirtyFlag = true;
 		
+		// Set the Youngster outside visible
+		instance_outsideMemory.SetYoungsterOutsideVisible(true);
+		
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		blinkingLightEnd = function()
+		{
+			instance_blinkingLight.image_index = 1;
+			instance_blinkingLight.image_speed = 0;
+			
+			// Start the conversation
+			MimiConversation();
+		}
 		
 		// Play the coin animation
 		var animationEnd = function()
 		{
 			// Set Mimi's animation to idle
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-			// Start the conversation
-			MimiConversation();
+			
+			instance_blinkingLight.image_index = 0;
+			instance_blinkingLight.image_speed = 1;
+			instance_outsideMemory.SetBlinkingLightVisible(true);
+			instance_blinkingLight.PlayAnimation(foreground_blinkingLights, blinkingLightEnd);
 		}
 		PlayerPlayAnimation(anim_mimiCoin, false, animationEnd);
 	}

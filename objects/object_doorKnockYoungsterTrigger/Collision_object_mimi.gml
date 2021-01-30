@@ -147,7 +147,7 @@ function MimiAndYoungsterConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			var position = SnapToClosestPosition(m_knockPositionX - 60, m_player.y);
+			var position = PlayerSnapToClosestPosition(m_knockPositionX - 60, m_player.y);
 			m_player.m_position = position;
 		}
 		
@@ -166,7 +166,7 @@ function MimiToYoungster()
 		SetControlState(PlayerControlState.PlayerNoControl);
 
 		// Set Mimi to a fixed position
-		var position = SnapToClosestPosition(m_knockPositionX, m_player.y);
+		var position = PlayerSnapToClosestPosition(m_knockPositionX, m_player.y);
 		m_player.m_position = position;
 			
 		MimiAndYoungsterConversation();

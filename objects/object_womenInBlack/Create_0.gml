@@ -1,25 +1,11 @@
-function SetPath(p_pathIndex, p_position)
-{	
-	assert(((p_position >= 0.0) && (p_position <= 1.0)), "Position out of range");
-		
-	var tempX = x;
-	var tempY = y;
-	m_path = p_pathIndex;
-	path_start(p_pathIndex, 0, path_action_stop, true);
-	m_position = p_position;
-	m_cachedPosition = p_position;
-	path_position = p_position;
-	path_positionprevious = p_position;
-	
-	// HACK: This is here because path_start actually moves the object in the function
-	x = tempX;
-	y = tempY;
-}
-
 function SetPath(p_pathIndex, p_position, p_speed)
 {
-	path_start(p_pathIndex, p_speed, path_action_stop, true);
-	path_position = p_position;
+	assert(((p_position >= 0.0) && (p_position <= 1.0)), "Position out of range");
+		
+	m_pathIndex = p_pathIndex;
+	m_speed = p_speed;
+	
+	path_start(m_pathIndex, p_speed, path_action_stop, true);
 }
 
 function PlayAnimation(p_spriteIndex)
@@ -27,15 +13,38 @@ function PlayAnimation(p_spriteIndex)
 	sprite_index = p_spriteIndex;
 }
 
-function Mirror()
+function Mirror(p_mirror)
 {
-	image_xscale = -1.0;
+	if(p_mirror)
+	{
+		image_xscale = -1.0;
+	}
+	else
+	{
+		image_xscale = 1.0;
+	}
 }
 
-function SetPathEndCallback(p_callback)
+function AddPathPointCallback(p_pathPoint, p_callback, p_persistant)
 {
-	m_callbackPathEnd = p_callback;
+	assert(m_pathIndex != noone, "PathIndex is invalid");
+	
+	var pathPosition = SnapToClosestPathIndex(m_pathIndex, p_pathPoint);
+	var pathCallback = new PathCallback(m_pathIndex, pathPosition, p_callback, p_persistant, PathCallbackType.Both);
+	ds_list_add(m_pathCallbacks, pathCallback);
 }
 
-m_callbackPathEnd = noone;
+function AddPathEndCallback(p_callback, p_persistant)
+{
+	AddPathPointCallback(path_get_number(m_pathIndex)-1, p_callback, p_persistant);
+}
+
+function AddPathBeginCallback(p_callback, p_persistant)
+{
+	AddPathPointCallback(0, p_callback, p_persistant);
+}
+
+m_pathIndex = noone;
 m_speed = 1.3;
+
+m_pathCallbacks = ds_list_create();

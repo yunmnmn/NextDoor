@@ -33,11 +33,19 @@ function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 	}
 }
 
-function PathCallback(p_pathIndex, p_position, p_callback, p_persistant) constructor
+enum PathCallbackType
+{
+	LowToHigh,
+	HighToLow,
+	Both,
+}
+
+function PathCallback(p_pathIndex, p_position, p_callback, p_persistant, p_callbackType) constructor
 {
 	m_pathIndex = p_pathIndex;
 	m_position = p_position;
 	m_callback = p_callback;
 	m_persistant = p_persistant;
+	m_callbackType = p_callbackType;
 }
 

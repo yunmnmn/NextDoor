@@ -95,12 +95,12 @@ function WomenInBlackConversation()
 		// Play the walking animation
 		instance_women.PlayAnimation(anim_womenWalk);
 		// Mirror the animation, the Women's walk is by default to the left
-		instance_women.Mirror();
+		instance_women.Mirror(true);
 		// Close the door again
 		instance_hallwayUpMemory.SetDoorWomenVisible(false);
 		
 		// Play the callback when the women reached the end
-		instance_women.SetPathEndCallback(cb5_2);
+		instance_women.AddPathEndCallback(cb5_2, false);
 	}
 
 	// Start of the conversation. Doesn't require a function

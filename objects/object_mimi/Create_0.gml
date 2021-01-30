@@ -33,16 +33,6 @@ function GetPath()
 	return m_path;
 }
 
-function SetPathEndCallback(p_callback)
-{
-	m_callbackPathEnd = p_callback;
-}
-
-function SetPathStartCallback(p_callback)
-{
-	m_callbackPathStart = p_callback;
-}
-
 function AddPathCallback(p_pathCallback)
 {
 	ds_list_add(m_pathCallbacks, p_pathCallback);
@@ -92,11 +82,10 @@ m_position = 0.0;
 m_path = noone;
 
 // Path callbacks
-m_callbackAnimationEnd = noone;
-m_callbackPathEnd = noone;
-m_callbackPathStart = noone;
-
 m_pathCallbacks = ds_list_create();
+
+// This callback will be called when the animatino is finished
+m_callbackAnimationEnd = noone;
 
 // These variables are set by the player object itself
 m_mirrored = false;
