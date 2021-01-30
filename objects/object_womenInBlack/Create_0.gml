@@ -13,18 +13,6 @@ function PlayAnimation(p_spriteIndex)
 	sprite_index = p_spriteIndex;
 }
 
-function Mirror(p_mirror)
-{
-	if(p_mirror)
-	{
-		image_xscale = -1.0;
-	}
-	else
-	{
-		image_xscale = 1.0;
-	}
-}
-
 function AddPathPointCallback(p_pathPoint, p_callback, p_persistant)
 {
 	assert(m_pathIndex != noone, "PathIndex is invalid");
