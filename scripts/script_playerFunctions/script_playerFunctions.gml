@@ -79,27 +79,6 @@ function PlayerFreezeAnimationEnd2(p_spriteIndex)
 	PlayerFreezeAnimationEnd(p_spriteIndex, PlayerGetMirrored());
 }
 
-// TODO: make this prettier
-// Changes the room to the one provided room name (as string), and set the path and position
-global.m_path = noone;
-global.m_position = 0.0;
-global.m_mirrored = false;
-// TODO: remove the s
-function PlayerChangeRoomsAndSetPath(p_roomName, p_path, p_position, p_mirrored)
-{
-	ChangeRooms(p_roomName);
-	// Set the PlayerPath when all objects are created.
-	global.m_path = p_path;
-	global.m_position = p_position;
-	global.m_mirrored = p_mirrored;
-	var postRoomLoadCallback = function()
-	{
-		PlayerSetPath(global.m_path, global.m_position);
-		PlayerSetMirrored(global.m_mirrored);
-	}
-	SetPostRoomLoadCallback(postRoomLoadCallback);
-}
-
 function PlayerSnapToClosestPosition(p_positionX, p_positionY)
 {
 	return SnapToClosestPosition(PlayerGetPath(), p_positionX, p_positionY);

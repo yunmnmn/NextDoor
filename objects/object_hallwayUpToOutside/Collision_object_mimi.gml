@@ -8,7 +8,7 @@ if(keyboard_check_pressed(vk_space) && m_dirtyFlag == false)
 	var fadeEndCallback = function()
 	{
 		SetControlState(PlayerControlState.PlayerControl);
-		PlayerChangeRoomsAndSetPath("room_outside", path_outsideHigh, 0.001, false);
+		ChangeRoomAndSetPath("room_outside", path_outsideHigh, 0.001, false);
 	}
 	CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
 }

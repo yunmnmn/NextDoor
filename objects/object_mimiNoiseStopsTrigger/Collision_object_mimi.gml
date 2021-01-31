@@ -9,7 +9,7 @@ function MimiConversation()
 			SetGlobalGameState(GlobalGameStates.MimiRoomSits2);
 		
 			// Reload the room effectively
-			PlayerChangeRoomsAndSetPath("room_mimiRoom", path_mimiRoom, 0.0, false);
+			ChangeRoomAndSetPath("room_mimiRoom", path_mimiRoom, 0.0, false);
 		}
 		CreateFader(FadeState.FadeOut, 0.01, fadeOutEndCallback);
 	}

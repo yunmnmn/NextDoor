@@ -13,5 +13,5 @@ m_followInstance = GetPlayerInstance();
 // By default, the follow speed is instant
 m_followSpeed = 1.0;
 
-// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomsAndSetPath())
-PostRoomLoadCallback();
+// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
+ExecutePostRoomLoadCallbacks();

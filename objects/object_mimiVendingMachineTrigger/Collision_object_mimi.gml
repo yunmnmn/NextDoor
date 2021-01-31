@@ -26,14 +26,14 @@ function MimiConversation()
 	cb12_5 = function()
 	{
 		var c12_5 = new TextContext(sprite_mimiAvatarTroubled, true, cb12_6);
-		c12_5.AddSubText(new SubText("… ", 0.2));
+		c12_5.AddSubText(new SubText("…", 0.2));
 		RenderText(c12_5);
 	}
 	
 	cb12_4 = function()
 	{
 		var c12_4 = new TextContext(sprite_youngsterAvatarScared, true, cb12_5);
-		c12_4.AddSubText(new SubText("leaks through those walls? ", 0.2));
+		c12_4.AddSubText(new SubText("leaks through those walls?", 0.2));
 		RenderText(c12_4);
 	}
 	
@@ -59,7 +59,7 @@ function MimiConversation()
 		instance_womenOutside.PlayAnimation2(sprite_womenIdle, noone);
 		
 		// Play the youngster crawl animation
-		instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGasp, noone);
+		instance_youngsterOutside.PlayAnimation2(sprite_youngsterCornerIdle, noone);
 		
 		// Play Mimi's shock animation
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
@@ -114,14 +114,14 @@ function MimiConversation()
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
 		
 		// Play Mimi's shock animation
-		var SetIdleWHenShockFinish = function()
+		var SetIdleWhenShockFinish = function()
 		{
 			// Set mimi back to idle
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+			PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		}
-		PlayerPlayAnimation(anim_mimiShock, false, SetIdleWHenShockFinish);
+		PlayerPlayAnimation2(anim_mimiShock, SetIdleWhenShockFinish);
 		
-		var c11_19 = new TextContext(sprite_youngsterAvatarScared, true, cb11_20);
+		var c11_19 = new TextContext(sprite_youngsterAvatarGasp, true, cb11_20);
 		c11_19.AddSubText(new SubText("AH!", 0.2));
 		RenderText(c11_19);
 	}
@@ -265,17 +265,17 @@ function MimiConversation()
 		// If it's successfully displaying the text, Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
-		var SetIdleWHenShockFinish = function()
+		var SetIdleWhenShockFinish = function()
 		{
 			// Enable progressing this TextContext 
 			GetCurrentTextContext().m_progressable = true;
 			
 			// Set mimi back to idle
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+			PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		}
 		
-		// Play the knocking animation
-		PlayerPlayAnimation(anim_mimiShock, false, SetIdleWHenShockFinish);
+		// Play the shock animation
+		PlayerPlayAnimation(anim_mimiShock, false, SetIdleWhenShockFinish);
 	}
 }
 

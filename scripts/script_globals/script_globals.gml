@@ -45,20 +45,20 @@ function SetGlobalGameState(p_globalGameState)
 }
 
 // This will be called by the room initializer after all objects are loaded
-function PostRoomLoadCallback()
+function ExecutePostRoomLoadCallbacks()
 {
-	if(global.m_postRoomLoadCallback != noone)
+	for(i = 0; i < ds_list_size(global.m_postRoomLoadCallbacks); i++)
 	{
-		global.m_postRoomLoadCallback();
-		global.m_postRoomLoadCallback = noone;
+		var pathCallback = ds_list_find_value(global.m_postRoomLoadCallbacks, i);
+		pathCallback();
 	}
+	
+	ds_list_clear(global.m_postRoomLoadCallbacks);
 }
 
-function SetPostRoomLoadCallback(p_callback)
+function AddPostRoomLoadCallback(p_callback)
 {
-	// Check if the background instance is 0 first
-	assert(global.m_postRoomLoadCallback == noone, "There is already a Post RoomLoad Callback registered");
-	global.m_postRoomLoadCallback = p_callback;
+	ds_list_add(global.m_postRoomLoadCallbacks, p_callback);
 }
 
 // --- Global variables used to store the game states ---
@@ -79,4 +79,4 @@ global.g_textboxInstance = noone;
 global.g_playerInstance = noone;
 
 // This will be called by the room initializer after all objects are loaded
-global.m_postRoomLoadCallback = noone;
+global.m_postRoomLoadCallbacks = ds_list_create();
