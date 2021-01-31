@@ -1,12 +1,9 @@
 function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
-	{
-		// Set the player image speed back
-		m_player.image_speed = 1;
-		
+	{	
 		// Set animation back to idle
-		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		
 		// Give control to the player after the conversation is over
 		SetControlState(PlayerControlState.PlayerControl);
@@ -14,11 +11,10 @@ function MimiAndYoungsterConversation()
 		// Set the youngster back to idle
 		var animationEndCallback = function()
 		{
-			m_youngster.PlayAnimation(sprite_youngsterIdle, noone);
-			m_youngster.image_speed = 1;
+			m_youngster.PlayAnimation2(sprite_youngsterIdle, noone);
 		};
 		// Reverse the youngster point
-		m_youngster.PlayAnimation(anim_youngsterPoint, animationEndCallback);
+		m_youngster.PlayAnimation2(anim_youngsterPoint, animationEndCallback);
 		m_youngster.image_index = 7;
 		m_youngster.image_speed = -1;
 		
@@ -36,15 +32,12 @@ function MimiAndYoungsterConversation()
 		var callbackAngryEnd = function()
 		{
 			// Only set the imgae speed to 0 if the angry animation is still set
-			if(m_player.sprite_index == anim_mimiAngry)
+			if(GetPlayerInstance().sprite_index == anim_mimiAngry)
 			{
-				m_player.image_speed = 0;
-				m_player.image_index = 4;
+				PlayerFreezeAnimationEnd2(anim_mimiAngry);
 			}
 		}
-		m_player.image_speed = 1;
-		m_player.image_index = 0;
-		PlayerPlayAnimation(anim_mimiAngry, false, callbackAngryEnd);
+		PlayerPlayAnimation2(anim_mimiAngry, callbackAngryEnd);
 	}
 	
 	cb2_9 = function()
@@ -62,10 +55,9 @@ function MimiAndYoungsterConversation()
 		
 		var animationEndCallback = function()
 		{
-			m_youngster.image_speed = 0;
-			m_youngster.image_index = 7;
+			m_youngster.FreezeAnimationAtEnd2(anim_youngsterPoint);
 		};
-		m_youngster.PlayAnimation(anim_youngsterPoint, animationEndCallback);
+		m_youngster.PlayAnimation2(anim_youngsterPoint, animationEndCallback);
 	}
 	
 	cb2_7 = function()
@@ -85,13 +77,12 @@ function MimiAndYoungsterConversation()
 		var callbackAngryEnd = function()
 		{
 			// Only set the imgae speed to 0 if the angry animation is still set
-			if(m_player.sprite_index == anim_mimiAngry)
+			if(GetPlayerInstance().sprite_index == anim_mimiAngry)
 			{
-				m_player.image_speed = 0;
-				m_player.image_index = 4;
+				PlayerFreezeAnimationEnd2(anim_mimiAngry);
 			}
 		}
-		PlayerPlayAnimation(anim_mimiAngry, false, callbackAngryEnd);
+		PlayerPlayAnimation2(anim_mimiAngry, callbackAngryEnd);
 	}
 	
 	cb2_5 = function()
@@ -147,8 +138,8 @@ function MimiAndYoungsterConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			var position = PlayerSnapToClosestPosition(m_knockPositionX - 60, m_player.y);
-			m_player.m_position = position;
+			var position = PlayerSnapToClosestPosition(m_knockPositionX - 60, GetPlayerInstance().y);
+			GetPlayerInstance().m_position = position;
 		}
 		
 		// Play the knocking animation
@@ -166,8 +157,8 @@ function MimiToYoungster()
 		SetControlState(PlayerControlState.PlayerNoControl);
 
 		// Set Mimi to a fixed position
-		var position = PlayerSnapToClosestPosition(m_knockPositionX, m_player.y);
-		m_player.m_position = position;
+		var position = PlayerSnapToClosestPosition(m_knockPositionX, GetPlayerInstance().y);
+		GetPlayerInstance().m_position = position;
 			
 		MimiAndYoungsterConversation();
 	}

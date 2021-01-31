@@ -1,20 +1,9 @@
 function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
-	{	
-		// Set the image properties back to normal
-		m_player.image_speed = 1;
-		m_player.image_index = 0;
-		
+	{			
 		// Set Mimi to idle
-		if(GetPlayerInstance().x > x)
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
-		}
-		else
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		}
+		PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		
 		// Give control back to the player again
 		SetControlState(PlayerControlState.PlayerControl);
@@ -54,20 +43,12 @@ function MimiAndYoungsterConversation()
 		var callbackAngryEnd = function()
 		{
 			// Only set the image speed to 0 if the angry animation is still set
-			if(m_player.sprite_index == anim_mimiAngry)
+			if(GetPlayerInstance().sprite_index == anim_mimiAngry)
 			{
-				m_player.image_speed = 0;
-				m_player.image_index = 4;
+				PlayerFreezeAnimationEnd2(anim_mimiAngry);
 			}
 		}
-		if(GetPlayerInstance().x > x)
-		{
-			PlayerPlayAnimation(anim_mimiAngry, true, callbackAngryEnd);
-		}
-		else
-		{
-			PlayerPlayAnimation(anim_mimiAngry, false, callbackAngryEnd);
-		}
+		PlayerPlayAnimation2(anim_mimiAngry, callbackAngryEnd);
 
 	}
 	

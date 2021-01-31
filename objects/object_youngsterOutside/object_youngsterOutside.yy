@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "object_parentLighting",
-    "path": "objects/object_parentLighting/object_parentLighting.yy",
+    "name": "object_parentObject",
+    "path": "objects/object_parentObject/object_parentObject.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,10 +23,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_youngsterOutside","path":"objects/object_youngsterOutside/object_youngsterOutside.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_youngsterOutside","path":"objects/object_youngsterOutside/object_youngsterOutside.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

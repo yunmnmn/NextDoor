@@ -4,8 +4,6 @@ function MimiAndOldtimerConversation()
 	{		
 		// Set Mimi to idle
 		PlayerPlayAnimation2(sprite_mimiIdle, noone);
-		m_player.image_speed = 1;
-		m_player.image_index = 0;
 		
 		// Give control back to the player again
 		SetControlState(PlayerControlState.PlayerControl);
@@ -105,10 +103,10 @@ function MimiAndOldtimerConversation()
 	{
 		var animationEndCallback = function()
 		{
-			image_speed = 0;
-			image_index = 5;
+			// Freeze at the last frame of the thinking animation
+			FreezeAnimationAtEnd2(anim_oldtimerThink);
 		};
-		PlayAnimation(anim_oldtimerThink, animationEndCallback);
+		PlayAnimation2(anim_oldtimerThink, animationEndCallback);
 		
 		var c8_9 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_10);
 		c8_9.AddSubText(new SubText("I'm pretty sure more women are living there", 0.2));
@@ -176,12 +174,9 @@ function MimiAndOldtimerConversation()
 		var callbackAngryEnd = function()
 		{
 			// Freeze at the last frame
-			m_player.image_speed = 0;
-			m_player.image_index = 2;
+			PlayerFreezeAnimationEnd(anim_mimiListen, GetPlayerInstance().m_mirrored);
 		}
 		PlayerPlayAnimation2(anim_mimiListen, callbackAngryEnd);
-		m_player.image_speed = 1;
-		m_player.image_index = 0;
 	}
 }
 

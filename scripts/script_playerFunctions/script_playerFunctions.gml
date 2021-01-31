@@ -41,6 +41,12 @@ function PlayerGetPath()
 	return global.g_playerInstance.GetPath();
 }
 
+function PlayerPlayAnimation(p_spriteIndex, p_mirrored, p_callbackEnd)
+{
+	PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd);
+	PlayerSetMirrored(p_mirrored);
+}
+
 function PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd)
 {
 	assert(p_spriteIndex != noone, "Passed sprite index is invalid");
@@ -49,12 +55,31 @@ function PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd)
 	global.g_playerInstance.PlayAnimation(p_spriteIndex, p_callbackEnd);
 }
 
-function PlayerPlayAnimation(p_spriteIndex, p_mirrored, p_callbackEnd)
+function PlayerFreezeAnimation(p_spriteIndex, p_imageIndex, p_mirrored)
 {
-	PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd);
+	PlayerPlayAnimation2(p_spriteIndex, noone);
+	GetPlayerInstance().image_index = p_imageIndex;
+	GetPlayerInstance().image_speed = 0;
+	
 	PlayerSetMirrored(p_mirrored);
 }
 
+function PlayerGetMirrored()
+{
+	return GetPlayerInstance().m_mirrored;
+}
+
+function PlayerFreezeAnimationEnd(p_spriteIndex, p_mirrored)
+{
+	PlayerFreezeAnimation(p_spriteIndex, sprite_get_number(image_number) -1, p_mirrored);
+}
+
+function PlayerFreezeAnimationEnd2(p_spriteIndex)
+{
+	PlayerFreezeAnimationEnd(p_spriteIndex, PlayerGetMirrored());
+}
+
+// TODO: make this prettier
 // Changes the room to the one provided room name (as string), and set the path and position
 global.m_path = noone;
 global.m_position = 0.0;

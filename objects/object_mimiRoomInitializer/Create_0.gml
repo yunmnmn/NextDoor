@@ -16,9 +16,6 @@ function MimiConversation()
 		// Set the animation speed back when it's finished playing the conversation
 		// Play the sitting animation
 		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
-		GetPlayerInstance().image_speed = 1;
-		GetPlayerInstance().image_index = 0;
-		// Set the animation speed back when it's finished playing the conversation
 	}
 	
 	cb2_3 = function()
@@ -57,10 +54,8 @@ function MimiComplainsAboutNoise()
 	PlayerSetPath(path_mimiRoom, 0.0);
 	
 	// Set the sitting animation	
-	PlayerPlayAnimation(anim_mimiSit, false, noone);
 	// Set the animation speed to 0
-	GetPlayerInstance().image_speed = 0;
-	GetPlayerInstance().image_index = 0;
+	PlayerFreezeAnimation(anim_mimiSit, 0, false);
 	
 	// Set the conversation
 	MimiConversation();
@@ -82,8 +77,6 @@ function MimiConversation2()
 		// Set the animation speed back when it's finished playing the conversation
 		// Play the sitting animation
 		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
-		GetPlayerInstance().image_speed = 1;
-		GetPlayerInstance().image_index = 0;
 	}
 	
 	cb10_3 = function()
@@ -113,10 +106,8 @@ function MimiGetsDrink()
 	// Set the next global state after the animation is finished playing
 	SetGlobalGameState(GlobalGameStates.MimiGetsDrink);
 	
-	// Play the sitting animation
-	PlayerPlayAnimation(anim_mimiSit, false, noone);
-	GetPlayerInstance().image_speed = 0;
-	GetPlayerInstance().image_index = 0;
+	// Play the sitting animation, start it frozen on the first frame
+	PlayerFreezeAnimation(anim_mimiSit, 0, false);
 	
 	MimiConversation2();
 }

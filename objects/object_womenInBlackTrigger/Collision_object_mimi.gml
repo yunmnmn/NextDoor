@@ -81,7 +81,7 @@ function WomenInBlackConversation()
 		// Set women invisible, and to the default state
 		instance_hallwayUpMemory.SetWomenVisible(false);
 		instance_women.SetPath(path_hallwayUpWomen, 0.0, 0.0);
-		instance_women.PlayAnimation(sprite_womenIdle);
+		instance_women.PlayAnimation2(sprite_womenIdle, noone);
 		
 		var c5_2 = new TextContext(sprite_youngsterAvatarNormal, true, cb5_3);
 		c5_2.AddSubText(new SubText("?", 0.2));
@@ -93,9 +93,8 @@ function WomenInBlackConversation()
 		// Set the path for the women to walk out of the screen
 		instance_women.SetPath(path_hallwayUpWomen, 0.0, instance_women.m_speed);
 		// Play the walking animation
-		instance_women.PlayAnimation(anim_womenWalk);
 		// Mirror the animation, the Women's walk is by default to the left
-		instance_women.Mirror(true);
+		instance_women.PlayAnimation(anim_womenWalk, true, noone);
 		// Close the door again
 		instance_hallwayUpMemory.SetDoorWomenVisible(false);
 		

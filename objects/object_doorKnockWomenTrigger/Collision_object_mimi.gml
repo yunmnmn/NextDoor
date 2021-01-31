@@ -10,6 +10,9 @@ function MimiConversation()
 		
 		// Advance the global game state
 		SetGlobalGameState(GlobalGameStates.MimiGointToYoungsterAgain);
+		
+		// Set the animation back to idle
+		PlayerPlayAnimation2(sprite_mimiIdle, noone);
 	}
 	
 	cb3_3 = function()
@@ -49,8 +52,8 @@ function MimiConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 				
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			var position = PlayerSnapToClosestPosition(m_knockPositionX - 60, m_player.y);
-			m_player.m_position = position;
+			var position = PlayerSnapToClosestPosition(m_knockPositionX - 60, GetPlayerInstance().y);
+			GetPlayerInstance().m_position = position;
 		}
 
 		// Play the knocking animation
@@ -69,8 +72,8 @@ function MimiKnockOnWomenDoor()
 		SetControlState(PlayerControlState.PlayerNoControl);
 	
 		// Set Mimi to a fixed position
-		var pathPosition = PlayerSnapToClosestPosition(m_knockPositionX, m_player.y);
-		m_player.m_position = pathPosition;
+		var pathPosition = PlayerSnapToClosestPosition(m_knockPositionX, GetPlayerInstance().y);
+		GetPlayerInstance().m_position = pathPosition;
 		
 		MimiConversation();
 	}

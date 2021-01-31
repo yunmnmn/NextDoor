@@ -7,8 +7,6 @@ function MimiConversation()
 		
 		// Set mimi back to idle
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		GetPlayerInstance().image_index = 0;
-		GetPlayerInstance().image_speed = 1;
 	}
 	
 	cb12_7 = function()
@@ -58,10 +56,10 @@ function MimiConversation()
 		// Set the women invisible again
 		instance_outsideMemory.SetWomenOutsideVisible(false);
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
-		instance_womenOutside.PlayAnimation(sprite_womenIdle);
+		instance_womenOutside.PlayAnimation2(sprite_womenIdle, noone);
 		
 		// Play the youngster crawl animation
-		instance_youngsterOutside.PlayAnimation(anim_youngsterCornerGrasp, noone);
+		instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGasp, noone);
 		
 		// Play Mimi's shock animation
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
@@ -76,7 +74,7 @@ function MimiConversation()
 		// Set the path for the women to walk out of the screen
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 1.3);
 		// Play the walking animation
-		instance_womenOutside.PlayAnimation(anim_womenWalkTall);
+		instance_womenOutside.PlayAnimation2(anim_womenWalkTall, noone);
 		// Mirror the animation, the Women's walk is by default to the left
 		instance_womenOutside.Mirror(true);
 		
@@ -101,16 +99,16 @@ function MimiConversation()
 
 	cb11_19 = function()
 	{
-		// Play the Youngster grasp animation
+		// Play the Youngster gasp animation
 		var animationEndCallback = function()
 		{
-			instance_youngsterOutside.image_speed = 0;
-			instance_youngsterOutside.image_index = 7;
+			// Freeze at the last frame
+			instance_youngsterOutside.FreezeAnimationAtEnd(anim_youngsterCornerGasp);
 		};
-		instance_youngsterOutside.PlayAnimation(anim_youngsterCornerGrasp, animationEndCallback);
+		instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGasp, animationEndCallback);
 		
 		// Set the women in black visible
-		instance_womenOutside.PlayAnimation(sprite_womenIdleTall);
+		instance_womenOutside.PlayAnimation2(sprite_womenIdleTall, noone);
 		instance_womenOutside.Mirror(true);
 		instance_outsideMemory.SetWomenOutsideVisible(true);
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
@@ -218,12 +216,9 @@ function MimiConversation()
 		var callbackAngryEnd = function()
 		{
 			// Freeze at the last frame
-			m_player.image_speed = 0;
-			m_player.image_index = 2;
+			PlayerFreezeAnimationEnd2(anim_mimiListen);
 		}
 		PlayerPlayAnimation2(anim_mimiListen, callbackAngryEnd);
-		m_player.image_speed = 1;
-		m_player.image_index = 0;
 		
 		var c11_6 = new TextContext(sprite_mimiAvatarTroubled, true, cb11_7);
 		c11_6.AddSubText(new SubText("What's gotten into you?", 0.2));
@@ -298,7 +293,8 @@ function MimiBuysDrink()
 		
 		blinkingLightEnd = function()
 		{
-			instance_blinkingLight.image_index = 1;
+			// Freeze the blinking animation at the last frame
+			instance_blinkingLight.image_index = instance_blinkingLight.image_number - 1;
 			instance_blinkingLight.image_speed = 0;
 			
 			// Start the conversation
@@ -311,6 +307,7 @@ function MimiBuysDrink()
 			// Set Mimi's animation to idle
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
+			// Play the blinking animation
 			instance_blinkingLight.image_index = 0;
 			instance_blinkingLight.image_speed = 1;
 			instance_outsideMemory.SetBlinkingLightVisible(true);

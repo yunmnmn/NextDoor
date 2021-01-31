@@ -1,3 +1,41 @@
+function PathTypeCheck(p_callbackType, p_position)
+{
+	if(p_callbackType == PathCallbackType.LowToHigh)
+	{
+		if(path_positionprevious <= p_position && path_position >= p_position)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else if(p_callbackType == PathCallbackType.HighToLow)
+	{
+		if(path_positionprevious >= p_position && path_position <= p_position)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		if((path_positionprevious < p_position && path_position > p_position) ||
+			(path_positionprevious > p_position && path_positionprevious < p_position))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
+
 // Check if the there are registered path callbacks
 for(i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 {
@@ -14,13 +52,10 @@ for(i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 	
 	var pathCallback = ds_list_find_value(m_pathCallbacks, i);
 	
-	var belowToUp = path_positionprevious <= pathCallback.m_position && path_position >= pathCallback.m_position;
-	var upToBelow = path_positionprevious >= pathCallback.m_position && path_positionprevious <= pathCallback.m_position;
 	if(pathCallback.m_callback != noone && path_index == pathCallback.m_pathIndex &&
-		(belowToUp || upToBelow))
+		PathTypeCheck(pathCallback.m_callbackType, pathCallback.m_position))
 	{
 		pathCallback.m_callback();
-		pathCallback.m_dirty = true;
 		
 		// Remove the callback if it's not persistant. Add i when something isn't removed
 		if(!pathCallback.m_persistant)

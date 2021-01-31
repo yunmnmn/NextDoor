@@ -6,7 +6,7 @@
 if(GetControlState() == PlayerControlState.PlayerControl)
 {
 	// Set the states first depending on the cached states from the previous frame
-	var delta = 0.00001;
+	var delta = 0.001;
 	if(abs(m_cachedPosition - m_position) > delta)
 	{
 		m_movementState = MimiMovementState.Walking;
@@ -25,37 +25,32 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 		m_direction = Direction.Right;
 	}
 
-	// Set the animations depending on the states from previous to now
-	if(m_movementState != m_cachedMovementState)
+	// Set the animation depending on the movement state
+	if(m_movementState == MimiMovementState.Walking)
 	{
-		if(m_movementState == MimiMovementState.Walking)
-		{
-			sprite_index = anim_mimiWalk;
-		}
-		else if(m_movementState = MimiMovementState.Idle)
-		{
-			sprite_index = sprite_mimiIdle;
-		}
-		else
-		{
-			assert(false, "Movement state can't be default");
-		}
+		sprite_index = anim_mimiWalk;
+	}
+	else if(m_movementState = MimiMovementState.Idle)
+	{
+		sprite_index = sprite_mimiIdle;
+	}
+	else
+	{
+		assert(false, "Movement state can't be default");
 	}
 
-	if(m_direction != m_cachedDirection)
+	// Set the looking direction depending if it's mirrored
+	if(m_direction == Direction.Right)
 	{
-		if(m_direction == Direction.Right)
-		{
-			SetMirrored(false);
-		}
-		else if(m_direction == Direction.Left)
-		{
-			SetMirrored(true);
-		}
-		else
-		{
-			assert(false, "Direction has to be Right or Left");
-		}
+		SetMirrored(false);
+	}
+	else if(m_direction == Direction.Left)
+	{
+		SetMirrored(true);
+	}
+	else
+	{
+		assert(false, "Direction has to be Right or Left");
 	}
 
 	// Set the cached states
