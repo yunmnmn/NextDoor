@@ -9,7 +9,7 @@ function CollisionContext(p_collisionInstance, p_callback) constructor
 	
 	AddGlobalState1 = function(p_globalState1)
 	{
-		ds_list_add(m_globalStates, AddGlobalState1);
+		ds_list_add(m_globalStates, p_globalState1);
 	}
 	
 	AddGlobalState2 = function(p_globalState1, p_globalState2)

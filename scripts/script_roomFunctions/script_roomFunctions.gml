@@ -16,7 +16,7 @@ function ChangeRooms(p_roomName)
 function CreateFader(p_fadeState, p_fadeSpeed, p_callback)
 {
 	// TODO: check if layer exists
-	var roomFader = instance_create_layer(x, y, "layer_ui", object_roomFader);
+	var roomFader = instance_create_layer(0, 0, "layer_ui", object_roomFader);
 	roomFader.SetFadeState(p_fadeState);
 	roomFader.SetFadingSpeed(p_fadeSpeed);
 	roomFader.SetCallback(p_callback);

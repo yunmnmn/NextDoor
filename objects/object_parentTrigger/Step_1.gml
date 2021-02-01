@@ -8,9 +8,9 @@ CheckForGlobalState = function(p_collisionContext)
 	}
 	
 	// Check if the global state is active
-	for(j = 0; j < ds_list_size(collisionContext.m_globalStates); j++)
+	for(j = 0; j < ds_list_size(p_collisionContext.m_globalStates); j++)
 	{
-		var globalState = ds_list_find_value(collisionContext.m_globalStates, j);
+		var globalState = ds_list_find_value(p_collisionContext.m_globalStates, j);
 		if(GetGlobalGameState() == globalState)
 		{
 			return true;
@@ -38,7 +38,7 @@ for(i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 			m_drawFrame = (m_drawFrame + 1) % (sprite_get_number(anim_buttonSpace))
 		}
 		
-		if(keyboard_check(vk_space))
+		if(keyboard_check_pressed(vk_space))
 		{
 			collisionContext.m_callback();
 			ds_list_delete(m_collisionContexts, i);

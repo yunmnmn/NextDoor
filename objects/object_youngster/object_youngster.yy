@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "object_parentObject",
-    "path": "objects/object_parentObject/object_parentObject.yy",
+    "name": "object_parentLighting",
+    "path": "objects/object_parentLighting/object_parentLighting.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,9 +24,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"object_mimi","path":"objects/object_mimi/object_mimi.yy",},"parent":{"name":"object_youngster","path":"objects/object_youngster/object_youngster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"object_youngster","path":"objects/object_youngster/object_youngster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_youngster","path":"objects/object_youngster/object_youngster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_youngster","path":"objects/object_youngster/object_youngster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

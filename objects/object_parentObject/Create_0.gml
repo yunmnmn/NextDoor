@@ -1,3 +1,6 @@
+// Call the parent create(object_parentTrigger)
+event_inherited();
+
 // Set the instance on a path
 function SetPath(p_pathIndex, p_position, p_speed)
 {

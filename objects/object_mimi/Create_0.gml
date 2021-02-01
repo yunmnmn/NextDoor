@@ -37,7 +37,7 @@ function AddPathCallback(p_pathCallback)
 {
 	// Before adding it to the callback list, check if the conditions are met already
 	// TODO: delta depends on the length of the path, make it independent
-	var delta = 0.001;
+	var delta = 0.01;
 	if(p_pathCallback.m_callback != noone && path_index == p_pathCallback.m_pathIndex && 
 		abs(p_pathCallback.m_position - m_position) < delta)
 	{
