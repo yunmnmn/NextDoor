@@ -5,7 +5,7 @@ function MimiAndYoungsterConversation()
 		// Set Mimi to idle
 		PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		
-		// Give control back to the player again
+		// Give control ba ck to the player again
 		SetControlState(PlayerControlState.PlayerControl);
 		
 		// Advance the global game state
@@ -92,18 +92,13 @@ function MimiConversationYoungster()
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
-		// Set Mimi to idle
-		if(GetPlayerInstance().x > x)
+		var test = function()
 		{
+			GetPlayerInstance().SetPathSpeed(0.0);
 			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+			MimiAndYoungsterConversation();
 		}
-		else
-		{
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		}
-		
-		// Play the conversation
-		MimiAndYoungsterConversation();
+		PlayerMoveAndExecute(x + 100, GetPlayerInstance().y, 1.3, test);
 	}
 }
 

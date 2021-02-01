@@ -67,7 +67,7 @@ function AddPostRoomLoadCallback(p_callback)
 global.m_globalGameState = GlobalGameStates.MimiRoomSits;
 
 // By default, give the player control over mimi
-global.g_playerControlState = noone;
+global.g_playerControlState = PlayerControlState.PlayerNoControl;
 
 // Let the background instance assign the global via the function
 global.g_backgroundInstance = noone;

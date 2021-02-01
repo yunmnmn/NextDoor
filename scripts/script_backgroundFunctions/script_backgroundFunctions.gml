@@ -81,9 +81,15 @@ function SetViewportFollowInstance(p_instance)
 	global.g_backgroundInstance.m_followInstance = p_instance;
 }
 
+// Set the following speed
 function SetViewportFollowSpeed(p_followSpeed)
 {
 	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	
 	global.g_backgroundInstance.m_followSpeed = p_followSpeed;
+}
+
+function DisableFollowingInstance()
+{
+	global.g_backgroundInstance.m_followInstance = noone;
 }

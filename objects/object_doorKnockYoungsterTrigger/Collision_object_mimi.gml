@@ -138,8 +138,7 @@ function MimiAndYoungsterConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			var position = PlayerSnapToClosestPosition(m_knockPositionX - 60, GetPlayerInstance().y);
-			GetPlayerInstance().m_position = position;
+			PlayerSnapToClosestPosition(m_knockPositionX - 60, GetPlayerInstance().y, true);
 		}
 		
 		// Play the knocking animation
@@ -157,9 +156,9 @@ function MimiToYoungster()
 		SetControlState(PlayerControlState.PlayerNoControl);
 
 		// Set Mimi to a fixed position
-		var position = PlayerSnapToClosestPosition(m_knockPositionX, GetPlayerInstance().y);
-		GetPlayerInstance().m_position = position;
+		PlayerSnapToClosestPosition(m_knockPositionX, GetPlayerInstance().y, true);
 			
+		// Start the conversation
 		MimiAndYoungsterConversation();
 	}
 }
@@ -173,7 +172,5 @@ switch(GetGlobalGameState())
 		break;
 	//case GlobalGameStates.MimiGoingToAskNeighbours:
 	default:
-		m_youngster.visible = true;
-		m_openDoorMask.visible = true;
 		break;
 }

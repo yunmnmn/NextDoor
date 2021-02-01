@@ -314,6 +314,9 @@ function MimiBuysDrink()
 			instance_blinkingLight.PlayAnimation(foreground_blinkingLights, blinkingLightEnd);
 		}
 		PlayerPlayAnimation(anim_mimiCoin, false, animationEnd);
+		
+		// Snap mimi to the coin position instance
+		PlayerSnapToClosestPosition(instance_coinSnapPosition.x, instance_coinSnapPosition.y, true);
 	}
 }
 

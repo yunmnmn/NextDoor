@@ -52,8 +52,7 @@ function MimiConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 				
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			var position = PlayerSnapToClosestPosition(m_knockPositionX - 60, GetPlayerInstance().y);
-			GetPlayerInstance().m_position = position;
+			PlayerSnapToClosestPosition(m_knockPositionX - 60, GetPlayerInstance().y, true);
 		}
 
 		// Play the knocking animation
@@ -72,8 +71,7 @@ function MimiKnockOnWomenDoor()
 		SetControlState(PlayerControlState.PlayerNoControl);
 	
 		// Set Mimi to a fixed position
-		var pathPosition = PlayerSnapToClosestPosition(m_knockPositionX, GetPlayerInstance().y);
-		GetPlayerInstance().m_position = pathPosition;
+		PlayerSnapToClosestPosition(m_knockPositionX, GetPlayerInstance().y, true);
 		
 		MimiConversation();
 	}

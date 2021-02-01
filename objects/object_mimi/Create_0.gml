@@ -35,12 +35,31 @@ function GetPath()
 
 function AddPathCallback(p_pathCallback)
 {
-	ds_list_add(m_pathCallbacks, p_pathCallback);
+	// Before adding it to the callback list, check if the conditions are met already
+	var delta = 0.001;
+	if(p_pathCallback.m_callback != noone && path_index == p_pathCallback.m_pathIndex && 
+		abs(p_pathCallback.m_position - m_position) < delta)
+	{
+		p_pathCallback.m_callback()
+	}
+	else
+	{
+		// Else add it to the list
+		ds_list_add(m_pathCallbacks, p_pathCallback);
+	}
 }
 
+// MOvement speed of mimi when the player controls it
 function SetSpeed(p_speed)
 {
 	m_speed = p_speed;
+}
+
+// Path speed of the player when it's controlled by the path system
+function SetPathSpeed(p_pathSpeed)
+{
+	path_speed = p_pathSpeed;
+	m_pathSpeed = p_pathSpeed;
 }
 
 function SetMirrored(p_mirrored)
@@ -49,11 +68,13 @@ function SetMirrored(p_mirrored)
 	{
 		image_xscale = -1.0;
 		m_mirrored = true;
+		m_direction = Direction.Left;
 	}
 	else
 	{
 		image_xscale = 1.0;
 		m_mirrored = false;
+		m_direction = Direction.Right;
 	}
 }
 
@@ -72,6 +93,21 @@ function PlayAnimation(p_spriteIndex, p_callbackEnd)
 	m_callbackAnimationEnd = p_callbackEnd;
 }
 
+function MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
+{
+	assert(m_path != noone, "Path can't be invalid");
+	assert(GetControlState() == PlayerControlState.PlayerNoControl, "This function can only be called when the player is in NoControl state");
+	
+	// Set the path speed
+	var pathPosition = SnapToClosestPosition(PlayerGetPath(), p_positionX, p_positionY);
+	var moveDirection = (pathPosition > m_position) ? 1.0 : -1.0;
+	var pathSpeed = p_speed * moveDirection;
+	SetPathSpeed(pathSpeed);
+	
+	// Set the callback
+	AddPathCallback(new PathCallback(m_path, pathPosition, p_callback, false, PathCallbackType.Both));
+}
+
 // Register mimi to the global object
 RegisterPlayerInstance(id);
 
@@ -81,7 +117,9 @@ PlayAnimation(sprite_mimiIdle, noone);
 // These variables are set by the instance manager
 SetSpeed(0.4); 
 m_position = 0.0;
+
 m_path = noone;
+m_pathSpeed = 0.0;
 
 // Path callbacks
 m_pathCallbacks = ds_list_create();

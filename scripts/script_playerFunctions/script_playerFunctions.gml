@@ -79,7 +79,24 @@ function PlayerFreezeAnimationEnd2(p_spriteIndex)
 	PlayerFreezeAnimationEnd(p_spriteIndex, PlayerGetMirrored());
 }
 
-function PlayerSnapToClosestPosition(p_positionX, p_positionY)
+function PlayerSnapToClosestPosition(p_positionX, p_positionY, p_disableFollowing)
 {
-	return SnapToClosestPosition(PlayerGetPath(), p_positionX, p_positionY);
+	var position = SnapToClosestPosition(PlayerGetPath(), p_positionX, p_positionY);
+	GetPlayerInstance().m_position = position;
+	GetPlayerInstance().m_cachedPosition = position;
+	GetPlayerInstance().path_position = position;
+	GetPlayerInstance().path_positionprevious = position;
+	
+	if(p_disableFollowing)
+	{
+		DisableFollowingInstance();
+	}
+}
+
+function PlayerMoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
+{
+	// This can only work in NoControl state
+	assert(GetControlState() == PlayerControlState.PlayerNoControl, "This function can only be called when the player is in NoControl state");
+	
+	GetPlayerInstance().MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback);
 }
