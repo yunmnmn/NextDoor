@@ -92,13 +92,15 @@ function MimiConversationYoungster()
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
-		var test = function()
+		mirror = (GetPlayerInstance().x > x) ? true : false;
+		walkToPosition = function()
 		{
+			
 			GetPlayerInstance().SetPathSpeed(0.0);
-			PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+			PlayerPlayAnimation(sprite_mimiIdle, mirror, noone);
 			MimiAndYoungsterConversation();
 		}
-		PlayerMoveAndExecute(x + 100, GetPlayerInstance().y, 1.3, test);
+		PlayerMoveAndExecute(mirror ? x + 100 : x - 100, GetPlayerInstance().y, 1.3, walkToPosition);
 	}
 }
 

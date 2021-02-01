@@ -9,7 +9,7 @@ function PathTypeCheck(p_callbackType, p_position)
 {
 	if(p_callbackType == PathCallbackType.LowToHigh)
 	{
-		if(path_positionprevious <= p_position && path_position >= p_position)
+		if(m_cachedPosition <= p_position && m_position >= p_position)
 		{
 			return true;
 		}
@@ -20,7 +20,7 @@ function PathTypeCheck(p_callbackType, p_position)
 	}
 	else if(p_callbackType == PathCallbackType.HighToLow)
 	{
-		if(path_positionprevious >= p_position && path_position <= p_position)
+		if(m_cachedPosition >= p_position && m_position <= p_position)
 		{
 			return true;
 		}
@@ -31,8 +31,8 @@ function PathTypeCheck(p_callbackType, p_position)
 	}
 	else
 	{
-		if((path_positionprevious < p_position && path_position > p_position) ||
-			(path_positionprevious > p_position && path_positionprevious < p_position))
+		if((m_cachedPosition < p_position && m_position > p_position) ||
+			(m_cachedPosition > p_position && m_position < p_position))
 		{
 			return true;
 		}

@@ -25,7 +25,7 @@ function PathTypeCheck(p_callbackType, p_position)
 	else
 	{
 		if((path_positionprevious < p_position && path_position > p_position) ||
-			(path_positionprevious > p_position && path_positionprevious < p_position))
+			(path_positionprevious > p_position && path_position < p_position))
 		{
 			return true;
 		}

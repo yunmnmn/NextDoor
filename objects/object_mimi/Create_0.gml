@@ -36,11 +36,17 @@ function GetPath()
 function AddPathCallback(p_pathCallback)
 {
 	// Before adding it to the callback list, check if the conditions are met already
+	// TODO: delta depends on the length of the path, make it independent
 	var delta = 0.001;
 	if(p_pathCallback.m_callback != noone && path_index == p_pathCallback.m_pathIndex && 
 		abs(p_pathCallback.m_position - m_position) < delta)
 	{
-		p_pathCallback.m_callback()
+		p_pathCallback.m_callback();
+		// Still add it to the list if it's persistant
+		if(p_pathCallback.m_persistant)
+		{
+			ds_list_add(m_pathCallbacks, p_pathCallback);
+		}
 	}
 	else
 	{
@@ -68,12 +74,16 @@ function SetMirrored(p_mirrored)
 	{
 		image_xscale = -1.0;
 		m_mirrored = true;
+		
+		// This only applies for the idle and walk animation
 		m_direction = Direction.Left;
 	}
 	else
 	{
 		image_xscale = 1.0;
 		m_mirrored = false;
+		
+		// This only applies for the idle and walk animation
 		m_direction = Direction.Right;
 	}
 }
