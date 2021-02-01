@@ -31,8 +31,8 @@ function PathTypeCheck(p_callbackType, p_position)
 	}
 	else
 	{
-		if((m_cachedPosition < p_position && m_position > p_position) ||
-			(m_cachedPosition > p_position && m_position < p_position))
+		if((m_cachedPosition <= p_position && m_position >= p_position) ||
+			(m_cachedPosition >= p_position && m_position <= p_position))
 		{
 			return true;
 		}
