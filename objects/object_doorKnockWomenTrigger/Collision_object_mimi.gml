@@ -77,7 +77,7 @@ function MimiKnockOnWomenDoor()
 			
 			MimiConversation();
 		}
-		PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.3, walkToPosition);
+		PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
 	}
 }
 

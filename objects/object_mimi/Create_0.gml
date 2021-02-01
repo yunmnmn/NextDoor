@@ -56,16 +56,18 @@ function AddPathCallback(p_pathCallback)
 }
 
 // MOvement speed of mimi when the player controls it
+// TODO: connect this to m_pathSpeed
 function SetSpeed(p_speed)
 {
 	m_speed = p_speed;
 }
 
 // Path speed of the player when it's controlled by the path system
-function SetPathSpeed(p_pathSpeed)
+// Give it a multiplier instead. The eventual speed will be calculated from m_speed
+function SetPathSpeed(p_pathSpeedMultiplier)
 {
-	path_speed = p_pathSpeed;
-	m_pathSpeed = p_pathSpeed;
+	m_pathSpeed = p_pathSpeedMultiplier * GetMovementSpeed() * path_get_length(m_path);
+	path_speed = m_pathSpeed;
 }
 
 function SetMirrored(p_mirrored)
@@ -88,7 +90,7 @@ function SetMirrored(p_mirrored)
 	}
 }
 
-// Calcultes the movement depending on the path's length and the speed
+// Calcultes the movement depending on the path's length and the speed (normalized value between 0.0 - 1.0)
 function GetMovementSpeed()
 {
 	var pathLength = path_get_length(m_path);
@@ -125,7 +127,7 @@ RegisterPlayerInstance(id);
 PlayAnimation(sprite_mimiIdle, noone);
 
 // These variables are set by the instance manager
-SetSpeed(0.4); 
+SetSpeed(0.1); 
 m_position = 0.0;
 
 m_path = noone;

@@ -11,12 +11,12 @@ function MimiAndYoungsterConversation()
 		// Set the youngster back to idle
 		var animationEndCallback = function()
 		{
-			m_youngster.PlayAnimation2(sprite_youngsterIdle, noone);
+			instance_youngster.PlayAnimation2(sprite_youngsterIdle, noone);
 		};
 		// Reverse the youngster point
-		m_youngster.PlayAnimation2(anim_youngsterPoint, animationEndCallback);
-		m_youngster.image_index = 7;
-		m_youngster.image_speed = -1;
+		instance_youngster.PlayAnimation2(anim_youngsterPoint, animationEndCallback);
+		instance_youngster.image_index = 7;
+		instance_youngster.image_speed = -1;
 		
 		// Set the next global state after the conversation is finished
 		SetGlobalGameState(GlobalGameStates.MimiGoingToKnockAtNeighbour);
@@ -55,9 +55,9 @@ function MimiAndYoungsterConversation()
 		
 		var animationEndCallback = function()
 		{
-			m_youngster.FreezeAnimationAtEnd2(anim_youngsterPoint);
+			instance_youngster.FreezeAnimationAtEnd2(anim_youngsterPoint);
 		};
-		m_youngster.PlayAnimation2(anim_youngsterPoint, animationEndCallback);
+		instance_youngster.PlayAnimation2(anim_youngsterPoint, animationEndCallback);
 	}
 	
 	cb2_7 = function()
@@ -138,7 +138,7 @@ function MimiAndYoungsterConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(m_knockPositionX - 61, GetPlayerInstance().y, true);
+			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, true);
 		}
 		
 		// Play the knocking animation
@@ -163,7 +163,7 @@ function MimiToYoungster()
 			
 			MimiAndYoungsterConversation();
 		}
-		PlayerMoveAndExecute(m_knockPositionX, GetPlayerInstance().y, 1.3, walkToPosition);
+		PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
 	}
 }
 

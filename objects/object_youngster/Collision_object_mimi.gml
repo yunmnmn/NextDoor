@@ -100,7 +100,7 @@ function MimiConversationYoungster()
 			PlayerPlayAnimation(sprite_mimiIdle, mirror, noone);
 			MimiAndYoungsterConversation();
 		}
-		PlayerMoveAndExecute(mirror ? x + 100 : x - 100, GetPlayerInstance().y, 1.3, walkToPosition);
+		PlayerMoveAndExecute(mirror ? x + 100 : x - 100, GetPlayerInstance().y, 1.0, walkToPosition);
 	}
 }
 

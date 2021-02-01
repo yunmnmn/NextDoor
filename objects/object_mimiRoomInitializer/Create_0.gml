@@ -40,8 +40,6 @@ function MimiConversation()
 	RenderText(c2_1);
 }
 
-
-
 function MimiComplainsAboutNoise()
 {
 	// HACK: one time thing
