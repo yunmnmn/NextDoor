@@ -138,7 +138,7 @@ function MimiAndYoungsterConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(m_knockPositionX - 60, GetPlayerInstance().y, true);
+			PlayerSnapToClosestPosition(m_knockPositionX - 61, GetPlayerInstance().y, true);
 		}
 		
 		// Play the knocking animation
@@ -155,11 +155,15 @@ function MimiToYoungster()
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerNoControl);
 
-		// Set Mimi to a fixed position
-		PlayerSnapToClosestPosition(m_knockPositionX, GetPlayerInstance().y, true);
+		// Walk to the position to knock
+		var walkToPosition = function()
+		{
+			DisableFollowingInstance();
+			GetPlayerInstance().SetPathSpeed(0.0);
 			
-		// Start the conversation
-		MimiAndYoungsterConversation();
+			MimiAndYoungsterConversation();
+		}
+		PlayerMoveAndExecute(m_knockPositionX, GetPlayerInstance().y, 1.3, walkToPosition);
 	}
 }
 
