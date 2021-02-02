@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","path":"sprites/Sprite15/Sprite15.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","path":"sprites/Sprite15/Sprite15.yy",},"LayerId":{"name":"758018dc-48b7-4480-a0cb-b51cb43dbfff","path":"sprites/Sprite15/Sprite15.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Sprite15","path":"sprites/Sprite15/Sprite15.yy",},"resourceVersion":"1.0","name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","path":"sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","path":"sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",},"LayerId":{"name":"758018dc-48b7-4480-a0cb-b51cb43dbfff","path":"sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprite_placeholderDoor","path":"sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",},"resourceVersion":"1.0","name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Sprite15","path":"sprites/Sprite15/Sprite15.yy",},
+    "spriteId": {"name":"sprite_placeholderDoor","path":"sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0894c263-2ff5-445e-897c-a30f1988d79e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","path":"sprites/Sprite15/Sprite15.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0894c263-2ff5-445e-897c-a30f1988d79e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0cc9b4f3-a209-4955-8cb5-06d8d1ac7237","path":"sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Sprite15","path":"sprites/Sprite15/Sprite15.yy",},
+    "parent": {"name":"sprite_placeholderDoor","path":"sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",},
     "resourceVersion": "1.3",
-    "name": "Sprite15",
+    "name": "sprite_placeholderDoor",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -68,11 +68,11 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"758018dc-48b7-4480-a0cb-b51cb43dbfff","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "NextDoor",
-    "path": "NextDoor.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Sprite15",
+  "name": "sprite_placeholderDoor",
   "tags": [],
   "resourceType": "GMSprite",
 }

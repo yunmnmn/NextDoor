@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite15",
-    "path": "sprites/Sprite15/Sprite15.yy",
+    "name": "sprite_placeholderDoor",
+    "path": "sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",
   },
   "solid": false,
   "visible": true,
