@@ -163,9 +163,8 @@ MimiToYoungster = function()
 }
 
 // First use of the collider
-// TODO: make this one condition
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiToYoungster);
-collisionContext.AddGlobalState2(GlobalGameStates.MimiRoomSits, GlobalGameStates.MimiGoingToYoungster);
+collisionContext.AddGlobalState2(GlobalGameStates.MimiGoingToYoungster);
 AddCollisionContext(collisionContext);
 
 // -------------------------- Second colliding event --------------------------

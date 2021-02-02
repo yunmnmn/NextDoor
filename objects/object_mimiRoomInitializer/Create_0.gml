@@ -9,9 +9,6 @@ function MimiConversation()
 		
 			// Give the control back to the player
 			SetControlState(PlayerControlState.PlayerControl);
-		
-			// Set the next global state after the animation is finished playing
-			SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);
 		}
 		// Set the animation speed back when it's finished playing the conversation
 		// Play the sitting animation
@@ -35,6 +32,9 @@ function MimiConversation()
 	// Start of the conversation. Doesn't require a function
 	var c2_1 = new TextContext(sprite_mimiAvatarNormal, true, cb2_2);
 	c2_1.AddSubText(new SubText("...", 0.6));
+	
+	// Set the next global state after the animation is finished playing
+	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);
 
 	// Call the parent text context
 	RenderText(c2_1);
