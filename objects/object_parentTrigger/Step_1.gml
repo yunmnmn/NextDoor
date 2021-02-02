@@ -38,7 +38,7 @@ for(i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 			m_drawFrame = (m_drawFrame + 1) % (sprite_get_number(anim_buttonSpace))
 		}
 		
-		if(keyboard_check_pressed(vk_space))
+		if(ActionKeyPressed())
 		{
 			collisionContext.m_callback();
 			ds_list_delete(m_collisionContexts, i);

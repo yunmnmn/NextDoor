@@ -281,7 +281,7 @@ function MimiConversation()
 
 function MimiBuysDrink()
 {
-	if(keyboard_check(vk_space) && m_dirtyFlag == false)
+	if(ActionKeyPressed() && m_dirtyFlag == false)
 	{
 		m_dirtyFlag = true;
 		

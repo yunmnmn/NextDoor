@@ -1,5 +1,5 @@
 // Transition Mimi's HallwayDown -> Room when Mimi interacts with the trigger
-if(keyboard_check_pressed(vk_space) && m_dirtyFlag == false)
+if(ActionKeyPressed() && m_dirtyFlag == false)
 {
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);

@@ -32,6 +32,7 @@
     {"id":{"name":"script_roomFunctions","path":"scripts/script_roomFunctions/script_roomFunctions.yy",},"order":2,},
     {"id":{"name":"anim_womenWalkTall","path":"sprites/anim_womenWalkTall/anim_womenWalkTall.yy",},"order":3,},
     {"id":{"name":"object_womenInBlack","path":"objects/object_womenInBlack/object_womenInBlack.yy",},"order":1,},
+    {"id":{"name":"script_inputFunctions","path":"scripts/script_inputFunctions/script_inputFunctions.yy",},"order":7,},
     {"id":{"name":"object_parentLighting","path":"objects/object_parentLighting/object_parentLighting.yy",},"order":1,},
     {"id":{"name":"sprite_mimiAvatarTroubled","path":"sprites/sprite_mimiAvatarTroubled/sprite_mimiAvatarTroubled.yy",},"order":3,},
     {"id":{"name":"foreground_fence","path":"sprites/foreground_fence/foreground_fence.yy",},"order":1,},
