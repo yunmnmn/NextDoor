@@ -1,36 +1,36 @@
-if(gamepad_button_check_pressed(0, gp_face1))
+if(gamepad_button_check_pressed(m_controllerIndex, gp_face1))
 {
 	m_currentControllerKey = gp_face1;
 }
-else if(gamepad_button_check_pressed(0, gp_face2))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_face2))
 {
 	m_currentControllerKey = gp_face2;
 }
-else if(gamepad_button_check_pressed(0, gp_face3))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_face3))
 {
 	m_currentControllerKey = gp_face3;
 }
-else if(gamepad_button_check_pressed(0, gp_face4))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_face4))
 {
 	m_currentControllerKey = gp_face4;
 }
-else if(gamepad_button_check_pressed(0, gp_shoulderl))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderl))
 {
 	m_currentControllerKey = gp_shoulderl;
 }
-else if(gamepad_button_check_pressed(0, gp_shoulderlb))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderlb))
 {
 	m_currentControllerKey = gp_shoulderlb;
 }
-else if(gamepad_button_check_pressed(0, gp_shoulderr))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderr))
 {
 	m_currentControllerKey = gp_shoulderr;
 }
-else if(gamepad_button_check_pressed(0, gp_shoulderrb))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderrb))
 {
 	m_currentControllerKey = gp_shoulderrb;
 }
-else if(gamepad_button_check_pressed(0, gp_select))
+else if(gamepad_button_check_pressed(m_controllerIndex, gp_select))
 {
 	m_currentControllerKey = gp_select;
 }

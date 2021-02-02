@@ -10,7 +10,7 @@ m_previousAxisH = 0.0;
 m_currentAxisH = 0.0;
 m_previousAxisV = 0.0;
 m_currentAxisV = 0.0;
-// Checks if the key is different from the previous frame
+// Checks if a controller key has been input
 function CheckControllerPressed()
 {
 	// Early out if gamepads is not supported on the system
@@ -29,6 +29,8 @@ function CheckControllerPressed()
 	if(m_previousControllerKey != m_currentControllerKey || m_previousAxisH != m_currentAxisH || m_previousAxisV != m_currentAxisV)
 	{
 		m_previousControllerKey = m_currentControllerKey;
+		m_previousAxisH = m_currentAxisH;
+		m_previousAxisV = m_currentAxisV;
 		return true;
 	}
 	
@@ -37,11 +39,25 @@ function CheckControllerPressed()
 
 m_previousKeyboardKey = noone;
 m_currentKeyboardKey = noone;
-function CheckLastControlDevicePressed()
+// Checks if a KeyboardKey has been pressed
+function CheckKeyboardKeyPressed()
 {
 	if(m_currentKeyboardKey != m_previousKeyboardKey)
 	{
 		m_currentKeyboardKey = m_previousKeyboardKey;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+
+function CheckLastControlDevicePressed()
+{
+	if(CheckKeyboardKeyPressed())
+	{
 		return ControlDevice.Keyboard;
 	}
 	else if(CheckControllerPressed())
