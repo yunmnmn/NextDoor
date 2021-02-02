@@ -1,3 +1,4 @@
+// Progress to sequence 2
 if(keyboard_check(vk_shift))
 {
 	SetGlobalGameState(GlobalGameStates.MimiRoomSits2);

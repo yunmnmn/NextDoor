@@ -20,8 +20,13 @@ enum GlobalGameStates
 	
 	// Sequence 2 states 
 	MimiRoomSits2,
-	MimiGetsDrink
+	MimiGetsDrink,
 	
+	// Sequence 3 states
+	MimiReturnsFromDrinking,	
+	MimiChecksOnYoungster,
+	MimiEntersYoungstersRoom,
+	MimiApproachesHole,
 }
 
 function SetControlState(p_controlState)

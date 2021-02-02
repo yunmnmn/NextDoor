@@ -7,6 +7,9 @@ function MimiConversation()
 		
 		// Set mimi back to idle
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		
+		// Progress the global state
+		SetGlobalGameState(GlobalGameStates.MimiReturnsFromDrinking);
 	}
 	
 	cb12_7 = function()

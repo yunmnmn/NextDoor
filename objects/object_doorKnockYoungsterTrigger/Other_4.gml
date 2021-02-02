@@ -162,6 +162,110 @@ MimiToYoungster = function()
 	PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
+// First use of the collider
+// TODO: make this one condition
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiToYoungster);
 collisionContext.AddGlobalState2(GlobalGameStates.MimiRoomSits, GlobalGameStates.MimiGoingToYoungster);
 AddCollisionContext(collisionContext);
+
+// -------------------------- Second colliding event --------------------------
+
+function MimiKnocksOnDoorConversation()
+{
+	conversationFinished = function()
+	{
+		// Give control to the player after the conversation is over
+		SetControlState(PlayerControlState.PlayerControl);
+		
+		// Advance the state
+		SetGlobalGameState(GlobalGameStates.MimiEntersYoungstersRoom);
+	}
+	
+	cb14_3 = function()
+	{	
+		var c14_3 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
+		c14_3.AddSubText(new SubText("(The door seems to be open...)", 0.2));
+		RenderText(c14_3);
+	}
+	
+	cb14_2 = function()
+	{	
+		var c14_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb14_3);
+		c14_2.AddSubText(new SubText("Are you okay?", 0.2));
+		RenderText(c14_2);
+	}
+
+	// Start of the conversation. Doesn't require a function
+	var c14_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb14_2);
+	c14_1.AddSubText(new SubText("Hello?! ", 0.6));
+
+	// Call the parent text context
+	if(RenderText(c14_1))
+	{
+		// Disable progressing this TextContext untill Mimi's knocking animation has finished playing
+		GetCurrentTextContext().m_progressable = false;
+		
+		// If it's successfully displaying the text, Disable the player control
+		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		var SetIdleWhenKnockingFinish = function()
+		{
+			// Enable progressing this TextContext 
+			GetCurrentTextContext().m_progressable = true;
+			
+			// Set mimi back to idle
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+			
+			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
+			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, true);
+		}
+		
+		// Play the knocking animation
+		PlayerPlayAnimation(anim_mimiKnock, false, SetIdleWhenKnockingFinish);
+	}
+}
+
+MimiChecksOnYoungster = function()
+{
+	// Disable the control the player has
+	SetControlState(PlayerControlState.PlayerNoControl);
+
+	// Walk to the position to knock
+	var walkToPosition = function()
+	{
+		DisableFollowingInstance();
+		GetPlayerInstance().SetPathSpeed(0.0);
+			
+		MimiKnocksOnDoorConversation();
+	}
+	PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
+}
+
+// Second use of the collider
+var collisionContext2 = new CollisionContext(GetPlayerInstance(), MimiChecksOnYoungster);
+collisionContext2.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
+AddCollisionContext(collisionContext2);
+
+// -------------------------- Third colliding event --------------------------
+
+// Transition HallwayUp -> Youngster's room 
+function collisionEvent()
+{
+	// Don't give the control to the player while transitioning
+	SetControlState(PlayerControlState.PlayerNoControl);
+	
+	// Fade, and when finished, load the hallway
+	{
+		var fadeEndCallback = function()
+		{
+			SetControlState(PlayerControlState.PlayerControl);
+			ChangeRoomAndSetPath("room_youngsterRoom", path_youngsterRoom, 0.999, false);
+		}
+		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
+	}
+}
+
+// Third use of the collider
+var collisionContext3 = new CollisionContext(GetPlayerInstance(), collisionEvent);
+collisionContext3.AddGlobalState1(GlobalGameStates.MimiEntersYoungstersRoom);
+AddCollisionContext(collisionContext3);
