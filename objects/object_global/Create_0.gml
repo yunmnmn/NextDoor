@@ -118,6 +118,22 @@ function ActionKeyPressed()
 	}
 }
 
+function ActionKeyPressed()
+{
+	if(m_controlDevice == ControlDevice.Keyboard)
+	{
+		return keyboard_check_pressed(vk_space);
+	}
+	else if(m_controlDevice == ControlDevice.Controller)
+	{
+		return gamepad_button_check_pressed(m_controllerIndex, gp_face1);
+	}
+	else
+	{
+		assert(false, "Something went wrong with the input device");
+	}
+}
+
 m_controllerIndex = noone;
 var padCount = gamepad_get_device_count();
 for(i = 0; i < padCount; i++)
