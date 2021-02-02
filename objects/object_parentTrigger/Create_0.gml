@@ -6,6 +6,7 @@ function CollisionContext(p_collisionInstance, p_callback) constructor
 	m_globalStates = ds_list_create();
 	
 	m_allStates = false;
+	m_executeOnHit = false;
 	
 	AddGlobalState1 = function(p_globalState1)
 	{
@@ -39,6 +40,11 @@ function CollisionContext(p_collisionInstance, p_callback) constructor
 	AllStates = function()
 	{
 		m_allStates = true;
+	}
+	
+	ExecuteOnHit = function()
+	{
+		m_executeOnHit = true;
 	}
 }
 

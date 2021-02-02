@@ -13,7 +13,7 @@ m_currentAxisV = 0.0;
 // Checks if a controller key has been input
 function CheckControllerPressed()
 {
-	// Early out if gamepads is not supported on the system
+	// Early out if gamepads are not supported on this system
 	if(!gamepad_is_supported())
 	{
 		return false;
