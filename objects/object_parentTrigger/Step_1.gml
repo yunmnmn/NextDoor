@@ -29,7 +29,10 @@ for(i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 	// Check if this trigger collides with the CollisionInstaince
 	if(place_meeting(x, y, collisionContext.m_collisionInstance) && CheckForGlobalState(collisionContext))
 	{
-		m_drawButtonPrompt = true;
+		if(!collisionContext.m_executeOnHit)
+		{
+			m_drawButtonPrompt = true;
+		}
 		
 		m_elapsedTimeInMiliseconds += DeltaTimeInMiliseconds();
 		if(m_elapsedTimeInMiliseconds > m_frameTimeInMiliseconds)
