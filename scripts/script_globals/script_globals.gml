@@ -27,11 +27,22 @@ enum GlobalGameStates
 	MimiChecksOnYoungster,
 	MimiEntersYoungstersRoom,
 	MimiApproachesHole,
+	MimiIsPeeking,
 }
 
 function SetControlState(p_controlState)
 {
 	global.g_playerControlState = p_controlState;
+}
+
+function SetMimiScared(p_scared)
+{
+	global.g_mimiScared = p_scared;
+}
+
+function GetMimiScared()
+{
+	return global.g_mimiScared;
 }
 
 function GetControlState()
@@ -82,6 +93,9 @@ global.g_textboxInstance = noone;
 
 // Set the player instance
 global.g_playerInstance = noone;
+
+// Set mimi scared
+global.g_mimiScared = false;
 
 // This will be called by the room initializer after all objects are loaded
 global.m_postRoomLoadCallbacks = ds_list_create();

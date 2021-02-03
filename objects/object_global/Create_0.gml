@@ -118,15 +118,15 @@ function ActionKeyPressed()
 	}
 }
 
-function ActionKeyPressed()
+function ActionKeyHold()
 {
 	if(m_controlDevice == ControlDevice.Keyboard)
 	{
-		return keyboard_check_pressed(vk_space);
+		return keyboard_check(vk_space);
 	}
 	else if(m_controlDevice == ControlDevice.Controller)
 	{
-		return gamepad_button_check_pressed(m_controllerIndex, gp_face1);
+		return gamepad_button_check(m_controllerIndex, gp_face1);
 	}
 	else
 	{

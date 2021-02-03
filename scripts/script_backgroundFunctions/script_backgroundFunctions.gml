@@ -72,6 +72,8 @@ function GetShadowMapTexture()
 	return shadowMapTexture;
 }
 
+// -------------- viewport functions --------------
+
 // Set the instance that the viewport follows
 function SetViewportFollowInstance(p_instance)
 {
@@ -92,4 +94,39 @@ function SetViewportFollowSpeed(p_followSpeed)
 function DisableFollowingInstance()
 {
 	global.g_backgroundInstance.m_followInstance = noone;
+}
+
+function RescrictViewportX(p_min, p_max)
+{
+	global.g_backgroundInstance.RestrictViewportX(p_min, p_max);
+}
+
+function RescrictViewportY(p_min, p_max)
+{
+	global.g_backgroundInstance.RestrictViewportY(p_min, p_max);
+}
+
+function UnrestrictViewportX()
+{
+	global.g_backgroundInstance.RestrictViewportX(0, 99999999);
+}
+
+function UnrestrictViewportY()
+{
+	global.g_backgroundInstance.RestrictViewportY(0, 99999999);
+}
+
+function GetViewportPositionX()
+{
+	return global.g_backgroundInstance.GetViewportPositionX();
+}
+
+function GetViewportPositionY()
+{
+	return global.g_backgroundInstance.GetViewportPositionY();
+}
+
+function SetViewportPositionX(m_positionX)
+{
+	global.g_backgroundInstance.SetViewportPositionX(m_positionX);
 }

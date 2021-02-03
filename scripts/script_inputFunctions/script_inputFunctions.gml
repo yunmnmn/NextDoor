@@ -12,3 +12,8 @@ function ActionKeyPressed()
 {
 	return instance_global.ActionKeyPressed();
 }
+
+function ActionKeyHold()
+{
+	return instance_global.ActionKeyHold();
+}

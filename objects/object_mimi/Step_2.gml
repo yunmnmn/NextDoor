@@ -100,11 +100,26 @@ if(GetControlState() == PlayerControlState.PlayerControl || path_speed != 0.0)
 	// Set the animation depending on the movement state
 	if(m_movementState == MimiMovementState.Walking)
 	{
-		sprite_index = anim_mimiWalk;
+		if(!GetMimiScared)
+		{
+			sprite_index = anim_mimiWalk;
+		}
+		else
+		{
+			sprite_index = anim_mimiWalkScared
+		}
 	}
 	else if(m_movementState = MimiMovementState.Idle)
 	{
-		sprite_index = sprite_mimiIdle;
+		if(!GetMimiScared())
+		{
+			sprite_index = sprite_mimiIdle;
+		}
+		else
+		{
+			// TODO; replace with scared idle
+			sprite_index = sprite_mimiIdle;
+		}
 	}
 	else
 	{

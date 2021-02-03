@@ -11,7 +11,7 @@ function NobodyIsHereConversation()
 	cb15_2 = function()
 	{	
 		var c13_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c13_2.AddSubText(new SubText("Nobody home…", 0.2));
+		c13_2.AddSubText(new SubText("Nobody's home…", 0.2));
 		RenderText(c13_2);
 	}
 
@@ -23,6 +23,8 @@ function NobodyIsHereConversation()
 
 NobodyIshere = function()
 {
+	RescrictViewportX(700, room_width);
+	
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 		

@@ -14,14 +14,14 @@ function MimiConversation()
 	
 	cb12_7 = function()
 	{
-		var c11_7 = new TextContext(sprite_mimiAvatarNormal, true, cb12ConversationFinished);
+		var c11_7 = new TextContext(sprite_mimiAvatarTroubled, true, cb12ConversationFinished);
 		c11_7.AddSubText(new SubText("See you around", 0.2));
 		RenderText(c11_7);
 	}
 	
 	cb12_6 = function()
 	{		
-		var c12_6 = new TextContext(sprite_mimiAvatarNormal, true, cb12_7)
+		var c12_6 = new TextContext(sprite_mimiAvatarTroubled, true, cb12_7)
 		c12_6.AddSubText(new SubText("I'm going back to my room", 0.2));
 		RenderText(c12_6);
 	}

@@ -25,6 +25,9 @@ function YoungsterStreamsConversation()
 
 MimiHearsYoungsterScream = function()
 {
+	// Set Mimi to scared from now on
+	SetMimiScared(true);
+	
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 		

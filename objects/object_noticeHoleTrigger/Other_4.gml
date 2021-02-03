@@ -9,24 +9,24 @@ function MimiNoticesHoleConversation()
 		SetGlobalGameState(GlobalGameStates.MimiApproachesHole);
 	}
 	
-	cb16_3 = function()
+	cb17_3 = function()
 	{	
-		var c16_3 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c16_3.AddSubText(new SubText("Hey, there's a hole over there", 0.2));
-		RenderText(c16_3);
+		var c17_3 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
+		c17_3.AddSubText(new SubText("Hey, there's a hole over there", 0.2));
+		RenderText(c17_3);
 	}
 	
-	cb16_2 = function()
+	cb17_2 = function()
 	{	
-		var c16_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb16_3);
-		c16_2.AddSubText(new SubText("That is strange", 0.2));
-		RenderText(c16_2);
+		var c17_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb17_3);
+		c17_2.AddSubText(new SubText("That is strange", 0.2));
+		RenderText(c17_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
-	var c16_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb16_2);
-	c16_1.AddSubText(new SubText("They really don't make any sound", 0.2));
-	RenderText(c16_1);
+	var c17_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb17_2);
+	c17_1.AddSubText(new SubText("They really don't make any sound", 0.2));
+	RenderText(c17_1);
 }
 
 MimiNoticesHole = function()
@@ -35,7 +35,7 @@ MimiNoticesHole = function()
 	SetControlState(PlayerControlState.PlayerNoControl);
 		
 	// Set the idle animation
-	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
 		
 	// Play the conversation
 	MimiNoticesHoleConversation();
@@ -43,4 +43,5 @@ MimiNoticesHole = function()
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiNoticesHole);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiEntersYoungstersRoom);
+collisionContext.ExecuteOnHit();
 AddCollisionContext(collisionContext);

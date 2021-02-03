@@ -213,7 +213,7 @@ function MimiKnocksOnDoorConversation()
 			GetCurrentTextContext().m_progressable = true;
 			
 			// Set mimi back to idle
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+			PlayerPlayAnimation(sprite_mimiIdleScared, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
 			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, true);
