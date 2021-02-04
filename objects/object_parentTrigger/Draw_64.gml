@@ -1,5 +1,6 @@
 // NOTE: This is in screen space. Convert from room space -> screen space
 if(m_drawButtonPrompt)
 {
-	draw_sprite(anim_buttonSpace, m_drawFrame, x - camera_get_view_x(view_camera[0]), y - camera_get_view_y(view_camera[0]));
+	var player = GetPlayerInstance();
+	draw_sprite(anim_mark, m_drawFrame, player.x, player.y - player.sprite_height - camera_get_view_y(view_camera[0]));
 }
