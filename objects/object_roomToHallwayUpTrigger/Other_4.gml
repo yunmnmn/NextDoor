@@ -42,19 +42,19 @@ AddCollisionContext(collisionContext1);
 
 // -------------------------- Second colliding event --------------------------
 
-var doorCollisionEvent = function()
-{
-	// Don't give the control to the player while transitioning
-	SetControlState(PlayerControlState.PlayerNoControl);
-	// Fade, and when finished, load the hallway
-	var fadeEndCallback = function()
-	{
-		SetControlState(PlayerControlState.PlayerControl);
-		ChangeRoomAndSetPath("room_hallwayUp", path_hallwayUp, 0.01, false);
-	}
-	CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
-}
+//var doorCollisionEvent = function()
+//{
+//	// Don't give the control to the player while transitioning
+//	SetControlState(PlayerControlState.PlayerNoControl);
+//	// Fade, and when finished, load the hallway
+//	var fadeEndCallback = function()
+//	{
+//		SetControlState(PlayerControlState.PlayerControl);
+//		ChangeRoomAndSetPath("room_hallwayUp", path_hallwayUp, 0.01, false);
+//	}
+//	CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
+//}
 
-var collisionContext2 = new CollisionContext(GetPlayerInstance(), doorCollisionEvent);
-collisionContext2.AllStates();
-AddCollisionContext(collisionContext2);
+//var collisionContext2 = new CollisionContext(GetPlayerInstance(), doorCollisionEvent);
+//collisionContext2.AllStates();
+//AddCollisionContext(collisionContext2);

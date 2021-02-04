@@ -7,7 +7,15 @@ if(GetGlobalGameState() == GlobalGameStates.MimiIsPeeking)
 	}
 	else
 	{
-		var interpolatedX = lerp(GetViewportPositionX(), m_viewportLookPositionOriginX, min(m_snapbackSpeed * DeltaTimeInMiliseconds(), 1.0));
-		SetViewportPositionX(interpolatedX);
+		if(!m_lockedToWomen)
+		{
+			var interpolatedX = lerp(GetViewportPositionX(), m_viewportLookPositionOriginX, min(m_snapbackSpeed * DeltaTimeInMiliseconds(), 1.0));
+			SetViewportPositionX(interpolatedX);
+		}
 	}
+}
+
+if(GetViewportPositionX() < 12)
+{
+	m_lockedToWomen = true;
 }
