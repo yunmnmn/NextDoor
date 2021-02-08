@@ -1,23 +1,16 @@
 m_viewportLookPositionOriginX = 0.0;
 m_viewportLookPositionOriginY = 0.0;
 
-m_panSpeed = 0.001;
-m_snapbackSpeed = 0.01;
+m_pan = 0.0;
+m_panSpeed = 0.0003;
+m_snapbackSpeed = 0.002;
 
 m_lockedToWomen = false;
 
 function MimiPeepsConversation()
 {
 	conversationFinished = function()
-	{
-		// Disable following any instance from here one
-		DisableFollowingInstance();
-		
-		// TODO: rename viewport to camera...
-		// Cache this viewport position
-		m_viewportLookPositionOriginX = GetViewportPositionX();
-		m_viewportLookPositionOriginY = GetViewportPositionY();
-		
+	{		
 		// Advance the global game state
 		SetGlobalGameState(GlobalGameStates.MimiIsPeeking);
 	}
@@ -50,6 +43,13 @@ function MimiPeepsConversation()
 	}
 	// Play the knocking animation
 	PlayerPlayAnimation2(anim_mimiPeep, animationEndCallback);
+	
+	// Disable following any instance from here one
+	DisableFollowingInstance();
+	// TODO: rename viewport to camera...
+	// Cache this viewport position
+	m_viewportLookPositionOriginX = GetViewportPositionX();
+	m_viewportLookPositionOriginY = GetViewportPositionY();
 }
 
 MimiPeeps = function()
