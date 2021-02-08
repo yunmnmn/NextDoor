@@ -45,3 +45,13 @@ if(ActionKeyPressed())
 		}
 	}
 }
+
+if(m_textContext != noone && m_textContext.m_animationCallback != noone)
+{
+	if(m_drawFrame == sprite_get_number(m_textContext.m_avatarSpriteIndex)-1)
+	{
+		var tmp = m_textContext.m_animationCallback;
+		m_textContext.m_animationCallback = noone;
+		tmp();
+	}
+}

@@ -71,7 +71,7 @@ function PlayerGetMirrored()
 
 function PlayerFreezeAnimationEnd(p_spriteIndex, p_mirrored)
 {
-	PlayerFreezeAnimation(p_spriteIndex, sprite_get_number(image_number) -1, p_mirrored);
+	PlayerFreezeAnimation(p_spriteIndex, sprite_get_number(p_spriteIndex) - 1, p_mirrored);
 }
 
 function PlayerFreezeAnimationEnd2(p_spriteIndex)

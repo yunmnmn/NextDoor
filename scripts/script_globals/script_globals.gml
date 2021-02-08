@@ -28,7 +28,8 @@ enum GlobalGameStates
 	MimiEntersYoungstersRoom,
 	MimiApproachesHole,
 	MimiIsPeeking,
-	MimiFallsBack, 
+	MimiLocksPeeking,
+	MimiIsShocked, 
 }
 
 function SetControlState(p_controlState)

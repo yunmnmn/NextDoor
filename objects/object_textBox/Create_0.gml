@@ -38,6 +38,8 @@ function Reset()
 	m_textPosition = 0.0;
 	m_text = "";
 	m_sameFrame = 0;
+	m_elapsedTimeInMiliseconds = 0.0;
+	m_drawFrame = 0;
 }
 
 // Register this instance to the global textbox instance
@@ -46,6 +48,10 @@ RegisterTextboxInstance(id);
 // This text is used to render text
 m_textContext = noone;
 m_state = TextboxState.Idle;
+
+// Animation related
+m_elapsedTimeInMiliseconds = 0.0;
+m_drawFrame = 0;
 
 // Used as an index to which part of the string to copy
 m_subTextIndex = 0;
@@ -59,3 +65,7 @@ m_sameFrame = 0;
 // TODO: find a better solution for this
 m_xOffset = x;
 m_yOffset = y;
+
+// Fixed
+m_framesPerSecond = 6.0;
+m_frameTimeInMiliseconds = 1000.0 / m_framesPerSecond;

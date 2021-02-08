@@ -57,9 +57,16 @@ if(m_textContext != noone)
 	// Draw the sprite if it's valid
 	if(m_textContext.m_avatarSpriteIndex != noone)
 	{
+		m_elapsedTimeInMiliseconds += DeltaTimeInMiliseconds();
+		if(m_elapsedTimeInMiliseconds > m_frameTimeInMiliseconds)
+		{
+			m_elapsedTimeInMiliseconds = 0.0;
+			m_drawFrame = clamp(m_drawFrame + 1, 0, sprite_get_number(m_textContext.m_avatarSpriteIndex) - 1);
+		}
+		
 		// Hardcoded offset
 		var offset = 10;
-		draw_sprite(m_textContext.m_avatarSpriteIndex, 0, x - sprite_get_width(m_textContext.m_avatarSpriteIndex) - offset, y);
+		draw_sprite(m_textContext.m_avatarSpriteIndex, m_drawFrame, x - sprite_get_width(m_textContext.m_avatarSpriteIndex) - offset, y);
 	}
 }
 

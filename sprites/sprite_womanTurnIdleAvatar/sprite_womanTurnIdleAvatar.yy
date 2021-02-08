@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 139,
   "bbox_top": 0,
-  "bbox_bottom": 115,
+  "bbox_bottom": 132,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 140,
-  "height": 116,
+  "height": 133,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"34c4e106-600d-4d51-a1f9-423b3f90f686","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"34c4e106-600d-4d51-a1f9-423b3f90f686","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"LayerId":{"name":"e409bb27-7579-4289-856f-ac8593d0ff2c","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprite_womanTurnIdleAvatar","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"resourceVersion":"1.0","name":"34c4e106-600d-4d51-a1f9-423b3f90f686","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ffa6a6fb-8220-4fc5-9c50-ff263e241241","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ffa6a6fb-8220-4fc5-9c50-ff263e241241","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"LayerId":{"name":"93b87558-6598-439d-aac8-5df1eacfac2f","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprite_womanTurnIdleAvatar","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"resourceVersion":"1.0","name":"ffa6a6fb-8220-4fc5-9c50-ff263e241241","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sprite_womanTurnIdleAvatar","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"569dd0bf-f4c0-4426-88e1-7058c6d6f695","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34c4e106-600d-4d51-a1f9-423b3f90f686","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"96d0f0c9-feb0-433c-8651-0edf2cfac037","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ffa6a6fb-8220-4fc5-9c50-ff263e241241","path":"sprites/sprite_womanTurnIdleAvatar/sprite_womanTurnIdleAvatar.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e409bb27-7579-4289-856f-ac8593d0ff2c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"93b87558-6598-439d-aac8-5df1eacfac2f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Avatars",

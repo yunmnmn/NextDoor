@@ -7,6 +7,13 @@ m_snapbackSpeed = 0.002;
 
 m_lockedToWomen = false;
 
+function MimiIsSpooked()
+{
+	//PlayerPlayAnimation2(anim_mimiPeep, animationEndCallback);
+	//instance_peepholeTrigger.m_lockedToWomen = false;
+	//PlayerPlayAnimation2(anim_mimiPeepShock, animationEndCallback);
+}
+
 function MimiPeepsConversation()
 {
 	conversationFinished = function()

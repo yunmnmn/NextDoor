@@ -26,6 +26,7 @@ function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 	m_subTexts = ds_list_create();
 	m_skippable = p_skippable;
 	m_progressable = true;
+	m_animationCallback = noone;
 	
 	AddSubText = function(p_subText)
 	{
