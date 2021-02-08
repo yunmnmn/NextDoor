@@ -22,9 +22,7 @@ function NobodyIsHereConversation()
 }
 
 NobodyIshere = function()
-{
-	RescrictViewportX(700, room_width);
-	
+{	
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 		

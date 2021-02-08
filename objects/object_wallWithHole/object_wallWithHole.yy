@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_placeholderBlue",
-    "path": "sprites/sprite_placeholderBlue/sprite_placeholderBlue.yy",
+    "name": "foreground_youngsterRoomWall",
+    "path": "sprites/foreground_youngsterRoomWall/foreground_youngsterRoomWall.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,7 +20,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"object_wallWithHole","path":"objects/object_wallWithHole/object_wallWithHole.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_wallWithHole","path":"objects/object_wallWithHole/object_wallWithHole.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

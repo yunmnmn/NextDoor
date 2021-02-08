@@ -3,8 +3,8 @@
   "closed": false,
   "precision": 4,
   "points": [
-    {"speed":100.0,"x":720.0,"y":348.0,},
-    {"speed":100.0,"x":1608.0,"y":348.0,},
+    {"speed":100.0,"x":972.0,"y":348.0,},
+    {"speed":100.0,"x":2328.0,"y":348.0,},
   ],
   "parent": {
     "name": "YoungsterRoom",

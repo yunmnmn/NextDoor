@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "background_mimiRoom",
-    "path": "sprites/background_mimiRoom/background_mimiRoom.yy",
+    "name": "background_youngsterRoom",
+    "path": "sprites/background_youngsterRoom/background_youngsterRoom.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,7 +24,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"object_youngsterRoomInitializer","path":"objects/object_youngsterRoomInitializer/object_youngsterRoomInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_youngsterRoomInitializer","path":"objects/object_youngsterRoomInitializer/object_youngsterRoomInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
