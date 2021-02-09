@@ -47,10 +47,15 @@ if(m_textContext != noone)
 		// Only allow progressing when the current TextContext is progressable
 		if(m_textContext.m_progressable)
 		{
+			m_elapsedTimeInMilisecondsMarker += DeltaTimeInMiliseconds();
+			if(m_elapsedTimeInMilisecondsMarker > 1000.0 / m_markerImageSpeed)
+			{
+				m_elapsedTimeInMilisecondsMarker = 0.0;
+				m_markerFrame = (m_markerFrame + 1) % m_markerImageNumber;
+			}
 			// Draw a small white box on the bottom right corner to indicate that the text is finished
-			var boxSize = new Vector2(10.0, 10.0);
-			var boxPosition = new Vector2(x + sprite_width - boxSize.m_x, y + sprite_height - boxSize.m_y);
-			draw_rectangle(boxPosition.m_x, boxPosition.m_y, boxPosition.m_x + boxSize.m_x, boxPosition.m_y + boxSize.m_y, false);
+			var spriteSize = new Vector2(m_markerWidth, m_markerHeight);
+			draw_sprite(m_textBoxMarkerSpriteIndex, m_markerFrame, x + sprite_width - spriteSize.m_x, y + sprite_height - spriteSize.m_y);
 		}
 	}
 	

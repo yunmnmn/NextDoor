@@ -38,7 +38,7 @@ for(i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 		if(m_elapsedTimeInMiliseconds > m_frameTimeInMiliseconds)
 		{
 			m_elapsedTimeInMiliseconds = 0.0;
-			m_drawFrame = clamp(m_drawFrame + 1, 0, sprite_get_number(anim_mark) - 1);
+			m_drawFrame = clamp(m_drawFrame + 1, 0, sprite_get_number(m_markSpriteIndex) - 1);
 		}
 		
 		if(collisionContext.m_executeOnHit || ActionKeyPressed())

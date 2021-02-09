@@ -59,7 +59,8 @@ m_collisionContexts = ds_list_create();
 m_drawButtonPrompt = false;
 
 // Fixed
-m_framesPerSecond = 6.0;
+m_markSpriteIndex = anim_mark;
+m_framesPerSecond = sprite_get_speed(m_markSpriteIndex);
 m_frameTimeInMiliseconds = 1000.0 / m_framesPerSecond;
 // Changes over frames
 m_drawFrame = 0;

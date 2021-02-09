@@ -36,7 +36,7 @@ function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 		
 		if(m_avatarSpriteIndex != noone)
 		{
-			m_avatarImageSpeed = sprite_get_speed(m_avatarSpriteIndex)
+			m_avatarImageSpeed = sprite_get_speed(m_avatarSpriteIndex);
 		}
 	}
 }

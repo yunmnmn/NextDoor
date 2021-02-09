@@ -40,6 +40,8 @@ function Reset()
 	m_sameFrame = 0;
 	m_elapsedTimeInMiliseconds = 0.0;
 	m_drawFrame = 0;
+	m_elapsedTimeInMilisecondsMarker = 0.0;
+	m_markerFrame = 0;
 }
 
 // Register this instance to the global textbox instance
@@ -58,6 +60,16 @@ m_subTextIndex = 0;
 m_playSpeed = 0.0;
 m_textPosition = 0.0;
 m_text = "";
+
+// Fixed
+m_textBoxMarkerSpriteIndex = anim_textboxMarker;
+m_markerImageSpeed = sprite_get_speed(m_textBoxMarkerSpriteIndex);
+m_markerWidth = sprite_get_width(m_textBoxMarkerSpriteIndex);
+m_markerHeight = sprite_get_height(m_textBoxMarkerSpriteIndex);
+m_markerImageNumber = sprite_get_number(m_textBoxMarkerSpriteIndex);
+// non-fixed
+m_elapsedTimeInMilisecondsMarker = 0.0;
+m_markerFrame = 0;
 
 // HACK: to not register the space twice
 m_sameFrame = 0;
