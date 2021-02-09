@@ -1,8 +1,3 @@
-function WomenLooksAtMimi()
-{
-
-}
-
 function MimiIsSpooked()
 {
 	finishConverstaion = function()

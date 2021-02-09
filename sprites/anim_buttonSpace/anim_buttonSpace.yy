@@ -84,8 +84,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6971db29-0b30-47a0-81ee-870aef149a4c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Additional",
+    "path": "folders/Sprites/Additional.yy",
   },
   "resourceVersion": "1.0",
   "name": "anim_buttonSpace",

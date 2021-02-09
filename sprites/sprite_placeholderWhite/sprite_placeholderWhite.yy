@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"eca0cd47-8f99-4945-9394-e52193a0a326","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Additional",
+    "path": "folders/Sprites/Additional.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprite_placeholderWhite",

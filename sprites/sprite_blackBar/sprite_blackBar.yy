@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d63560e6-7371-44bc-99a8-49294e9f5aa9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Additional",
+    "path": "folders/Sprites/Additional.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprite_blackBar",

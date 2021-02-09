@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2396cdab-217c-47c5-9198-6000a1344249","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Additional",
+    "path": "folders/Sprites/Additional.yy",
   },
   "resourceVersion": "1.0",
   "name": "anim_mark",

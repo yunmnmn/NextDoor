@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5fb7463e-8376-4ec9-a879-faa4df0d6f69","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Additional",
+    "path": "folders/Sprites/Additional.yy",
   },
   "resourceVersion": "1.0",
   "name": "anim_textboxMarker",
