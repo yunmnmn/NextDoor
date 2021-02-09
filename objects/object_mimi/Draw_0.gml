@@ -73,6 +73,10 @@ shader_set_uniform_f(shader_get_uniform(shader_shadow, "u_shadowMapUvBounds"),
 						shadowMapImageUv[1],  // Top uv
 						shadowMapImageUv[2],  // Right uv
 						shadowMapImageUv[3]); // Bottom uv
+shader_set_uniform_f(shader_get_uniform(shader_shadow, "u_shadowMapSize"),
+						backgroundSize.m_x,  // Left uv
+						backgroundSize.m_y);  // Top uv				
+
 
 // Draw the shader
 draw_self();

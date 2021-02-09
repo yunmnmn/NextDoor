@@ -83,8 +83,9 @@ function MimiPeepsConversation()
 		c18_1.AddSubText(new SubText("How did this got here", 0.2));
 		RenderText(c18_1)
 	}
+	
 	// Play the peeping animation
-	PlayerPlayAnimation2(anim_mimiPeep, animationGaspEnd);
+	PlayerPlayAnimation(anim_mimiPeep, true, animationGaspEnd);
 	
 	// Disable following any instance from here one
 	DisableFollowingInstance();
@@ -104,7 +105,7 @@ MimiPeeps = function()
 		GetPlayerInstance().SetPathSpeed(0.0);
 		MimiPeepsConversation();
 	}
-	PlayerMoveAndExecute(x + 5, GetPlayerInstance().y, 1.0, walkToPosition);
+	PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
 // The collision context for this trigger
@@ -127,6 +128,7 @@ m_panSpeed = 0.0003;
 m_snapbackSpeed = 0.002;
 m_womenCloseToWallFadeSpeed = 0.002;
 
+// List of dirty flags
 m_lockedToWomen = false;
 m_womenPeeps = false;
 m_womenAttacks = false;
