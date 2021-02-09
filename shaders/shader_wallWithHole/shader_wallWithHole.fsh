@@ -44,6 +44,6 @@ void main()
 	
 	vec4 color = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 	//color.a = ((1.0 - u_scale) * dith) / 64.0;
-	color.a = alpha;
+	color.a = min(color.a, alpha);
     gl_FragColor = color;
 }

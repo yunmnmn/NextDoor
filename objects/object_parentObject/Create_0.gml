@@ -16,6 +16,8 @@ function PlayAnimation(p_spriteIndex, p_mirrored, p_callback)
 {
 	Mirror(p_mirrored);
 	sprite_index = p_spriteIndex;
+	image_speed = 1.0;
+	image_index = 0;
 	m_callbackAnimationEnd = p_callback;
 }
 

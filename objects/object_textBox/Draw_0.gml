@@ -58,7 +58,7 @@ if(m_textContext != noone)
 	if(m_textContext.m_avatarSpriteIndex != noone)
 	{
 		m_elapsedTimeInMiliseconds += DeltaTimeInMiliseconds();
-		if(m_elapsedTimeInMiliseconds > m_frameTimeInMiliseconds)
+		if(m_elapsedTimeInMiliseconds > 1000.0 / m_textContext.m_avatarImageSpeed)
 		{
 			m_elapsedTimeInMiliseconds = 0.0;
 			m_drawFrame = clamp(m_drawFrame + 1, 0, sprite_get_number(m_textContext.m_avatarSpriteIndex) - 1);

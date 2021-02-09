@@ -1,17 +1,47 @@
-m_viewportLookPositionOriginX = 0.0;
-m_viewportLookPositionOriginY = 0.0;
+function WomenLooksAtMimi()
+{
 
-m_pan = 0.0;
-m_panSpeed = 0.0003;
-m_snapbackSpeed = 0.002;
-
-m_lockedToWomen = false;
+}
 
 function MimiIsSpooked()
 {
-	//PlayerPlayAnimation2(anim_mimiPeep, animationEndCallback);
-	//instance_peepholeTrigger.m_lockedToWomen = false;
-	//PlayerPlayAnimation2(anim_mimiPeepShock, animationEndCallback);
+	finishConverstaion = function()
+	{
+		// Set the x and y position
+		instance_womanScary.x = instance_womenWallPosition.x;
+		instance_womanScary.y = instance_womenWallPosition.y;
+		instance_womanScary.FreezeAnimationAtEnd2(anim_womenLook);
+		
+		SetGlobalGameState(GlobalGameStates.MimiPeepsAgain);
+	}
+	
+	cb20_2 = function()
+	{
+		var c20_2 = new TextContext(sprite_mimiAvatarEye, false, finishConverstaion);
+		c20_2.AddSubText(new SubText("...", 0.2));
+		RenderText(c20_2);
+	}
+	
+	cb21_1 = function()
+	{
+		var c21_2 = new TextContext(sprite_mimiAvatarCloser, false, cb20_2);
+		c21_2.AddSubText(new SubText("...", 0.2));
+		RenderText(c21_2);
+	}
+	
+	animationEndCallback = function()
+	{
+		GetCurrentTextContext().m_progressable = true;
+		PlayerFreezeAnimationEnd2(anim_mimiPeepShock);
+	}
+	PlayerPlayAnimation2(anim_mimiPeepShock, animationEndCallback);
+	
+	instance_peepholeTrigger.m_lockedToWomen = false;
+
+	var c20_1 = new TextContext(sprite_mimiAvatarGasp, false, cb21_1);
+	c20_1.AddSubText(new SubText("Ah!", 0.2));
+	c20_1.m_progressable = false;
+	RenderText(c20_1);
 }
 
 function MimiPeepsConversation()
@@ -36,9 +66,7 @@ function MimiPeepsConversation()
 		RenderText(c18_2);
 	}
 
-	// Disable progressing this TextContext untill Mimi's knocking animation has finished playing
-	// When the knocking animation is finished, execute this callback
-	var animationEndCallback = function()
+	var animationGaspEnd = function()
 	{		
 		// Freeze the peeping animation when it's finished
 		PlayerFreezeAnimationEnd2(anim_mimiPeep);
@@ -48,8 +76,8 @@ function MimiPeepsConversation()
 		c18_1.AddSubText(new SubText("How did this got here", 0.2));
 		RenderText(c18_1)
 	}
-	// Play the knocking animation
-	PlayerPlayAnimation2(anim_mimiPeep, animationEndCallback);
+	// Play the peeping animation
+	PlayerPlayAnimation2(anim_mimiPeep, animationGaspEnd);
 	
 	// Disable following any instance from here one
 	DisableFollowingInstance();
@@ -72,6 +100,21 @@ MimiPeeps = function()
 	PlayerMoveAndExecute(x + 5, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
+// The collision context for this trigger
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiPeeps);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiApproachesHole);
 AddCollisionContext(collisionContext);
+
+m_viewportLookPositionOriginX = 0.0;
+m_viewportLookPositionOriginY = 0.0;
+
+m_secondPeekViewportPositionX = 640;
+
+m_pan = 0.0;
+m_panSpeed = 0.0003;
+m_snapbackSpeed = 0.002;
+m_womenCloseToWallFadeSpeed = 0.002;
+
+m_lockedToWomen = false;
+m_womenPeeps = false;
+m_womenAttacks = false;

@@ -28,9 +28,16 @@ function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 	m_progressable = true;
 	m_animationCallback = noone;
 	
+	m_avatarImageSpeed = 1000;
+	
 	AddSubText = function(p_subText)
 	{
 		ds_list_add(m_subTexts, p_subText);
+		
+		if(m_avatarSpriteIndex != noone)
+		{
+			m_avatarImageSpeed = sprite_get_speed(m_avatarSpriteIndex)
+		}
 	}
 }
 

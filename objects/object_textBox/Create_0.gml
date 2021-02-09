@@ -65,7 +65,3 @@ m_sameFrame = 0;
 // TODO: find a better solution for this
 m_xOffset = x;
 m_yOffset = y;
-
-// Fixed
-m_framesPerSecond = 6.0;
-m_frameTimeInMiliseconds = 1000.0 / m_framesPerSecond;
