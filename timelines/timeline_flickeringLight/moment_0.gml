@@ -1,0 +1,1 @@
+SetBackgroundSpriteIndex(background_outsideWithLight);

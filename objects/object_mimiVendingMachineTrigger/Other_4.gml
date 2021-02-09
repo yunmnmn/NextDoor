@@ -265,7 +265,7 @@ function MimiConversation()
 		// Disable progressing this TextContext untill Mimi's shock animation is finished
 		GetCurrentTextContext().m_progressable = false;
 		
-		// If it's successfully displaying the text, Disable the player control
+		// Disable the player control
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
 		var SetIdleWhenShockFinish = function()
@@ -273,7 +273,7 @@ function MimiConversation()
 			// Enable progressing this TextContext 
 			GetCurrentTextContext().m_progressable = true;
 			
-			// Set mimi back to idle
+			// Set Mimi back to idle
 			PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		}
 		
@@ -289,28 +289,17 @@ MimiBuysDrink = function()
 		
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
-		
-	blinkingLightEnd = function()
-	{
-		// Freeze the blinking animation at the last frame
-		instance_blinkingLight.image_index = instance_blinkingLight.image_number - 1;
-		instance_blinkingLight.image_speed = 0;
-			
-		// Start the conversation
-		MimiConversation();
-	}
-		
+				
 	// Play the coin animation
 	var animationEnd = function()
 	{
 		// Set Mimi's animation to idle
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-			
-		// Play the blinking animation
-		instance_blinkingLight.image_index = 0;
-		instance_blinkingLight.image_speed = 1;
-		instance_outsideMemory.SetBlinkingLightVisible(true);
-		instance_blinkingLight.PlayAnimation(foreground_blinkingLights, blinkingLightEnd);
+		
+		// TODO: Timelines assumes the same framerate for everyone, this might mess up
+		timeline_index = timeline_flickeringLight;
+		timeline_position = 0;
+		timeline_running = true;
 	}
 	PlayerPlayAnimation(anim_mimiCoin, false, animationEnd);
 		

@@ -2,5 +2,5 @@
 if(m_drawButtonPrompt)
 {
 	var player = GetPlayerInstance();
-	draw_sprite(anim_mark, m_drawFrame, player.x, player.y - player.sprite_height - camera_get_view_y(view_camera[0]));
+	draw_sprite(anim_mark, m_drawFrame, player.x - camera_get_view_x(view_camera[0]), player.y - player.sprite_height - camera_get_view_y(view_camera[0]));
 }

@@ -50,7 +50,7 @@ function GetBackgroundSpriteIndex()
 {
 	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	
-	var backgroundSpriteIndex = object_get_sprite(global.g_backgroundInstance.object_index);
+	var backgroundSpriteIndex = GetBackgroundInstance().sprite_index;
 	assert(backgroundSpriteIndex != -1, "This shouldn't be -1, this means that the object did not have a sprite assigned to it");
 	
 	return backgroundSpriteIndex;
@@ -70,6 +70,11 @@ function GetShadowMapTexture()
 	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	var shadowMapTexture = sprite_get_texture(GetBackgroundSpriteIndex(), 1);
 	return shadowMapTexture;
+}
+
+function SetBackgroundSpriteIndex(p_spriteIndex)
+{
+	GetBackgroundInstance().sprite_index = p_spriteIndex;
 }
 
 // -------------- viewport functions --------------

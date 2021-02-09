@@ -1,12 +1,5 @@
-m_blinkingLightVisible = false;
 m_youngsterOutsideVisible = false;
 m_womenOutsideVisible = false;
-
-function SetBlinkingLightVisible(p_visible)
-{
-	m_blinkingLightVisible = p_visible;
-	instance_blinkingLight.visible = p_visible;
-}
 
 function SetYoungsterOutsideVisible(p_visible)
 {
