@@ -52,9 +52,16 @@ function MimiPeepsConversation()
 		SetGlobalGameState(GlobalGameStates.MimiIsPeeking);
 	}
 	
+	cb18_4 = function()
+	{
+		var c18_4 = new TextContext(sprite_mimiAvatarEye, true, conversationFinished);
+		c18_4.AddSubText(new SubText("...", 0.2));
+		RenderText(c18_4);
+	}
+	
 	cb18_3 = function()
 	{
-		var c18_3 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
+		var c18_3 = new TextContext(sprite_mimiAvatarTroubled, true, cb18_4);
 		c18_3.AddSubText(new SubText("Maybe that guy did it", 0.2));
 		RenderText(c18_3);
 	}
@@ -105,9 +112,14 @@ var collisionContext = new CollisionContext(GetPlayerInstance(), MimiPeeps);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiApproachesHole);
 AddCollisionContext(collisionContext);
 
+// The original position of the viewport when entering the youngster room, and not interacting with the wall trigger
 m_viewportLookPositionOriginX = 0.0;
 m_viewportLookPositionOriginY = 0.0;
 
+// Offset from the origin when the wall should start fading
+m_viewportFadeThreshold = 600.0;
+
+// The position of the viewport when the wall will fade automatically when Mimi looks for the second time
 m_secondPeekViewportPositionX = 640;
 
 m_pan = 0.0;

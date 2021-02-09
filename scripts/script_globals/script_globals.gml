@@ -33,6 +33,9 @@ enum GlobalGameStates
 	MimiPeepsAgain,
 	WomenLooksAtMimi,
 	MimiFallsBackwards,
+	
+	// Sequence 4 states
+	MimiStandsUpFromAttack,
 }
 
 function SetControlState(p_controlState)

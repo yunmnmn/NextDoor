@@ -27,7 +27,7 @@ NobodyIshere = function()
 	SetControlState(PlayerControlState.PlayerNoControl);
 		
 	// Set the idle animation
-	PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+	PlayerPlayAnimation(sprite_mimiIdleScared, true, noone);
 		
 	// Play the conversation with the women in black
 	NobodyIsHereConversation();

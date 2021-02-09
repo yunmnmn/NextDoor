@@ -80,7 +80,7 @@ function SetViewportFollowInstance(p_instance)
 	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	assert(p_instance != noone, "Instance can't be invalid");
 	
-	global.g_backgroundInstance.m_followInstance = p_instance;
+	GetBackgroundInstance().m_followInstance = p_instance;
 }
 
 // Set the following speed
@@ -88,45 +88,45 @@ function SetViewportFollowSpeed(p_followSpeed)
 {
 	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	
-	global.g_backgroundInstance.m_followSpeed = p_followSpeed;
+	GetBackgroundInstance().m_followSpeed = p_followSpeed;
 }
 
 function DisableFollowingInstance()
 {
-	global.g_backgroundInstance.m_followInstance = noone;
+	GetBackgroundInstance().m_followInstance = noone;
 }
 
 function RescrictViewportX(p_min, p_max)
 {
-	global.g_backgroundInstance.RestrictViewportX(p_min, p_max);
+	GetBackgroundInstance().RestrictViewportX(p_min, p_max);
 }
 
 function RescrictViewportY(p_min, p_max)
 {
-	global.g_backgroundInstance.RestrictViewportY(p_min, p_max);
+	GetBackgroundInstance().RestrictViewportY(p_min, p_max);
 }
 
 function UnrestrictViewportX()
 {
-	global.g_backgroundInstance.RestrictViewportX(0, 99999999);
+	GetBackgroundInstance().RestrictViewportX(0, 99999999);
 }
 
 function UnrestrictViewportY()
 {
-	global.g_backgroundInstance.RestrictViewportY(0, 99999999);
+	GetBackgroundInstance().RestrictViewportY(0, 99999999);
 }
 
 function GetViewportPositionX()
 {
-	return global.g_backgroundInstance.GetViewportPositionX();
+	return GetBackgroundInstance().GetViewportPositionX();
 }
 
 function GetViewportPositionY()
 {
-	return global.g_backgroundInstance.GetViewportPositionY();
+	return GetBackgroundInstance().GetViewportPositionY();
 }
 
 function SetViewportPositionX(m_positionX)
 {
-	global.g_backgroundInstance.SetViewportPositionX(m_positionX);
+	GetBackgroundInstance().SetViewportPositionX(m_positionX);
 }

@@ -1,4 +1,4 @@
-if(global.g_backgroundInstance.m_followInstance)
+if(m_followInstance)
 {
 	var followX = clamp(m_followInstance.x, m_viewportMinX + m_viewportHalfSize.m_x, m_viewportMaxX - m_viewportHalfSize.m_x);
 	var followY = clamp(m_followInstance.y, m_viewportHalfSize.m_y, room_height - m_viewportHalfSize.m_y);
