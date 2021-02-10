@@ -147,6 +147,41 @@ for(i = 0; i < padCount; i++)
 	}
 }
 
+// ----------- Draw button prompts ---------
+m_buttonFrame = 0;
+m_elapsedTimeInMilisecondsMarker = 0;
+m_buttonImageSpeed = 6.0; // Hack/TODO: make this dynamic instead
+
+m_drawMovingPrompt = false;
+m_movingPromptX = 0;
+m_movingPromptY = 0;
+function DrawMovingPrompt(p_draw, p_x, p_y)
+{
+	m_drawMovingPrompt = p_draw;
+	m_movingPromptX = p_x;
+	m_movingPromptY = p_y
+}
+
+m_drawPressPrompt = false;
+m_pressPromptX = 0;
+m_pressPromptY = 0;
+function DrawActionPressPrompt(p_draw, p_x, p_y)
+{
+	m_drawPressPrompt = p_draw;
+	m_pressPromptX = p_x;
+	m_pressPromptY = p_y;
+}
+
+m_drawHoldPrompt = false;
+m_holdPromptX = 0;
+m_holdPromptY = 0;
+function DrawActionHoldPrompt(p_draw, p_x, p_y)
+{
+	m_drawHoldPrompt = p_draw;
+	m_holdPromptX = p_x;
+	m_holdPromptY = p_y;
+}
+
 
 // Default input device is a keyboard
 m_controlDevice = ControlDevice.Keyboard;

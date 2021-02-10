@@ -1,5 +1,5 @@
 var collisionEvent = function()
-{
+{	
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);
 	// Fade, and when finished, load the hallway

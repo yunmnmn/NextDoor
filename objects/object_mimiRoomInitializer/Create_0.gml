@@ -2,17 +2,10 @@ function MimiConversation()
 {
 	conversationFinished = function()
 	{
-		var animationEndCallback = function()
-		{
-			// Play the idle animation
-			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-		
-			// Give the control back to the player
-			SetControlState(PlayerControlState.PlayerControl);
-		}
-		// Set the animation speed back when it's finished playing the conversation
-		// Play the sitting animation
-		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
+		m_talkingFinished = true;
+		// Draw the button prompts
+		instance_global.DrawMovingPrompt(true, 175, 124);
+		instance_global.DrawActionPressPrompt(true, 700, 60);
 	}
 	
 	cb2_3 = function()
@@ -122,3 +115,7 @@ switch(GetGlobalGameState())
 	default:
 		break;
 }
+
+//
+m_pressedMove = false;
+m_talkingFinished = false;

@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Globals",
+    "path": "folders/Objects/Globals.yy",
   },
   "resourceVersion": "1.0",
   "name": "object_blackBar",
