@@ -12,6 +12,21 @@ if(m_textContext != noone)
 		if(m_subTextIndex < subTextCount)
 		{
 			var subText = ds_list_find_value(m_textContext.m_subTexts, m_subTextIndex);
+			
+			// TODO comment
+			if(!m_textDirty)
+			{
+				if(subText.m_newLine)
+				{
+					m_text += "\n";
+				}
+				else
+				{
+					m_text += " ";
+				}
+				m_textDirty = true;
+			}
+			
 			var text = subText.m_text;
 			var playSpeed = subText.m_playSpeed;
 		
@@ -26,6 +41,7 @@ if(m_textContext != noone)
 				m_text = stringToRender;
 				m_subTextIndex++;
 				m_textPosition = 0;
+				m_textDirty = false;
 			}
 		}
 		else
@@ -34,14 +50,12 @@ if(m_textContext != noone)
 			m_state = TextboxState.Waiting;
 		}
 	
-		var textHeight = string_height(stringToRender);
-		draw_text_ext(x, y, stringToRender, textHeight, sprite_width);
+		draw_text_ext(x, y, stringToRender, m_textHeight, sprite_width);
 	}
 	else if(m_state == TextboxState.Waiting)
 	{
 		// Draw the full text
-		var textHeight = string_height(m_text);
-		draw_text_ext(x, y, m_text, textHeight, sprite_width);
+		draw_text_ext(x, y, m_text, m_textHeight, sprite_width);
 	
 		// Only allow progressing when the current TextContext is progressable
 		if(m_textContext.m_progressable)

@@ -42,14 +42,21 @@ function Reset()
 	m_drawFrame = 0;
 	m_elapsedTimeInMilisecondsMarker = 0.0;
 	m_markerFrame = 0;
+	m_textDirty = true;
 }
 
 // Register this instance to the global textbox instance
 RegisterTextboxInstance(id);
 
+// Draw the text
+draw_set_font(font_textboxFont);
+// Simple string to get the height of the string
+m_textHeight = string_height("a");
+
 // This text is used to render text
 m_textContext = noone;
 m_state = TextboxState.Idle;
+m_textDirty = true;
 
 // Animation related
 m_elapsedTimeInMiliseconds = 0.0;
