@@ -12,10 +12,11 @@ function Vector2(p_x, p_y) constructor
 }
 
 // SubTextContext is used 
-function SubText(p_text, p_playSpeed) constructor
+function SubText(p_text, p_playSpeed, p_newLine) constructor
 {
 	m_text = p_text;
 	m_playSpeed = p_playSpeed;
+	m_newLine= p_newLine;
 }
 
 // TextContext is used to chain texts

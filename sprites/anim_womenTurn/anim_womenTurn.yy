@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 64,
-  "bbox_right": 343,
-  "bbox_top": 4,
-  "bbox_bottom": 183,
+  "bbox_left": 0,
+  "bbox_right": 347,
+  "bbox_top": 0,
+  "bbox_bottom": 215,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -103,36 +103,36 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a7c0511c-d111-405f-a89e-6629bc5a62a2","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a7c0511c-d111-405f-a89e-6629bc5a62a2","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"a7c0511c-d111-405f-a89e-6629bc5a62a2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"523600b4-38d6-473f-ab3c-74bc49aa017b","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"523600b4-38d6-473f-ab3c-74bc49aa017b","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"523600b4-38d6-473f-ab3c-74bc49aa017b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"94d5b541-3da0-4a8c-8460-db1ddc846557","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"94d5b541-3da0-4a8c-8460-db1ddc846557","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"94d5b541-3da0-4a8c-8460-db1ddc846557","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5af5b460-f9c8-4b36-aa4c-f41900b9fd69","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5af5b460-f9c8-4b36-aa4c-f41900b9fd69","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"5af5b460-f9c8-4b36-aa4c-f41900b9fd69","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f73b0ff6-396f-4fc3-99c3-b7d035b8760a","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f73b0ff6-396f-4fc3-99c3-b7d035b8760a","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"f73b0ff6-396f-4fc3-99c3-b7d035b8760a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c05cce8d-2236-48bf-9230-7f0a0f56fa71","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c05cce8d-2236-48bf-9230-7f0a0f56fa71","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"c05cce8d-2236-48bf-9230-7f0a0f56fa71","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"941679b9-d33d-439e-a447-3e18bc7d6b8a","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"941679b9-d33d-439e-a447-3e18bc7d6b8a","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"941679b9-d33d-439e-a447-3e18bc7d6b8a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0b386407-d2bc-4b17-af96-efc739e8348b","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0b386407-d2bc-4b17-af96-efc739e8348b","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"0b386407-d2bc-4b17-af96-efc739e8348b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cac4db8c-4934-4214-b04a-b32b08bd85a8","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cac4db8c-4934-4214-b04a-b32b08bd85a8","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"cac4db8c-4934-4214-b04a-b32b08bd85a8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d8f711fb-37f2-4c05-b067-f86b2b785f68","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d8f711fb-37f2-4c05-b067-f86b2b785f68","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"d8f711fb-37f2-4c05-b067-f86b2b785f68","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5ef43b1b-ffbd-42da-90d1-39affb67c9bd","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5ef43b1b-ffbd-42da-90d1-39affb67c9bd","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"5ef43b1b-ffbd-42da-90d1-39affb67c9bd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"611b5183-5221-4c02-a5cb-b220c32cfbd0","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"611b5183-5221-4c02-a5cb-b220c32cfbd0","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"611b5183-5221-4c02-a5cb-b220c32cfbd0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1eda5bed-3f4b-4626-a449-d4a75b584f51","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1eda5bed-3f4b-4626-a449-d4a75b584f51","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"1eda5bed-3f4b-4626-a449-d4a75b584f51","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"08063d2b-4839-4269-8683-50aea4e5411f","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"08063d2b-4839-4269-8683-50aea4e5411f","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"08063d2b-4839-4269-8683-50aea4e5411f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4a0a7109-ac7c-4e7d-8449-ee62b0b1974c","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4a0a7109-ac7c-4e7d-8449-ee62b0b1974c","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"4a0a7109-ac7c-4e7d-8449-ee62b0b1974c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d199b276-ed8c-491a-b9f0-b0b873678eb6","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d199b276-ed8c-491a-b9f0-b0b873678eb6","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"LayerId":{"name":"5ab949cd-0a07-4763-acca-d785a14889ca","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","name":"d199b276-ed8c-491a-b9f0-b0b873678eb6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"anim_womenTurn","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 6.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -141,14 +141,14 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d83e06bb-b68f-4aee-b291-4e240a9ac7fb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a7c0511c-d111-405f-a89e-6629bc5a62a2","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"4c5a8026-d0a2-481c-a54d-10d917bbb669","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"523600b4-38d6-473f-ab3c-74bc49aa017b","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"79a921e9-958a-4e82-a866-32e99b27bf32","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"94d5b541-3da0-4a8c-8460-db1ddc846557","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"e777c172-bb88-44c3-9484-b99bf75ab9bc","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5af5b460-f9c8-4b36-aa4c-f41900b9fd69","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"dfb3d0c4-8abd-49c4-a303-ae438f7bd66e","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f73b0ff6-396f-4fc3-99c3-b7d035b8760a","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"3367f21c-fa90-42ec-a397-3ef0758a15eb","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c05cce8d-2236-48bf-9230-7f0a0f56fa71","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"092e34bf-88fd-46f9-a95b-1a10a6cb9ab1","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"941679b9-d33d-439e-a447-3e18bc7d6b8a","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"3cddd180-8088-41a5-a05e-5fee7ebbd59f","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b386407-d2bc-4b17-af96-efc739e8348b","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b4535ab2-fff7-41de-8dcb-6b1cdb02c1c6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cac4db8c-4934-4214-b04a-b32b08bd85a8","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"59bfbf2f-c22c-4cfd-8ba8-bea8e325f9b7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d8f711fb-37f2-4c05-b067-f86b2b785f68","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"420b5b6b-4e4d-4cb6-8755-64aebde90ac0","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5ef43b1b-ffbd-42da-90d1-39affb67c9bd","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"385131aa-e029-4335-82ff-bd495816a027","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"611b5183-5221-4c02-a5cb-b220c32cfbd0","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e57fc364-18aa-4f7c-ae88-0bcc8ab3aa89","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1eda5bed-3f4b-4626-a449-d4a75b584f51","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"52b26221-d8a3-4f46-9121-1044f7c0f06b","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"08063d2b-4839-4269-8683-50aea4e5411f","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1013c478-e1ad-4f0a-a1cb-b27827bc0afd","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a0a7109-ac7c-4e7d-8449-ee62b0b1974c","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"591e4bb7-1c05-4608-b76b-5dd381586ba2","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d199b276-ed8c-491a-b9f0-b0b873678eb6","path":"sprites/anim_womenTurn/anim_womenTurn.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -172,7 +172,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"86dbdd78-651b-4801-8247-2533fbcbd3b9","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5ab949cd-0a07-4763-acca-d785a14889ca","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Woman",

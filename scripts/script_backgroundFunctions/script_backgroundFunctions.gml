@@ -1,6 +1,5 @@
-// NOTE:
 /*
-For Sijbren: Some weird ass lingo for texture, sprites, texturemaps, object, instances blabla
+Some weird ass lingo for texture, sprites, texturemaps, object, instances blabla
 
 object: acts as a template, in which instances can be created from. Objects can have references to
 components(sprites, script, sounds, etc)
@@ -64,20 +63,54 @@ function GetBackgroundTexture()
 	return backgroundTexture;
 }
 
-// Returns the ShadowMap texture
-function GetShadowMapTexture()
-{
-	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
-	var shadowMapTexture = sprite_get_texture(GetBackgroundSpriteIndex(), 1);
-	return shadowMapTexture;
-}
-
 function SetBackgroundSpriteIndex(p_spriteIndex)
 {
 	GetBackgroundInstance().sprite_index = p_spriteIndex;
 }
 
-// -------------- viewport functions --------------
+// -------------- Shadow Map functions --------------
+
+// Sets the ShadowMap surface
+function SetShadowMapSurfaceInstance(p_instance)
+{
+	assert(p_instance != noone, "Surface instance is invalid");
+	global.m_shadowSurfaceInstance = p_instance;
+}
+
+// Gets the ShadowMap surface
+function GetShadowSurfaceInstance()
+{
+	assert(global.m_shadowSurfaceInstance != noone, "Surface instance is invalid");
+	return global.m_shadowSurfaceInstance;
+}
+
+// Sets the surface to draw on
+function SetShadowMapAsTarget()
+{
+	var shadowMapSurface = GetShadowSurfaceInstance();
+	surface_set_target(shadowMapSurface);
+}
+
+// Returns the ShadowMap texture
+function GetShadowMapTexture()
+{
+	var shadowMapSurfaceInstance = GetShadowSurfaceInstance();
+	return surface_get_texture(shadowMapSurfaceInstance);
+}
+
+// Resets the ShadowMap surface to draw on
+function ResetShadowMapAsTarget()
+{
+	surface_reset_target();
+}
+
+//function ResizeShadowMapSurface(p_width, p_width)
+//{
+//	var shadowSurfaceInstance = GetShadowSurfaceInstance();
+//	surface_resize(shadowSurfaceInstance, p_width, p_width);
+//}
+
+// -------------- Viewport functions --------------
 
 // Set the instance that the viewport follows
 function SetViewportFollowInstance(p_instance)
@@ -134,4 +167,9 @@ function GetViewportPositionY()
 function SetViewportPositionX(m_positionX)
 {
 	GetBackgroundInstance().SetViewportPositionX(m_positionX);
+}
+
+function PulseScreen(p_magnitude)
+{
+	GetBackgroundInstance().PulseScreen(10);
 }

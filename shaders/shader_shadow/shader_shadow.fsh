@@ -8,7 +8,6 @@ varying vec2 v_shadowMapTexCoord;
 
 uniform sampler2D s_shadowMapTexture;
 uniform float u_shadowMapUvOffsetX;
-uniform vec4 u_shadowMapUvBounds;
 
 void main()
 {

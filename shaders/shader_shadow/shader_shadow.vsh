@@ -7,8 +7,8 @@ attribute vec4 in_Colour;                    // (r,g,b,a)
 attribute vec2 in_TextureCoord;              // (u,v)
 
 // Uniforms
-uniform vec4 u_ratio;
-uniform vec4 u_shadowMapUv;
+uniform vec2 u_ratio;
+uniform vec2 u_norm;
 uniform vec2 u_texCoordOrigin;
 
 varying vec2 v_vTexcoord;
@@ -25,7 +25,5 @@ void main()
     v_vTexcoord = in_TextureCoord;
 	
 	// (ShadowMap UV in TextureMapSpace) + Offset of sprites position in uv cordinate space + offset of the uv vertex (multiplied with the ratio of uv difference of the sprite and background)
-	v_shadowMapTexCoord =	u_shadowMapUv.xy + 
-							vec2(u_ratio.x * u_shadowMapUv.z, u_ratio.y * u_shadowMapUv.w) + 
-							((in_TextureCoord - u_texCoordOrigin) * u_ratio.zw);
+	v_shadowMapTexCoord = u_norm + ((in_TextureCoord - u_texCoordOrigin) * u_ratio);
 }

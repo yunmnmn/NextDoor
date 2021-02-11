@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "object_parentInitializer",
-    "path": "objects/object_parentInitializer/object_parentInitializer.yy",
+    "name": "object_parentRoomInitializer",
+    "path": "objects/object_parentRoomInitializer/object_parentRoomInitializer.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

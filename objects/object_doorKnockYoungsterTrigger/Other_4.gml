@@ -25,7 +25,7 @@ function MimiAndYoungsterConversation()
 	cb2_10 = function()
 	{
 		var c2_10 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
-		c2_10.AddSubText(new SubText("Watch me! You wait right here!", 0.2));
+		c2_10.AddSubText(new SubText("Watch me! You wait right here!", 0.2, true));
 		RenderText(c2_10);
 		
 		// Play the angry animation
@@ -43,14 +43,14 @@ function MimiAndYoungsterConversation()
 	cb2_9 = function()
 	{
 		var c2_9 = new TextContext(sprite_youngsterAvatarSmirk, true, cb2_10);
-		c2_9.AddSubText(new SubText("If the neighbour says it's too loud, I'll think about it.", 0.2));
+		c2_9.AddSubText(new SubText("If the neighbour says it's too loud, I'll think about it.", 0.2, true));
 		RenderText(c2_9);
 	}
 	
 	cb2_8 = function()
 	{
 		var c2_8 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_9);
-		c2_8.AddSubText(new SubText("Maybe you're just too uptight.", 0.2));
+		c2_8.AddSubText(new SubText("Maybe you're just too uptight.", 0.2, true));
 		RenderText(c2_8);
 		
 		var animationEndCallback = function()
@@ -63,14 +63,14 @@ function MimiAndYoungsterConversation()
 	cb2_7 = function()
 	{
 		var c2_7 = new TextContext(sprite_mimiAvatarAngry, true, cb2_8);
-		c2_7.AddSubText(new SubText("You're disturbing the peace!", 0.2));
+		c2_7.AddSubText(new SubText("You're disturbing the peace!", 0.2, true));
 		RenderText(c2_7);
 	}
 	
 	cb2_6 = function()
 	{
 		var c2_6 = new TextContext(sprite_mimiAvatarAngry, true, cb2_7);
-		c2_6.AddSubText(new SubText("Yes it is!", 0.2));
+		c2_6.AddSubText(new SubText("Yes it is!", 0.2, true));
 		RenderText(c2_6);
 		
 		// Play the angry animation
@@ -88,21 +88,21 @@ function MimiAndYoungsterConversation()
 	cb2_5 = function()
 	{
 		var c2_5 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_6);
-		c2_5.AddSubText(new SubText("I don't think it's so loud.", 0.2));
+		c2_5.AddSubText(new SubText("I don't think it's so loud.", 0.2, true));
 		RenderText(c2_5);
 	}
 	
 	cb2_4 = function()
 	{
 		var c2_4 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_5);
-		c2_4.AddSubText(new SubText("I do?", 0.2));
+		c2_4.AddSubText(new SubText("I do?", 0.2, true));
 		RenderText(c2_4);
 	}
 	
 	cb2_3 = function()
 	{
 		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, cb2_4);
-		c2_3.AddSubText(new SubText("You always have it unbearably loud!", 0.2));
+		c2_3.AddSubText(new SubText("You always have it unbearably loud!", 0.2, true));
 		RenderText(c2_3);
 	}
 	
@@ -112,13 +112,13 @@ function MimiAndYoungsterConversation()
 		instance_hallwayUpMemory.SetYoungsterVisible(true);
 		
 		var c2_2 = new TextContext(sprite_mimiAvatarAngry, true, cb2_3);
-		c2_2.AddSubText(new SubText("Could you please lower the volume?!", 0.2));
+		c2_2.AddSubText(new SubText("Could you please lower the volume?!", 0.2, true));
 		RenderText(c2_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
 	var c2_1 = new TextContext(sprite_mimiAvatarAngry, false, cb2_2);
-	c2_1.AddSubText(new SubText("Hello?!", 0.2));
+	c2_1.AddSubText(new SubText("Hello?!", 0.2, true));
 
 	// Call the parent text context
 	if(RenderText(c2_1))
@@ -183,20 +183,20 @@ function MimiKnocksOnDoorConversation()
 	cb14_3 = function()
 	{	
 		var c14_3 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c14_3.AddSubText(new SubText("(The door seems to be open...)", 0.2));
+		c14_3.AddSubText(new SubText("(The door seems to be open...)", 0.2, true));
 		RenderText(c14_3);
 	}
 	
 	cb14_2 = function()
 	{	
 		var c14_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb14_3);
-		c14_2.AddSubText(new SubText("Are you okay?", 0.2));
+		c14_2.AddSubText(new SubText("Are you okay?", 0.2, true));
 		RenderText(c14_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
 	var c14_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb14_2);
-	c14_1.AddSubText(new SubText("Hello?! ", 0.6));
+	c14_1.AddSubText(new SubText("Hello?! ", 0.6, true));
 
 	// Call the parent text context
 	if(RenderText(c14_1))

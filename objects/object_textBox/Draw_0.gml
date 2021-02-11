@@ -4,7 +4,6 @@ draw_set_font(font_textboxFont);
 // Only draw something if the TextContext is valid
 if(m_textContext != noone)
 {
-	// TODO: Move this logic to a step event, instead of a draw
 	if(m_state == TextboxState.RenderingContext)
 	{	
 		var stringToRender = "";

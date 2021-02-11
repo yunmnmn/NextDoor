@@ -23,7 +23,7 @@ function NoticesMimi()
 	
 		var c19_3 = new TextContext(anim_womanTurnAvatar, false, noone);
 		c19_3.m_progressable = false;
-		c19_3.AddSubText(new SubText("!", 0.2));
+		c19_3.AddSubText(new SubText("!", 0.2, true));
 		c19_3.m_animationCallback = BackToMimi;
 		RenderText(c19_3);
 	}
@@ -40,7 +40,7 @@ function NoticesMimi()
 	instance_textbox.Reset();
 	var c19_1 = new TextContext(sprite_womenScrewAvatar, false, noone);
 	c19_1.m_progressable = false;
-	c19_1.AddSubText(new SubText("...", 0.2));
+	c19_1.AddSubText(new SubText("...", 0.2, true));
 	RenderText(c19_1);
 }
 

@@ -26,7 +26,7 @@ function WomenInBlackConversation()
 		SetViewportFollowSpeed(0.005);
 		
 		var c6_2 = new TextContext(sprite_oldtimerAvatarAngry, true, conversationFinished);
-		c6_2.AddSubText(new SubText("Could you argue somewhere else, please?", 0.2));
+		c6_2.AddSubText(new SubText("Could you argue somewhere else, please?", 0.2, true));
 		RenderText(c6_2);
 	}
 	
@@ -37,42 +37,42 @@ function WomenInBlackConversation()
 		instance_hallwayUpMemory.SetOldtimerVisible(true);
 		
 		var c6_1 = new TextContext(sprite_oldtimerAvatarAngry, true, cb6_2);
-		c6_1.AddSubText(new SubText("What's going on?", 0.2));
+		c6_1.AddSubText(new SubText("What's going on?", 0.2, true));
 		RenderText(c6_1);
 	}
 	
 	cb5_7 = function()
 	{
 		var c5_7 = new TextContext(sprite_youngsterAvatarNormal, true, cb6_1);
-		c5_7.AddSubText(new SubText("Why all the black?", 0.2));
+		c5_7.AddSubText(new SubText("Why all the black?", 0.2, true));
 		RenderText(c5_7);
 	}
 	
 	cb5_6 = function()
 	{
 		var c5_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb5_7);
-		c5_6.AddSubText(new SubText("That's the first time I ever seen her", 0.2));
+		c5_6.AddSubText(new SubText("That's the first time I ever seen her", 0.2, true));
 		RenderText(c5_6);
 	}
 	
 	cb5_5 = function()
 	{
 		var c5_5 = new TextContext(sprite_youngsterAvatarNormal, true, cb5_6);
-		c5_5.AddSubText(new SubText("Looked kind of freaky too", 0.2));
+		c5_5.AddSubText(new SubText("Looked kind of freaky too", 0.2, true));
 		RenderText(c5_5);
 	}
 	
 	cb5_4 = function()
 	{
 		var c5_4 = new TextContext(sprite_youngsterAvatarNormal, true, cb5_5);
-		c5_4.AddSubText(new SubText("She was home?", 0.2));
+		c5_4.AddSubText(new SubText("She was home?", 0.2, true));
 		RenderText(c5_4);
 	}
 	
 	cb5_3 = function()
 	{
 		var c5_3 = new TextContext(sprite_mimiAvatarTroubled, true, cb5_4);
-		c5_3.AddSubText(new SubText("?", 0.2));
+		c5_3.AddSubText(new SubText("?", 0.2, true));
 		RenderText(c5_3);
 	}
 	
@@ -84,7 +84,7 @@ function WomenInBlackConversation()
 		instance_women.PlayAnimation2(sprite_womenIdle, noone);
 		
 		var c5_2 = new TextContext(sprite_youngsterAvatarNormal, true, cb5_3);
-		c5_2.AddSubText(new SubText("?", 0.2));
+		c5_2.AddSubText(new SubText("?", 0.2, true));
 		RenderText(c5_2);
 	}
 	
@@ -104,7 +104,7 @@ function WomenInBlackConversation()
 
 	// Start of the conversation. Doesn't require a function
 	var c5_1 = new TextContext(sprite_womanAvatar, true, womenAppearsCallback);
-	c5_1.AddSubText(new SubText("...", 0.2));
+	c5_1.AddSubText(new SubText("...", 0.2, true));
 	RenderText(c5_1);
 }
 

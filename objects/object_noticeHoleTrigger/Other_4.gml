@@ -12,20 +12,20 @@ function MimiNoticesHoleConversation()
 	cb17_3 = function()
 	{	
 		var c17_3 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c17_3.AddSubText(new SubText("Hey, there's a hole over there", 0.2));
+		c17_3.AddSubText(new SubText("Hey, there's a hole over there", 0.2, true));
 		RenderText(c17_3);
 	}
 	
 	cb17_2 = function()
 	{	
 		var c17_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb17_3);
-		c17_2.AddSubText(new SubText("That is strange", 0.2));
+		c17_2.AddSubText(new SubText("That is strange", 0.2, true));
 		RenderText(c17_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
 	var c17_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb17_2);
-	c17_1.AddSubText(new SubText("They really don't make any sound", 0.2));
+	c17_1.AddSubText(new SubText("They really don't make any sound", 0.2, true));
 	RenderText(c17_1);
 }
 

@@ -46,6 +46,7 @@ if(ActionKeyPressed())
 	}
 }
 
+// Execute the callback if the TextContext has a callback when the avatar finished playing
 if(m_textContext != noone && m_textContext.m_animationCallback != noone)
 {
 	if(m_drawFrame == sprite_get_number(m_textContext.m_avatarSpriteIndex)-1)

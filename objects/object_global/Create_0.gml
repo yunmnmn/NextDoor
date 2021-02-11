@@ -1,3 +1,8 @@
+// Create a ShadowSurface instance, and set it
+var surface = surface_create(1,1);
+SetShadowMapSurfaceInstance(surface);
+
+
 enum ControlDevice
 {
 	Keyboard,

@@ -1,0 +1,35 @@
+if(m_followInstance)
+{
+	var followX = clamp(m_followInstance.x, m_viewportMinX + m_viewportHalfSize.m_x, m_viewportMaxX - m_viewportHalfSize.m_x);
+	var followY = clamp(m_followInstance.y, m_viewportHalfSize.m_y, room_height - m_viewportHalfSize.m_y);
+
+	// Desired position
+	var newViewportPosX = followX - m_viewportHalfSize.m_x;
+	var newViewportPosY = followY - m_viewportHalfSize.m_y;
+
+	// Interpolate between current position and new one
+	var currentViewportPosX = camera_get_view_x(m_viewport);
+	var currentViewportPosY = camera_get_view_y(m_viewport);
+
+	var interpolatedX = lerp(currentViewportPosX, newViewportPosX, min(m_followSpeed * DeltaTimeInMiliseconds(), 1.0));
+	var interpolatedY = lerp(currentViewportPosY, newViewportPosY, min(m_followSpeed * DeltaTimeInMiliseconds(), 1.0));
+
+	SetViewportPosition(interpolatedX, interpolatedY);
+}
+
+if(m_stabilized < 1.0)
+{
+	var shakeOffsetX = random_range(-m_shakeMagnitude, m_shakeMagnitude);
+	var shakeOffsetY = random_range(-m_shakeMagnitude, m_shakeMagnitude);
+	m_shakeMagnitude = lerp(m_initialShakeMagnitude, 0, m_stabilized);
+	
+	m_stabilized += m_stabilizeSpeed * DeltaTimeInMiliseconds();
+	m_stabilized = clamp(m_stabilized, 0, 1);
+	
+	camera_set_view_pos(m_viewport, m_rawPositionX + shakeOffsetX, m_rawPositionY + shakeOffsetY);
+	
+	//var interpolatedX = lerp(currentViewportPosX, m_rawPositionX, m_stabilized);
+	//var interpolatedY = lerp(currentViewportPosY, m_rawPositionY, m_stabilized);
+
+	//camera_set_view_pos(m_viewport, interpolatedX, interpolatedY);
+}

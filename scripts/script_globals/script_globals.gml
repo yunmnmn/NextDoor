@@ -107,3 +107,6 @@ global.g_mimiScared = false;
 
 // This will be called by the room initializer after all objects are loaded
 global.m_postRoomLoadCallbacks = ds_list_create();
+
+// This will be set by the global_instance. It's used to render combined shadow values in the room
+global.m_shadowSurfaceInstance = noone;

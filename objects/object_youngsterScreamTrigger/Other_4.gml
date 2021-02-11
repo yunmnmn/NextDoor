@@ -12,14 +12,14 @@ function YoungsterStreamsConversation()
 	cb13_2 = function()
 	{	
 		var c13_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c13_2.AddSubText(new SubText("Sounded like it came from upstairs", 0.2));
+		c13_2.AddSubText(new SubText("Sounded like it came from upstairs", 0.2, true));
 		RenderText(c13_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
 	var c13_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb13_2);
-	c13_1.AddSubText(new SubText("GYAH!", 0.6));
-	c13_1.AddSubText(new SubText("What was that sound?", 0.2));
+	c13_1.AddSubText(new SubText("GYAH!", 0.6, true));
+	c13_1.AddSubText(new SubText("What was that sound?", 0.2, true));
 	RenderText(c13_1);
 }
 
