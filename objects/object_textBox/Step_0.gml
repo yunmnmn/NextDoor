@@ -17,7 +17,7 @@ if(ActionKeyPressed())
 				for(i = 0; i < ds_list_size(m_textContext.m_subTexts); i++)
 				{
 					var subText = ds_list_find_value(m_textContext.m_subTexts, i).m_text;
-					m_text = m_text + subText;
+					m_text += subText + "\n";
 				}
 	
 				m_state = TextboxState.Waiting;
