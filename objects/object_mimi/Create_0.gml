@@ -37,9 +37,9 @@ function AddPathCallback(p_pathCallback)
 {
 	// Before adding it to the callback list, check if the conditions are met already
 	var delta = GetPathDistanceFromPixels(p_pathCallback.m_pathIndex, 6);
-	var withinDelta = abs(p_pathCallback.m_position - m_position) < delta;
-	if(p_pathCallback.m_callback != noone && path_index == p_pathCallback.m_pathIndex)
+	if(p_pathCallback.m_callback != noone)
 	{
+		var withinDelta = abs(p_pathCallback.m_position - m_position) < delta;
 		if(withinDelta)
 		{
 			p_pathCallback.m_callback();

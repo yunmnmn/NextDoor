@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 instance_stairs.visible = false;
 
 // Set the lower path callback, so Mimi can go up
