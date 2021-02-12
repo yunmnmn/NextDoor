@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f49b7a59-3b62-4f86-bd85-27b12dcfb751","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f49b7a59-3b62-4f86-bd85-27b12dcfb751","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":{"name":"d25ab4a5-9fe1-4a9f-9c9b-6603766818c3","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"background_mimiRoomDay","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"f49b7a59-3b62-4f86-bd85-27b12dcfb751","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ec044dc3-cf49-48bd-892b-0052f2605a75","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ec044dc3-cf49-48bd-892b-0052f2605a75","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":{"name":"d25ab4a5-9fe1-4a9f-9c9b-6603766818c3","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"background_mimiRoomDay","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"ec044dc3-cf49-48bd-892b-0052f2605a75","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"1a9376ee-4659-471b-9311-938b2a8b0f9c","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"1a9376ee-4659-471b-9311-938b2a8b0f9c","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":{"name":"54f21e12-874b-4408-909f-3e9e255cadbc","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"background_mimiRoomDay","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"1a9376ee-4659-471b-9311-938b2a8b0f9c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c180e631-7d65-4225-aff9-e044cf2fe0de","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c180e631-7d65-4225-aff9-e044cf2fe0de","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"LayerId":{"name":"54f21e12-874b-4408-909f-3e9e255cadbc","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"background_mimiRoomDay","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","name":"c180e631-7d65-4225-aff9-e044cf2fe0de","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"background_mimiRoomDay","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e64f50f6-259c-4cce-b10c-5dff205cd876","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f49b7a59-3b62-4f86-bd85-27b12dcfb751","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"e59a75ae-8f44-47b7-8fbd-1302d445a670","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec044dc3-cf49-48bd-892b-0052f2605a75","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7140591a-69c3-4ece-bbf7-9d08228c6a20","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1a9376ee-4659-471b-9311-938b2a8b0f9c","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2d4737d0-2e34-429c-b12c-582e3e87d24d","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c180e631-7d65-4225-aff9-e044cf2fe0de","path":"sprites/background_mimiRoomDay/background_mimiRoomDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d25ab4a5-9fe1-4a9f-9c9b-6603766818c3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"54f21e12-874b-4408-909f-3e9e255cadbc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Backgrounds",

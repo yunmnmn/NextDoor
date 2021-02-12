@@ -12,13 +12,13 @@ uniform float u_shadowMapUvOffsetX;
 void main()
 {
 	float shadowMapU = abs(u_shadowMapUvOffsetX - v_shadowMapTexCoord.x);
-	float shadowGradient = texture2D(s_shadowMapTexture, vec2(shadowMapU, v_shadowMapTexCoord.y)).x;
+	vec4 shadowGradient = texture2D(s_shadowMapTexture, vec2(shadowMapU, v_shadowMapTexCoord.y));
 	
 	// Sample the texture like normal (this is standard from GM)
 	vec4 baseColour = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
 	
 	// Only multiply the colour with the shadowgradient, leave the alpha alone
-	baseColour.rgb *= shadowGradient;
+	baseColour.rgb *= shadowGradient.rgb;
 	
 	// Set the fragment color
     gl_FragColor = baseColour;

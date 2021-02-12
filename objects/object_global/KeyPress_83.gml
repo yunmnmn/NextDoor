@@ -1,1 +1,1 @@
-PulseScreen(10);
+PulseScreen(0.1);
