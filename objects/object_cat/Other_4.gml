@@ -38,7 +38,7 @@ CatMeows = function()
 		
 		PlayAnimation2(anim_cat, CatAnimationFinished);
 	}
-	PlayerMoveAndExecute(mirror ? x + 100 : x - 100, GetPlayerInstance().y, 1.0, walkToPosition);
+	PlayerMoveAndExecute(mirror ? x + 60 : x - 60, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
 CatIsOnTheGround = function()

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "background_mimiRoom",
-    "path": "sprites/background_mimiRoom/background_mimiRoom.yy",
+    "name": "background_mimiRoomNight",
+    "path": "sprites/background_mimiRoomNight/background_mimiRoomNight.yy",
   },
   "solid": false,
   "visible": true,

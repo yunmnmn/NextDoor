@@ -38,6 +38,7 @@
       ],"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_triggers","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"object_outsideInitializer","path":"objects/object_outsideInitializer/object_outsideInitializer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":-534.0,"resourceVersion":"1.0","name":"inst_6DD1DFDE","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"object_outsideLampNearStairs","path":"objects/object_outsideLampNearStairs/object_outsideLampNearStairs.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":600.0,"y":540.0,"resourceVersion":"1.0","name":"instance_lampOutsideNearStairs","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_backgroundInstance","tags":[],"resourceType":"GMRInstanceLayer",},
     {"spriteId":null,"colour":4278190080,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":900,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
@@ -57,6 +58,7 @@
     {"name":"inst_5C8CB995","path":"rooms/room_outside/room_outside.yy",},
     {"name":"instance_coinSnapPosition","path":"rooms/room_outside/room_outside.yy",},
     {"name":"inst_78F07A9F","path":"rooms/room_outside/room_outside.yy",},
+    {"name":"instance_lampOutsideNearStairs","path":"rooms/room_outside/room_outside.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

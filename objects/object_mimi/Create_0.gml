@@ -36,22 +36,24 @@ function GetPath()
 function AddPathCallback(p_pathCallback)
 {
 	// Before adding it to the callback list, check if the conditions are met already
-	// TODO: delta depends on the length of the path, make it independent
-	var delta = 0.01;
-	if(p_pathCallback.m_callback != noone && path_index == p_pathCallback.m_pathIndex && 
-		abs(p_pathCallback.m_position - m_position) < delta)
+	var delta = GetPathDistanceFromPixels(p_pathCallback.m_pathIndex, 6);
+	var withinDelta = abs(p_pathCallback.m_position - m_position) < delta;
+	if(p_pathCallback.m_callback != noone && path_index == p_pathCallback.m_pathIndex)
 	{
-		p_pathCallback.m_callback();
-		// Still add it to the list if it's persistant
-		if(p_pathCallback.m_persistant)
+		if(withinDelta)
 		{
+			p_pathCallback.m_callback();
+			// Still add it to the list if it's persistant
+			if(p_pathCallback.m_persistant)
+			{
+				ds_list_add(m_pathCallbacks, p_pathCallback);
+			}
+		}
+		else
+		{
+			// Else add it to the list
 			ds_list_add(m_pathCallbacks, p_pathCallback);
 		}
-	}
-	else
-	{
-		// Else add it to the list
-		ds_list_add(m_pathCallbacks, p_pathCallback);
 	}
 }
 

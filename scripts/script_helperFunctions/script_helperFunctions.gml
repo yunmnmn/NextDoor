@@ -18,6 +18,13 @@ function DeltaTimeInMiliseconds()
 	return delta_time / 1000;
 }
 
+// Converts the pixel distance to path distance
+function GetPathDistanceFromPixels(p_pathIndex, p_pixels)
+{
+	var onePixel = 1.0 / path_get_length(p_pathIndex)
+	return onePixel * p_pixels;
+}
+
 function SnapToClosestPathIndex(p_pathIndex, p_pathPoint)
 {
 	var xPos = path_get_point_x(p_pathIndex, p_pathPoint);

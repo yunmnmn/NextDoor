@@ -1,1 +1,1 @@
-SetBackgroundSpriteIndex(background_outside);
+instance_outsideMemory.SetLampOutsideNearStairsVisible(false);

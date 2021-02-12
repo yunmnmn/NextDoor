@@ -3,4 +3,5 @@ if(room == room_outside)
 {
 	instance_youngsterOutside.visible = m_youngsterOutsideVisible;
 	instance_womenOutside.visible = m_womenOutsideVisible;
+	instance_lampOutsideNearStairs.visible = m_lampOutsideNearStairs;
 }
