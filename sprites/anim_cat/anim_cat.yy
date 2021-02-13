@@ -227,8 +227,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5fad88b4-efd4-4648-b19c-6ab99b0226c8","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cat",
+    "path": "folders/Sprites/Cat.yy",
   },
   "resourceVersion": "1.0",
   "name": "anim_cat",

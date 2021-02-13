@@ -191,8 +191,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b6ac3fc9-4bf9-4f28-8c03-c44e1d44e66e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cat",
+    "path": "folders/Sprites/Cat.yy",
   },
   "resourceVersion": "1.0",
   "name": "anim_catFall",

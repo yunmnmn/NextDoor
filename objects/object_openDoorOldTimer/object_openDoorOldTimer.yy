@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_placeholderDoor",
-    "path": "sprites/sprite_placeholderDoor/sprite_placeholderDoor.yy",
+    "name": "sprite_openDoorOldTimer",
+    "path": "sprites/sprite_openDoorOldTimer/sprite_openDoorOldTimer.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
     "path": "folders/Objects/HallwayUp.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_openDoor",
+  "name": "object_openDoorOldTimer",
   "tags": [],
   "resourceType": "GMObject",
 }
