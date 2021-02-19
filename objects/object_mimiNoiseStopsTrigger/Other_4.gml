@@ -10,6 +10,9 @@ MimiConversation = function()
 			// Advance the global state
 			SetGlobalGameState(GlobalGameStates.MimiGetsDrink);
 			
+			// Start the transition from day to night
+			instance_mimiRoomBackground.StartTransition();
+			
 			// Wait a while before Mimi promps to get a drink
 			PlayTimeline(timeline_getDrink);
 		}
@@ -20,9 +23,6 @@ MimiConversation = function()
 			PlayerPlayAnimationBackwards(anim_mimiSit, false, keepSitting);
 		}
 		PlayerMoveAndExecute(180, GetPlayerInstance().y, 1.0, walkToPosition);
-		
-		// Start the transition from day to night
-		instance_mimiRoomBackground.StartTransition();
 	}
 	
 	cb9_4 = function()
