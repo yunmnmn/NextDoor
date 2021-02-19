@@ -18,6 +18,39 @@ function DeltaTimeInMiliseconds()
 	return delta_time / 1000;
 }
 
+// Calculate the average delta time over frames
+global.averageDeltaTimeInMiliseconds = noone;
+function AverageDeltaTimeInMiliseconds()
+{
+	if(global.averageDeltaTimeInMiliseconds == noone)
+	{
+		global.averageDeltaTimeInMiliseconds = DeltaTimeInMiliseconds();
+	}
+	else
+	{
+		var dt = DeltaTimeInMiliseconds();
+		global.averageDeltaTimeInMiliseconds = (dt + global.averageDeltaTimeInMiliseconds) * 0.5;
+	}
+}
+
+function GetAverageDeltaTimeInMiliseconds()
+{
+	return global.averageDeltaTimeInMiliseconds;
+}
+
+// Get the timeline speed that is nice for 60 fps
+// NOTE: The timeline moments are assumed at a 60 fps
+function PlayTimeline(p_timelineIndex)
+{
+	// TODO: Timelines assumes the same framerate for everyone, this might mess up
+	timeline_index = p_timelineIndex;
+	timeline_position = 0;
+	timeline_running = true;
+	timeline_speed = GetAverageDeltaTimeInMiliseconds();
+	asdf = 0;
+}
+
+
 // Converts the pixel distance to path distance
 function GetPathDistanceFromPixels(p_pathIndex, p_pixels)
 {

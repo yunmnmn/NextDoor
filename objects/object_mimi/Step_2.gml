@@ -100,24 +100,32 @@ if(GetControlState() == PlayerControlState.PlayerControl || path_speed != 0.0)
 	// Set the animation depending on the movement state
 	if(m_movementState == MimiMovementState.Walking)
 	{
-		if(!GetMimiScared())
+		if(GetMimiCrawling())
 		{
-			sprite_index = anim_mimiWalk;
+			sprite_index = anim_mimiCrawl;
+		}
+		else if(GetMimiScared())
+		{
+			sprite_index = anim_mimiWalkScared;
 		}
 		else
 		{
-			sprite_index = anim_mimiWalkScared
+			sprite_index = anim_mimiWalk;
 		}
 	}
 	else if(m_movementState = MimiMovementState.Idle)
 	{
-		if(!GetMimiScared())
+		if(GetMimiCrawling())
 		{
-			sprite_index = sprite_mimiIdle;
+			sprite_index = anim_mimiCrawlIdle;
+		}
+		else if(GetMimiScared())
+		{
+			sprite_index = sprite_mimiIdleScared;
 		}
 		else
 		{
-			sprite_index = sprite_mimiIdleScared;
+			sprite_index = sprite_mimiIdle;
 		}
 	}
 	else
@@ -132,7 +140,14 @@ if(GetControlState() == PlayerControlState.PlayerControl || path_speed != 0.0)
 	}
 	else if(m_direction == Direction.Left)
 	{
-		SetMirrored(true);
+		if(GetMimiCrawling())
+		{
+			SetMirrored(false);
+		}
+		else
+		{
+			SetMirrored(true);
+		}
 	}
 	else
 	{

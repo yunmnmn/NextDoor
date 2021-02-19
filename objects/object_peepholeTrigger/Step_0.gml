@@ -131,6 +131,9 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				SetViewportFollowInstance(GetPlayerInstance());
 				// Give control back to the player
 				SetControlState(PlayerControlState.PlayerControl);
+				
+				// Play the women timeline
+				PlayTimeline(timeline_womenMoves);
 			}
 			
 			MimiStandsUp = function()

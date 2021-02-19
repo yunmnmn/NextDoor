@@ -296,10 +296,8 @@ MimiBuysDrink = function()
 		// Set Mimi's animation to idle
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 		
-		// TODO: Timelines assumes the same framerate for everyone, this might mess up
-		timeline_index = timeline_flickeringLight;
-		timeline_position = 0;
-		timeline_running = true;
+		// Play the flickering light Timeline
+		PlayTimeline(timeline_flickeringLight);
 	}
 	PlayerPlayAnimation(anim_mimiCoin, false, animationEnd);
 		

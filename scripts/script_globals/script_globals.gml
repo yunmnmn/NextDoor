@@ -36,6 +36,7 @@ enum GlobalGameStates
 	
 	// Sequence 4 states
 	MimiStandsUpFromAttack,
+	MimiHearsTickingAtWindow,
 }
 
 function SetControlState(p_controlState)
@@ -51,6 +52,16 @@ function SetMimiScared(p_scared)
 function GetMimiScared()
 {
 	return global.g_mimiScared;
+}
+
+function SetMimiCrawling(p_crawling)
+{
+	global.g_mimiCrawling = p_crawling;
+}
+
+function GetMimiCrawling()
+{
+	return global.g_mimiCrawling;
 }
 
 function GetControlState()
@@ -102,8 +113,11 @@ global.g_textboxInstance = noone;
 // Set the player instance
 global.g_playerInstance = noone;
 
-// Set mimi scared
+// Set Mimi scared
 global.g_mimiScared = false;
+
+// Set Mimi crawling
+global.g_mimiCrawling = false;
 
 // This will be called by the room initializer after all objects are loaded
 global.m_postRoomLoadCallbacks = ds_list_create();

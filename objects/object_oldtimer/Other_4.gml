@@ -165,19 +165,7 @@ function MimiAndOldtimerConversation()
 	// Call the parent text context
 	var c7_1 = new TextContext(sprite_mimiAvatarNormal, true, cb7_2);
 	c7_1.AddSubText(new SubText("Excuse me, can I ask you something?", 0.2, true));
-	if(RenderText(c7_1))
-	{
-		// If it's successfully displaying the text, Disable the player control
-		SetControlState(PlayerControlState.PlayerNoControl);
-		
-		// Play the listen animation
-		var callbackAngryEnd = function()
-		{
-			// Freeze at the last frame
-			PlayerFreezeAnimationEnd(anim_mimiListen, GetPlayerInstance().m_mirrored);
-		}
-		PlayerPlayAnimation2(anim_mimiListen, callbackAngryEnd);
-	}
+	RenderText(c7_1);
 }
 
 MimiConversationOldtimer = function()
@@ -185,18 +173,23 @@ MimiConversationOldtimer = function()
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 		
-	// Set Mimi to idle
-	if(GetPlayerInstance().x > x)
-	{
-		PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+	mirror = (GetPlayerInstance().x > x) ? true : false;
+	walkToPosition = function()
+	{			
+		// Set the path speed back to 0.0
+		// TODO: fix a way so that the user doesn;t mannualy need to set this
+		GetPlayerInstance().SetPathSpeed(0.0);
+		// Play the listen animation
+		var callbackAngryEnd = function()
+		{
+			// Freeze at the last frame
+			PlayerFreezeAnimationEnd(anim_mimiListen, GetPlayerInstance().m_mirrored);
+		}
+		PlayerPlayAnimation(anim_mimiListen, mirror, callbackAngryEnd);
+		// Play the conversation
+		MimiAndOldtimerConversation();
 	}
-	else
-	{
-		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
-	}
-		
-	// Play the conversation
-	MimiAndOldtimerConversation();
+	PlayerMoveAndExecute(mirror ? x + 100 : x - 100, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiConversationOldtimer);

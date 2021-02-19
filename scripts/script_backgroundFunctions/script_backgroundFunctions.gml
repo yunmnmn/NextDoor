@@ -115,23 +115,48 @@ function ResetShadowMapAsTarget()
 // Set the instance that the viewport follows
 function SetViewportFollowInstance(p_instance)
 {
-	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	assert(p_instance != noone, "Instance can't be invalid");
-	
-	GetBackgroundInstance().m_followInstance = p_instance;
+	GetBackgroundInstance().SetViewportFollowInstance(p_instance);
+}
+
+function FollowPosition(p_position)
+{
+	assert(p_position != noone, "p_position must be of type Vector2");
+	GetBackgroundInstance().FollowPosition(p_position);
 }
 
 // Set the following speed
 function SetViewportFollowSpeed(p_followSpeed)
 {
-	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
-	
 	GetBackgroundInstance().m_followSpeed = p_followSpeed;
+}
+
+function FollowPositionAndDisable(p_position)
+{
+	assert(p_position != noone, "p_position must be of type Vector2");
+	GetBackgroundInstance().FollowPositionAndDisable(p_position);
+}
+
+function FollowAndDisableInstance(p_instance)
+{
+	assert(p_instance != noone, "p_instance can't be invalid");
+	GetBackgroundInstance().FollowAndDisableInstance(p_instance);
+}
+
+function AddViewportFollowCallback(p_callback)
+{
+	assert(p_callback != noone, "p_callback can't be invalid");
+	GetBackgroundInstance().AddViewportFollowCallback(p_callback);
 }
 
 function DisableFollowingInstance()
 {
-	GetBackgroundInstance().m_followInstance = noone;
+	GetBackgroundInstance().DisableFollowingInstance();
+}
+
+function DisableFollowingPosition()
+{
+	GetBackgroundInstance().DisableFollowingPosition();
 }
 
 function RescrictViewportX(p_min, p_max)
@@ -164,9 +189,19 @@ function GetViewportPositionY()
 	return GetBackgroundInstance().GetViewportPositionY();
 }
 
+function GetViewportSizeX()
+{
+	return GetBackgroundInstance()
+}
+
 function SetViewportPositionX(m_positionX)
 {
 	GetBackgroundInstance().SetViewportPositionX(m_positionX);
+}
+
+function GetViewportWidth()
+{
+	return GetBackgroundInstance().GetViewportWidth();
 }
 
 function PulseScreen(p_magnitude)

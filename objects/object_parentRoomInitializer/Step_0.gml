@@ -1,20 +1,42 @@
-if(m_followInstance)
+if(m_followInstance || m_followPosition != noone)
 {
-	var followX = clamp(m_followInstance.x, m_viewportMinX + m_viewportHalfSize.m_x, m_viewportMaxX - m_viewportHalfSize.m_x);
-	var followY = clamp(m_followInstance.y, m_viewportHalfSize.m_y, room_height - m_viewportHalfSize.m_y);
+	// TODO: recheck this all...
+	var followPosition = m_followPosition;
+	if(m_followInstance != noone)
+	{
+		followPosition = new Vector2(m_followInstance.x, m_followInstance.y);
+	}
+
+	var followX = clamp(followPosition.m_x, m_viewportMinX + m_viewportHalfSize.m_x, m_viewportMaxX - m_viewportHalfSize.m_x);
+	var followY = clamp(followPosition.m_y, m_viewportMinY + m_viewportHalfSize.m_y, m_viewportMaxY - m_viewportHalfSize.m_y);
 
 	// Desired position
 	var newViewportPosX = followX - m_viewportHalfSize.m_x;
 	var newViewportPosY = followY - m_viewportHalfSize.m_y;
-
-	// Interpolate between current position and new one
-	var currentViewportPosX = camera_get_view_x(m_viewport);
-	var currentViewportPosY = camera_get_view_y(m_viewport);
-
-	var interpolatedX = lerp(currentViewportPosX, newViewportPosX, min(m_followSpeed * DeltaTimeInMiliseconds(), 1.0));
-	var interpolatedY = lerp(currentViewportPosY, newViewportPosY, min(m_followSpeed * DeltaTimeInMiliseconds(), 1.0));
-
+	
+	m_desiredX = newViewportPosX;
+	m_desiredY = newViewportPosY;
+	
+	// Interpolate between starting position and new one
+	m_pan += m_followSpeed * DeltaTimeInMiliseconds();
+	m_pan = max(min(m_pan, 1.0), 0.0);
+	
+	var interpolatedX = lerp(m_fromPosition.m_x, newViewportPosX, m_pan);
+	interpolatedX = clamp(interpolatedX, min(m_fromPosition.m_x, newViewportPosX), max(m_fromPosition.m_x, newViewportPosX));
+	var interpolatedY = lerp(m_fromPosition.m_y, newViewportPosY, m_pan);
+	interpolatedY = clamp(interpolatedY, min(m_fromPosition.m_y, newViewportPosY), max(m_fromPosition.m_y, newViewportPosY));
+	
 	SetViewportPosition(interpolatedX, interpolatedY);
+	
+	if(abs(newViewportPosX - interpolatedX) < 6 && abs(newViewportPosY - interpolatedY) < 6)
+	{
+		for(i = 0; i < ds_list_size(m_viewportCallbacks); i++)
+		{
+			var pathCallback = ds_list_find_value(m_viewportCallbacks, i);
+			pathCallback();
+		}
+		ds_list_clear(m_viewportCallbacks);
+	}
 }
 
 if(m_stabilized < 1.0)

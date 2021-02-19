@@ -12,7 +12,7 @@ if(WalkingLeft())
 if(WalkingRight())
 {
 	// Only allow movement when the player is allowed control
-	if(global.g_playerControlState == PlayerControlState.PlayerControl)
+	if(global.g_playerControlState == PlayerControlState.PlayerControl && !GetMimiCrawling())
 	{
 		m_position += GetMovementSpeed();
 		// Clamp the positions between 0 - 1
