@@ -16,9 +16,9 @@ enum GlobalGameStates
 	MimiGointToYoungsterAgain,
 	MimiWalksIntoWoman,
 	MimiWalksToOldtimer,
-	MimiWalksBackToRoom,
 	
 	// Sequence 2 states 
+	MimiWalksBackToRoom,
 	MimiRoomSits2,
 	MimiGetsDrink,
 	

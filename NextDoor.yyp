@@ -17,6 +17,7 @@
     {"id":{"name":"object_fence","path":"objects/object_fence/object_fence.yy",},"order":6,},
     {"id":{"name":"object_womenScary","path":"objects/object_womenScary/object_womenScary.yy",},"order":2,},
     {"id":{"name":"path_hallwayDown","path":"paths/path_hallwayDown/path_hallwayDown.yy",},"order":0,},
+    {"id":{"name":"timeline_getDrink","path":"timelines/timeline_getDrink/timeline_getDrink.yy",},"order":2,},
     {"id":{"name":"anim_womenCrawl","path":"sprites/anim_womenCrawl/anim_womenCrawl.yy",},"order":11,},
     {"id":{"name":"anim_womenSlats","path":"sprites/anim_womenSlats/anim_womenSlats.yy",},"order":10,},
     {"id":{"name":"anim_mimiSit","path":"sprites/anim_mimiSit/anim_mimiSit.yy",},"order":5,},

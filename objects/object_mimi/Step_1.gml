@@ -5,3 +5,16 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 	path_positionprevious = path_position; 
 	path_position = m_position;
 }
+
+// Callback for animation played backwards
+if(m_callbackAnimationEndBackwards)
+{
+	if(image_index == 0)
+	{
+		image_index = 0;
+		image_speed = 1;
+		var cacheCallback = m_callbackAnimationEndBackwards;
+		m_callbackAnimationEndBackwards = noone;
+		cacheCallback();
+	}
+}

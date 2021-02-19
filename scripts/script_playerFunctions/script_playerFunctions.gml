@@ -47,6 +47,13 @@ function PlayerPlayAnimation(p_spriteIndex, p_mirrored, p_callbackEnd)
 	PlayerSetMirrored(p_mirrored);
 }
 
+function PlayerPlayAnimationBackwards(p_spriteIndex, p_mirrored, p_callbackEnd)
+{
+	assert(p_spriteIndex != noone, "Passed sprite index is invalid");
+	GetPlayerInstance().PlayAnimationBackwards(p_spriteIndex, p_callbackEnd);
+	PlayerSetMirrored(p_mirrored);
+}
+
 function PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd)
 {
 	assert(p_spriteIndex != noone, "Passed sprite index is invalid");

@@ -112,9 +112,6 @@ switch(GetGlobalGameState())
 	case GlobalGameStates.MimiRoomSits:
 		MimiComplainsAboutNoise();
 		break;
-	case GlobalGameStates.MimiRoomSits2:
-		MimiGetsDrink();
-		break;
 	default:
 		break;
 }

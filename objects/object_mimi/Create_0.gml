@@ -107,6 +107,14 @@ function PlayAnimation(p_spriteIndex, p_callbackEnd)
 	m_callbackAnimationEnd = p_callbackEnd;
 }
 
+function PlayAnimationBackwards(p_spriteIndex, p_callbackEnd)
+{
+	sprite_index = p_spriteIndex;
+	image_index = sprite_get_number(p_spriteIndex) - 1;
+	image_speed = -1;
+	m_callbackAnimationEndBackwards = p_callbackEnd;
+}
+
 function MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
 {
 	assert(m_path != noone, "Path can't be invalid");
@@ -140,6 +148,7 @@ m_pathCallbacks = ds_list_create();
 
 // This callback will be called when the animatino is finished
 m_callbackAnimationEnd = noone;
+m_callbackAnimationEndBackwards = noone;
 
 // These variables are set by the player object itself
 m_mirrored = false;

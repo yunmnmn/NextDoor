@@ -1,22 +1,33 @@
-function MimiConversation()
+MimiConversation = function()
 {		
-	conversationFinished = function()
+	backToStudying = function()
 	{
-		// Execute this when it's completely dark
-		var fadeOutEndCallback = function()
+		keepSitting = function()
 		{
+			// HACK: Keep sitting
+			GetPlayerInstance().image_speed = 0.0;
+			
 			// Advance the global state
-			SetGlobalGameState(GlobalGameStates.MimiRoomSits2);
-		
-			// Reload the room effectively
-			ChangeRoomAndSetPath("room_mimiRoom", path_mimiRoom, 0.0, false);
+			SetGlobalGameState(GlobalGameStates.MimiGetsDrink);
+			
+			// Wait a while before Mimi promps to get a drink
+			PlayTimeline(timeline_getDrink);
 		}
-		CreateFader(FadeState.FadeOut, 0.01, fadeOutEndCallback);
+		
+		walkToPosition = function()
+		{			
+			GetPlayerInstance().SetPathSpeed(0.0);
+			PlayerPlayAnimationBackwards(anim_mimiSit, false, keepSitting);
+		}
+		PlayerMoveAndExecute(180, GetPlayerInstance().y, 1.0, walkToPosition);
+		
+		// Start the transition from day to night
+		instance_mimiRoomBackground.StartTransition();
 	}
 	
 	cb9_4 = function()
 	{
-		var c9_4 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
+		var c9_4 = new TextContext(sprite_mimiAvatarNormal, true, backToStudying);
 		c9_4.AddSubText(new SubText("Oh well, I can finally do some studying", 0.2, true));
 		RenderText(c9_4);
 	}
@@ -54,3 +65,7 @@ var collisionContext = new CollisionContext(GetPlayerInstance(), MimiConversatio
 collisionContext.AddGlobalState1(GlobalGameStates.MimiWalksBackToRoom);
 collisionContext.ExecuteOnHit();
 AddCollisionContext(collisionContext);
+
+m_startDayNightTransition = false;
+m_transition = 0.0;
+m_transitionSpeed = 0.01;
