@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "background_hallwayUp",
-    "path": "sprites/background_hallwayUp/background_hallwayUp.yy",
+    "name": "background_hallwayUpNight",
+    "path": "sprites/background_hallwayUpNight/background_hallwayUpNight.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_hallwayUpInitializer","path":"objects/object_hallwayUpInitializer/object_hallwayUpInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

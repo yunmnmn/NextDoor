@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sprite_openDoorYoungster",
-    "path": "sprites/sprite_openDoorYoungster/sprite_openDoorYoungster.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

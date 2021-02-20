@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_openDoorWomen",
-    "path": "sprites/sprite_openDoorWomen/sprite_openDoorWomen.yy",
+    "name": "foreground_openDoorWomen",
+    "path": "sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",
   },
   "solid": false,
   "visible": true,

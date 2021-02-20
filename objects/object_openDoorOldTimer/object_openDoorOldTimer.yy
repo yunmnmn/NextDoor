@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_openDoorOldTimer",
-    "path": "sprites/sprite_openDoorOldTimer/sprite_openDoorOldTimer.yy",
+    "name": "foreground_openDoorOldTimer",
+    "path": "sprites/foreground_openDoorOldTimer/foreground_openDoorOldTimer.yy",
   },
   "solid": false,
   "visible": true,
