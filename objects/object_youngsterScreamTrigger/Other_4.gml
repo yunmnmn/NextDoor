@@ -28,6 +28,10 @@ MimiHearsYoungsterScream = function()
 	// Set Mimi to scared from now on
 	SetMimiScared(true);
 	
+	// Make the youngster outside invisible again
+	instance_outsideMemory.m_youngsterOutsideVisible = false;
+
+	
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 		

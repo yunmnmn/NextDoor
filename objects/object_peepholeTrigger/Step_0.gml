@@ -185,7 +185,6 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 			RenderText(c23_1)
 			
 			instance_womenSlats.FreezeAnimationAtEnd2(anim_womenSlats);
-			instance_womenSlats.visible = false;
 		}
 		instance_womenSlats.visible = true;
 		instance_womenSlats.PlayAnimation2(anim_womenSlats, animationSlatsFinished);

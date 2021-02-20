@@ -35,7 +35,7 @@ function MimiConversation()
 
 	// Call the parent text context
 	if(RenderText(c3_1))
-	{
+	{		
 		// Disable progressing this TextContext untill Mimi's knocking animation has finished playing
 		GetCurrentTextContext().m_progressable = false;
 		
@@ -52,12 +52,12 @@ function MimiConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 				
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, true);
+			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, false);
 		}
 
 		// Play the knocking animation
 		PlayerPlayAnimation(anim_mimiKnock, false, animationEndCallback);
-		SetViewportFollowSpeed(0.01);
+		SetViewportFollowSpeed(0.001);
 	}
 }
 

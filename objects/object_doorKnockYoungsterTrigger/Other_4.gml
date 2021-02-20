@@ -2,6 +2,9 @@ function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
 	{	
+		// Follow the player instance again
+		SetViewportFollowInstance(GetPlayerInstance());
+		
 		// Set animation back to idle
 		PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		
