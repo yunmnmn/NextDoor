@@ -1,23 +1,38 @@
 m_drawButtonPrompt = false;
 
 CheckForGlobalState = function(p_collisionContext)
-{
-	if(p_collisionContext.m_allStates)
-	{
-		return true;
-	}
-	
+{	
 	// Check if the global state is active
-	for(j = 0; j < ds_list_size(p_collisionContext.m_globalStates); j++)
-	{
-		var globalState = ds_list_find_value(p_collisionContext.m_globalStates, j);
-		if(GetGlobalGameState() == globalState)
+	if(!p_collisionContext.m_doNotExecuteOn)
+	{	// Only execute on objects that are listed in the filter
+		
+		if(p_collisionContext.m_allStates)
 		{
 			return true;
 		}
+		
+		for(j = 0; j < ds_list_size(p_collisionContext.m_globalStates); j++)
+		{
+			var globalState = ds_list_find_value(p_collisionContext.m_globalStates, j);
+			if(GetGlobalGameState() == globalState)
+			{
+				return true;
+			}
+			return false;
+		}
 	}
-	
-	return false;
+	else
+	{	// Execute on all instances, except the ones that are listed
+		for(j = 0; j < ds_list_size(p_collisionContext.m_globalStates); j++)
+		{
+			var globalState = ds_list_find_value(p_collisionContext.m_globalStates, j);
+			if(GetGlobalGameState() == globalState)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 }
 
 // Check for collisions

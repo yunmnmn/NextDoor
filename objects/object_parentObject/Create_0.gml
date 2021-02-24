@@ -11,6 +11,12 @@ function SetPath(p_pathIndex, p_position, p_speed)
 	path_start(m_pathIndex, p_speed, path_action_stop, true);
 }
 
+// Disble the path
+function StopPath()
+{
+	path_end();
+}
+
 // Play an animation on the instance
 function PlayAnimation(p_spriteIndex, p_mirrored, p_callback)
 {

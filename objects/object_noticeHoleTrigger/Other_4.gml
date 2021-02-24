@@ -42,6 +42,6 @@ MimiNoticesHole = function()
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiNoticesHole);
-collisionContext.AddGlobalState1(GlobalGameStates.MimiEntersYoungstersRoom);
+collisionContext.AddGlobalState1(GlobalGameStates.MimiLooksAround);
 collisionContext.ExecuteOnHit();
 AddCollisionContext(collisionContext);

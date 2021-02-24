@@ -6,6 +6,9 @@ function NobodyIsHereConversation()
 	{
 		// Give control to the player after the conversation is over
 		SetControlState(PlayerControlState.PlayerControl);
+		
+		// Advance the global state
+		SetGlobalGameState(GlobalGameStates.MimiLooksAround);
 	}
 	
 	cb15_2 = function()
@@ -40,19 +43,64 @@ AddCollisionContext(collisionContext1);
 
 // -------------------------- Second colliding event --------------------------
 
-//var doorCollisionEvent = function()
-//{
-//	// Don't give the control to the player while transitioning
-//	SetControlState(PlayerControlState.PlayerNoControl);
-//	// Fade, and when finished, load the hallway
-//	var fadeEndCallback = function()
-//	{
-//		SetControlState(PlayerControlState.PlayerControl);
-//		ChangeRoomAndSetPath("room_hallwayUp", path_hallwayUp, 0.01, false);
-//	}
-//	CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
-//}
+// Don't let Mimi outside anymore
+CannotGoToHallwayUp = function()
+{
+	conversationFinished = function()
+	{			
+		// Give control ba ck to the player again
+		SetControlState(PlayerControlState.PlayerControl);
+		
+		// TODO: make sure this works...
+		// HACK: This must be added again in order for it to be able to trigger again
+		var collisionContext = new CollisionContext(GetPlayerInstance(), CannotGoToHallwayUp);
+		collisionContext.AddGlobalState1(GlobalGameStates.MimiLooksAround);
+		AddCollisionContext(collisionContext);
+	}
+	// Start the monologue
+	var c32_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
+	c32_1.AddSubText(new SubText("Let's look around some more", 0.2, true));
+	RenderText(c32_1);
+	
+	// Set Mimi to idle
+	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	
+	// Don't give the control to the player while transitioning
+	SetControlState(PlayerControlState.PlayerNoControl);
+}
 
-//var collisionContext2 = new CollisionContext(GetPlayerInstance(), doorCollisionEvent);
-//collisionContext2.AllStates();
-//AddCollisionContext(collisionContext2);
+var collisionContext2 = new CollisionContext(GetPlayerInstance(), CannotGoToHallwayUp);
+collisionContext2.AddGlobalState1(GlobalGameStates.MimiLooksAround);
+AddCollisionContext(collisionContext2);
+
+// -------------------------- Third colliding event --------------------------
+
+// Don't let Mimi outside anymore
+WomenMightBeOutside = function()
+{
+	conversationFinished = function()
+	{			
+		// Give control ba ck to the player again
+		SetControlState(PlayerControlState.PlayerControl);
+		
+		// TODO: make sure this works...
+		// HACK: This must be added again in order for it to be able to trigger again
+		var collisionContext = new CollisionContext(GetPlayerInstance(), WomenMightBeOutside);
+		collisionContext.AddGlobalState1(GlobalGameStates.MimiStandsUpFromAttack);
+		AddCollisionContext(collisionContext);
+	}
+	// Start the monologue
+	var c32_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
+	c32_1.AddSubText(new SubText("She could still be in the hallway", 0.2, true));
+	RenderText(c32_1);
+	
+	// Set Mimi to idle
+	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	
+	// Don't give the control to the player while transitioning
+	SetControlState(PlayerControlState.PlayerNoControl);
+}
+
+var collisionContext2 = new CollisionContext(GetPlayerInstance(), WomenMightBeOutside);
+collisionContext2.AddGlobalState2(GlobalGameStates.MimiStandsUpFromAttack, GlobalGameStates.MimiHearsTickingAtWindow);
+AddCollisionContext(collisionContext2);

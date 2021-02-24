@@ -10,14 +10,14 @@ CatMeows = function()
 	cbcat_2 = function()
 	{
 		var ccat_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		ccat_2.AddSubText(new SubText("That's an.... ugly cat...", 0.2, true));
+		ccat_2.AddSubText(new SubText("This cat has a cursed face…", 0.2, true));
 		RenderText(ccat_2);
 	}
 	
 	cbcat_1 = function()
 	{
 		var ccat_1 = new TextContext(sprite_catAvatar, true, cbcat_2);
-		ccat_1.AddSubText(new SubText("Meow", 0.2, true));
+		ccat_1.AddSubText(new SubText("Meow!", 0.2, true));
 		RenderText(ccat_1);
 	}
 	

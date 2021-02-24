@@ -26,6 +26,7 @@ enum GlobalGameStates
 	MimiReturnsFromDrinking,	
 	MimiChecksOnYoungster,
 	MimiEntersYoungstersRoom,
+	MimiLooksAround,
 	MimiApproachesHole,
 	MimiIsPeeking,
 	MimiLocksPeeking,

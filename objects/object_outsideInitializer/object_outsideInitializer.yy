@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "OutsideDay",
-    "path": "folders/Objects/OutsideDay.yy",
+    "name": "Outside",
+    "path": "folders/Objects/Outside.yy",
   },
   "resourceVersion": "1.0",
   "name": "object_outsideInitializer",

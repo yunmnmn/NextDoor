@@ -24,6 +24,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"object_womenInBlack","path":"objects/object_womenInBlack/object_womenInBlack.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":726.0,"y":312.0,"resourceVersion":"1.0","name":"instance_women","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"object_oldtimer","path":"objects/object_oldtimer/object_oldtimer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1218.0,"y":318.0,"resourceVersion":"1.0","name":"instance_oldtimer","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"object_mimi","path":"objects/object_mimi/object_mimi.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1440.0,"y":360.0,"resourceVersion":"1.0","name":"inst_59C61765","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"object_cockroach","path":"objects/object_cockroach/object_cockroach.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":792.0,"y":1.0,"resourceVersion":"1.0","name":"inst_663D3435","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":1,"gridY":1,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_levelObjects","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"object_doorKnockYoungsterTrigger","path":"objects/object_doorKnockYoungsterTrigger/object_doorKnockYoungsterTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.09375,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":228.0,"y":282.0,"resourceVersion":"1.0","name":"inst_44FAEB0D","tags":[],"resourceType":"GMRInstance",},
@@ -54,6 +55,7 @@
     {"name":"inst_3C69F2","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
     {"name":"instance_doorWomen","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
     {"name":"instance_doorOldtimer","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
+    {"name":"inst_663D3435","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

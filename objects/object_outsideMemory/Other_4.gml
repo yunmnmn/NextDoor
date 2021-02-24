@@ -1,4 +1,4 @@
-// Becauset he object is persistant, only call this function in HallwayUp
+// Because the object is persistant, only call this function in HallwayUp
 if(room == room_outside)
 {
 	instance_youngsterOutside.visible = m_youngsterOutsideVisible;

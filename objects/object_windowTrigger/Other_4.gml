@@ -4,22 +4,14 @@ MimiFallsBackwards = function()
 	// TODO: Fix hardcoding
 	PlayerSnapToClosestPosition(2200, 348, false);
 	
-	// TODO: show the women at the window
-	
-	// Set camera back to m_viewportLookPositionOriginX
-	SetViewportPositionX(m_viewportLookPositionOriginX);
-	
-	// TODO: Make Mimi fall backwards
-	FallingBackwardsFinished = function()
+	// Show the women at the window
+	FreezeWomenAnimation = function()
 	{
 		// Set the viewport speed
-		SetViewportFollowSpeed(0.007);
+		SetViewportFollowSpeed(0.003);
 		// Follow Mimi again with a slight offset to the left
 		var viewportEndPosition = new Vector2(GetPlayerInstance().x - 400, GetPlayerInstance().y);
 		FollowPositionAndDisable(viewportEndPosition);
-		
-		// Set to movement crawling
-		SetMimiCrawling(true);
 		
 		// Let the Women walk torwards mimi
 		instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 1.3);
@@ -27,11 +19,24 @@ MimiFallsBackwards = function()
 		// Play the walking animation
 		instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);
 		
-		// Freeze at the last frame
-		PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
-		
 		// Enable player controls again
 		SetControlState(PlayerControlState.PlayerControl);
+	}
+	instance_youngsetRoomWomenOutside.StopPath();
+	instance_youngsetRoomWomenOutside.x = 2373;
+	instance_youngsetRoomWomenOutside.y = 200;
+	instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, FreezeWomenAnimation);
+	
+	// Set camera back to m_viewportLookPositionOriginX
+	SetViewportPositionX(m_viewportLookPositionOriginX);
+	
+	FallingBackwardsFinished = function()
+	{
+		// Set to movement crawling
+		SetMimiCrawling(true);
+		
+		// Freeze at the last frame
+		PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
 	}
 	PlayerPlayAnimation(anim_mimiLeapFromStand, false, FallingBackwardsFinished);
 }
