@@ -24,7 +24,7 @@ MimiFallsBackwards = function()
 	}
 	instance_youngsetRoomWomenOutside.StopPath();
 	instance_youngsetRoomWomenOutside.x = 2373;
-	instance_youngsetRoomWomenOutside.y = 200;
+	instance_youngsetRoomWomenOutside.y = 240;
 	instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, FreezeWomenAnimation);
 	
 	// Set camera back to m_viewportLookPositionOriginX

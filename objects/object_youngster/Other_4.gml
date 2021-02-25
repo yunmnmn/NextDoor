@@ -10,7 +10,7 @@ YoungsterIsWaiting = function()
 		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterIsWaiting);
-		collisionContext.AddGlobalState1(GlobalGameStates.MimiGoingToKnockAtNeighbour);
+		collisionContext.AddGlobalState2(GlobalGameStates.MimiGoingToKnockAtNeighbour, GlobalGameStates.MimiWalksIntoWoman);
 		AddCollisionContext(collisionContext);
 	}
 	
@@ -27,7 +27,7 @@ YoungsterIsWaiting = function()
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterIsWaiting);
-collisionContext.AddGlobalState1(GlobalGameStates.MimiGoingToKnockAtNeighbour);
+collisionContext.AddGlobalState2(GlobalGameStates.MimiGoingToKnockAtNeighbour, GlobalGameStates.MimiWalksIntoWoman);
 AddCollisionContext(collisionContext);
 
 // -------------------------- Second colliding event --------------------------

@@ -56,6 +56,9 @@ function MimiConversation()
 	
 	cb12_1 = function()
 	{
+		// Set the stairs invisible again
+		instance_stairs.visible = false;
+		
 		// Set the women invisible again
 		instance_outsideMemory.SetWomenOutsideVisible(false);
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);

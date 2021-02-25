@@ -4,6 +4,11 @@ function AddCollisionContext(p_collisionContext)
 	ds_list_add(m_collisionContexts, p_collisionContext);
 }
 
+function DeleteAllCollisionContexts()
+{
+	ds_list_clear(m_collisionContexts);
+}
+
 m_collisionContexts = ds_list_create();
 
 m_drawButtonPrompt = false;

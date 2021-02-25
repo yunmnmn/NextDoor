@@ -18,8 +18,9 @@ CheckForGlobalState = function(p_collisionContext)
 			{
 				return true;
 			}
-			return false;
 		}
+		
+		return false;
 	}
 	else
 	{	// Execute on all instances, except the ones that are listed
