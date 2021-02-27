@@ -59,7 +59,7 @@ function MimiPeepsConversation()
 	
 	cb18_3 = function()
 	{
-		var c18_3 = new TextContext(sprite_mimiAvatarTroubled, true, cb18_4);
+		var c18_3 = new TextContext(sprite_mimiAvatarCloser, true, cb18_4);
 		c18_3.AddSubText(new SubText("Maybe that guy did it", 0.2, true));
 		RenderText(c18_3);
 	}

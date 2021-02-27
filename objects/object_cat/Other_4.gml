@@ -62,3 +62,13 @@ collisionContext.ExecuteOnHit();
 AddCollisionContext(collisionContext);
 
 image_speed = 0;
+
+// Only be visible from sequence 3 onwards
+if(GetGlobalGameState() >= GlobalGameStates.MimiReturnsFromDrinking)
+{
+	visible = true;
+}
+else
+{
+	visible = false;
+}

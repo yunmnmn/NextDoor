@@ -290,8 +290,8 @@ function MimiConversation()
 
 MimiBuysDrink = function()
 {
-	// Set the Youngster outside visible
-	instance_outsideMemory.SetYoungsterOutsideVisible(true);
+	// Change the sprite of the youngster
+	instance_youngsterOutside.PlayAnimation2(sprite_youngsterCornerIdle, noone);
 		
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);

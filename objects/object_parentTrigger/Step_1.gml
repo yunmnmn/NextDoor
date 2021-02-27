@@ -42,8 +42,8 @@ for(i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 	var collisionContext = ds_list_find_value(m_collisionContexts, i);
 	assert(collisionContext.m_collisionInstance != noone && collisionContext.m_callback != noone, "CollisionContext has invalid members");
 	
-	// Check if this trigger collides with the CollisionInstaince
-	if(place_meeting(x, y, collisionContext.m_collisionInstance) && CheckForGlobalState(collisionContext))
+	// Check if this trigger collides with the CollisionInstaince, and if the global state matches, and if there is no instance happening now
+	if(place_meeting(x, y, collisionContext.m_collisionInstance) && CheckForGlobalState(collisionContext) && GetCurrentTextContext() == noone)
 	{
 		if(!collisionContext.m_executeOnHit)
 		{

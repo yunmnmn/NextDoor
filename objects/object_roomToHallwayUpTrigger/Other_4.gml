@@ -13,12 +13,11 @@ function NobodyIsHereConversation()
 	
 	cb15_2 = function()
 	{	
-		var c13_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c13_2.AddSubText(new SubText("Nobody's home…", 0.2, true));
-		RenderText(c13_2);
+		var c15_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
+		c15_2.AddSubText(new SubText("Nobody's home…", 0.2, true));
+		RenderText(c15_2);
 	}
 
-	// Start of the conversation. Doesn't require a function
 	var c15_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb15_2);
 	c15_1.AddSubText(new SubText("That's weird", 0.6, true));
 	RenderText(c15_1);

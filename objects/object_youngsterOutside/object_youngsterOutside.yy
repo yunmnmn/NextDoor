@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_youngsterCornerIdle",
-    "path": "sprites/sprite_youngsterCornerIdle/sprite_youngsterCornerIdle.yy",
+    "name": "sprite_youngsterCornerIdleShadow",
+    "path": "sprites/sprite_youngsterCornerIdleShadow/sprite_youngsterCornerIdleShadow.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_youngsterOutside","path":"objects/object_youngsterOutside/object_youngsterOutside.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
