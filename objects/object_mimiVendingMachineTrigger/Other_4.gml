@@ -90,7 +90,7 @@ function MimiConversation()
 			instance_womenOutside.Mirror(false);
 			instance_stairs.visible = true;
 		}
-		instance_womenOutside.AddPathPointCallback(1, womenAtStairs, false);
+		instance_womenOutside.AddPathPointCallback(2, womenAtStairs, false);
 		
 		// When the women is at the end of the path
 		instance_womenOutside.AddPathEndCallback(cb12_1, false);
@@ -119,13 +119,16 @@ function MimiConversation()
 		instance_outsideMemory.SetWomenOutsideVisible(true);
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
 		
-		// Play Mimi's shock animation
-		var SetIdleWhenShockFinish = function()
+		// Set a point callback when Women passes Mimi, so mimi turns back to idle
+		var womenPassesMimi = function()
 		{
-			// Set mimi back to idle
+			// Play the mimi turn animation
 			PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		}
-		PlayerPlayAnimation2(anim_mimiShock, SetIdleWhenShockFinish);
+		instance_womenOutside.AddPathPointCallback(1, womenPassesMimi, false);
+
+		// Play the mimi turn animation
+		PlayerPlayAndFreezeAtEnd(anim_mimiTurn, PlayerGetMirrored());
 		
 		var c11_19 = new TextContext(sprite_youngsterAvatarGasp, true, cb11_20);
 		c11_19.AddSubText(new SubText("AH!", 0.2, true));
