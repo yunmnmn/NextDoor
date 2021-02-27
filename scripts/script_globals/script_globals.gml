@@ -1,5 +1,16 @@
 // Set debug mode or not
-global.m_debug = true;
+global.m_debug = false;
+
+// Default fading speed
+global.m_defaultFadingSpeed = 0.0;
+if(DebugMode())
+{
+	global.m_defaultFadingSpeed = 0.01;
+}
+else
+{
+	global.m_defaultFadingSpeed = 0.0005;
+}
 
 // Enum to set Mimi's states
 enum PlayerControlState
@@ -46,6 +57,11 @@ enum GlobalGameStates
 function DebugMode()
 {
 	return global.m_debug;
+}
+
+function GetDefaultFadingSpeed()
+{
+	return global.m_defaultFadingSpeed;
 }
 
 function SetControlState(p_controlState)

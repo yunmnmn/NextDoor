@@ -77,6 +77,9 @@ for(i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 // Only change walking animations if the player is in control, or it's automatically walking
 if(GetControlState() == PlayerControlState.PlayerControl || path_speed != 0.0)
 {
+	// If the player is in control, always set the image_speed to default
+	image_speed = 1.0;
+	
 	// Set the states first depending on the cached states from the previous frame
 	var delta = 0.000001;
 	if(abs(m_cachedPosition - m_position) > delta)

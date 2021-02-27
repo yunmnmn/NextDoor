@@ -119,3 +119,16 @@ function PlayerMoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
 	
 	GetPlayerInstance().MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback);
 }
+
+// Get the idle sprite depending on the stage of the game
+function PlayerGetIdleSprite()
+{
+	if(GetMimiScared())
+	{
+		return sprite_mimiIdleScared;
+	}
+	else
+	{
+		return sprite_mimiIdle;
+	}
+}

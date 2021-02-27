@@ -235,7 +235,6 @@ MimiChecksOnYoungster = function()
 	// Walk to the position to knock
 	var walkToPosition = function()
 	{
-		DisableFollowingInstance();
 		GetPlayerInstance().SetPathSpeed(0.0);
 			
 		MimiKnocksOnDoorConversation();
@@ -256,6 +255,9 @@ function collisionEvent()
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);
 	
+	// Set Mimi to idle
+	PlayerPlayAnimation2(PlayerGetIdleSprite(), noone);
+	
 	// Fade, and when finished, load the hallway
 	{
 		var fadeEndCallback = function()
@@ -265,7 +267,7 @@ function collisionEvent()
 			var pathPosition = SnapToClosestPosition(path_youngsterRoom, 1600, 342);
 			ChangeRoomAndSetPath("room_youngsterRoom", path_youngsterRoom, pathPosition, true);
 		}
-		CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
+		CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 	}
 }
 

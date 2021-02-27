@@ -5,6 +5,9 @@ transitionToOutside = function()
 {
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);
+	
+	// Set Mimi to idle
+	PlayerPlayAnimation2(PlayerGetIdleSprite(), noone);
 
 	// Fade, and when finished, load the hallway
 	var fadeEndCallback = function()
@@ -12,7 +15,7 @@ transitionToOutside = function()
 		SetControlState(PlayerControlState.PlayerControl);
 		ChangeRoomAndSetPath("room_outside", path_outsideHigh, 0.001, false);
 	}
-	CreateFader(FadeState.FadeOut, 0.01, fadeEndCallback);
+	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 }
 
 var collisionContext1 = new CollisionContext(GetPlayerInstance(), transitionToOutside);

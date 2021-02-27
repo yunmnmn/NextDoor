@@ -1,5 +1,5 @@
-x = camera_get_view_x(view_camera[0]) + m_xOffset;
-y = camera_get_view_y(view_camera[0]) + m_yOffset;
+x = m_xOffset;
+y = m_yOffset;
 
 // Only draw something if the TextContext is valid
 if(ActionKeyPressed())

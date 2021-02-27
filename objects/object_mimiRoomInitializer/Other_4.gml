@@ -48,9 +48,6 @@ function MimiConversation()
 	// Start of the conversation. Doesn't require a function
 	var c2_1 = new TextContext(sprite_mimiAvatarNormal, true, cb2_2);
 	c2_1.AddSubText(new SubText("...", 0.6, true));
-	c2_1.AddSubText(new SubText("TODO: newline test, remove", 0.6, true));
-	c2_1.AddSubText(new SubText("TODO: newline teset, remove2", 0.6, true));
-	c2_1.AddSubText(new SubText("TODO: newline teset, remove3", 0.6, true));
 	
 	// Set the next global state after the animation is finished playing
 	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);
@@ -79,6 +76,7 @@ function MimiComplainsAboutNoise()
 	
 	// Pulse the screen here
 	PulseScreen(1.0);
+	
 }
 
 function MimiConversation2()
