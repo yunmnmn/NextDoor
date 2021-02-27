@@ -35,7 +35,7 @@ MimiNoticesHole = function()
 	SetControlState(PlayerControlState.PlayerNoControl);
 		
 	// Set the idle animation
-	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
+	PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, true);
 		
 	// Play the conversation
 	MimiNoticesHoleConversation();

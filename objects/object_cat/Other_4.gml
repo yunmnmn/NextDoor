@@ -2,7 +2,7 @@ CatMeows = function()
 {
 	conversationFinished = function()
 	{
-		PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
+		PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, PlayerGetMirrored());
 		
 		SetControlState(PlayerControlState.PlayerControl);
 	}
@@ -34,7 +34,7 @@ CatMeows = function()
 	walkToPosition = function()
 	{			
 		GetPlayerInstance().SetPathSpeed(0.0);
-		PlayerPlayAnimation(sprite_mimiIdleScared, mirror, noone);
+		PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, mirror);
 		
 		PlayAnimation2(anim_cat, CatAnimationFinished);
 	}

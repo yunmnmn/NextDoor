@@ -62,6 +62,18 @@ function PlayerPlayAnimation2(p_spriteIndex, p_callbackEnd)
 	global.g_playerInstance.PlayAnimation(p_spriteIndex, p_callbackEnd);
 }
 
+function PlayerPlayAndFreezeAtEnd(p_spriteIndex, p_mirrored)
+{
+	var FreezeAtEnd = function()
+	{
+		GetPlayerInstance().image_index = GetPlayerInstance().image_number - 1;
+		GetPlayerInstance().image_speed = 0;
+	}
+	PlayerPlayAnimation(p_spriteIndex, p_mirrored, FreezeAtEnd);
+	
+	PlayerSetMirrored(p_mirrored);
+}
+
 function PlayerFreezeAnimation(p_spriteIndex, p_imageIndex, p_mirrored)
 {
 	PlayerPlayAnimation2(p_spriteIndex, noone);

@@ -1,5 +1,5 @@
 // Set debug mode or not
-global.m_debug = false;
+global.m_debug = true;
 
 // Enum to set Mimi's states
 enum PlayerControlState

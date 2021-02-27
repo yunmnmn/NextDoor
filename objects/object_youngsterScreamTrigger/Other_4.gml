@@ -31,12 +31,11 @@ MimiHearsYoungsterScream = function()
 	// Make the youngster outside invisible again
 	instance_outsideMemory.m_youngsterOutsideVisible = false;
 
-	
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 		
-	// Set the idle animation
-	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	// Set mimi back to idle scared
+	PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, PlayerGetMirrored());
 		
 	// Play the conversation with the women in black
 	YoungsterStreamsConversation();

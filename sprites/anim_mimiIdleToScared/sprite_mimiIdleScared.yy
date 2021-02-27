@@ -111,7 +111,7 @@
     "spriteId": {"name":"sprite_mimiIdleScared","path":"sprites/sprite_mimiIdleScared/sprite_mimiIdleScared.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 6.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
