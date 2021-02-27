@@ -178,10 +178,12 @@ function DrawActionPressPrompt(p_draw, p_x, p_y)
 }
 
 m_drawHoldPrompt = false;
+m_drawHoldPromptWorld = false;
 m_holdPromptX = 0;
 m_holdPromptY = 0;
-function DrawActionHoldPrompt(p_draw, p_x, p_y)
+function DrawActionHoldPrompt(p_draw, p_worldSpace, p_x, p_y)
 {
+	m_drawHoldPromptWorld = p_worldSpace;
 	m_drawHoldPrompt = p_draw;
 	m_holdPromptX = p_x;
 	m_holdPromptY = p_y;

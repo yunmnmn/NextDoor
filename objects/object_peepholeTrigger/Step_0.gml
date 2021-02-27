@@ -27,6 +27,12 @@ if(GetGlobalGameState() == GlobalGameStates.MimiIsPeeking)
 		}
 	}
 	
+	// Disable the holdprompt. The user gets the idea
+	if(m_pan > 0.5)
+	{
+		instance_global.DrawActionHoldPrompt(false, true, 0, 0);
+	}
+	
 	RoomLerp(m_viewportLookPositionOriginX, 0);
 	
 	if(GetViewportPositionX() < 6)

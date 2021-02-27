@@ -45,6 +45,9 @@ function MimiPeepsConversation()
 	{		
 		// Advance the global game state
 		SetGlobalGameState(GlobalGameStates.MimiIsPeeking);
+		
+		// Draw the hold prompt
+		instance_global.DrawActionHoldPrompt(true, true, 960, 150);
 	}
 	
 	cb18_4 = function()

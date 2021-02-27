@@ -52,7 +52,7 @@ if(m_drawPressPrompt)
 	draw_sprite(buttonSpriteIndex, imageIndex, m_pressPromptX, m_pressPromptY);
 }
 
-if(m_drawHoldPrompt)
+if(m_drawHoldPrompt && !m_drawHoldPromptWorld)
 {
 	var buttonSpriteIndex = noone;
 	if(m_controlDevice == ControlDevice.Keyboard)
