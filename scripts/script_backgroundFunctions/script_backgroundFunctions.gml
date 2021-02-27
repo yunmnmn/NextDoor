@@ -206,5 +206,5 @@ function GetViewportWidth()
 
 function PulseScreen(p_magnitude)
 {
-	GetBackgroundInstance().PulseScreen(10);
+	GetBackgroundInstance().PulseScreen(p_magnitude);
 }
