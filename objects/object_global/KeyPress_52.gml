@@ -1,5 +1,5 @@
 // Progress to sequence 3
-if(keyboard_check(vk_shift))
+if(keyboard_check(vk_shift) && DebugMode())
 {
 	// Follow the player again
 	SetViewportFollowInstance(GetPlayerInstance());

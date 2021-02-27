@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "sprite_placeholderRed",
-    "path": "sprites/sprite_placeholderRed/sprite_placeholderRed.yy",
+    "name": "foreground_openDoorWomen",
+    "path": "sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "object_invisibleTrigger",
-    "path": "objects/object_invisibleTrigger/object_invisibleTrigger.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,9 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_doorKnockWomenTrigger","path":"objects/object_doorKnockWomenTrigger/object_doorKnockWomenTrigger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -33,7 +28,7 @@
     "path": "folders/Objects/HallwayUp.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_doorKnockWomenTrigger",
+  "name": "object_openDoorWomen",
   "tags": [],
   "resourceType": "GMObject",
 }

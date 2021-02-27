@@ -1,2 +1,5 @@
 // Softreset the current room
-ReloadRoom();
+if(DebugMode())
+{
+	ReloadRoom();
+}

@@ -1,3 +1,6 @@
+// Set debug mode or not
+global.m_debug = false;
+
 // Enum to set Mimi's states
 enum PlayerControlState
 {
@@ -38,6 +41,11 @@ enum GlobalGameStates
 	// Sequence 4 states
 	MimiStandsUpFromAttack,
 	MimiHearsTickingAtWindow,
+}
+
+function DebugMode()
+{
+	return global.m_debug;
 }
 
 function SetControlState(p_controlState)
