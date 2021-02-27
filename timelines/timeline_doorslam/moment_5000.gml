@@ -15,7 +15,7 @@ else
 	{
 		var MonologueFinished = function()
 		{
-			// Disable the player control
+			// Enable the player control
 			SetControlState(PlayerControlState.PlayerControl);
 		}
 		

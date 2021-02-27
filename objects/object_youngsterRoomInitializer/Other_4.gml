@@ -4,4 +4,7 @@ event_inherited();
 RescrictViewportX(910, 2376);
 
 // Call the doorslam timeline
-PlayTimeline(timeline_doorslam);
+if(GetGlobalGameState() == GlobalGameStates.MimiEntersYoungstersRoom)
+{
+	PlayTimeline(timeline_doorslam);
+}

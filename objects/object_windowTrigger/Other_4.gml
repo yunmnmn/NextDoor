@@ -43,10 +43,8 @@ MimiFallsBackwards = function()
 
 PlayWomenClimbMovie = function()
 {
-	// TODO: Play the movie
-	
-	// Fall backwards afterwards
-	MimiFallsBackwards();
+	// Play the movie
+	instance_movie.PlayMovie(MimiFallsBackwards);
 }
 
 LookOutsideWindow = function()
