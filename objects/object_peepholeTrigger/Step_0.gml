@@ -158,7 +158,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				cb23_4 = function()
 				{
 					var c23_4 = new TextContext(sprite_mimiAvatarScared, true, cb23_5);
-					c23_4.AddSubText(new SubText("Does this mean…", 0.2, true));
+					c23_4.AddSubText(new SubText("Does this mean...", 0.2, true));
 					RenderText(c23_4);
 				}
 			

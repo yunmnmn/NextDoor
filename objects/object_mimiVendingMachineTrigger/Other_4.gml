@@ -29,7 +29,7 @@ function MimiConversation()
 	cb12_5 = function()
 	{
 		var c12_5 = new TextContext(sprite_mimiAvatarTroubled, true, cb12_6);
-		c12_5.AddSubText(new SubText("…", 0.2, true));
+		c12_5.AddSubText(new SubText("...", 0.2, true));
 		RenderText(c12_5);
 	}
 	
@@ -99,7 +99,7 @@ function MimiConversation()
 	cb11_20 = function()
 	{
 		var c11_20 = new TextContext(sprite_womanTallAvatar, true, womenWalk);
-		c11_20.AddSubText(new SubText("…", 0.2, true));
+		c11_20.AddSubText(new SubText("...", 0.2, true));
 		RenderText(c11_20);
 	}
 
@@ -180,7 +180,7 @@ function MimiConversation()
 		instance_womenOutside.AddPathPointCallback(1, BehimdMimi, false);
 		
 		var c11_14 = new TextContext(sprite_youngsterAvatarScared, true, cb11_15);
-		c11_14.AddSubText(new SubText("I don't know how many people live there, but…", 0.2, true));
+		c11_14.AddSubText(new SubText("I don't know how many people live there, but...", 0.2, true));
 		RenderText(c11_14);
 	}
 	
@@ -215,7 +215,7 @@ function MimiConversation()
 	cb11_9 = function()
 	{
 		var c11_9 = new TextContext(sprite_mimiAvatarTroubled, true, cb11_10);
-		c11_9.AddSubText(new SubText("Sure…", 0.2, true));
+		c11_9.AddSubText(new SubText("Sure...", 0.2, true));
 		RenderText(c11_9);
 	}
 	

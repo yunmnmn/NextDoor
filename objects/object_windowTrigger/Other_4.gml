@@ -13,7 +13,7 @@ MimiFallsBackwards = function()
 		var viewportEndPosition = new Vector2(GetPlayerInstance().x - 400, GetPlayerInstance().y);
 		FollowPositionAndDisable(viewportEndPosition);
 		
-		// Let the Women walk torwards mimi
+		// Let the Women walk torwards Mimi
 		instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 1.0);
 		
 		// Play the walking animation
@@ -55,8 +55,8 @@ LookOutsideWindow = function()
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 	
-	// Set the path for the women to walk out of the screen
-	instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomenOutside, 0.0, 1.3);
+	// Set the path for the women to walk to the window
+	instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomenOutside, 0.0, 1.0);
 	// Play the walking animation
 	instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenWalkGiant, false, noone);
 	// Set the callback to play the Movie when the women reaches the end of the path

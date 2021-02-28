@@ -14,7 +14,7 @@ function NobodyIsHereConversation()
 	cb15_2 = function()
 	{	
 		var c15_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c15_2.AddSubText(new SubText("Nobody's home…", 0.2, true));
+		c15_2.AddSubText(new SubText("Nobody's home...", 0.2, true));
 		RenderText(c15_2);
 	}
 
