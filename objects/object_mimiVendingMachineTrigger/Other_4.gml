@@ -307,7 +307,7 @@ function MimiConversation()
 		
 		// Pan the camera to the youngster
 		SetViewportFollowSpeed(0.0015);
-		SetViewportFollowInstance(instance_youngsterOutside);
+		FollowPosition(new Vector2(instance_youngsterOutside.x, GetPlayerInstance().y));
 	}
 }
 
