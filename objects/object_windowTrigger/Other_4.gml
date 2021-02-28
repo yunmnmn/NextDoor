@@ -43,8 +43,11 @@ MimiFallsBackwards = function()
 
 PlayWomenClimbMovie = function()
 {
-	// Play the movie
-	instance_movie.PlayMovie(MimiFallsBackwards);
+	// Freeze the animation at the end
+	instance_youngsetRoomWomenOutside.FreezeAnimationAtEnd2(anim_womenWalkGiant);
+	
+	// Play the timeline a little bit later, so it's waiting there
+	PlayTimeline(timeline_womenIsAtWindow);
 }
 
 LookOutsideWindow = function()

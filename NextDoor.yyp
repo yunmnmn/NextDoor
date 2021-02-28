@@ -135,6 +135,7 @@
     {"id":{"name":"anim_womanTurnAvatar","path":"sprites/anim_womanTurnAvatar/anim_womanTurnAvatar.yy",},"order":3,},
     {"id":{"name":"sprite_youngsterAvatarScared","path":"sprites/sprite_youngsterAvatarScared/sprite_youngsterAvatarScared.yy",},"order":2,},
     {"id":{"name":"foreground_mothA","path":"sprites/foreground_mothA/foreground_mothA.yy",},"order":3,},
+    {"id":{"name":"timeline_womenIsAtWindow","path":"timelines/timeline_womenIsAtWindow/timeline_womenIsAtWindow.yy",},"order":4,},
     {"id":{"name":"script_backgroundFunctions","path":"scripts/script_backgroundFunctions/script_backgroundFunctions.yy",},"order":1,},
     {"id":{"name":"object_hallwayDownInitializer","path":"objects/object_hallwayDownInitializer/object_hallwayDownInitializer.yy",},"order":0,},
     {"id":{"name":"shader_wallWithHole","path":"shaders/shader_wallWithHole/shader_wallWithHole.yy",},"order":1,},
