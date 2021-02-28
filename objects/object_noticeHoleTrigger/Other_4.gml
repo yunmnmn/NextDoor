@@ -7,6 +7,9 @@ function MimiNoticesHoleConversation()
 		
 		// Advance the state
 		SetGlobalGameState(GlobalGameStates.MimiApproachesHole);
+		
+		// Call the doorslam timeline
+		PlayTimeline(timeline_doorslam);
 	}
 	
 	cb17_3 = function()
