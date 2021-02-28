@@ -289,10 +289,7 @@ function MimiConversation()
 }
 
 MimiBuysDrink = function()
-{
-	// Change the sprite of the youngster
-	instance_youngsterOutside.PlayAnimation2(sprite_youngsterCornerIdle, noone);
-		
+{		
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 				
