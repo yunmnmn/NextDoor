@@ -13,14 +13,19 @@ MimiFallsBackwards = function()
 		var viewportEndPosition = new Vector2(GetPlayerInstance().x - 400, GetPlayerInstance().y);
 		FollowPositionAndDisable(viewportEndPosition);
 		
-		// Let the Women walk torwards Mimi
-		instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 0.5);
-		
-		// Play the walking animation
-		instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);
-		
 		// Enable player controls again
 		SetControlState(PlayerControlState.PlayerControl);
+		
+		FreezeWomenAnimation2 = function()
+		{
+			// Let the Women walk torwards Mimi
+			instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 0.5);
+		
+			// Play the walking animation
+			instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);
+		}
+		instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, FreezeWomenAnimation2);
+		
 	}
 	instance_youngsetRoomWomenOutside.StopPath();
 	instance_youngsetRoomWomenOutside.x = 2373;
