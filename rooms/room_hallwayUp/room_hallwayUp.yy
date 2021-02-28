@@ -13,7 +13,7 @@
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
   ],
   "layers": [
-    {"pathId":{"name":"path_hallwayUpWomen","path":"paths/path_hallwayUpWomen/path_hallwayUpWomen.yy",},"colour":4278255381,"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":12,"gridY":12,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_womenPath","tags":[],"resourceType":"GMRPathLayer",},
+    {"pathId":{"name":"path_hallwayUpWomen","path":"paths/path_hallwayUpWomen/path_hallwayUpWomen.yy",},"colour":4278255381,"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":6,"gridY":6,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_womenPath","tags":[],"resourceType":"GMRPathLayer",},
     {"pathId":{"name":"path_hallwayUp","path":"paths/path_hallwayUp/path_hallwayUp.yy",},"colour":4278190335,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":12,"gridY":12,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_path","tags":[],"resourceType":"GMRPathLayer",},
     {"instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_ui","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
