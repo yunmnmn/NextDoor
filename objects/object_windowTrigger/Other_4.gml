@@ -44,7 +44,7 @@ MimiFallsBackwards = function()
 PlayWomenClimbMovie = function()
 {
 	// Freeze the animation at the end
-	instance_youngsetRoomWomenOutside.FreezeAnimationAtEnd2(anim_womenWalkGiant);
+	instance_youngsetRoomWomenOutside.image_speed = 0.0;
 	
 	// Play the timeline a little bit later, so it's waiting there
 	PlayTimeline(timeline_womenIsAtWindow);

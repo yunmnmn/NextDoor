@@ -4,7 +4,7 @@
   "precision": 4,
   "points": [
     {"speed":100.0,"x":2928.0,"y":420.0,},
-    {"speed":100.0,"x":2472.0,"y":420.0,},
+    {"speed":100.0,"x":2496.0,"y":420.0,},
   ],
   "parent": {
     "name": "YoungsterRoom",
