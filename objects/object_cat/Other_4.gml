@@ -34,7 +34,7 @@ CatMeows = function()
 	walkToPosition = function()
 	{			
 		GetPlayerInstance().SetPathSpeed(0.0);
-		PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, mirror);
+		PlayerPlayAndFreezeAtEnd(sprite_mimiIdleScared, mirror);
 		
 		PlayAnimation2(anim_cat, CatAnimationFinished);
 	}

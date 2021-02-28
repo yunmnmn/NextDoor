@@ -1,5 +1,5 @@
 // If the current TextContext is occupied, go back a second
-if(GetCurrentTextContext() != noone)
+if(GetControlState() != PlayerControlState.PlayerControl)
 {
 	timeline_position = timeline_position - 1000;
 }

@@ -6,7 +6,7 @@ function WomenInBlackConversation()
 		SetViewportFollowInstance(GetPlayerInstance());
 		// Set the following speed
 		// NOTE: the followspeed will be set back again when the player hits the green trigger
-		SetViewportFollowSpeed(0.005);
+		SetViewportFollowSpeed(0.003);
 		
 		// Set the idle animation
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
@@ -23,7 +23,7 @@ function WomenInBlackConversation()
 		// Set the oldtimer to be the following object
 		SetViewportFollowInstance(instance_oldtimer);
 		// Set the following speed
-		SetViewportFollowSpeed(0.005);
+		SetViewportFollowSpeed(0.003);
 		
 		var c6_2 = new TextContext(sprite_oldtimerAvatarAngry, true, conversationFinished);
 		c6_2.AddSubText(new SubText("Could you argue somewhere else, please?", 0.2, true));

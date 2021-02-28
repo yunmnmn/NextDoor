@@ -1,5 +1,5 @@
 // If the current TextContext is occupied, go back a second
-if(GetCurrentTextContext() != noone)
+if(GetControlState() != PlayerControlState.PlayerControl)
 {
 	timeline_position = timeline_position - 1000;
 }
@@ -26,5 +26,5 @@ else
 	SetControlState(PlayerControlState.PlayerNoControl);
 	
 	// Play the idle animation
-	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
 }
