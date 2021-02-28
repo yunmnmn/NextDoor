@@ -181,6 +181,10 @@ function MimiKnocksOnDoorConversation()
 		
 		// Advance the state
 		SetGlobalGameState(GlobalGameStates.MimiEntersYoungstersRoom);
+		
+		// Let the viewport follow the player again
+		// TODO: This shouldn't have to, check why
+		SetViewportFollowInstance(GetPlayerInstance());
 	}
 	
 	cb14_3 = function()
@@ -207,7 +211,7 @@ function MimiKnocksOnDoorConversation()
 		// Disable progressing this TextContext untill Mimi's knocking animation has finished playing
 		GetCurrentTextContext().m_progressable = false;
 		
-		// If it's successfully displaying the text, Disable the player control
+		// Give the player control back
 		SetControlState(PlayerControlState.PlayerNoControl);
 		
 		var SetIdleWhenKnockingFinish = function()
