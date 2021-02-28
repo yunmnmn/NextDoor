@@ -78,7 +78,7 @@ function MimiConversation()
 	womenWalk = function()
 	{
 		// Set the path for the women to walk out of the screen
-		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 1.3);
+		instance_womenOutside.path_speed = 1.3;
 		// Play the walking animation
 		instance_womenOutside.PlayAnimation2(anim_womenWalkTall, noone);
 		// Mirror the animation, the Women's walk is by default to the left
@@ -90,7 +90,7 @@ function MimiConversation()
 			instance_womenOutside.Mirror(false);
 			instance_stairs.visible = true;
 		}
-		instance_womenOutside.AddPathPointCallback(2, womenAtStairs, false);
+		instance_womenOutside.AddPathPointCallback(3, womenAtStairs, false);
 		
 		// When the women is at the end of the path
 		instance_womenOutside.AddPathEndCallback(cb12_1, false);
@@ -113,11 +113,8 @@ function MimiConversation()
 		};
 		instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGasp, animationEndCallback);
 		
-		// Set the women in black visible
+		// Set the women behind to a visible sprite
 		instance_womenOutside.PlayAnimation2(sprite_womenIdleTall, noone);
-		instance_womenOutside.Mirror(true);
-		instance_outsideMemory.SetWomenOutsideVisible(true);
-		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
 		
 		// Set a point callback when Women passes Mimi, so mimi turns back to idle
 		var womenPassesMimi = function()
@@ -125,7 +122,7 @@ function MimiConversation()
 			// Play the mimi turn animation
 			PlayerPlayAnimation2(sprite_mimiIdle, noone);
 		}
-		instance_womenOutside.AddPathPointCallback(1, womenPassesMimi, false);
+		instance_womenOutside.AddPathPointCallback(2, womenPassesMimi, false);
 
 		// Play the mimi turn animation
 		PlayerPlayAndFreezeAtEnd(anim_mimiTurn, PlayerGetMirrored());
@@ -164,7 +161,24 @@ function MimiConversation()
 	}
 	
 	cb11_14 = function()
-	{
+	{		
+		// Set the women on the path
+		instance_womenOutside.PlayAnimation2(anim_womenWalkTallShadow, noone);
+		instance_womenOutside.Mirror(true);
+		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 1.3);
+		// Set the women in black visible
+		instance_outsideMemory.SetWomenOutsideVisible(true);
+		
+		var BehimdMimi = function()
+		{
+			// Set women to tall idle shadow
+			instance_womenOutside.FreezeAnimationAtEnd2(sprite_womenIdleTallShadow);
+			
+			// Stop the women from walking
+			instance_womenOutside.path_speed = 0.0;
+		}
+		instance_womenOutside.AddPathPointCallback(1, BehimdMimi, false);
+		
 		var c11_14 = new TextContext(sprite_youngsterAvatarScared, true, cb11_15);
 		c11_14.AddSubText(new SubText("I don't know how many people live there, but…", 0.2, true));
 		RenderText(c11_14);
