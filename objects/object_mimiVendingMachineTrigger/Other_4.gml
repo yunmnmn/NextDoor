@@ -10,6 +10,8 @@ function MimiConversation()
 		
 		// Progress the global state
 		SetGlobalGameState(GlobalGameStates.MimiReturnsFromDrinking);
+		
+		SetViewportFollowSpeed(1.0);
 	}
 	
 	cb12_7 = function()
@@ -73,6 +75,9 @@ function MimiConversation()
 		var c12_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb12_2);
 		c12_2.AddSubText(new SubText("?", 0.2, true));
 		RenderText(c12_2);
+		
+		// Pan the camera back to mimi
+		SetViewportFollowInstance(GetPlayerInstance());
 	}
 	
 	womenWalk = function()
@@ -299,6 +304,10 @@ function MimiConversation()
 		
 		// Play the shock animation
 		PlayerPlayAnimation(anim_mimiShock, false, SetIdleWhenShockFinish);
+		
+		// Pan the camera to the youngster
+		SetViewportFollowSpeed(0.0015);
+		SetViewportFollowInstance(instance_youngsterOutside);
 	}
 }
 
