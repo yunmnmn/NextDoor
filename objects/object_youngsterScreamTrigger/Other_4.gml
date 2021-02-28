@@ -18,6 +18,13 @@ function YoungsterStreamsConversation()
 	
 	cb13_1 = function()
 	{
+		// Go to scared from now on
+		var AnimationEndCallback = function()
+		{
+			PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
+		}
+		PlayerPlayAnimation2(anim_mimiIdleToScared, AnimationEndCallback);
+		
 		// Start of the conversation. Doesn't require a function
 		var c13_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb13_2);
 		c13_1.AddSubText(new SubText("What was that sound?", 0.2, true));
