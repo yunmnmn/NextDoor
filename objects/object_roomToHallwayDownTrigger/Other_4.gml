@@ -14,7 +14,20 @@ var collisionEvent = function()
 	}
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 }
-
 var collisionContext = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext.AllStates();
 AddCollisionContext(collisionContext);
+
+
+if(GetGlobalGameState() == GlobalGameStates.MimiRoomSits)
+{
+
+	var promptEvent = function()
+	{
+		instance_global.DrawActionPressPrompt(true, 700, 60);
+	}
+	var collisionContext2 = new CollisionContext(GetPlayerInstance(), promptEvent);
+	collisionContext2.AddGlobalState1(GlobalGameStates.MimiGoingToYoungster);
+	collisionContext2.ExecuteOnHit();
+	AddCollisionContext(collisionContext2);
+}

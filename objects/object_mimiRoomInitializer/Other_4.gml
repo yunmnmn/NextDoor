@@ -24,11 +24,23 @@ else
 function MimiConversation()
 {
 	conversationFinished = function()
-	{
-		m_talkingFinished = true;
-		// Draw the button prompts
-		instance_global.DrawMovingPrompt(true, 175, 124);
-		instance_global.DrawActionPressPrompt(true, 700, 60);
+	{		
+		var animationEndCallback = function()
+		{
+			// Play the idle animation
+			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
+		
+			// Give the control back to the player
+			SetControlState(PlayerControlState.PlayerControl);
+			
+			// Draw the button prompts
+			instance_global.DrawMovingPrompt(true, 175, 124);
+			
+			m_talkingFinished = true;
+		}
+		// Set the animation speed back when it's finished playing the conversation
+		// Play the sitting animation
+		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
 	}
 	
 	cb2_3 = function()
@@ -76,7 +88,6 @@ function MimiComplainsAboutNoise()
 	
 	// Pulse the screen here
 	PulseScreen(1.0);
-	
 }
 
 function MimiConversation2()
@@ -141,5 +152,4 @@ switch(GetGlobalGameState())
 }
 
 //
-m_pressedMove = false;
 m_talkingFinished = false;
