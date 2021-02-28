@@ -148,6 +148,7 @@
     {"id":{"name":"room_hallwayUp","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},"order":3,},
     {"id":{"name":"background_youngsterRoom","path":"sprites/background_youngsterRoom/background_youngsterRoom.yy",},"order":7,},
     {"id":{"name":"sprite_youngsterIdle","path":"sprites/sprite_youngsterIdle/sprite_youngsterIdle.yy",},"order":0,},
+    {"id":{"name":"timeline_mimiCrawlsBack","path":"timelines/timeline_mimiCrawlsBack/timeline_mimiCrawlsBack.yy",},"order":5,},
     {"id":{"name":"anim_mimiTurn","path":"sprites/anim_mimiTurn/anim_mimiTurn.yy",},"order":19,},
     {"id":{"name":"anim_mimiKnock","path":"sprites/anim_mimiKnock/anim_mimiKnock.yy",},"order":7,},
     {"id":{"name":"anim_womenScrew","path":"sprites/anim_womenScrew/anim_womenScrew.yy",},"order":9,},

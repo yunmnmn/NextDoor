@@ -187,12 +187,8 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 			// Start the slats animation
 			instance_womenSlats.PlayAnimation2(anim_womenSlats, animationSlatsFinished);
 			
-			animationCrawlFinished = function()
-			{
-				PlayerFreezeAnimationEnd2(anim_mimiCrawlStart);
-			}
-			// Start the crawl animation at the same time
-			PlayerPlayAnimation2(anim_mimiCrawlStart, animationCrawlFinished);
+			// Delay the carwling back animation slightly
+			PlayTimeline(timeline_mimiCrawlsBack);
 			
 			// Also play a TextContext
 			var c22_2 = new TextContext(sprite_mimiAvatarScared, false, noone);
