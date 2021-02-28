@@ -14,7 +14,7 @@ MimiFallsBackwards = function()
 		FollowPositionAndDisable(viewportEndPosition);
 		
 		// Let the Women walk torwards mimi
-		instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 1.3);
+		instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 1.0);
 		
 		// Play the walking animation
 		instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);
