@@ -15,11 +15,16 @@ function YoungsterStreamsConversation()
 		c13_2.AddSubText(new SubText("Sounded like it came from upstairs", 0.2, true));
 		RenderText(c13_2);
 	}
+	
+	cb13_1 = function()
+	{
+		// Start of the conversation. Doesn't require a function
+		var c13_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb13_2);
+		c13_1.AddSubText(new SubText("What was that sound?", 0.2, true));
+		RenderText(c13_1);
+	}
 
-	// Start of the conversation. Doesn't require a function
-	var c13_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb13_2);
-	c13_1.AddSubText(new SubText("What was that sound?", 0.2, true));
-	RenderText(c13_1);
+	PlayerPlayAnimation2(anim_mimiShock, cb13_1);
 }
 
 MimiHearsYoungsterScream = function()
