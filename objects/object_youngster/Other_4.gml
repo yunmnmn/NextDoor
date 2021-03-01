@@ -49,7 +49,7 @@ function MimiAndYoungsterConversation()
 	cb4_8 = function()
 	{
 		var c2_8 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
-		c2_8.AddSubText(new SubText("Doesn’t seem to be anyone around today though", 0.2, true));
+		c2_8.AddSubText(new SubText("Doesn't seem to be anyone around today though", 0.2, true));
 		RenderText(c2_8);
 	}
 	

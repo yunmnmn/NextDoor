@@ -17,6 +17,9 @@ MimiFallsBackwards = function()
 		// Enable player controls again
 		SetControlState(PlayerControlState.PlayerControl);
 		
+		// Set player speed slower
+		GetPlayerInstance().SetSpeed(0.10); 
+		
 		FreezeWomenAnimation2 = function()
 		{
 			// Let the Women walk torwards Mimi
