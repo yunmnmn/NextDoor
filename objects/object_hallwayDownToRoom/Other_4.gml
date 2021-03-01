@@ -43,7 +43,7 @@ CannotGoToRoom = function()
 	}
 	// Start the monologue
 	var c30_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-	c30_1.AddSubText(new SubText("The scream came from upstairs", 0.2, true));
+	c30_1.AddSubText(new SubText("The scream came from upstairs!", 0.2, true));
 	RenderText(c30_1);
 	
 	// Set Mimi to idle

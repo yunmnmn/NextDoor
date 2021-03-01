@@ -17,14 +17,14 @@ function MimiConversation()
 	cb12_7 = function()
 	{
 		var c11_7 = new TextContext(sprite_mimiAvatarTroubled, true, cb12ConversationFinished);
-		c11_7.AddSubText(new SubText("See you around", 0.2, true));
+		c11_7.AddSubText(new SubText("See you around...", 0.2, true));
 		RenderText(c11_7);
 	}
 	
 	cb12_6 = function()
 	{		
 		var c12_6 = new TextContext(sprite_mimiAvatarTroubled, true, cb12_7)
-		c12_6.AddSubText(new SubText("I'm going back to my room", 0.2, true));
+		c12_6.AddSubText(new SubText("I'm going back to my room.", 0.2, true));
 		RenderText(c12_6);
 	}
 	
@@ -140,28 +140,28 @@ function MimiConversation()
 	cb11_18 = function()
 	{
 		var c11_18 = new TextContext(sprite_youngsterAvatarScared, true, cb11_19);
-		c11_18.AddSubText(new SubText("It's freaking me out", 0.2, true));
+		c11_18.AddSubText(new SubText("It's freaking me out...", 0.2, true));
 		RenderText(c11_18);
 	}
 	
 	cb11_17 = function()
 	{
 		var c11_17 = new TextContext(sprite_youngsterAvatarScared, true, cb11_18);
-		c11_17.AddSubText(new SubText("With these thin walls, right?", 0.2, true));
+		c11_17.AddSubText(new SubText("I should at least be able to hear them talk or move around or something.", 0.2, true));
 		RenderText(c11_17);
 	}
 	
 	cb11_16 = function()
 	{
 		var c11_16 = new TextContext(sprite_youngsterAvatarScared, true, cb11_17);
-		c11_16.AddSubText(new SubText("talk or move around or something", 0.2, true));
+		c11_16.AddSubText(new SubText("And with these thin walls...", 0.2, true));
 		RenderText(c11_16);
 	}
 	
 	cb11_15 = function()
 	{
 		var c11_15 = new TextContext(sprite_youngsterAvatarScared, true, cb11_16);
-		c11_15.AddSubText(new SubText("They never make a single sound. At least I should be able to hear them ", 0.2, true));
+		c11_15.AddSubText(new SubText("They never make a single sound!", 0.2, true));
 		RenderText(c11_15);
 	}
 	
@@ -192,7 +192,7 @@ function MimiConversation()
 	cb11_13 = function()
 	{
 		var c11_13 = new TextContext(sprite_youngsterAvatarScared, true, cb11_14);
-		c11_13.AddSubText(new SubText("It's weird", 0.2, true));
+		c11_13.AddSubText(new SubText("It's weird.", 0.2, true));
 		RenderText(c11_13);
 	}
 	
@@ -213,7 +213,7 @@ function MimiConversation()
 	cb11_10 = function()
 	{
 		var c11_10 = new TextContext(sprite_youngsterAvatarScared, true, cb11_11);
-		c11_10.AddSubText(new SubText("Those ladies nextdoor to me", 0.2, true));
+		c11_10.AddSubText(new SubText("Those ladies nextdoor to me.", 0.2, true));
 		RenderText(c11_10);
 	}
 	
@@ -234,7 +234,7 @@ function MimiConversation()
 	cb11_7 = function()
 	{
 		var c11_7 = new TextContext(sprite_mimiAvatarTroubled, true, cb11_8);
-		c11_7.AddSubText(new SubText("You're white as a sheet", 0.2, true));
+		c11_7.AddSubText(new SubText("You're white as a sheet!", 0.2, true));
 		RenderText(c11_7);
 	}
 	
@@ -256,14 +256,14 @@ function MimiConversation()
 	cb11_5 = function()
 	{
 		var c11_5 = new TextContext(sprite_youngsterAvatarScared, true, cb11_6);
-		c11_5.AddSubText(new SubText("Don't sneak up on me like that", 0.2, true));
+		c11_5.AddSubText(new SubText("Don't sneak up on me like that.", 0.2, true));
 		RenderText(c11_5);
 	}
 	
 	cb11_4 = function()
 	{
 		var c11_4 = new TextContext(sprite_youngsterAvatarScared, true, cb11_5);
-		c11_4.AddSubText(new SubText("Oh it's you", 0.2, true));
+		c11_4.AddSubText(new SubText("Oh it's you...", 0.2, true));
 		RenderText(c11_4);
 	}
 	
@@ -282,7 +282,7 @@ function MimiConversation()
 	}
 	
 	var c11_1 = new TextContext(sprite_mimiAvatarTroubled, false, cb11_2);
-	c11_1.AddSubText(new SubText("It's that guy from upstairs", 0.2, true));
+	c11_1.AddSubText(new SubText("It's that guy from upstairs.", 0.2, true));
 	
 	// Call the parent text context
 	if(RenderText(c11_1))

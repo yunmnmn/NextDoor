@@ -144,14 +144,14 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				cb23_6 = function()
 				{
 					var c23_6 = new TextContext(sprite_mimiAvatarScared, true, MimiStandsUp);
-					c23_6.AddSubText(new SubText("Were exactly the same woman ", 0.2, true));
+					c23_6.AddSubText(new SubText("Were exactly the same woman?", 0.2, true));
 					RenderText(c23_6);
 				}
 			
 				cb23_5 = function()
 				{
 					var cb23_5 = new TextContext(sprite_mimiAvatarScared, true, cb23_6);
-					cb23_5.AddSubText(new SubText("All of those women with different figures", 0.2, true));
+					cb23_5.AddSubText(new SubText("All of those women with different figures.", 0.2, true));
 					RenderText(cb23_5);
 				}
 			
@@ -172,7 +172,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				cb23_2 = function()
 				{
 					var c23_2 = new TextContext(sprite_mimiAvatarScared, true, cb23_3);
-					c23_2.AddSubText(new SubText("Those limbs", 0.2, true));
+					c23_2.AddSubText(new SubText("Those limbs...", 0.2, true));
 					RenderText(c23_2);
 				}
 			

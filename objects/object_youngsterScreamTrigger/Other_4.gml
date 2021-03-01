@@ -12,7 +12,7 @@ function YoungsterStreamsConversation()
 	cb13_2 = function()
 	{	
 		var c13_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c13_2.AddSubText(new SubText("Sounded like it came from upstairs", 0.2, true));
+		c13_2.AddSubText(new SubText("Sounded like it came from upstairs...", 0.2, true));
 		RenderText(c13_2);
 	}
 	

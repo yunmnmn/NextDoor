@@ -26,7 +26,7 @@ function WomenInBlackConversation()
 		SetViewportFollowSpeed(0.0015);
 		
 		var c6_2 = new TextContext(sprite_oldtimerAvatarAngry, true, conversationFinished);
-		c6_2.AddSubText(new SubText("Could you argue somewhere else, please?", 0.2, true));
+		c6_2.AddSubText(new SubText("Could you argue somewhere else, please.", 0.2, true));
 		RenderText(c6_2);
 	}
 	
@@ -51,7 +51,7 @@ function WomenInBlackConversation()
 	cb5_6 = function()
 	{
 		var c5_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb5_7);
-		c5_6.AddSubText(new SubText("That's the first time I ever seen her", 0.2, true));
+		c5_6.AddSubText(new SubText("That's the first time I ever seen her.", 0.2, true));
 		RenderText(c5_6);
 	}
 	

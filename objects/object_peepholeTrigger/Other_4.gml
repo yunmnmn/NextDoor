@@ -60,14 +60,14 @@ function MimiPeepsConversation()
 	cb18_3 = function()
 	{
 		var c18_3 = new TextContext(sprite_mimiAvatarCloser, true, cb18_4);
-		c18_3.AddSubText(new SubText("Maybe that guy did it", 0.2, true));
+		c18_3.AddSubText(new SubText("Maybe that guy did it.", 0.2, true));
 		RenderText(c18_3);
 	}
 	
 	cb18_2 = function()
 	{
 		var c18_2 = new TextContext(sprite_mimiAvatarTroubled, true, cb18_3);
-		c18_2.AddSubText(new SubText("It looks made", 0.2, true));
+		c18_2.AddSubText(new SubText("It looks made...", 0.2, true));
 		RenderText(c18_2);
 	}
 
@@ -78,7 +78,7 @@ function MimiPeepsConversation()
 		
 		// Start of the conversation. Doesn't require a function
 		var c18_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb18_2);
-		c18_1.AddSubText(new SubText("How did this got here", 0.2, true));
+		c18_1.AddSubText(new SubText("How did this get here?", 0.2, true));
 		RenderText(c18_1)
 	}
 	

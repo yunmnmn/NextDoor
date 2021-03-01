@@ -10,7 +10,7 @@ CatMeows = function()
 	cbcat_3 = function()
 	{
 		var ccat_3 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-		ccat_3.AddSubText(new SubText("This cat has a cursed face...", 0.2, true));
+		ccat_3.AddSubText(new SubText("It has a cursed face...", 0.2, true));
 		RenderText(ccat_3);
 	}
 

@@ -43,10 +43,17 @@ function MimiConversation()
 		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
 	}
 	
+	cb2_4 = function()
+	{
+		var c2_4 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
+		c2_4.AddSubText(new SubText("I should give the guy upstairs a piece of my mind!", 0.2, true));
+		RenderText(c2_4);
+	}
+	
 	cb2_3 = function()
 	{
-		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
-		c2_3.AddSubText(new SubText("I can't study with this noise all the time! ", 0.2, true));
+		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, cb2_4);
+		c2_3.AddSubText(new SubText("I can't study with this noise all the time!", 0.2, true));
 		RenderText(c2_3);
 	}
 	
@@ -111,19 +118,19 @@ function MimiConversation2()
 	cb10_3 = function()
 	{
 		var c10_3 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
-		c10_3.AddSubText(new SubText("I could really use a drink", 0.2, true));
+		c10_3.AddSubText(new SubText("I could really use a drink.", 0.2, true));
 		RenderText(c10_3);
 	}
 	
 	cb10_2 = function()
 	{
 		var c10_2 = new TextContext(sprite_mimiAvatarNormal, true, cb10_3);
-		c10_2.AddSubText(new SubText("I'm thristy", 0.2, true));
+		c10_2.AddSubText(new SubText("I've been studying for so long...", 0.2, true));
 		RenderText(c10_2);
 	}
 
 	var c10_1 = new TextContext(sprite_mimiAvatarNormal, true, cb10_2);
-	c10_1.AddSubText(new SubText("Phew, I've been studying for so long", 0.2, true));
+	c10_1.AddSubText(new SubText("Phew!", 0.2, true));
 	RenderText(c10_1);
 }
 

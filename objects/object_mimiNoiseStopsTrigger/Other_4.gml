@@ -28,14 +28,14 @@ MimiConversation = function()
 	cb9_4 = function()
 	{
 		var c9_4 = new TextContext(sprite_mimiAvatarNormal, true, backToStudying);
-		c9_4.AddSubText(new SubText("Oh well, I can finally do some studying", 0.2, true));
+		c9_4.AddSubText(new SubText("Oh well, I can finally do some studying.", 0.2, true));
 		RenderText(c9_4);
 	}
 	
 	cb9_3 = function()
 	{
 		var c9_3 = new TextContext(sprite_mimiAvatarNormal, true, cb9_4);
-		c9_3.AddSubText(new SubText("After all that trouble he gave me", 0.2, true));
+		c9_3.AddSubText(new SubText("After all that trouble he gave me...", 0.2, true));
 		RenderText(c9_3);
 	}
 	

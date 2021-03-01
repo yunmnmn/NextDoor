@@ -190,7 +190,7 @@ function MimiKnocksOnDoorConversation()
 	cb14_3 = function()
 	{	
 		var c14_3 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c14_3.AddSubText(new SubText("(The door seems to be open...)", 0.2, true));
+		c14_3.AddSubText(new SubText("The door seems to be open.", 0.2, true));
 		RenderText(c14_3);
 	}
 	

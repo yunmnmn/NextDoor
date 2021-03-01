@@ -19,7 +19,7 @@ else
 	}
 	
 	var c25_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb25_2);
-	c25_1.AddSubText(new SubText("Phew, she went downstairs", 0.2, true));
+	c25_1.AddSubText(new SubText("Phew, she went downstairs.", 0.2, true));
 	RenderText(c25_1);
 
 	// Disable the player control

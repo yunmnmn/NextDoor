@@ -16,7 +16,7 @@ YoungsterIsWaiting = function()
 	
 	// Start the conversation
 	var c27_1 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
-	c27_1.AddSubText(new SubText("Well, go ask around", 0.2, true));
+	c27_1.AddSubText(new SubText("Well? go ask around!", 0.2, true));
 	RenderText(c27_1);
 	
 	// Disable the control for the player
@@ -49,21 +49,21 @@ function MimiAndYoungsterConversation()
 	cb4_8 = function()
 	{
 		var c2_8 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
-		c2_8.AddSubText(new SubText("Doesn't seem to be anyone around today though", 0.2, true));
+		c2_8.AddSubText(new SubText("Doesn't seem to be anyone around today though.", 0.2, true));
 		RenderText(c2_8);
 	}
 	
 	cb4_7 = function()
 	{
 		var c2_7 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_8);
-		c2_7.AddSubText(new SubText("Sometimes I hear the door opening and closing", 0.2, true));
+		c2_7.AddSubText(new SubText("Sometimes I hear the door opening and closing.", 0.2, true));
 		RenderText(c2_7);
 	}
 	
 	cb4_6 = function()
 	{
 		var c2_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_7);
-		c2_6.AddSubText(new SubText("I don't think it's empty", 0.2, true));
+		c2_6.AddSubText(new SubText("I don't think it's empty...", 0.2, true));
 		RenderText(c2_6);
 	}
 	
@@ -103,13 +103,13 @@ function MimiAndYoungsterConversation()
 	cb4_2 = function()
 	{
 		var c4_2 = new TextContext(sprite_youngsterAvatarSmirk, true, cb4_3);
-		c4_2.AddSubText(new SubText("That neighbour seems to be away a lot", 0.2, true));
+		c4_2.AddSubText(new SubText("That neighbour seems to be away a lot.", 0.2, true));
 		RenderText(c4_2);
 	}
 	
 	// Call the parent text context
 	var c4_1 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_2);
-	c4_1.AddSubText(new SubText("Probably not home", 0.2, true));
+	c4_1.AddSubText(new SubText("Probably not home...", 0.2, true));
 	if(RenderText(c4_1))
 	{
 		// If it's successfully displaying the text, Disable the player control

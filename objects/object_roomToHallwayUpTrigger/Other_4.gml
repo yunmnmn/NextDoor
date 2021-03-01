@@ -19,7 +19,7 @@ function NobodyIsHereConversation()
 	}
 
 	var c15_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb15_2);
-	c15_1.AddSubText(new SubText("That's weird", 0.6, true));
+	c15_1.AddSubText(new SubText("That's weird.", 0.6, true));
 	RenderText(c15_1);
 }
 
@@ -58,7 +58,7 @@ CannotGoToHallwayUp = function()
 	}
 	// Start the monologue
 	var c32_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-	c32_1.AddSubText(new SubText("Let's look around some more", 0.2, true));
+	c32_1.AddSubText(new SubText("Let's look around some more.", 0.2, true));
 	RenderText(c32_1);
 	
 	// Set Mimi to idle
@@ -90,7 +90,7 @@ WomenMightBeOutside = function()
 	}
 	// Start the monologue
 	var c32_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-	c32_1.AddSubText(new SubText("She could still be in the hallway", 0.2, true));
+	c32_1.AddSubText(new SubText("She could still be in the hallway.", 0.2, true));
 	RenderText(c32_1);
 	
 	// Set Mimi to idle

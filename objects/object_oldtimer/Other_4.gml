@@ -15,14 +15,14 @@ function MimiAndOldtimerConversation()
 	cb8_3 = function()
 	{
 		var c8_3 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
-		c8_3.AddSubText(new SubText("Better get back to my room to try some more studying", 0.2, true));
+		c8_3.AddSubText(new SubText("Better get back to my room to try some more studying.", 0.2, true));
 		RenderText(c8_3);
 	}
 	
 	cb8_2 = function()
 	{
 		var c8_2 = new TextContext(sprite_mimiAvatarNormal, true, cb8_3);
-		c8_2.AddSubText(new SubText("But doesn't really help me with the noise issue", 0.2, true));
+		c8_2.AddSubText(new SubText("But doesn't really help me with the noise issue.", 0.2, true));
 		RenderText(c8_2);
 	}
 	
@@ -32,70 +32,70 @@ function MimiAndOldtimerConversation()
 		instance_hallwayUpMemory.SetOldtimerVisible(false);
 		
 		var c8_1 = new TextContext(sprite_mimiAvatarNormal, true, cb8_2);
-		c8_1.AddSubText(new SubText("That is weird and all", 0.2, true));
+		c8_1.AddSubText(new SubText("That is weird and all.", 0.2, true));
 		RenderText(c8_1);
 	}
 	
 	cb7_18 = function()
 	{		
 		var c8_18 = new TextContext(sprite_mimiAvatarNormal, true, cb8_1);
-		c8_18.AddSubText(new SubText("Thank you, have a nice day", 0.2, true));
+		c8_18.AddSubText(new SubText("Thank you, have a nice day.", 0.2, true));
 		RenderText(c8_18);
 	}
 	
 	cb7_17 = function()
 	{
 		var c8_17 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_18);
-		c8_17.AddSubText(new SubText("Have a nice day", 0.2, true));
+		c8_17.AddSubText(new SubText("Have a nice day.", 0.2, true));
 		RenderText(c8_17);
 	}
 	
 	cb7_16 = function()
 	{
 		var c8_16 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_17);
-		c8_16.AddSubText(new SubText("If that's all, I still have some laundry to do", 0.2, true));
+		c8_16.AddSubText(new SubText("If that's all, I still have some laundry to do.", 0.2, true));
 		RenderText(c8_16);
 	}
 
 	cb7_15 = function()
 	{
 		var c8_15 = new TextContext(sprite_mimiAvatarNormal, true, cb7_16);
-		c8_15.AddSubText(new SubText("Hmm", 0.2, true));
+		c8_15.AddSubText(new SubText("Hmm...", 0.2, true));
 		RenderText(c8_15);
 	}
 	
 	cb7_14 = function()
 	{
 		var c8_14 = new TextContext(sprite_oldtimerAvatarAngry, true, cb7_15);
-		c8_14.AddSubText(new SubText("Very unfriendly", 0.2, true));
+		c8_14.AddSubText(new SubText("Very unfriendly.", 0.2, true));
 		RenderText(c8_14);
 	}
 
 	cb7_13 = function()
 	{
 		var c8_13 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_14);
-		c8_13.AddSubText(new SubText("They never say hello or anything", 0.2, true));
+		c8_13.AddSubText(new SubText("They never say hello or anything either.", 0.2, true));
 		RenderText(c8_13);
 	}
 
 	cb7_12 = function()
 	{
 		var c8_12 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_13);
-		c8_12.AddSubText(new SubText("But they all dress completely in black", 0.2, true));
+		c8_12.AddSubText(new SubText("But they dress completely in black.", 0.2, true));
 		RenderText(c8_12);
 	}
 	
 	cb7_11 = function()
 	{
 		var c8_11 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_12);
-		c8_11.AddSubText(new SubText("They'll all have a different figure", 0.2, true));
+		c8_11.AddSubText(new SubText("They all have a different figure.", 0.2, true));
 		RenderText(c8_11);
 	}
 
 	cb7_10 = function()
 	{
 		var c8_10 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_11);
-		c8_10.AddSubText(new SubText("A strange bunch", 0.2, true));
+		c8_10.AddSubText(new SubText("A strange bunch...", 0.2, true));
 		RenderText(c8_10);
 	}
 	
@@ -109,7 +109,7 @@ function MimiAndOldtimerConversation()
 		PlayAnimation2(anim_oldtimerThink, animationEndCallback);
 		
 		var c8_9 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_10);
-		c8_9.AddSubText(new SubText("I'm pretty sure more women are living there", 0.2, true));
+		c8_9.AddSubText(new SubText("I'm pretty sure more women are living there.", 0.2, true));
 		RenderText(c8_9);
 	}
 	
@@ -130,7 +130,7 @@ function MimiAndOldtimerConversation()
 	cb7_6 = function()
 	{
 		var c7_6 = new TextContext(sprite_mimiAvatarNormal, true, cb7_7);
-		c7_6.AddSubText(new SubText("She just left", 0.2, true));
+		c7_6.AddSubText(new SubText("She just left...", 0.2, true));
 		RenderText(c7_6);
 	}
 	
@@ -144,7 +144,7 @@ function MimiAndOldtimerConversation()
 	cb7_4 = function()
 	{
 		var c7_4 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_5);
-		c7_4.AddSubText(new SubText("I can hear it a little, but our rooms are separated", 0.2, true));
+		c7_4.AddSubText(new SubText("I can hear it a little, but our rooms are separated.", 0.2, true));
 		RenderText(c7_4);
 	}
 	
@@ -158,7 +158,7 @@ function MimiAndOldtimerConversation()
 	cb7_2 = function()
 	{
 		var c7_2 = new TextContext(sprite_mimiAvatarNormal, true, cb7_3);
-		c7_2.AddSubText(new SubText("I'm from downstairs", 0.2, true));
+		c7_2.AddSubText(new SubText("I'm from downstairs.", 0.2, true));
 		RenderText(c7_2);
 	}
 	
