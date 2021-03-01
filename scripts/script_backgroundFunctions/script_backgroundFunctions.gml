@@ -70,17 +70,20 @@ function SetBackgroundSpriteIndex(p_spriteIndex)
 
 // -------------- Shadow Map functions --------------
 
-// Sets the ShadowMap surface
-function SetShadowMapSurfaceInstance(p_instance)
-{
-	assert(p_instance != noone, "Surface instance is invalid");
-	global.m_shadowSurfaceInstance = p_instance;
-}
-
 // Gets the ShadowMap surface
 function GetShadowSurfaceInstance()
 {
-	assert(global.m_shadowSurfaceInstance != noone, "Surface instance is invalid");
+	if(!surface_exists(global.m_shadowSurfaceInstance))
+	{
+		global.m_shadowSurfaceInstance = surface_create(1,1);
+	}
+	
+	if(surface_get_width(global.m_shadowSurfaceInstance) != room_width
+	|| surface_get_height(global.m_shadowSurfaceInstance) != room_height)
+	{
+		surface_resize(global.m_shadowSurfaceInstance, room_width, room_height);
+	}
+	
 	return global.m_shadowSurfaceInstance;
 }
 
@@ -112,12 +115,6 @@ function ResetShadowMapAsTarget()
 		global.m_surfaceDepth--;
 	}
 }
-
-//function ResizeShadowMapSurface(p_width, p_width)
-//{
-//	var shadowSurfaceInstance = GetShadowSurfaceInstance();
-//	surface_resize(shadowSurfaceInstance, p_width, p_width);
-//}
 
 // -------------- Viewport functions --------------
 

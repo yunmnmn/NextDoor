@@ -1,2 +1,2 @@
-var shadowSurfaceInstance = GetShadowSurfaceInstance();
-surface_resize(shadowSurfaceInstance, room_width, room_height);
+// Re-create and resizes the surface if necessary
+GetShadowSurfaceInstance();
