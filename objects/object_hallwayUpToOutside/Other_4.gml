@@ -13,7 +13,8 @@ transitionToOutside = function()
 	var fadeEndCallback = function()
 	{
 		SetControlState(PlayerControlState.PlayerControl);
-		ChangeRoomAndSetPath(room_outside, path_outsideHigh, 0.001, false);
+		var pathPosition = SnapToClosestPosition(path_hallwayDown, 345, 402);
+		ChangeRoomAndSetPath(room_outside, path_outsideHigh, pathPosition, false);
 	}
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 }

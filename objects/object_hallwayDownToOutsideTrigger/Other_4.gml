@@ -12,7 +12,8 @@ function collisionEvent()
 		var fadeEndCallback = function()
 		{
 			SetControlState(PlayerControlState.PlayerControl);
-			ChangeRoomAndSetPath(room_outside, path_outsideLow, 0.001, false);
+			var pathPosition = SnapToClosestPosition(path_outsideLow, 342, 776);
+			ChangeRoomAndSetPath(room_outside, path_outsideLow, ChangeRoomAndSetPath, false);
 		}
 		CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 	}
