@@ -16,5 +16,5 @@ if(keyboard_check(vk_shift) && DebugMode())
 	AddPostRoomLoadCallback(postRoomLoadCallback);
 	
 	SetGlobalGameState(GlobalGameStates.MimiStandsUpFromAttack);
-	ChangeRoomAndSetPath("room_youngsterRoom", path_youngsterRoom, 0.45, true);
+	ChangeRoomAndSetPath(room_youngsterRoom, path_youngsterRoom, 0.45, true);
 }

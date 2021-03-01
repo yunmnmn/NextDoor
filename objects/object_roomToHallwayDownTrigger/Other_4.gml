@@ -10,7 +10,8 @@ var collisionEvent = function()
 	var fadeEndCallback = function()
 	{
 		SetControlState(PlayerControlState.PlayerControl);
-		ChangeRoomAndSetPath("room_hallwayDown", path_hallwayDown, 0.01, false);
+		var pathPosition = SnapToClosestPosition(path_hallwayDown, 224, 348);
+		ChangeRoomAndSetPath(room_hallwayDown, path_hallwayDown, pathPosition, false);
 	}
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 }
@@ -19,9 +20,9 @@ collisionContext.AllStates();
 AddCollisionContext(collisionContext);
 
 
+// HACK: prompt the controls
 if(GetGlobalGameState() == GlobalGameStates.MimiRoomSits)
 {
-
 	var promptEvent = function()
 	{
 		instance_global.DrawActionPressPrompt(true, 700, 60);

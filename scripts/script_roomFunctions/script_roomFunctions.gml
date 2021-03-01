@@ -1,18 +1,3 @@
-// Changes the room to the one provided room name (as string)
-// TODO; remove the s
-function ChangeRooms(p_roomName)
-{
-	// Get the roomIndex from the roomName
-	var room2Index = asset_get_index(p_roomName);
-	assert(room2Index != -1, "The room doesn't exist with that name");
-	
-	// Reset the global backgroundInstance
-	ResetBackgroundInstance()
-	
-	// Change room
-	room_goto(room2Index);
-}
-
 function CreateFader(p_fadeState, p_fadeSpeed, p_callback)
 {
 	// TODO: check if layer exists
@@ -22,15 +7,29 @@ function CreateFader(p_fadeState, p_fadeSpeed, p_callback)
 	roomFader.SetCallback(p_callback);
 }
 
+// Changes the room to the one provided room name (as string)
+// TODO; remove the s
+function ChangeRooms(p_roomInstance)
+{
+	// Get the roomIndex from the roomName
+	assert(p_roomInstance != noone, "The room instance doesn't exist");
+	
+	// Reset the global backgroundInstance
+	ResetBackgroundInstance()
+	
+	// Change room
+	room_goto(p_roomInstance);
+}
+
 // TODO: make this prettier
 // Changes the room to the one provided room name (as string), and set the path and position
 global.m_path = noone;
 global.m_position = 0.0;
 global.m_mirrored = false;
 // TODO: remove the s
-function ChangeRoomAndSetPath(p_roomName, p_path, p_position, p_mirrored)
+function ChangeRoomAndSetPath(p_roomInstance, p_path, p_position, p_mirrored)
 {
-	ChangeRooms(p_roomName);
+	ChangeRooms(p_roomInstance);
 	// Set the PlayerPath when all objects are created.
 	global.m_path = p_path;
 	global.m_position = p_position;

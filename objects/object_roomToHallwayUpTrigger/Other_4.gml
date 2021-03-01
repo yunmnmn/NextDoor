@@ -111,7 +111,7 @@ GameEndingRoom = function()
 {	
 	var TransitionToEndingRoom = function()
 	{
-		ChangeRooms("room_ending");
+		ChangeRooms(room_ending);
 	}
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), TransitionToEndingRoom);
 	

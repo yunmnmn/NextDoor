@@ -11,7 +11,7 @@ function collisionEvent()
 	var fadeEndCallback = function()
 	{
 		SetControlState(PlayerControlState.PlayerControl);
-		ChangeRoomAndSetPath("room_hallwayUp", path_hallwayUp, 0.999, true);
+		ChangeRoomAndSetPath(room_hallwayUp, path_hallwayUp, 0.999, true);
 	}
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 }

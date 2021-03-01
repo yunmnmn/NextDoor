@@ -269,7 +269,7 @@ function collisionEvent()
 			SetControlState(PlayerControlState.PlayerControl);
 			
 			var pathPosition = SnapToClosestPosition(path_youngsterRoom, 1600, 342);
-			ChangeRoomAndSetPath("room_youngsterRoom", path_youngsterRoom, pathPosition, true);
+			ChangeRoomAndSetPath(room_youngsterRoom, path_youngsterRoom, pathPosition, true);
 		}
 		CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 	}

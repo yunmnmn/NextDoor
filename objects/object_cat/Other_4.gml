@@ -7,10 +7,17 @@ CatMeows = function()
 		SetControlState(PlayerControlState.PlayerControl);
 	}
 	
+	cbcat_3 = function()
+	{
+		var ccat_3 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
+		ccat_3.AddSubText(new SubText("This cat has a cursed face...", 0.2, true));
+		RenderText(ccat_3);
+	}
+
 	cbcat_2 = function()
 	{
-		var ccat_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		ccat_2.AddSubText(new SubText("This cat has a cursed face...", 0.2, true));
+		var ccat_2 = new TextContext(sprite_mimiAvatarScared, true, cbcat_3);
+		ccat_2.AddSubText(new SubText("Who's cat is this?", 0.2, true));
 		RenderText(ccat_2);
 	}
 	
