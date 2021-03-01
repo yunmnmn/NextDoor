@@ -85,10 +85,15 @@ function GetShadowSurfaceInstance()
 }
 
 // Sets the surface to draw on
+global.m_surfaceDepth = 0;
 function SetShadowMapAsTarget()
 {
 	var shadowMapSurface = GetShadowSurfaceInstance();
-	surface_set_target(shadowMapSurface);
+	if(surface_exists(shadowMapSurface))
+	{
+		global.m_surfaceDepth++;
+		surface_set_target(shadowMapSurface);
+	}
 }
 
 // Returns the ShadowMap texture
@@ -101,7 +106,11 @@ function GetShadowMapTexture()
 // Resets the ShadowMap surface to draw on
 function ResetShadowMapAsTarget()
 {
-	surface_reset_target();
+	if(global.m_surfaceDepth > 0)
+	{
+		surface_reset_target();
+		global.m_surfaceDepth--;
+	}
 }
 
 //function ResizeShadowMapSurface(p_width, p_width)
