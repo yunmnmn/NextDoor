@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"66c21835-1950-493a-a0cb-5a36963dd492","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"66c21835-1950-493a-a0cb-5a36963dd492","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"LayerId":{"name":"8309fadf-51dc-4989-806e-09ad0748706c","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"foreground_openDoorWomen","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"resourceVersion":"1.0","name":"66c21835-1950-493a-a0cb-5a36963dd492","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6abd8e2b-039b-4c7c-a82f-80c0bbdbf59a","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6abd8e2b-039b-4c7c-a82f-80c0bbdbf59a","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"LayerId":{"name":"9676a32d-969a-4c35-9acd-4a2db10e57a9","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"foreground_openDoorWomen","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"resourceVersion":"1.0","name":"6abd8e2b-039b-4c7c-a82f-80c0bbdbf59a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"foreground_openDoorWomen","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ca1d4b84-e577-4016-8125-24acdda9bee0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"66c21835-1950-493a-a0cb-5a36963dd492","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"111ad955-a36b-4cf8-93ea-9939cabeb2b2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6abd8e2b-039b-4c7c-a82f-80c0bbdbf59a","path":"sprites/foreground_openDoorWomen/foreground_openDoorWomen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8309fadf-51dc-4989-806e-09ad0748706c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9676a32d-969a-4c35-9acd-4a2db10e57a9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "HallwayUp",
