@@ -42,3 +42,14 @@ if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink)
 {
 	PlayerAddPathCallback(path_outsideHigh, 0.5, pathHighStairsVisibleCallback, true, PathCallbackType.Both);
 }
+
+
+// Depending on the game state, set the starting transition already
+if(GetGlobalGameState() < GlobalGameStates.MimiRoomSits2)
+{
+	sprite_index = background_outsideDay;
+}
+else
+{
+	sprite_index = background_outside;
+}
