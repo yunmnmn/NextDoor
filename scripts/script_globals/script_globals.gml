@@ -52,6 +52,7 @@ enum GlobalGameStates
 	// Sequence 4 states
 	MimiStandsUpFromAttack,
 	MimiHearsTickingAtWindow,
+	MimiGetsChased,
 }
 
 function DebugMode()
@@ -77,6 +78,16 @@ function SetMimiScared(p_scared)
 function GetMimiScared()
 {
 	return global.g_mimiScared;
+}
+
+function SetMimiCaught(p_caught)
+{
+	global.m_mimiCaught = p_caught;
+}
+
+function GetMimiCaught()
+{
+	return global.m_mimiCaught;
 }
 
 function SetMimiCrawling(p_crawling)
@@ -149,3 +160,6 @@ global.m_postRoomLoadCallbacks = ds_list_create();
 
 // This will be set by the global_instance. It's used to render combined shadow values in the room
 global.m_shadowSurfaceInstance = noone;
+
+// Set ending caught or not
+global.m_mimiCaught = false;

@@ -8,7 +8,8 @@ MimiFallsBackwards = function()
 	FreezeWomenAnimation = function()
 	{
 		// Set the viewport speed
-		SetViewportFollowSpeed(0.003);
+		SetViewportFollowSpeed(0.003)
+		
 		// Follow Mimi again with a slight offset to the left
 		var viewportEndPosition = new Vector2(GetPlayerInstance().x - 400, GetPlayerInstance().y);
 		FollowPositionAndDisable(viewportEndPosition);
@@ -23,13 +24,20 @@ MimiFallsBackwards = function()
 		
 			// Play the walking animation
 			instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);
+			
+			// Advance the Global state
+			SetGlobalGameState(GlobalGameStates.MimiGetsChased);
 		}
+		// Play the women stuck animation one more time when the camera is panning
 		instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, FreezeWomenAnimation2);
 		
 	}
+	// Show the women at the window
 	instance_youngsetRoomWomenOutside.StopPath();
 	instance_youngsetRoomWomenOutside.x = 2373;
 	instance_youngsetRoomWomenOutside.y = 240;
+	
+	// Play the women stu ck animation
 	instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, FreezeWomenAnimation);
 	
 	// Set camera back to m_viewportLookPositionOriginX
