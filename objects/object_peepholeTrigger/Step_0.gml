@@ -165,7 +165,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				cb23_3 = function()
 				{
 					var c23_3 = new TextContext(sprite_mimiAvatarScared, true, cb23_4);
-					c23_3.AddSubText(new SubText("Why do they exstend and contract?", 0.2, true));
+					c23_3.AddSubText(new SubText("Why do they extend and contract?", 0.2, true));
 					RenderText(c23_3);
 				}
 			
