@@ -1,4 +1,4 @@
-m_womenWindowAnimation = movie_womenWindow;
+m_womenWindowAnimation = movie_womenTopFrames;
 m_framesPerSecond = sprite_get_speed(m_womenWindowAnimation);
 m_frameTimeInMiliseconds = 1000.0 / m_framesPerSecond;
 
