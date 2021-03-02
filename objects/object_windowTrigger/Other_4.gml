@@ -18,12 +18,12 @@ MimiFallsBackwards = function()
 		SetControlState(PlayerControlState.PlayerControl);
 		
 		// Set player speed slower
-		GetPlayerInstance().SetSpeed(0.10); 
+		GetPlayerInstance().SetSpeed(0.07); 
 		
 		FreezeWomenAnimation2 = function()
 		{
 			// Let the Women walk torwards Mimi
-			instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 0.5);
+			instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 0.7);
 		
 			// Play the walking animation
 			instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);

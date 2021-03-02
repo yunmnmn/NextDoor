@@ -38,14 +38,14 @@ function MimiConversation()
 	cb12_4 = function()
 	{
 		var c12_4 = new TextContext(sprite_youngsterAvatarScared, true, cb12_5);
-		c12_4.AddSubText(new SubText("leaks through those walls?", 0.2, true));
+		c12_4.AddSubText(new SubText("What are they doing that not a single sound leaks through those walls?", 0.2, true));
 		RenderText(c12_4);
 	}
 	
 	cb12_3 = function()
 	{
 		var c12_3 = new TextContext(sprite_youngsterAvatarScared, true, cb12_4);
-		c12_3.AddSubText(new SubText("What things are they doing nextdoor? What are they doing that not a single sound", 0.2, true));
+		c12_3.AddSubText(new SubText("What things are they doing nextdoor?", 0.2, true));
 		RenderText(c12_3);
 	}
 	
