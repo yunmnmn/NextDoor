@@ -61,6 +61,7 @@ CatIsOnTheGround = function()
 CatFalls = function()
 {
 	PlayAnimation2(anim_catFall, CatIsOnTheGround);
+	mask_index = anim_cat;
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), CatFalls);
