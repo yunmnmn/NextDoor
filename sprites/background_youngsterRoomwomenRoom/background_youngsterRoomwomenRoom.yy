@@ -103,15 +103,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","path":"sprites/background_womenRoom/background_womenRoom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","path":"sprites/background_womenRoom/background_womenRoom.yy",},"LayerId":{"name":"3ece2257-39f9-4708-8966-ed0c4b52da8c","path":"sprites/background_womenRoom/background_womenRoom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"background_womenRoom","path":"sprites/background_womenRoom/background_womenRoom.yy",},"resourceVersion":"1.0","name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","path":"sprites/background_womenRoom/background_womenRoom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","path":"sprites/background_womenRoom/background_womenRoom.yy",},"LayerId":{"name":"3ece2257-39f9-4708-8966-ed0c4b52da8c","path":"sprites/background_womenRoom/background_womenRoom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"background_womenRoom","path":"sprites/background_womenRoom/background_womenRoom.yy",},"resourceVersion":"1.0","name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"LayerId":{"name":"3ece2257-39f9-4708-8966-ed0c4b52da8c","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"background_youngsterRoomwomenRoom","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"resourceVersion":"1.0","name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"LayerId":{"name":"3ece2257-39f9-4708-8966-ed0c4b52da8c","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"background_youngsterRoomwomenRoom","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"resourceVersion":"1.0","name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"background_womenRoom","path":"sprites/background_womenRoom/background_womenRoom.yy",},
+    "spriteId": {"name":"background_youngsterRoomwomenRoom","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -123,8 +123,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4cfafca5-055b-4334-a03d-0f915e1292e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","path":"sprites/background_womenRoom/background_womenRoom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"9583415d-8ea9-4ef0-bf42-8d57bf1985b2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","path":"sprites/background_womenRoom/background_womenRoom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4cfafca5-055b-4334-a03d-0f915e1292e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc803627-92f9-482a-8ab3-c1fd5862b19a","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9583415d-8ea9-4ef0-bf42-8d57bf1985b2","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"54a82b33-9cad-43b1-b14b-4b10a6b8240d","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -141,9 +141,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"background_womenRoom","path":"sprites/background_womenRoom/background_womenRoom.yy",},
+    "parent": {"name":"background_youngsterRoomwomenRoom","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},
     "resourceVersion": "1.3",
-    "name": "background_womenRoom",
+    "name": "background_youngsterRoomwomenRoom",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -155,7 +155,7 @@
     "path": "folders/Backgrounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "background_womenRoom",
+  "name": "background_youngsterRoomwomenRoom",
   "tags": [],
   "resourceType": "GMSprite",
 }

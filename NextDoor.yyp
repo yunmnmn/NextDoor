@@ -130,7 +130,7 @@
     {"id":{"name":"object_hallwayDownToRoom","path":"objects/object_hallwayDownToRoom/object_hallwayDownToRoom.yy",},"order":2,},
     {"id":{"name":"sprite_placeholderBlue","path":"sprites/sprite_placeholderBlue/sprite_placeholderBlue.yy",},"order":3,},
     {"id":{"name":"shader_shadow","path":"shaders/shader_shadow/shader_shadow.yy",},"order":0,},
-    {"id":{"name":"background_womenRoom","path":"sprites/background_womenRoom/background_womenRoom.yy",},"order":9,},
+    {"id":{"name":"background_youngsterRoomwomenRoom","path":"sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",},"order":9,},
     {"id":{"name":"sprite_placeholderGreen","path":"sprites/sprite_placeholderGreen/sprite_placeholderGreen.yy",},"order":4,},
     {"id":{"name":"font_textboxFont","path":"fonts/font_textboxFont/font_textboxFont.yy",},"order":0,},
     {"id":{"name":"background_hallwayUpDay","path":"sprites/background_hallwayUpDay/background_hallwayUpDay.yy",},"order":6,},

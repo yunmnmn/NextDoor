@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "background_womenRoom",
-    "path": "sprites/background_womenRoom/background_womenRoom.yy",
+    "name": "background_youngsterRoomwomenRoom",
+    "path": "sprites/background_youngsterRoomwomenRoom/background_youngsterRoomwomenRoom.yy",
   },
   "solid": false,
   "visible": true,
