@@ -11,8 +11,6 @@ function MimiConversation()
 		// Progress the global state
 		SetGlobalGameState(GlobalGameStates.MimiReturnsFromDrinking);
 		
-		SetViewportFollowSpeed(1.0);
-		
 		// Enable all triggers again
 		SetDisableAllTriggers(false);
 	}
@@ -80,15 +78,20 @@ function MimiConversation()
 		RenderText(c12_2);
 		
 		// Pan the camera back to Mimi
-		SetViewportFollowInstance(GetPlayerInstance());
-		
-		// Play the Youngster GaspToIdle animation
-		var animationEndCallback = function()
+		followCallback = function()
 		{
-			// Freeze at the last frame
-			instance_youngsterOutside.FreezeAnimationAtEnd(sprite_youngsterCornerIdle);
-		};
-		instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGaspToIdle, animationEndCallback);
+			// Play the Youngster GaspToIdle animation
+			var animationEndCallback = function()
+			{
+				// Freeze at the last frame
+				instance_youngsterOutside.FreezeAnimationAtEnd(sprite_youngsterCornerIdle);
+				
+				// Set the follow speed back
+				SetViewportFollowSpeed(1.0);
+			};
+			instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGaspToIdle, animationEndCallback);
+		}
+		FollowInstanceAndCallback(GetPlayerInstance(), followCallback);
 	}
 	
 	womenWalk = function()
@@ -146,6 +149,9 @@ function MimiConversation()
 		var c11_19 = new TextContext(sprite_youngsterAvatarGasp, true, cb11_20);
 		c11_19.AddSubText(new SubText("AH!", 0.2, true));
 		RenderText(c11_19);
+		
+		// Turn on the light
+		instance_outsideMemory.SetLampOutsideNearDoorVisible(true);
 	}
 	
 	cb11_18 = function()
@@ -211,6 +217,10 @@ function MimiConversation()
 		var c11_14 = new TextContext(sprite_youngsterAvatarScared, true, cb11_15);
 		c11_14.AddSubText(new SubText("I don't know how many people live there, but...", 0.2, true));
 		RenderText(c11_14);
+		
+		// Turn off the light at the door
+		instance_outsideMemory.SetLampOutsideNearDoorVisible(false);
+		instance_outsideNightBackground.StopFlickering();
 	}
 	
 	cb11_13 = function()

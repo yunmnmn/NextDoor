@@ -1,6 +1,7 @@
 m_youngsterOutsideVisible = false;
 m_womenOutsideVisible = false;
 m_lampOutsideNearStairs = false;
+m_lampOutsideNearDoor = false;
 
 function SetYoungsterOutsideVisible(p_visible)
 {
@@ -18,6 +19,12 @@ function SetLampOutsideNearStairsVisible(p_visible)
 {
 	m_lampOutsideNearStairs = p_visible;
 	instance_lampOutsideNearStairs.visible = p_visible;
+}
+
+function SetLampOutsideNearDoorVisible(p_visible)
+{
+	m_lampOutsideNearDoor = p_visible;
+	instance_lampOutsideNearDoor.visible = p_visible;
 }
 
 // TODO: add the cat here

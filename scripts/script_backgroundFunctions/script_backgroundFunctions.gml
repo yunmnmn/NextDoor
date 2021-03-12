@@ -149,10 +149,20 @@ function FollowAndDisableInstance(p_instance)
 	GetBackgroundInstance().FollowAndDisableInstance(p_instance);
 }
 
-function AddViewportFollowCallback(p_callback)
+function FollowInstanceAndCallback(p_instance, p_callback)
 {
+	assert(p_instance != noone, "p_instance can't be invalid");
 	assert(p_callback != noone, "p_callback can't be invalid");
-	GetBackgroundInstance().AddViewportFollowCallback(p_callback);
+	
+	GetBackgroundInstance().FollowInstanceAndCallback(p_instance, p_callback);
+}
+
+function FollowPositionAndCallback(p_position, p_callback)
+{
+	assert(p_position != noone, "p_position must be of type Vector2");
+	assert(p_callback != noone, "p_callback can't be invalid");
+	
+	GetBackgroundInstance().FollowPositionAndCallback(p_position, p_callback);
 }
 
 function DisableFollowingInstance()

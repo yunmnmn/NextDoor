@@ -31,7 +31,6 @@ if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink)
 	PlayerSetPathEndCallback(path_outsideHigh, pathHighCallback, true, PathCallbackType.LowToHigh);
 }
 
-
 // Set a callback to make the stairs visible if mimi is nearing it
 var pathHighStairsVisibleCallback = function()
 {
@@ -52,4 +51,14 @@ if(GetGlobalGameState() < GlobalGameStates.MimiRoomSits2)
 else
 {
 	sprite_index = background_outside;
+	
+	// Enable the light at the door
+	instance_outsideMemory.SetLampOutsideNearDoorVisible(true);
+	// Play the flicking of the light
+	PlayTimeline(timeline_flickeringLightDoor);
+}
+
+StopFlickering = function()
+{
+	StopTimeline();
 }

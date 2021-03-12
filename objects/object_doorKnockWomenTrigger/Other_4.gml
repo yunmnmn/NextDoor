@@ -2,9 +2,6 @@ function MimiConversation()
 {
 	conversationFinished = function()
 	{
-		// Set the follow speed back to an instant speed
-		SetViewportFollowSpeed(1.0);
-		
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerControl);
 		
@@ -53,11 +50,20 @@ function MimiConversation()
 				
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
 			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, false);
+			
+			// Follow the player slowly while she is knocking
+			followCallback = function()
+			{
+				// Set the follow speed back to an instant speed
+				SetViewportFollowSpeed(1.0);
+				SetViewportFollowInstance(GetPlayerInstance());
+			}
+			FollowPositionAndCallback(new Vector2(x - 61, GetPlayerInstance().y), followCallback)
 		}
 
 		// Play the knocking animation
 		PlayerPlayAnimation(anim_mimiKnock, false, animationEndCallback);
-		SetViewportFollowSpeed(0.001);
+		SetViewportFollowSpeed(0.003);
 	}
 }
 

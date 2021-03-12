@@ -9,6 +9,9 @@ YoungsterClosesDoor = function()
 		
 	// Set the following speed back to instant
 	SetViewportFollowSpeed(1.0);
+	
+	// Add another collision event at the youngsterDoorTrigger
+	instance_youngsterDoorTrigger.AddDialogueAfterYoungsterSlamsDoor();
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterClosesDoor);

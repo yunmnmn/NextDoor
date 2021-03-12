@@ -47,6 +47,15 @@ function PlayTimeline(p_timelineIndex)
 	timeline_running = true;
 }
 
+// Play a timeline
+function StopTimeline()
+{
+	timeline_index = noone;
+	timeline_position = 0;
+	timeline_speed = 0;
+	timeline_running = false;
+}
+
 // Converts the pixel distance to path distance
 function GetPathDistanceFromPixels(p_pathIndex, p_pixels)
 {

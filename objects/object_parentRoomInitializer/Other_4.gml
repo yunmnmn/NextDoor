@@ -116,6 +116,18 @@ function FollowPositionAndDisable(p_position)
 	AddViewportFollowCallback(followCallback);
 }
 
+function FollowInstanceAndCallback(p_instance, p_callback)
+{
+	SetViewportFollowInstance(p_instance);
+	AddViewportFollowCallback(p_callback);
+}
+
+function FollowPositionAndCallback(p_position, p_callback)
+{
+	FollowPosition(p_position);
+	AddViewportFollowCallback(p_callback);
+}
+
 // --------- ScreenShake code ---------
 
 function PulseScreen(p_magnitude)

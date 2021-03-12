@@ -1,3 +1,6 @@
+
+// -------------------------- First colliding event --------------------------
+
 function MimiAndYoungsterConversation()
 {
 	conversationFinished = function()
@@ -279,3 +282,32 @@ function collisionEvent()
 var collisionContext3 = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext3.AddGlobalState1(GlobalGameStates.MimiEntersYoungstersRoom);
 AddCollisionContext(collisionContext3);
+
+
+// HACK: Add a trigger when the door is closed by youngster
+YoungsterSlamsDoorDialogue = function()
+{		
+	conversationFinished = function()
+	{			
+		// Give control ba ck to the player again
+		SetControlState(PlayerControlState.PlayerControl);
+	}
+	
+	// Start the monologue
+	var c34_1 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
+	c34_1.AddSubText(new SubText("I can't believe this guy!", 0.2, true));
+	RenderText(c34_1);
+	
+	// Set Mimi to idle	
+	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	
+	// Disable the control for the player
+	SetControlState(PlayerControlState.PlayerNoControl);
+}
+
+AddDialogueAfterYoungsterSlamsDoor = function()
+{
+	var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterSlamsDoorDialogue);
+	collisionContext.AddGlobalState1(GlobalGameStates.MimiWalksToOldtimer);
+	AddCollisionContext(collisionContext);
+}
