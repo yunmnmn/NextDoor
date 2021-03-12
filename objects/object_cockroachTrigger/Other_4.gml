@@ -6,7 +6,13 @@ ActivateCockroach = function()
 	instance_cockroach.image_index = 0;
 }
 
-var collisionContext = new CollisionContext(GetPlayerInstance(), ActivateCockroach);
-collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
-collisionContext.ExecuteOnHit();
-AddCollisionContext(collisionContext);
+// Only play the cockroach if it hasn't played yet
+if(instance_hallwayUpMemory.m_playedCockroach == false)
+{
+	instance_hallwayUpMemory.m_playedCockroach = true;
+	
+	var collisionContext = new CollisionContext(GetPlayerInstance(), ActivateCockroach);
+	collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
+	collisionContext.ExecuteOnHit();
+	AddCollisionContext(collisionContext);
+}

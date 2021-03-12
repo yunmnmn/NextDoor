@@ -158,7 +158,7 @@ m_viewportMaxY = room_height;
 m_initialShakeMagnitude = 0.0;
 m_shakeMagnitude = 0.0;
 m_stabilized = 1.0;
-m_stabilizeSpeed = 0.0005;
+m_stabilizeSpeed = 0.0015;
 
 m_rawPositionX = 0.0;
 m_rawPositionY = 0.0;

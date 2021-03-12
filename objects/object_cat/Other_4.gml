@@ -37,6 +37,8 @@ CatMeows = function()
 	// Disable the control for hte player
 	SetControlState(PlayerControlState.PlayerNoControl);
 	
+	instance_outsideMemory.m_talkedToCat = true;
+	
 	mirror = (GetPlayerInstance().x > x) ? true : false;
 	walkToPosition = function()
 	{			
@@ -62,12 +64,37 @@ CatFalls = function()
 {
 	PlayAnimation2(anim_catFall, CatIsOnTheGround);
 	mask_index = anim_cat;
+	
+	instance_outsideMemory.m_playedCat = true;
 }
 
-var collisionContext = new CollisionContext(GetPlayerInstance(), CatFalls);
-collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
-collisionContext.ExecuteOnHit();
-AddCollisionContext(collisionContext);
+// Check if Mimi already interacted with the cat
+if(instance_outsideMemory.m_playedCat = false)
+{
+	var collisionContext = new CollisionContext(GetPlayerInstance(), CatFalls);
+	collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
+	collisionContext.ExecuteOnHit();
+	AddCollisionContext(collisionContext);
+}
+else
+{
+	// Triggered the cat, but haven't talked to it yet
+	if(!instance_outsideMemory.m_talkedToCat)
+	{
+		FreezeAnimationAtEnd2(anim_catFall);
+		mask_index = anim_cat;
+		
+		// Add another collider, but this time it requires an action
+		var collisionContext = new CollisionContext(GetPlayerInstance(), CatMeows);
+		collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
+		AddCollisionContext(collisionContext);
+	}
+	else
+	{
+		// Did talk to the cat already
+		FreezeAnimationAtEnd2(anim_cat);
+	}
+}
 
 image_speed = 0;
 

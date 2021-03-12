@@ -11,12 +11,25 @@ ActivateCan = function()
 	
 	// Start the can falling animation
 	PlayAnimation2(foreground_can, CanFinished);
+	
+	
 }
 
-var collisionContext = new CollisionContext(GetPlayerInstance(), ActivateCan);
-collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
-collisionContext.ExecuteOnHit();
-AddCollisionContext(collisionContext);
+// Check if Mimi already interacted with the can
+if(instance_hallwayUpMemory.m_playedCan == false)
+{
+	instance_hallwayUpMemory.m_playedCan = true;
+	
+	var collisionContext = new CollisionContext(GetPlayerInstance(), ActivateCan);
+	collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
+	collisionContext.ExecuteOnHit();
+	AddCollisionContext(collisionContext);
+}
+else
+{
+	FreezeAnimationAtEnd2(foreground_can);
+}
+
 
 // Only set itself true on certain global states
 if(GetGlobalGameState() == GlobalGameStates.MimiChecksOnYoungster)

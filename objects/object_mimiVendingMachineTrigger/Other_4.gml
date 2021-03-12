@@ -12,6 +12,9 @@ function MimiConversation()
 		SetGlobalGameState(GlobalGameStates.MimiReturnsFromDrinking);
 		
 		SetViewportFollowSpeed(1.0);
+		
+		// Enable all triggers again
+		SetDisableAllTriggers(false);
 	}
 	
 	cb12_7 = function()
@@ -37,21 +40,21 @@ function MimiConversation()
 	
 	cb12_4 = function()
 	{
-		var c12_4 = new TextContext(sprite_youngsterAvatarScared, true, cb12_5);
+		var c12_4 = new TextContext(sprite_youngsterAvatarTerrified, true, cb12_5);
 		c12_4.AddSubText(new SubText("What are they doing that not a single sound leaks through those walls?", 0.2, true));
 		RenderText(c12_4);
 	}
 	
 	cb12_3 = function()
 	{
-		var c12_3 = new TextContext(sprite_youngsterAvatarScared, true, cb12_4);
+		var c12_3 = new TextContext(sprite_youngsterAvatarTerrified, true, cb12_4);
 		c12_3.AddSubText(new SubText("What things are they doing nextdoor?", 0.2, true));
 		RenderText(c12_3);
 	}
 	
 	cb12_2 = function()
 	{
-		var c12_2 = new TextContext(sprite_youngsterAvatarScared, true, cb12_3);
+		var c12_2 = new TextContext(sprite_youngsterAvatarTerrified, true, cb12_3);
 		c12_2.AddSubText(new SubText("Who are they?", 0.2, true));
 		RenderText(c12_2);
 	}
@@ -76,8 +79,16 @@ function MimiConversation()
 		c12_2.AddSubText(new SubText("?", 0.2, true));
 		RenderText(c12_2);
 		
-		// Pan the camera back to mimi
+		// Pan the camera back to Mimi
 		SetViewportFollowInstance(GetPlayerInstance());
+		
+		// Play the Youngster GaspToIdle animation
+		var animationEndCallback = function()
+		{
+			// Freeze at the last frame
+			instance_youngsterOutside.FreezeAnimationAtEnd(sprite_youngsterCornerIdle);
+		};
+		instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGaspToIdle, animationEndCallback);
 	}
 	
 	womenWalk = function()
@@ -141,6 +152,11 @@ function MimiConversation()
 	{
 		var c11_18 = new TextContext(sprite_youngsterAvatarScared, true, cb11_19);
 		c11_18.AddSubText(new SubText("It's freaking me out...", 0.2, true));
+		if(!m_womenWaiting)
+		{
+			c11_18.m_progressable = false;
+		}
+		
 		RenderText(c11_18);
 	}
 	
@@ -153,20 +169,6 @@ function MimiConversation()
 	
 	cb11_16 = function()
 	{
-		var c11_16 = new TextContext(sprite_youngsterAvatarScared, true, cb11_17);
-		c11_16.AddSubText(new SubText("And with these thin walls...", 0.2, true));
-		RenderText(c11_16);
-	}
-	
-	cb11_15 = function()
-	{
-		var c11_15 = new TextContext(sprite_youngsterAvatarScared, true, cb11_16);
-		c11_15.AddSubText(new SubText("They never make a single sound!", 0.2, true));
-		RenderText(c11_15);
-	}
-	
-	cb11_14 = function()
-	{		
 		// Set the women on the path
 		instance_womenOutside.PlayAnimation2(anim_womenWalkTallShadow, noone);
 		instance_womenOutside.Mirror(true);
@@ -181,9 +183,31 @@ function MimiConversation()
 			
 			// Stop the women from walking
 			instance_womenOutside.path_speed = 0.0;
+			
+			m_womenWaiting = true;
+			
+			// If the player is already waiting, make it progressable again
+			if(GetCurrentTextContext().m_progressable == false)
+			{
+				GetCurrentTextContext().m_progressable = true;
+			}
 		}
 		instance_womenOutside.AddPathPointCallback(1, BehimdMimi, false);
 		
+		var c11_16 = new TextContext(sprite_youngsterAvatarScared, true, cb11_17);
+		c11_16.AddSubText(new SubText("And with these thin walls...", 0.2, true));
+		RenderText(c11_16);
+	}
+	
+	cb11_15 = function()
+	{
+		var c11_15 = new TextContext(sprite_youngsterAvatarScared, true, cb11_16);
+		c11_15.AddSubText(new SubText("They never make a single sound!", 0.2, true));
+		RenderText(c11_15);
+	}
+	
+	cb11_14 = function()
+	{				
 		var c11_14 = new TextContext(sprite_youngsterAvatarScared, true, cb11_15);
 		c11_14.AddSubText(new SubText("I don't know how many people live there, but...", 0.2, true));
 		RenderText(c11_14);
@@ -313,6 +337,9 @@ function MimiConversation()
 
 MimiBuysDrink = function()
 {		
+	// Disable all triggers
+	SetDisableAllTriggers(true);
+	
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 				
@@ -324,6 +351,9 @@ MimiBuysDrink = function()
 		
 		// Play the flickering light Timeline
 		PlayTimeline(timeline_flickeringLight);
+		
+		// Set the youngster to use the shadowmap
+		instance_youngsterOutside.m_useShadowMap = true;
 	}
 	PlayerPlayAnimation(anim_mimiCoin, false, animationEnd);
 		
@@ -335,3 +365,5 @@ MimiBuysDrink = function()
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiBuysDrink);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiGetsDrink);
 AddCollisionContext(collisionContext);
+
+m_womenWaiting = false;

@@ -42,3 +42,5 @@ function SetOldtimerVisible(p_visible)
 	instance_oldtimer.visible = p_visible;
 }
 
+m_playedCockroach = false;
+m_playedCan = false;

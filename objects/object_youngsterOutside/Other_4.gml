@@ -11,3 +11,12 @@ else
 {
 	instance_youngsterOutside.PlayAnimation2(sprite_youngsterCornerIdleShadow, noone);
 }
+
+if(GetGlobalGameState() == GlobalGameStates.MimiGetsDrink)
+{
+	m_useShadowMap = false;
+}
+else
+{
+	m_useShadowMap = true;
+}

@@ -1,5 +1,8 @@
 var collisionEvent = function()
 {	
+	// Remove the pressing button prompt
+	instance_global.DrawActionPressPrompt(false, 0, 0);
+	
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);
 	

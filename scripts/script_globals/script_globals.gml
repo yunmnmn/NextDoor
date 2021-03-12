@@ -132,6 +132,16 @@ function AddPostRoomLoadCallback(p_callback)
 	ds_list_add(global.m_postRoomLoadCallbacks, p_callback);
 }
 
+function SetDisableAllTriggers(disableAllTriggers)
+{
+	global.m_disableAllTriggers = disableAllTriggers;
+}
+
+function GetDisableAllTriggers()
+{
+	return global.m_disableAllTriggers;
+}
+
 // --- Global variables used to store the game states ---
 
 // Global game state. Each object will manage its own behaviour depending on this global state
@@ -163,3 +173,6 @@ global.m_shadowSurfaceInstance = noone;
 
 // Set ending caught or not
 global.m_mimiCaught = false;
+
+// Disable all triggers for Mimi
+global.m_disableAllTriggers = false;

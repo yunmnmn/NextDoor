@@ -58,7 +58,7 @@ function MimiConversation()
 	}
 	
 	cb2_2 = function()
-	{
+	{		
 		var c2_2 = new TextContext(sprite_mimiAvatarAngry, true, cb2_3);
 		c2_2.AddSubText(new SubText("Oh, come on!", 0.2, true));
 		RenderText(c2_2);
@@ -75,7 +75,7 @@ function MimiConversation()
 	RenderText(c2_1);
 }
 
-function MimiComplainsAboutNoise()
+MimiComplainsAboutNoise = function()
 {
 	// HACK: one time thing
 	global.m_path = path_mimiRoom;
@@ -92,9 +92,6 @@ function MimiComplainsAboutNoise()
 	
 	// Set the conversation
 	MimiConversation();
-	
-	// Pulse the screen here
-	PulseScreen(1.0);
 }
 
 function MimiConversation2()
@@ -160,3 +157,7 @@ switch(GetGlobalGameState())
 
 //
 m_talkingFinished = false;
+
+// Warmup frames
+m_warmupFrames = 0;
+m_pulsed = false;

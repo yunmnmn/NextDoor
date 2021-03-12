@@ -21,3 +21,5 @@ function SetLampOutsideNearStairsVisible(p_visible)
 }
 
 // TODO: add the cat here
+m_playedCat = false;
+m_talkedToCat = false;
