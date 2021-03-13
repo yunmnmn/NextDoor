@@ -88,7 +88,7 @@ function SnapToClosestPosition(p_pathIndex, p_positionX, p_positionY)
 	var pointX = 0.0;
 	var pointY = 0.0;
 	var nodeIndex = 0;
-	for(i = 0; i < pathNodeCount-1; i++)
+	for(var i = 0; i < pathNodeCount-1; i++)
 	{
 		// Current node's position
 		var currentNodeX = path_get_point_x(p_pathIndex, i);
@@ -158,7 +158,7 @@ function SnapToClosestPosition(p_pathIndex, p_positionX, p_positionY)
 	var pathLength = path_get_length(p_pathIndex);
 	
 	var startLength = 0.0;
-	for(i = 0; i <= nodeIndex - 1; i++)
+	for(var i = 0; i <= nodeIndex - 1; i++)
 	{
 		// Current node's position
 		var currentNodeX = path_get_point_x(p_pathIndex, i);
@@ -223,7 +223,7 @@ function SnapToClosestPosition(p_pathIndex, p_positionX, p_positionY)
 	var acceptence = 2;
 	var iteration = 20;
 	var binaryStep = normRatio;
-	for(i = 0; i < iteration; i++)
+	for(var i = 0; i < iteration; i++)
 	{
 		binaryStep *= 0.5
 		var binaryPath = startLength + binaryStep;

@@ -1,11 +1,11 @@
 {
   "kind": 0,
   "closed": false,
-  "precision": 4,
+  "precision": 8,
   "points": [
     {"speed":100.0,"x":162.0,"y":778.0,},
     {"speed":100.0,"x":252.0,"y":778.0,},
-    {"speed":100.0,"x":1006.0,"y":778.0,},
+    {"speed":100.0,"x":996.0,"y":778.0,},
   ],
   "parent": {
     "name": "Outside",

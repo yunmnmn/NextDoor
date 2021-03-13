@@ -9,7 +9,8 @@ var pathLowCallback = function()
 	// Set the stairs visible
 	instance_stairs.visible = true;
 	
-	PlayerSetPath(path_outsideHigh, 0.9999)
+	// TODO: test this path set to 1.0
+	PlayerSetPath(path_outsideHigh, 1.0);
 }
 
 if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink)
@@ -17,14 +18,14 @@ if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink)
 	PlayerSetPathEndCallback(path_outsideLow, pathLowCallback, true, PathCallbackType.LowToHigh);
 }
 
-
 // Set the lower path callback, so Mimi can go down
 var pathHighCallback = function()
 {
 	// Set the stairs invisible
 	instance_stairs.visible = false;		
 	
-	PlayerSetPath(path_outsideLow, 0.9999)
+	// TODO: test this path set to 1.0
+	PlayerSetPath(path_outsideLow, 1.0);
 }
 if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink)
 {

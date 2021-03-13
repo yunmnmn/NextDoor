@@ -37,7 +37,7 @@ function PathTypeCheck(p_callbackType, p_position)
 }
 
 // Check if the there are registered path callbacks
-for(i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
+for(var i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 {
 	// HACK: when the path ends, it automatically invalidates the path_index, and resets everything...
 	if(path_index == -1)

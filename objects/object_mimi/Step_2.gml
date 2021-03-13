@@ -44,7 +44,7 @@ function PathTypeCheck(p_callbackType, p_position)
 }
 
 // Check if the there are registered path callbacks
-for(i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
+for(var i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 {
 	var pathCallback = ds_list_find_value(m_pathCallbacks, i);
 	

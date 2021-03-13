@@ -67,9 +67,6 @@ function MimiConversation()
 		instance_womenOutside.SetPath(path_outsideWomen, 0.0, 0.0);
 		instance_womenOutside.PlayAnimation2(sprite_womenIdle, noone);
 		
-		// Play the youngster crawl animation
-		instance_youngsterOutside.PlayAnimation2(sprite_youngsterCornerIdle, noone);
-		
 		// Play Mimi's shock animation
 		PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 		
@@ -104,6 +101,7 @@ function MimiConversation()
 		instance_womenOutside.Mirror(true);
 		
 		// When the women is at the stairs, make her turn around
+		// NOTE: 3 is the node at the stairs
 		var womenAtStairs = function()
 		{
 			instance_womenOutside.Mirror(false);
@@ -349,9 +347,6 @@ MimiBuysDrink = function()
 {		
 	// Disable all triggers
 	SetDisableAllTriggers(true);
-	
-	// Disable the control the player has
-	SetControlState(PlayerControlState.PlayerNoControl);
 				
 	// Play the coin animation
 	var animationEnd = function()
@@ -364,15 +359,29 @@ MimiBuysDrink = function()
 		
 		// Set the youngster to use the shadowmap
 		instance_youngsterOutside.m_useShadowMap = true;
+		// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
+		PlayerSnapToClosestPosition(x - 3, GetPlayerInstance().y, true);
 	}
 	PlayerPlayAnimation(anim_mimiCoin, false, animationEnd);
-		
-	// Snap mimi to the coin position instance
-	PlayerSnapToClosestPosition(instance_coinSnapPosition.x, instance_coinSnapPosition.y, true);
+}
+
+MimiMovesToBuyDrink = function()
+{
+	// Disable the control the player has
+	SetControlState(PlayerControlState.PlayerNoControl);
+
+	// Walk to the position to knock
+	var walkToPosition = function()
+	{
+		GetPlayerInstance().SetPathSpeed(0.0);
+			
+		MimiBuysDrink();
+	}
+	PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
 
-var collisionContext = new CollisionContext(GetPlayerInstance(), MimiBuysDrink);
+var collisionContext = new CollisionContext(GetPlayerInstance(), MimiMovesToBuyDrink);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiGetsDrink);
 AddCollisionContext(collisionContext);
 

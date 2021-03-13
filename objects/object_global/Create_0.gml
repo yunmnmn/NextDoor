@@ -140,7 +140,7 @@ function ActionKeyHold()
 
 m_controllerIndex = noone;
 var padCount = gamepad_get_device_count();
-for(i = 0; i < padCount; i++)
+for(var i = 0; i < padCount; i++)
 {
 	var name = gamepad_get_description(i);
 	if(name != "")

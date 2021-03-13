@@ -35,7 +35,6 @@ CannotGoToRoom = function()
 		// Give control ba ck to the player again
 		SetControlState(PlayerControlState.PlayerControl);
 		
-		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), CannotGoToRoom);
 		collisionContext.AddGlobalState1(GlobalGameStates.MimiChecksOnYoungster);
@@ -47,7 +46,7 @@ CannotGoToRoom = function()
 	RenderText(c30_1);
 	
 	// Set Mimi to idle
-	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
 	
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);

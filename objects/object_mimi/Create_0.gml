@@ -120,6 +120,8 @@ function MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
 	assert(m_path != noone, "Path can't be invalid");
 	assert(GetControlState() == PlayerControlState.PlayerNoControl, "This function can only be called when the player is in NoControl state");
 	
+	posX = p_positionX;
+	posY = p_positionY;
 	// Set the path speed
 	var pathPosition = SnapToClosestPosition(PlayerGetPath(), p_positionX, p_positionY);
 	var moveDirection = (pathPosition > m_position) ? 1.0 : -1.0;
@@ -128,6 +130,14 @@ function MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
 	
 	// Set the callback
 	AddPathCallback(new PathCallback(m_path, pathPosition, p_callback, false, PathCallbackType.Both));
+	
+	// Add an additional callback to snap the player to that position
+	// Set the callback
+	snappingCallback = function()
+	{
+		PlayerSnapToClosestPosition(posX, posY, false);
+	}
+	AddPathCallback(new PathCallback(m_path, pathPosition, snappingCallback, false, PathCallbackType.Both));
 }
 
 // Register mimi to the global object

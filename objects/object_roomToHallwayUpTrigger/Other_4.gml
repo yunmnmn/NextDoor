@@ -28,7 +28,7 @@ NobodyIshere = function()
 	// Disable the control the player has
 	SetControlState(PlayerControlState.PlayerNoControl);
 		
-	// Set the idle animation
+	// Set the IdleScared animation
 	PlayerPlayAndFreezeAtEnd(sprite_mimiIdleScared, true);
 		
 	// Play the conversation with the women in black
@@ -61,8 +61,8 @@ CannotGoToHallwayUp = function()
 	c32_1.AddSubText(new SubText("Let's look around some more.", 0.2, true));
 	RenderText(c32_1);
 	
-	// Set Mimi to idle
-	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	// Set Mimi to IdleScared
+	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
 	
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);
@@ -93,8 +93,8 @@ WomenMightBeOutside = function()
 	c32_1.AddSubText(new SubText("She could still be in the hallway.", 0.2, true));
 	RenderText(c32_1);
 	
-	// Set Mimi to idle
-	PlayerPlayAnimation2(sprite_mimiIdle, noone);
+	// Set Mimi to IdleScared
+	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
 	
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);

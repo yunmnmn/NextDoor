@@ -37,7 +37,7 @@ CheckForGlobalState = function(p_collisionContext)
 }
 
 // Check for collisions
-for(i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
+for(var i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 {
 	var collisionContext = ds_list_find_value(m_collisionContexts, i);
 	assert(collisionContext.m_collisionInstance != noone && collisionContext.m_callback != noone, "CollisionContext has invalid members");

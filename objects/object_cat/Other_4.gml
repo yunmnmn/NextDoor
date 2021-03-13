@@ -99,7 +99,7 @@ else
 image_speed = 0;
 
 // Only be visible from sequence 3 onwards
-if(GetGlobalGameState() >= GlobalGameStates.MimiReturnsFromDrinking)
+if(GetGlobalGameState() >= GlobalGameStates.MimiChecksOnYoungster)
 {
 	visible = true;
 }

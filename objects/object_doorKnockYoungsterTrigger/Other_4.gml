@@ -144,7 +144,7 @@ function MimiAndYoungsterConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, true);
+			PlayerSnapToClosestPosition(x - 59, GetPlayerInstance().y, true);
 		}
 		
 		// Play the knocking animation
@@ -226,7 +226,7 @@ function MimiKnocksOnDoorConversation()
 			PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, false);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(x - 61, GetPlayerInstance().y, true);
+			PlayerSnapToClosestPosition(x - 59, GetPlayerInstance().y, true);
 		}
 		
 		// Play the knocking animation

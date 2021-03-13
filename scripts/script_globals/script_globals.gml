@@ -118,7 +118,7 @@ function SetGlobalGameState(p_globalGameState)
 // This will be called by the room initializer after all objects are loaded
 function ExecutePostRoomLoadCallbacks()
 {
-	for(i = 0; i < ds_list_size(global.m_postRoomLoadCallbacks); i++)
+	for(var i = 0; i < ds_list_size(global.m_postRoomLoadCallbacks); i++)
 	{
 		var pathCallback = ds_list_find_value(global.m_postRoomLoadCallbacks, i);
 		pathCallback();

@@ -30,7 +30,7 @@ if(m_followInstance || m_followPosition != noone)
 	
 	if(abs(newViewportPosX - interpolatedX) < 6 && abs(newViewportPosY - interpolatedY) < 6)
 	{
-		for(i = 0; i < ds_list_size(m_viewportCallbacks); i++)
+		for(var i = 0; i < ds_list_size(m_viewportCallbacks); i++)
 		{
 			var pathCallback = ds_list_find_value(m_viewportCallbacks, i);
 			pathCallback();
