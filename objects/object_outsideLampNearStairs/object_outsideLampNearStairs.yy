@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "lamp_outside",
-    "path": "sprites/lamp_outside/lamp_outside.yy",
+    "name": "lamp_outsideStairs",
+    "path": "sprites/lamp_outsideStairs/lamp_outsideStairs.yy",
   },
   "solid": false,
   "visible": true,

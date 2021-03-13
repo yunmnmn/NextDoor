@@ -64,7 +64,7 @@
     {"id":{"name":"script_playerFunctions","path":"scripts/script_playerFunctions/script_playerFunctions.yy",},"order":6,},
     {"id":{"name":"script_roomFunctions","path":"scripts/script_roomFunctions/script_roomFunctions.yy",},"order":2,},
     {"id":{"name":"anim_womenWalkTall","path":"sprites/anim_womenWalkTall/anim_womenWalkTall.yy",},"order":3,},
-    {"id":{"name":"lamp_outside","path":"sprites/lamp_outside/lamp_outside.yy",},"order":4,},
+    {"id":{"name":"lamp_outsideStairs","path":"sprites/lamp_outsideStairs/lamp_outsideStairs.yy",},"order":4,},
     {"id":{"name":"object_womenInBlack","path":"objects/object_womenInBlack/object_womenInBlack.yy",},"order":1,},
     {"id":{"name":"script_inputFunctions","path":"scripts/script_inputFunctions/script_inputFunctions.yy",},"order":7,},
     {"id":{"name":"anim_cat","path":"sprites/anim_cat/anim_cat.yy",},"order":2,},
