@@ -103,26 +103,3 @@ WomenMightBeOutside = function()
 var collisionContext2 = new CollisionContext(GetPlayerInstance(), WomenMightBeOutside);
 collisionContext2.AddGlobalState2(GlobalGameStates.MimiStandsUpFromAttack, GlobalGameStates.MimiHearsTickingAtWindow);
 AddCollisionContext(collisionContext2);
-
-// -------------------------- Fourth colliding event --------------------------
-
-// Don't let Mimi outside anymore
-GameEndingRoom = function()
-{	
-	var TransitionToEndingRoom = function()
-	{
-		ChangeRooms(room_ending);
-	}
-	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), TransitionToEndingRoom);
-	
-	// Don't give the control to the player while transitioning
-	SetControlState(PlayerControlState.PlayerNoControl);
-	
-	// Set that Mimi wasn't caught
-	SetMimiCaught(false);
-}
-
-var endingCollisionContext = new CollisionContext(GetPlayerInstance(), GameEndingRoom);
-endingCollisionContext.AddGlobalState1(GlobalGameStates.MimiGetsChased);
-endingCollisionContext.ExecuteOnHit();
-AddCollisionContext(endingCollisionContext);

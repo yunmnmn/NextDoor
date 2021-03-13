@@ -137,6 +137,7 @@
     {"id":{"name":"script_structures","path":"scripts/script_structures/script_structures.yy",},"order":3,},
     {"id":{"name":"object_wallWithHole","path":"objects/object_wallWithHole/object_wallWithHole.yy",},"order":7,},
     {"id":{"name":"sprite_womenIdleGiant","path":"sprites/sprite_womenIdleGiant/sprite_womenIdleGiant.yy",},"order":5,},
+    {"id":{"name":"object_endingTrigger","path":"objects/object_endingTrigger/object_endingTrigger.yy",},"order":14,},
     {"id":{"name":"anim_mimiCrawlToIdle","path":"sprites/anim_mimiCrawlToIdle/anim_mimiCrawlToIdle.yy",},"order":18,},
     {"id":{"name":"object_womenSlats","path":"objects/object_womenSlats/object_womenSlats.yy",},"order":3,},
     {"id":{"name":"anim_mimiAngry","path":"sprites/anim_mimiAngry/anim_mimiAngry.yy",},"order":8,},
