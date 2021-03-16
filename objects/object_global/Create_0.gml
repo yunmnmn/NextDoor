@@ -146,7 +146,9 @@ for(var i = 0; i < padCount; i++)
 	if(name != "")
 	{
 		m_controllerIndex = i;
-		var test = gamepad_is_connected(m_controllerIndex);
+		
+		// Set the deadzone
+		gamepad_set_axis_deadzone(m_controllerIndex, 0.05);
 		break;
 	}
 }
