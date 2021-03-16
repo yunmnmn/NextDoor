@@ -28,6 +28,7 @@ function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 	m_skippable = p_skippable;
 	m_progressable = true;
 	m_animationCallback = noone;
+	m_avatarYOffset = 0;
 	
 	m_avatarImageSpeed = 1000;
 	

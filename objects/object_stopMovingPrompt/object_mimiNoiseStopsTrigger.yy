@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprite_placeholderPink",
-    "path": "sprites/sprite_placeholderPink/sprite_placeholderPink.yy",
+    "name": "sprite_placeholderRed",
+    "path": "sprites/sprite_placeholderRed/sprite_placeholderRed.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,16 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_windowTrigger","path":"objects/object_windowTrigger/object_windowTrigger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_mimiNoiseStopsTrigger","path":"objects/object_mimiNoiseStopsTrigger/object_mimiNoiseStopsTrigger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "YoungsterRoom",
-    "path": "folders/Objects/YoungsterRoom.yy",
+    "name": "MimiRoom",
+    "path": "folders/Objects/MimiRoom.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_windowTrigger",
+  "name": "object_mimiNoiseStopsTrigger",
   "tags": [],
   "resourceType": "GMObject",
 }

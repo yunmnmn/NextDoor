@@ -14,5 +14,5 @@ if(m_drawHoldPrompt && m_drawHoldPromptWorld)
 		assert(false, "No controller state is set")
 	}
 	var imageIndex = (m_buttonFrame) % sprite_get_number(buttonSpriteIndex);
-	draw_sprite(buttonSpriteIndex, imageIndex, m_holdPromptX, m_holdPromptY);
+	draw_sprite_ext(buttonSpriteIndex, imageIndex, m_holdPromptX, m_holdPromptY, 1.0, 1.0, 0.0, c_white, 0.6);
 }

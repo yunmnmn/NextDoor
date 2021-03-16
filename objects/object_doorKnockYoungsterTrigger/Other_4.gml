@@ -144,7 +144,7 @@ function MimiAndYoungsterConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(x - 59, GetPlayerInstance().y, true);
+			PlayerSnapToClosestPosition(x - 80, GetPlayerInstance().y, true);
 		}
 		
 		// Play the knocking animation
@@ -165,7 +165,7 @@ MimiToYoungster = function()
 			
 		MimiAndYoungsterConversation();
 	}
-	PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
+	PlayerMoveAndExecute(x - 20, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
 // First use of the collider
@@ -226,7 +226,7 @@ function MimiKnocksOnDoorConversation()
 			PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, false);
 			
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(x - 59, GetPlayerInstance().y, true);
+			PlayerSnapToClosestPosition(x - 60, GetPlayerInstance().y, true);
 		}
 		
 		// Play the knocking animation
@@ -282,7 +282,6 @@ function collisionEvent()
 var collisionContext3 = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext3.AddGlobalState1(GlobalGameStates.MimiEntersYoungstersRoom);
 AddCollisionContext(collisionContext3);
-
 
 // HACK: Add a trigger when the door is closed by youngster
 YoungsterSlamsDoorDialogue = function()

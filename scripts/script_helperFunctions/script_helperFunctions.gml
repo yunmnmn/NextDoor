@@ -220,7 +220,7 @@ function SnapToClosestPosition(p_pathIndex, p_positionX, p_positionY)
 	var ratio = pathLength / lengthVectorToNext;
 	var normRatio = 1.0 / ratio;
 	
-	var acceptence = 2;
+	var acceptence = 0.5;
 	var iteration = 20;
 	var binaryStep = normRatio;
 	for(var i = 0; i < iteration; i++)

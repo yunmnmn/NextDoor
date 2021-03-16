@@ -1,13 +1,3 @@
-// The player has to move Mimi in order to progress
-if(m_talkingFinished)
-{
-	if((WalkingRight() || WalkingLeft()))
-	{
-		// Remove the moving button prompt
-		instance_global.DrawMovingPrompt(false, 0, 0);
-	}
-}
-
 // Do the transition from day to night
 if(m_startDayNightTransition)
 {

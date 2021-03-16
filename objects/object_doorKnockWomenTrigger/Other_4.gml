@@ -49,7 +49,7 @@ function MimiConversation()
 			PlayerPlayAnimation(sprite_mimiIdle, false, noone);
 				
 			// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-			PlayerSnapToClosestPosition(x - 59, GetPlayerInstance().y, false);
+			PlayerSnapToClosestPosition(x - 60, GetPlayerInstance().y, false);
 			
 			// Follow the player slowly while she is knocking
 			followCallback = function()
@@ -58,7 +58,7 @@ function MimiConversation()
 				SetViewportFollowSpeed(1.0);
 				SetViewportFollowInstance(GetPlayerInstance());
 			}
-			FollowPositionAndCallback(new Vector2(x - 59, GetPlayerInstance().y), followCallback)
+			FollowPositionAndCallback(new Vector2(x - 60, GetPlayerInstance().y), followCallback)
 		}
 
 		// Play the knocking animation

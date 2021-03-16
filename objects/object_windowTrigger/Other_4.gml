@@ -79,7 +79,7 @@ LookOutsideWindow = function()
 	instance_youngsetRoomWomenOutside.AddPathPointCallback(1, PlayWomenClimbMovie, false);
 		
 	// Set the idle animation
-	PlayerPlayAndFreezeAtEnd(anim_mimiIdleToScared, false);
+	PlayerPlayAndFreezeAtEnd(sprite_mimiIdleScared, false);
 		
 	m_viewportLookPositionOriginX = GetViewportPositionX();
 	m_viewportLookPositionOriginY = GetViewportPositionY();

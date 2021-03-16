@@ -136,8 +136,13 @@ function MimiConversation()
 		// Set a point callback when Women passes Mimi, so mimi turns back to idle
 		var womenPassesMimi = function()
 		{
-			// Play the mimi turn animation
-			PlayerPlayAnimation2(sprite_mimiIdle, noone);
+			finishTurning = function()
+			{
+				PlayerPlayAnimation2(sprite_mimiIdle, noone);
+			}
+			
+			// Play the mimi turn reverse animation
+			PlayerPlayAnimation2(anim_mimiTurnReverse, finishTurning);
 		}
 		instance_womenOutside.AddPathPointCallback(2, womenPassesMimi, false);
 
@@ -166,13 +171,6 @@ function MimiConversation()
 	
 	cb11_17 = function()
 	{
-		var c11_17 = new TextContext(sprite_youngsterAvatarScared, true, cb11_18);
-		c11_17.AddSubText(new SubText("I should at least be able to hear them talk or move around or something.", 0.2, true));
-		RenderText(c11_17);
-	}
-	
-	cb11_16 = function()
-	{
 		// Set the women on the path
 		instance_womenOutside.PlayAnimation2(anim_womenWalkTallShadow, noone);
 		instance_womenOutside.Mirror(true);
@@ -198,6 +196,13 @@ function MimiConversation()
 		}
 		instance_womenOutside.AddPathPointCallback(1, BehimdMimi, false);
 		
+		var c11_17 = new TextContext(sprite_youngsterAvatarScared, true, cb11_18);
+		c11_17.AddSubText(new SubText("I should at least be able to hear them talk or move around or something.", 0.2, true));
+		RenderText(c11_17);
+	}
+	
+	cb11_16 = function()
+	{		
 		var c11_16 = new TextContext(sprite_youngsterAvatarScared, true, cb11_17);
 		c11_16.AddSubText(new SubText("And with these thin walls...", 0.2, true));
 		RenderText(c11_16);
@@ -360,7 +365,7 @@ MimiBuysDrink = function()
 		// Set the youngster to use the shadowmap
 		instance_youngsterOutside.m_useShadowMap = true;
 		// HACK: slightly move mimi to the right when she finishes, so the knock -> idle matches
-		PlayerSnapToClosestPosition(x - 3, GetPlayerInstance().y, true);
+		PlayerSnapToClosestPosition(x - 4, GetPlayerInstance().y, true);
 	}
 	PlayerPlayAnimation(anim_mimiCoin, false, animationEnd);
 }

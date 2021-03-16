@@ -69,6 +69,11 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiPeepsAgain)
 		}
 	}
 	
+	if(m_pan > 0.3)
+	{
+		instance_global.DrawActionHoldPrompt(false, true, 0, 0);
+	}
+	
 	RoomLerp(m_viewportLookPositionOriginX, m_secondPeekViewportPositionX);
 	
 	var currentViewportPosition = GetViewportPositionX();
@@ -137,7 +142,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				MimiStandsUp = function()
 				{
 					// Hack: move mimi 64 pixels to the left to match the CrawlToIdle animation
-					PlayerSnapToClosestPosition(GetPlayerInstance().x - 64, GetPlayerInstance().y, true);
+					PlayerSnapToClosestPosition(GetPlayerInstance().x - 58, GetPlayerInstance().y, true);
 					PlayerPlayAnimation2(anim_mimiCrawlToIdle, MimiIsUp);
 				}
 			

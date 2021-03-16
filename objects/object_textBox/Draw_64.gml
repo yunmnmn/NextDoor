@@ -84,7 +84,7 @@ if(m_textContext != noone)
 		
 		// Hardcoded offset
 		var offset = 10;
-		draw_sprite(m_textContext.m_avatarSpriteIndex, m_drawFrame, x - sprite_get_width(m_textContext.m_avatarSpriteIndex) - offset, y);
+		draw_sprite(m_textContext.m_avatarSpriteIndex, m_drawFrame, x - sprite_get_width(m_textContext.m_avatarSpriteIndex) - offset, y + m_textContext.m_avatarYOffset);
 	}
 }
 
