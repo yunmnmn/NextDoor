@@ -30,7 +30,7 @@ if(m_drawMovingPrompt)
 		assert(false, "No controller state is set")
 	}
 	var imageIndex = (m_buttonFrame) % sprite_get_number(buttonSpriteIndex);
-	draw_sprite_ext(buttonSpriteIndex, imageIndex, m_movingPromptX, m_movingPromptY, 1.0, 1.0, 0.0, c_white, 0.6);
+	draw_sprite_ext(buttonSpriteIndex, imageIndex, m_movingPromptX, m_movingPromptY, 1.0, 1.0, 0.0, c_white, 0.8);
 }
 
 if(m_drawPressPrompt)
@@ -49,7 +49,7 @@ if(m_drawPressPrompt)
 		assert(false, "No controller state is set")
 	}
 	var imageIndex = (m_buttonFrame) % sprite_get_number(buttonSpriteIndex);
-	draw_sprite_ext(buttonSpriteIndex, imageIndex, m_pressPromptX, m_pressPromptY, 1.0, 1.0, 0.0, c_white, 0.6);
+	draw_sprite_ext(buttonSpriteIndex, imageIndex, m_pressPromptX, m_pressPromptY, 1.0, 1.0, 0.0, c_white, 0.8);
 }
 
 if(m_drawHoldPrompt && !m_drawHoldPromptWorld)
@@ -68,5 +68,5 @@ if(m_drawHoldPrompt && !m_drawHoldPromptWorld)
 		assert(false, "No controller state is set")
 	}
 	var imageIndex = (m_buttonFrame) % sprite_get_number(buttonSpriteIndex);
-	draw_sprite_ext(buttonSpriteIndex, imageIndex, m_holdPromptX, m_holdPromptY, 1.0, 1.0, 0.0, c_white, 0.6);
+	draw_sprite_ext(buttonSpriteIndex, imageIndex, m_holdPromptX, m_holdPromptY, 1.0, 1.0, 0.0, c_white, 0.8);
 }

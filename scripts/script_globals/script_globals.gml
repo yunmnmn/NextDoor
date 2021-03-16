@@ -1,5 +1,5 @@
 // Set debug mode or not
-global.m_debug = true;
+global.m_debug = false;
 
 // Default fading speed
 global.m_defaultFadingSpeed = 0.0;

@@ -148,7 +148,7 @@ for(var i = 0; i < padCount; i++)
 		m_controllerIndex = i;
 		
 		// Set the deadzone
-		gamepad_set_axis_deadzone(m_controllerIndex, 0.05);
+		gamepad_set_axis_deadzone(m_controllerIndex, 0.4);
 		break;
 	}
 }
