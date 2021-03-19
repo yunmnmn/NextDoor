@@ -38,6 +38,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"object_noticeHoleTrigger","path":"objects/object_noticeHoleTrigger/object_noticeHoleTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1344.0,"y":288.0,"resourceVersion":"1.0","name":"inst_5C947DE9","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"object_windowTrigger","path":"objects/object_windowTrigger/object_windowTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2316.0,"y":276.0,"resourceVersion":"1.0","name":"instance_windowTrigger","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"object_endingTrigger","path":"objects/object_endingTrigger/object_endingTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1536.0,"y":276.0,"resourceVersion":"1.0","name":"inst_2B1D6A66","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"object_womanSpeedupTrigger","path":"objects/object_womanSpeedupTrigger/object_womanSpeedupTrigger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1776.0,"y":276.0,"resourceVersion":"1.0","name":"inst_204EC3E5","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":12,"gridY":12,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"layer_triggers","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"object_womenRoom","path":"objects/object_womenRoom/object_womenRoom.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_5F2234F6","tags":[],"resourceType":"GMRInstance",},
@@ -67,6 +68,7 @@
     {"name":"instance_movie","path":"rooms/room_youngsterRoom/room_youngsterRoom.yy",},
     {"name":"instance_doorOpen","path":"rooms/room_youngsterRoom/room_youngsterRoom.yy",},
     {"name":"inst_2B1D6A66","path":"rooms/room_youngsterRoom/room_youngsterRoom.yy",},
+    {"name":"inst_204EC3E5","path":"rooms/room_youngsterRoom/room_youngsterRoom.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -15,7 +15,7 @@ RemindToBuyDrink = function()
 	}
 	
 	// Start the monologue
-	var c35_1 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
+	var c35_1 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
 	c35_1.AddSubText(new SubText("I'm not going to find any drinks upstairs.", 0.2, true));
 	RenderText(c35_1);
 	

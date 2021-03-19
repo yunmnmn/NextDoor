@@ -103,12 +103,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"LayerId":{"name":"c18fbbfc-919c-45a1-88b3-6e66139fcb40","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_mimiTurnReverse","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"3c98899b-0039-4521-a818-c9c8e1f89038","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"3c98899b-0039-4521-a818-c9c8e1f89038","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"LayerId":{"name":"c18fbbfc-919c-45a1-88b3-6e66139fcb40","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"anim_mimiTurnReverse","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","name":"3c98899b-0039-4521-a818-c9c8e1f89038","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"LayerId":{"name":"c18fbbfc-919c-45a1-88b3-6e66139fcb40","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_mimiTurnReverse","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"anim_mimiTurnReverse","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},
@@ -123,8 +123,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"36ee71f7-6841-4733-bfd6-e7811753c7cf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"980db73b-3c66-4261-b7b0-99e604de6892","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c98899b-0039-4521-a818-c9c8e1f89038","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"980db73b-3c66-4261-b7b0-99e604de6892","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c98899b-0039-4521-a818-c9c8e1f89038","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"36ee71f7-6841-4733-bfd6-e7811753c7cf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8b164f0d-c2cc-4d5e-9cd7-578930dccf3e","path":"sprites/anim_mimiTurnReverse/anim_mimiTurnReverse.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,

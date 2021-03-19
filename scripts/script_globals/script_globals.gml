@@ -1,5 +1,5 @@
 // Set debug mode or not
-global.m_debug = false;
+global.m_debug = true;
 
 // Default fading speed
 global.m_defaultFadingSpeed = 0.0;
@@ -27,7 +27,6 @@ enum GlobalGameStates
 	MimiRoomSits,
 	MimiGoingToYoungster, 
 	MimiGoingToKnockAtNeighbour,
-	MimiGointToYoungsterAgain,
 	MimiWalksIntoWoman,
 	MimiWalksToOldtimer,
 	

@@ -7,6 +7,9 @@ function YoungsterStreamsConversation()
 		
 		// Advance the state
 		SetGlobalGameState(GlobalGameStates.MimiChecksOnYoungster);
+		
+		// Set Mimi to scared from now on
+		SetMimiScared(true);
 	}
 	
 	cb13_2 = function()
@@ -35,10 +38,7 @@ function YoungsterStreamsConversation()
 }
 
 MimiHearsYoungsterScream = function()
-{
-	// Set Mimi to scared from now on
-	SetMimiScared(true);
-	
+{	
 	// Make the youngster outside invisible again
 	instance_outsideMemory.m_youngsterOutsideVisible = false;
 
@@ -51,7 +51,6 @@ MimiHearsYoungsterScream = function()
 	// Play the conversation with the women in black
 	YoungsterStreamsConversation();
 }
-
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiHearsYoungsterScream);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiReturnsFromDrinking);

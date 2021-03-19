@@ -1,20 +1,105 @@
 function MimiConversation()
 {
 	conversationFinished = function()
-	{
-		// Disable the control the player has
+	{			
+		// Set Mimi to idle
+		PlayerPlayAnimation2(sprite_mimiIdle, noone);
+		
+		// Give control ba ck to the player again
 		SetControlState(PlayerControlState.PlayerControl);
 		
 		// Advance the global game state
-		SetGlobalGameState(GlobalGameStates.MimiGointToYoungsterAgain);
+		SetGlobalGameState(GlobalGameStates.MimiWalksIntoWoman);
+	}
+	
+	cb4_8 = function()
+	{
+		var c2_8 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
+		c2_8.AddSubText(new SubText("Doesn't seem to be anyone around today though.", 0.2, true));
+		RenderText(c2_8);
+	}
+	
+	cb4_7 = function()
+	{
+		var c2_7 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_8);
+		c2_7.AddSubText(new SubText("Sometimes I hear the door opening and closing.", 0.2, true));
+		RenderText(c2_7);
+	}
+	
+	cb4_6 = function()
+	{
+		var c2_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_7);
+		c2_6.AddSubText(new SubText("I don't think it's empty...", 0.2, true));
+		RenderText(c2_6);
+	}
+	
+	cb4_5 = function()
+	{
+		var c2_5 = new TextContext(sprite_mimiAvatarAngry, true, cb4_6);
+		c2_5.AddSubText(new SubText("Of course they don't complain, if nobody lives there!", 0.2, true));
+		RenderText(c2_5);
+			
+		// Play the angry animation
+		var callbackAngryEnd = function()
+		{
+			// Only set the image speed to 0 if the angry animation is still set
+			if(GetPlayerInstance().sprite_index == anim_mimiAngry)
+			{
+				PlayerFreezeAnimationEnd2(anim_mimiAngry);
+			}
+		}
+		PlayerPlayAnimation2(anim_mimiAngry, callbackAngryEnd);
+
+	}
+	
+	walkToYoungster_cb4_4 = function()
+	{
+		// Walk towards the youngster again
+		var walkToPosition = function()
+		{	
+			// TODO: Currently necessary for each PlayerMoveAndExecute function, make this obsolete
+			GetPlayerInstance().SetPathSpeed(0.0);
+			
+			// Make it progressable again when Mimi reaches the destination
+			GetCurrentTextContext().m_progressable = true;
+			
+			// Set Mimi back to Idle when she reaches her destination
+			PlayerFreezeAnimationEnd2(sprite_mimiIdle);
+		}
+		PlayerMoveAndExecute(360, 355, 1.0, walkToPosition);
 		
-		// Set the animation back to idle
-		PlayerPlayAnimation2(sprite_mimiIdle, noone);
+		// Walk walking, play line 4.2
+		var c4_4 = new TextContext(sprite_mimiAvatarTroubled, true, cb4_5);
+		c4_4.AddSubText(new SubText("You sure it's not just an empty room?", 0.2, true));
+		c4_4.m_progressable = false;
+		RenderText(c4_4);
+	}
+	
+	cb4_3 = function()
+	{
+		var c2_3 = new TextContext(sprite_mimiAvatarTroubled, true, walkToYoungster_cb4_4);
+		c2_3.AddSubText(new SubText("Away?!", 0.2, true));
+		RenderText(c2_3);
+	}
+	
+	cb4_2 = function()
+	{
+		var c4_2 = new TextContext(sprite_youngsterAvatarSmirk, true, cb4_3);
+		c4_2.AddSubText(new SubText("That neighbour seems to be away a lot.", 0.2, true));
+		RenderText(c4_2);
+	}
+	
+	// Call the parent text context
+	cb4_1 = function()
+	{
+		var c4_1 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_2);
+		c4_1.AddSubText(new SubText("Probably not home...", 0.2, true));
+		RenderText(c4_1)
 	}
 	
 	cb3_3 = function()
 	{
-		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
+		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, cb4_1);
 		c2_3.AddSubText(new SubText("Anybody there?", 0.2, true));
 		RenderText(c2_3);
 	}

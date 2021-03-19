@@ -21,7 +21,7 @@ transitionToOutside = function()
 
 var collisionContext1 = new CollisionContext(GetPlayerInstance(), transitionToOutside);
 collisionContext1.m_doNotExecuteOn = true;
-collisionContext1.AddGlobalState3(GlobalGameStates.MimiGoingToKnockAtNeighbour, GlobalGameStates.MimiGointToYoungsterAgain, GlobalGameStates.MimiWalksToOldtimer);
+collisionContext1.AddGlobalState2(GlobalGameStates.MimiGoingToKnockAtNeighbour, GlobalGameStates.MimiWalksToOldtimer);
 AddCollisionContext(collisionContext1);
 
 // -------------------------- Second colliding event --------------------------
@@ -69,7 +69,7 @@ CannotGoOutside2 = function()
 		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), CannotGoOutside2);
-		collisionContext.AddGlobalState2(GlobalGameStates.MimiGointToYoungsterAgain, GlobalGameStates.MimiWalksToOldtimer);
+		collisionContext.AddGlobalState1(GlobalGameStates.MimiWalksToOldtimer);
 		AddCollisionContext(collisionContext);
 	}
 	// Start the monologue
@@ -85,5 +85,5 @@ CannotGoOutside2 = function()
 }
 
 var collisionContext3 = new CollisionContext(GetPlayerInstance(), CannotGoOutside2);
-collisionContext3.AddGlobalState2(GlobalGameStates.MimiGointToYoungsterAgain, GlobalGameStates.MimiWalksToOldtimer);
+collisionContext3.AddGlobalState1(GlobalGameStates.MimiWalksToOldtimer);
 AddCollisionContext(collisionContext3);

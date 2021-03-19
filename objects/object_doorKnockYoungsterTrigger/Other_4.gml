@@ -160,12 +160,15 @@ MimiToYoungster = function()
 	// Walk to the position to knock
 	var walkToPosition = function()
 	{
-		DisableFollowingInstance();
+		// Stop using the path system
 		GetPlayerInstance().SetPathSpeed(0.0);
 			
 		MimiAndYoungsterConversation();
 	}
 	PlayerMoveAndExecute(x - 20, GetPlayerInstance().y, 1.0, walkToPosition);
+	
+	// Disable the following isntance
+	DisableFollowingInstance();
 }
 
 // First use of the collider

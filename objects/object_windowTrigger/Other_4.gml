@@ -2,57 +2,54 @@ MimiFallsBackwards = function()
 {
 	// Set Mimi at the right position
 	// TODO: Fix hardcoding
-	PlayerSnapToClosestPosition(2200, 348, false);
+	PlayerSnapToClosestPosition(2220, 348, false);
 	
-	// Show the women at the window
-	FreezeWomenAnimation = function()
-	{
-		// Set the viewport speed
-		SetViewportFollowSpeed(0.003)
-		
-		// Follow Mimi again with a slight offset to the left
-		var viewportEndPosition = new Vector2(GetPlayerInstance().x - 400, GetPlayerInstance().y);
-		FollowPositionAndDisable(viewportEndPosition);
-		
-		// Enable player controls again
-		SetControlState(PlayerControlState.PlayerControl);
-		
-		// Set player speed slower
-		GetPlayerInstance().SetSpeed(0.07); 
-		
-		FreezeWomenAnimation2 = function()
-		{
-			// Let the Women walk torwards Mimi
-			instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 0.7);
-		
-			// Play the walking animation
-			instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);
-			
-			// Advance the Global state
-			SetGlobalGameState(GlobalGameStates.MimiGetsChased);
-		}
-		// Play the women stuck animation one more time when the camera is panning
-		instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, FreezeWomenAnimation2);
-		
-	}
 	// Show the women at the window
 	instance_youngsetRoomWomenOutside.StopPath();
 	instance_youngsetRoomWomenOutside.x = 2373;
 	instance_youngsetRoomWomenOutside.y = 240;
 	
-	// Play the women stu ck animation
-	instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, FreezeWomenAnimation);
+	// Play the women stuck animation
+	instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenStuck, false, noone);
 	
-	// Set camera back to m_viewportLookPositionOriginX
-	SetViewportPositionX(m_viewportLookPositionOriginX);
+	// Set Mimi speed slower
+	GetPlayerInstance().SetSpeed(0.07); 
 	
 	FallingBackwardsFinished = function()
 	{
 		// Set to movement crawling
 		SetMimiCrawling(true);
 		
-		// Freeze at the last frame
-		PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
+		// Disable the control the player has
+		SetControlState(PlayerControlState.PlayerNoControl);
+		
+		// Follow Mimi again with a slight offset to the left
+		SetViewportFollowSpeed(0.0003);
+		var viewportEndPosition = new Vector2(GetPlayerInstance().x - 500, GetPlayerInstance().y);
+		FollowPositionAndDisable(viewportEndPosition);
+		
+		// Automatically crawl for a bit
+		var crawlToPosition = function()
+		{	
+			// TODO: Currently necessary for each PlayerMoveAndExecute function, make this obsolete
+			GetPlayerInstance().SetPathSpeed(0.0);
+			
+			// Enable the player control
+			SetControlState(PlayerControlState.PlayerControl);
+			
+			// Freeze at the last frame
+			PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
+			
+			// Let the Women walk torwards Mimi
+			instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomen, 0.0, 0.7);
+		
+			// Play the carwling animation
+			instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenCrawl, false, noone);
+			
+			// Advance the Global state
+			SetGlobalGameState(GlobalGameStates.MimiGetsChased);
+		}
+		PlayerMoveAndExecute(2050, 345, 1.0, crawlToPosition);
 	}
 	PlayerPlayAnimation(anim_mimiLeapFromStand, false, FallingBackwardsFinished);
 }

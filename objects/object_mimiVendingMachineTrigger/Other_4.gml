@@ -1,3 +1,6 @@
+
+// -------------------------- First colliding event --------------------------
+
 function MimiConversation()
 {		
 	cb12ConversationFinished = function()
@@ -385,9 +388,40 @@ MimiMovesToBuyDrink = function()
 	PlayerMoveAndExecute(x, GetPlayerInstance().y, 1.0, walkToPosition);
 }
 
-
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiMovesToBuyDrink);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiGetsDrink);
 AddCollisionContext(collisionContext);
 
 m_womenWaiting = false;
+
+// -------------------------- Second colliding event --------------------------
+
+MimiMonologue = function()
+{	
+	conversationFinished = function()
+	{
+		// Disable the player control
+		SetControlState(PlayerControlState.PlayerControl);
+		
+		var collisionContext = new CollisionContext(GetPlayerInstance(), MimiMonologue);
+		collisionContext.AllStates();
+		AddCollisionContext(collisionContext);
+	}
+	
+	var c37_1 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
+	c37_1.AddSubText(new SubText("I'm not really thirsty.", 0.2, true));
+	RenderText(c37_1)
+		
+	// Disable the player control
+	SetControlState(PlayerControlState.PlayerNoControl);
+	
+	// Set Mimi to Idle
+	PlayerFreezeAnimationEnd2(sprite_mimiIdle);
+}
+
+if(GetGlobalGameState() < GlobalGameStates.MimiRoomSits2)
+{
+	var collisionContext = new CollisionContext(GetPlayerInstance(), MimiMonologue);
+	collisionContext.AllStates();
+	AddCollisionContext(collisionContext);
+}
