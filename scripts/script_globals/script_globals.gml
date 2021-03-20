@@ -5,7 +5,7 @@ global.m_debug = true;
 global.m_defaultFadingSpeed = 0.0;
 if(DebugMode())
 {
-	global.m_defaultFadingSpeed = 0.01;
+	global.m_defaultFadingSpeed = 0.0005;
 }
 else
 {
