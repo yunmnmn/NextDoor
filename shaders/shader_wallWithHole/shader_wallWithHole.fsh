@@ -30,7 +30,8 @@ void main()
 	int xx = int(mod(pixel.x, 8.0));
 	int yy = int(mod(pixel.y, 8.0));
 	int index = (xx * 8) + yy;
-    float dith = float(test[index]);
+	// TODO: replace this 1 = index
+    float dith = float(test[1]);
 	
 	float alpha = 0.0;
 	if(u_scale * 64.0 <= dith)
