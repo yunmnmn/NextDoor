@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"61375dcf-9a10-4606-8952-64933b71546b","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"61375dcf-9a10-4606-8952-64933b71546b","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"LayerId":{"name":"41b60004-ba83-4647-a06f-d130f38ca5c4","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"foreground_doorOpen","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"resourceVersion":"1.0","name":"61375dcf-9a10-4606-8952-64933b71546b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"344fb3b1-dabc-41b3-a001-0bfa4f674197","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"344fb3b1-dabc-41b3-a001-0bfa4f674197","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"LayerId":{"name":"7014a164-151d-4921-a2f6-fceb6bae61be","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"foreground_doorOpen","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"resourceVersion":"1.0","name":"344fb3b1-dabc-41b3-a001-0bfa4f674197","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"foreground_doorOpen","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"186eb9a9-7158-4f4f-88e7-2369ed282c55","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"61375dcf-9a10-4606-8952-64933b71546b","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"98dfb42e-e749-477b-9149-2d6122554637","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"344fb3b1-dabc-41b3-a001-0bfa4f674197","path":"sprites/foreground_doorOpen/foreground_doorOpen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"41b60004-ba83-4647-a06f-d130f38ca5c4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7014a164-151d-4921-a2f6-fceb6bae61be","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "YoungsterRoom",

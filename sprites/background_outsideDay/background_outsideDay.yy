@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8cb81d86-a796-4821-bc1d-3f142fef4f3d","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8cb81d86-a796-4821-bc1d-3f142fef4f3d","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":{"name":"02538e91-3c58-4491-8327-625d915d1c4f","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"background_outsideDay","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"8cb81d86-a796-4821-bc1d-3f142fef4f3d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"30070a04-0e0c-47a0-a43b-e1b3a2e78f2b","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"30070a04-0e0c-47a0-a43b-e1b3a2e78f2b","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":{"name":"02538e91-3c58-4491-8327-625d915d1c4f","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"background_outsideDay","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"30070a04-0e0c-47a0-a43b-e1b3a2e78f2b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0250802a-781f-4a51-8de7-c98e5d01c38e","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0250802a-781f-4a51-8de7-c98e5d01c38e","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":{"name":"5360f8d9-78a6-4e0e-9282-9c21d5088584","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"background_outsideDay","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"0250802a-781f-4a51-8de7-c98e5d01c38e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"da6976f2-1f1d-4b9c-8e64-eea0565a4e37","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"da6976f2-1f1d-4b9c-8e64-eea0565a4e37","path":"sprites/background_outsideDay/background_outsideDay.yy",},"LayerId":{"name":"5360f8d9-78a6-4e0e-9282-9c21d5088584","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"background_outsideDay","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","name":"da6976f2-1f1d-4b9c-8e64-eea0565a4e37","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"background_outsideDay","path":"sprites/background_outsideDay/background_outsideDay.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7d9e7f51-2167-4f75-b2fa-807765335493","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8cb81d86-a796-4821-bc1d-3f142fef4f3d","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"187342ec-705c-430f-8ce5-376e8c0747db","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"30070a04-0e0c-47a0-a43b-e1b3a2e78f2b","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a1234e9f-cff8-4802-bced-131d5f8e066c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0250802a-781f-4a51-8de7-c98e5d01c38e","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e96b89f7-de5d-4b65-9f8d-b8a0b0a35578","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"da6976f2-1f1d-4b9c-8e64-eea0565a4e37","path":"sprites/background_outsideDay/background_outsideDay.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"02538e91-3c58-4491-8327-625d915d1c4f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5360f8d9-78a6-4e0e-9282-9c21d5088584","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Backgrounds",
