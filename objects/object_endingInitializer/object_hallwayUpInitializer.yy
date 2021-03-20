@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "background_youngsterRoom",
-    "path": "sprites/background_youngsterRoom/background_youngsterRoom.yy",
+    "name": "background_hallwayUpNight",
+    "path": "sprites/background_hallwayUpNight/background_hallwayUpNight.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,16 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_youngsterRoomInitializer","path":"objects/object_youngsterRoomInitializer/object_youngsterRoomInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_hallwayUpInitializer","path":"objects/object_hallwayUpInitializer/object_hallwayUpInitializer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "YoungsterRoom",
-    "path": "folders/Objects/YoungsterRoom.yy",
+    "name": "HallwayUp",
+    "path": "folders/Objects/HallwayUp.yy",
   },
   "resourceVersion": "1.0",
-  "name": "object_youngsterRoomInitializer",
+  "name": "object_hallwayUpInitializer",
   "tags": [],
   "resourceType": "GMObject",
 }

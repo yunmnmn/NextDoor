@@ -17,6 +17,9 @@ GameEndingRoom = function()
 	
 	// Set that Mimi was caught
 	SetMimiCaught(true);
+	
+	// Freeze at the last frame when she's caught
+	PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
 }
 
 var endingCollisionContext = new CollisionContext(GetPlayerInstance(), GameEndingRoom);
