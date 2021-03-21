@@ -44,9 +44,12 @@ function Reset()
 	m_textDirty = true;
 	
 	// ClearMemory
-	m_textContext.Free();
-	delete m_textContext;
-	m_textContext = noone;
+	if(m_textContext != noone)
+	{
+		m_textContext.Free();
+		delete m_textContext;
+		m_textContext = noone;
+	}
 }
 
 function ResetWithoutClearingMemory()
