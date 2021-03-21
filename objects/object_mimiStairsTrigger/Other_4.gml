@@ -47,9 +47,9 @@ ScaredToGoUpstairs = function()
 	}
 	
 	// Start the monologue
-	var c35_1 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-	c35_1.AddSubText(new SubText(" I'm not going up there, it give me the creeps.", 0.2, true));
-	RenderText(c35_1);
+	var c36_1 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
+	c36_1.AddSubText(new SubText("I'm not going up there, it give me the creeps.", 0.2, true));
+	RenderText(c36_1);
 	
 	// Set Mimi to idle
 	PlayerPlayAnimation2(sprite_mimiIdle, noone);

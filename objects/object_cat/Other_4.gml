@@ -7,31 +7,31 @@ CatMeows = function()
 		SetControlState(PlayerControlState.PlayerControl);
 	}
 	
-	cbcat_3 = function()
+	cb31_3 = function()
 	{
-		var ccat_3 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-		ccat_3.AddSubText(new SubText("It has a cursed face...", 0.2, true));
-		RenderText(ccat_3);
+		var c31_3 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
+		c31_3.AddSubText(new SubText("It has a cursed face...", 0.2, true));
+		RenderText(c31_3);
 	}
 
-	cbcat_2 = function()
+	cb31_2 = function()
 	{
-		var ccat_2 = new TextContext(sprite_mimiAvatarScared, true, cbcat_3);
-		ccat_2.AddSubText(new SubText("Who's cat is this?", 0.2, true));
-		RenderText(ccat_2);
+		var c31_2 = new TextContext(sprite_mimiAvatarScared, true, cb31_3);
+		c31_2.AddSubText(new SubText("Who's cat is this?", 0.2, true));
+		RenderText(c31_2);
 	}
 	
-	cbcat_1 = function()
+	cb31_1 = function()
 	{
-		var ccat_1 = new TextContext(sprite_catAvatar, true, cbcat_2);
-		ccat_1.AddSubText(new SubText("Meow!", 0.2, true));
-		RenderText(ccat_1);
+		var c31_1 = new TextContext(sprite_catAvatar, true, cb31_2);
+		c31_1.AddSubText(new SubText("Meow!", 0.2, true));
+		RenderText(c31_1);
 	}
 	
 	CatAnimationFinished = function()
 	{
 		FreezeAnimationAtEnd2(anim_cat);
-		cbcat_1();
+		cb31_1();
 	}
 	
 	// Disable the control for hte player

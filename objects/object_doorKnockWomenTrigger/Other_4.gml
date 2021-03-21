@@ -14,30 +14,30 @@ function MimiConversation()
 	
 	cb4_8 = function()
 	{
-		var c2_8 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
-		c2_8.AddSubText(new SubText("Doesn't seem to be anyone around today though.", 0.2, true));
-		RenderText(c2_8);
+		var c4_8 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
+		c4_8.AddSubText(new SubText("Doesn't seem to be anyone around today though.", 0.2, true));
+		RenderText(c4_8);
 	}
 	
 	cb4_7 = function()
 	{
-		var c2_7 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_8);
-		c2_7.AddSubText(new SubText("Sometimes I hear the door opening and closing.", 0.2, true));
-		RenderText(c2_7);
+		var c4_7 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_8);
+		c4_7.AddSubText(new SubText("Sometimes I hear the door opening and closing.", 0.2, true));
+		RenderText(c4_7);
 	}
 	
 	cb4_6 = function()
 	{
-		var c2_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_7);
-		c2_6.AddSubText(new SubText("I don't think it's empty...", 0.2, true));
-		RenderText(c2_6);
+		var c4_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_7);
+		c4_6.AddSubText(new SubText("I don't think it's empty...", 0.2, true));
+		RenderText(c4_6);
 	}
 	
 	cb4_5 = function()
 	{
-		var c2_5 = new TextContext(sprite_mimiAvatarAngry, true, cb4_6);
-		c2_5.AddSubText(new SubText("Of course they don't complain, if nobody lives there!", 0.2, true));
-		RenderText(c2_5);
+		var c4_5 = new TextContext(sprite_mimiAvatarAngry, true, cb4_6);
+		c4_5.AddSubText(new SubText("Of course they don't complain, if nobody lives there!", 0.2, true));
+		RenderText(c4_5);
 			
 		// Play the angry animation
 		var callbackAngryEnd = function()

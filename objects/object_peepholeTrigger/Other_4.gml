@@ -13,16 +13,16 @@ function MimiIsSpooked()
 		instance_global.DrawActionHoldPrompt(true, true, 970, 200);
 	}
 	
-	cb20_2 = function()
+	cb21_2 = function()
 	{
-		var c20_2 = new TextContext(sprite_mimiAvatarEye, false, finishConverstaion);
-		c20_2.AddSubText(new SubText("...", 0.2, true));
-		RenderText(c20_2);
+		var c21_2 = new TextContext(sprite_mimiAvatarEye, false, finishConverstaion);
+		c21_2.AddSubText(new SubText("...", 0.2, true));
+		RenderText(c21_2);
 	}
 	
 	cb21_1 = function()
 	{
-		var c21_2 = new TextContext(sprite_mimiAvatarCloser, false, cb20_2);
+		var c21_2 = new TextContext(sprite_mimiAvatarCloser, false, cb21_2);
 		c21_2.AddSubText(new SubText("...", 0.2, true));
 		RenderText(c21_2);
 	}

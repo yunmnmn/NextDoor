@@ -89,9 +89,9 @@ WomenMightBeOutside = function()
 		AddCollisionContext(collisionContext);
 	}
 	// Start the monologue
-	var c32_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-	c32_1.AddSubText(new SubText("She could still be in the hallway.", 0.2, true));
-	RenderText(c32_1);
+	var c33_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
+	c33_1.AddSubText(new SubText("She could still be in the hallway.", 0.2, true));
+	RenderText(c33_1);
 	
 	// Set Mimi to IdleScared
 	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);

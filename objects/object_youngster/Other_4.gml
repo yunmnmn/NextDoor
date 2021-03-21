@@ -48,7 +48,7 @@ YoungsterNoticesOldtimer = function()
 	
 	// Start the conversation
 	var c27_1 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
-	c27_1.AddSubText(new SubText("Ah, shit. Not her again...", 0.2, true));
+	c27_1.AddSubText(new SubText("Tsk, not her again...", 0.2, true));
 	RenderText(c27_1);
 	
 	// Disable the control for the player
