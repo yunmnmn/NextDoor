@@ -43,36 +43,34 @@ function MimiConversation()
 		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
 	}
 	
-	cb2_4 = function()
+	cb1_4 = function()
 	{
-		var c2_4 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
-		c2_4.AddSubText(new SubText("I should give the guy upstairs a piece of my mind!", 0.2, true));
-		RenderText(c2_4);
+		var c1_4 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
+		c1_4.AddSubText(new SubText("I should give the guy upstairs a piece of my mind!", 0.2, true));
+		RenderText(c1_4);
 	}
 	
-	cb2_3 = function()
+	cb1_3 = function()
 	{
-		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, cb2_4);
-		c2_3.AddSubText(new SubText("I can't study with this noise all the time!", 0.2, true));
-		RenderText(c2_3);
+		var c1_3 = new TextContext(sprite_mimiAvatarAngry, true, cb1_4);
+		c1_3.AddSubText(new SubText("I can't study with this noise all the time!", 0.2, true));
+		RenderText(c1_3);
 	}
 	
-	cb2_2 = function()
+	cb1_2 = function()
 	{		
-		var c2_2 = new TextContext(sprite_mimiAvatarAngry, true, cb2_3);
-		c2_2.AddSubText(new SubText("Oh, come on!", 0.2, true));
-		RenderText(c2_2);
+		var c1_2 = new TextContext(sprite_mimiAvatarAngry, true, cb1_3);
+		c1_2.AddSubText(new SubText("Oh, come on!", 0.2, true));
+		RenderText(c1_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
-	var c2_1 = new TextContext(sprite_mimiAvatarNormal, true, cb2_2);
-	c2_1.AddSubText(new SubText("...", 0.6, true));
+	var c1_1 = new TextContext(sprite_mimiAvatarNormal, true, cb1_2);
+	c1_1.AddSubText(new SubText("...", 0.6, true));
+	RenderText(c1_1);
 	
 	// Set the next global state after the animation is finished playing
-	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);
-
-	// Call the parent text context
-	RenderText(c2_1);
+	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);	
 }
 
 MimiComplainsAboutNoise = function()
