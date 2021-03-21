@@ -1,3 +1,12 @@
+// Reset the previous and current cached keys
+m_previousControllerKey = noone;
+m_currentControllerKey = noone;
+m_currentKeyboardKey = noone;
+m_previousKeyboardKey = noone;
+
+// Check if a new controller has been plugged in
+RegisterController();
+
 if(gamepad_button_check_pressed(m_controllerIndex, gp_face1))
 {
 	m_currentControllerKey = gp_face1;

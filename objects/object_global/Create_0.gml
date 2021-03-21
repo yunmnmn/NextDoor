@@ -30,7 +30,9 @@ function CheckControllerPressed()
 		return false;
 	}
 	
-	if(m_previousControllerKey != m_currentControllerKey || m_previousAxisH != m_currentAxisH || m_previousAxisV != m_currentAxisV)
+	if(	m_previousControllerKey != m_currentControllerKey ||	// Check if the action button is different
+		m_previousAxisH != m_currentAxisH || 
+		m_previousAxisV != m_currentAxisV)
 	{
 		m_previousControllerKey = m_currentControllerKey;
 		m_previousAxisH = m_currentAxisH;
@@ -139,19 +141,28 @@ function ActionKeyHold()
 }
 
 m_controllerIndex = noone;
-var padCount = gamepad_get_device_count();
-for(var i = 0; i < padCount; i++)
+function RegisterController()
 {
-	var name = gamepad_get_description(i);
-	if(name != "")
+	var padCount = gamepad_get_device_count();
+	for(var i = 0; i < padCount; i++)
 	{
-		m_controllerIndex = i;
+		var name = gamepad_get_description(i);
+		if(name != "")
+		{
+			// Set the controller
+			m_controllerIndex = i;
 		
-		// Set the deadzone
-		gamepad_set_axis_deadzone(m_controllerIndex, 0.4);
-		break;
+			// Set the deadzone
+			gamepad_set_axis_deadzone(m_controllerIndex, 0.4);
+			return;
+		}
 	}
+	
+	// If it got here, it means that no controller was detected, register keyboard here
+	m_controlDevice = ControlDevice.Keyboard;
 }
+
+
 
 // ----------- Draw button prompts ---------
 m_buttonFrame = 0;
