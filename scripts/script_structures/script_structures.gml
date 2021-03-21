@@ -41,6 +41,11 @@ function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 			m_avatarImageSpeed = sprite_get_speed(m_avatarSpriteIndex);
 		}
 	}
+	
+	Free = function()
+	{
+		ds_list_destroy(m_subTexts);
+	}
 }
 
 enum PathCallbackType
@@ -108,6 +113,11 @@ function CollisionContext(p_collisionInstance, p_callback) constructor
 	ExecuteOnHit = function()
 	{
 		m_executeOnHit = true;
+	}
+	
+	Free = function()
+	{
+		ds_list_destroy(m_globalStates);
 	}
 }
 

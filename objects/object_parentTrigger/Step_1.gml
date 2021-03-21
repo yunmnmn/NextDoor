@@ -61,6 +61,10 @@ for(var i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 		{
 			collisionContext.m_callback();
 			ds_list_delete(m_collisionContexts, i);
+			
+			// Clear the memory
+			collisionContext.Free();
+			delete collisionContext;
 		}
 		else
 		{

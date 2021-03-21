@@ -32,7 +32,6 @@ function RenderText(p_textContext)
 function Reset()
 {
 	m_state = TextboxState.Idle;
-	m_textContext = noone;
 	m_subTextIndex = 0;
 	m_playSpeed = 0.0;
 	m_textPosition = 0.0;
@@ -43,6 +42,27 @@ function Reset()
 	m_elapsedTimeInMilisecondsMarker = 0.0;
 	m_markerFrame = 0;
 	m_textDirty = true;
+	
+	// ClearMemory
+	m_textContext.Free();
+	delete m_textContext;
+	m_textContext = noone;
+}
+
+function ResetWithoutClearingMemory()
+{
+	m_state = TextboxState.Idle;
+	m_subTextIndex = 0;
+	m_playSpeed = 0.0;
+	m_textPosition = 0.0;
+	m_text = "";
+	m_sameFrame = 0;
+	m_elapsedTimeInMiliseconds = 0.0;
+	m_drawFrame = 0;
+	m_elapsedTimeInMilisecondsMarker = 0.0;
+	m_markerFrame = 0;
+	m_textDirty = true;
+	m_textContext = noone;
 }
 
 // Register this instance to the global textbox instance

@@ -32,13 +32,17 @@ if(ActionKeyPressed())
 				var tempTextContext = m_textContext;
 	
 				// Reset all the states back to default
-				Reset();
+				ResetWithoutClearingMemory();
 	
 				// Call the callback if there is one
 				if(tempTextContext.m_callback != noone)
 				{
 					tempTextContext.m_callback();
 				}
+				
+				// Clean the memory
+				tempTextContext.Free();
+				delete tempTextContext;
 			
 				m_sameFrame = 2;
 			}
