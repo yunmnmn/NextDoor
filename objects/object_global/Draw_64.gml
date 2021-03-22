@@ -1,3 +1,9 @@
+// Show FPS if debug is enabled
+if(DebugMode())
+{
+	draw_text(0, 0, 1000.0 / DeltaTimeInMiliseconds());
+}
+
 // Increment the frame
 if(m_drawMovingPrompt || m_drawPressPrompt || m_drawHoldPrompt)
 {
