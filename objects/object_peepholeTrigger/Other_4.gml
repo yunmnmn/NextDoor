@@ -126,6 +126,7 @@ m_secondPeekViewportPositionX = 640;
 
 m_pan = 0.0;
 m_panSpeed = 0.0002;
+m_panSpeedSecond = 0.0003;
 m_snapbackSpeed = 0.002;
 m_womenCloseToWallFadeSpeed = 0.002;
 

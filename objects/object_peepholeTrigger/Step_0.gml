@@ -61,7 +61,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiPeepsAgain)
 	{
 		if(ActionKeyHold())
 		{
-			m_pan += m_panSpeed * DeltaTimeInMiliseconds();
+			m_pan += m_panSpeedSecond * DeltaTimeInMiliseconds();
 		}
 		else
 		{
@@ -126,7 +126,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 		{
 			animationSlatsFinished = function()
 			{
-				MimiIsUp = function()
+				mimiIsUp = function()
 				{	
 					// Advance the global state 
 					SetGlobalGameState(GlobalGameStates.MimiStandsUpFromAttack);
@@ -138,17 +138,22 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 					// Play the women timeline
 					PlayTimeline(timeline_womenMoves);
 				}
+				
+				idleToIdleScared = function()
+				{
+					PlayerPlayAnimation2(anim_mimiIdleToScared, mimiIsUp);
+				}
 			
-				MimiStandsUp = function()
+				mimiStandsUp = function()
 				{
 					// Hack: move mimi 64 pixels to the left to match the CrawlToIdle animation
-					PlayerSnapToClosestPosition(GetPlayerInstance().x - 58, GetPlayerInstance().y, true);
-					PlayerPlayAnimation2(anim_mimiCrawlToIdle, MimiIsUp);
+					PlayerSnapToClosestPosition(GetPlayerInstance().x + 64, GetPlayerInstance().y, true);
+					PlayerPlayAnimation2(anim_mimiCrawlToIdle, idleToIdleScared);
 				}
 			
 				cb23_6 = function()
 				{
-					var c23_6 = new TextContext(sprite_mimiAvatarScared, true, MimiStandsUp);
+					var c23_6 = new TextContext(sprite_mimiAvatarScared, true, mimiStandsUp);
 					c23_6.AddSubText(new SubText("Were exactly the same woman?", 0.4, true));
 					RenderText(c23_6);
 				}
@@ -194,14 +199,16 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 			
 			// Delay the carwling back animation slightly
 			PlayTimeline(timeline_mimiCrawlsBack);
-			
-			// Also play a TextContext
-			var c22_2 = new TextContext(sprite_mimiAvatarScared, false, noone);
+		}
+		
+		cb22_2 = function()
+		{
+			var c22_2 = new TextContext(sprite_mimiAvatarScared, false, PlaySlatsAnimation);
 			c22_2.AddSubText(new SubText("?!", 0.6, true));
-			c22_2.m_progressable = false;
 			RenderText(c22_2);
 		}
-		c22_1 = new TextContext(sprite_mimiAvatarYell, false, PlaySlatsAnimation);
+		
+		c22_1 = new TextContext(sprite_mimiAvatarYell, false, cb22_2);
 		c22_1.AddSubText(new SubText("GYAH!", 0.6, true));
 		c22_1.m_progressable = false;
 		RenderText(c22_1);

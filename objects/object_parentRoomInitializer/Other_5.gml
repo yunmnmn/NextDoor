@@ -15,3 +15,5 @@ if(m_viewportHalfSize != noone)
 	delete m_viewportHalfSize;
 	m_viewportHalfSize = noone;
 }
+
+ds_list_destroy(m_viewportCallbacks);

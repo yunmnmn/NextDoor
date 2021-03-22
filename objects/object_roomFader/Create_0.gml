@@ -45,3 +45,8 @@ m_fadeSpeed = 0.0;
 m_callback = noone;
 m_fadeState = FadeState.FadeIn;
 m_alpha = 0.0;
+
+// Added later
+m_deleteAutomatically = true;
+
+m_dirty = false;

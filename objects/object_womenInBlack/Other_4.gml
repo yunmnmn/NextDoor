@@ -1,4 +1,5 @@
 m_speed = 1.3;
+m_endingSpeed = 1.0;
 m_speedTall = 1.6;
 
 // Trigger when Women is crawling towards Mimi
@@ -6,11 +7,35 @@ m_speedTall = 1.6;
 // Don't let Mimi outside anymore
 GameEndingRoom = function()
 {	
-	var TransitionToEndingRoom = function()
+	if(!GetMimiCaught())
 	{
+		return;
+	}
+	
+	transitionToEndingRoom = function()
+	{
+		// Delete the fader
+		fader.instance_destroy();
+		
+		// Reset the textbox
+		instance_textbox.Reset();
+		
+		// Change to the ending Room
 		ChangeRooms(room_ending);
 	}
-	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), TransitionToEndingRoom);
+	
+	// Show this text when Mimi did get caught
+	cb40_1 = function()
+	{
+		// Reset the textbox
+		instance_textbox.Reset();
+		
+		var c40_1 = new TextContext(noone, false, transitionToEndingRoom);
+		c40_1.AddSubText(new SubText("After that, I passed out...", 0.3, true));
+		RenderText(c40_1);
+	}
+	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), cb40_1);
+	fader.m_deleteAutomatically = false;
 	
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);

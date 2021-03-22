@@ -20,6 +20,9 @@ MimiFallsBackwards = function()
 		// Set to movement crawling
 		SetMimiCrawling(true);
 		
+		// Hack: move mimi 33 pixels to the left to match the anim_mimiLeapFromStand animation
+		PlayerSnapToClosestPosition(GetPlayerInstance().x - 33, GetPlayerInstance().y, true);
+		
 		// Disable the control the player has
 		SetControlState(PlayerControlState.PlayerNoControl);
 		

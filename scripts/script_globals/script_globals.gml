@@ -171,7 +171,7 @@ global.m_postRoomLoadCallbacks = ds_list_create();
 global.m_shadowSurfaceInstance = noone;
 
 // Set ending caught or not
-global.m_mimiCaught = false;
+global.m_mimiCaught = true;
 
 // Disable all triggers for Mimi
 global.m_disableAllTriggers = false;

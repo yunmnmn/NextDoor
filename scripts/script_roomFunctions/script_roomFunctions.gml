@@ -5,6 +5,8 @@ function CreateFader(p_fadeState, p_fadeSpeed, p_callback)
 	roomFader.SetFadeState(p_fadeState);
 	roomFader.SetFadingSpeed(p_fadeSpeed);
 	roomFader.SetCallback(p_callback);
+	
+	return roomFader;
 }
 
 // Changes the room to the one provided room name (as string)

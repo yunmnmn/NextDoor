@@ -8,4 +8,6 @@ if(m_play)
 	draw_sprite(movie_foreground, 0, 0, 0);
 	// Draw the top frames
 	draw_sprite(movie_womenTopFrames, m_drawFrame, 0, 0);
+	// Draw the shadowmap
+	draw_sprite(movie_shadowmap, 0, 0, 0);
 }
