@@ -67,8 +67,7 @@ if(m_textContext != noone)
 				m_markerFrame = (m_markerFrame + 1) % m_markerImageNumber;
 			}
 			// Draw a small white box on the bottom right corner to indicate that the text is finished
-			var spriteSize = new Vector2(m_markerWidth, m_markerHeight);
-			draw_sprite(m_textBoxMarkerSpriteIndex, m_markerFrame, x + sprite_width - spriteSize.m_x, y + sprite_height - spriteSize.m_y);
+			draw_sprite(m_textBoxMarkerSpriteIndex, m_markerFrame, x + sprite_width - m_markerWidth, y + sprite_height - m_markerHeight);
 		}
 	}
 	

@@ -44,6 +44,11 @@ function TextContext(p_avatarSpriteIndex, p_skippable, p_callback) constructor
 	
 	Free = function()
 	{
+		for(var i = 0; i < ds_list_size(m_subTexts); i++)
+		{
+			var subText = ds_list_find_value(m_subTexts, i);
+			delete subText;
+		}
 		ds_list_destroy(m_subTexts);
 	}
 }

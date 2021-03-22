@@ -35,6 +35,8 @@ function GetPath()
 
 function AddPathCallback(p_pathCallback)
 {
+	assert(p_pathCallback != noone, "Callback is invalid");
+	
 	// Before adding it to the callback list, check if the conditions are met already
 	var delta = GetPathDistanceFromPixels(p_pathCallback.m_pathIndex, 6);
 	if(p_pathCallback.m_callback != noone)
@@ -48,12 +50,20 @@ function AddPathCallback(p_pathCallback)
 			{
 				ds_list_add(m_pathCallbacks, p_pathCallback);
 			}
+			else
+			{
+				delete p_pathCallback;
+			}
 		}
 		else
 		{
 			// Else add it to the list
 			ds_list_add(m_pathCallbacks, p_pathCallback);
 		}
+	}
+	else
+	{
+		delete p_pathCallback;
 	}
 }
 

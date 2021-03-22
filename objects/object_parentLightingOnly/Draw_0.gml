@@ -8,8 +8,8 @@ var worldSpaceTopLeftY = y - sprite_get_yoffset(sprite_index);
 if(m_mirrored)
 {
 	// Get the width and height of the background sprite
-	var spriteSize = GetSpriteSize(sprite_index);
-	worldSpaceTopLeftX = x - (spriteSize.m_x - sprite_get_xoffset(sprite_index));
+	var spriteSizeX = GetSpriteSizeX(sprite_index);
+	worldSpaceTopLeftX = x - (spriteSizeX - sprite_get_xoffset(sprite_index));
 }
 
 // Calculate the normalized position of Sprite's topleft relative to the ShadowMap

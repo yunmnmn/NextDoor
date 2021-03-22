@@ -18,6 +18,14 @@ function RenderText(p_textContext)
 	
 	m_state = TextboxState.RenderingContext;
 	
+	// Clear the memory if there already is a TextContext
+	if(m_textContext != noone)
+	{
+		m_textContext.Free();
+		delete m_textContext;
+		m_textContext = noone;
+	}
+	
 	m_textContext = p_textContext;
 	m_subTextIndex = 0;
 	m_playSpeed = 0.0;

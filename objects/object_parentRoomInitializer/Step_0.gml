@@ -1,14 +1,24 @@
-if(m_followInstance || m_followPosition != noone)
+if(m_followInstance != noone || m_followPosition != noone)
 {
-	// TODO: recheck this all...
-	var followPosition = m_followPosition;
+	// TODO: recheck this all... m_followPosition could be noone
+	var followPositionX = 0;
+	var followPositionY = 0;
+	
+	if(m_followPosition)
+	{
+		followPositionX = m_followPosition.m_x;
+		followPositionY = m_followPosition.m_y;
+	}
+	
+	// Priority should be given to the instance, and then the position
 	if(m_followInstance != noone)
 	{
-		followPosition = new Vector2(m_followInstance.x, m_followInstance.y);
+		followPositionX = m_followInstance.x;
+		followPositionY = m_followInstance.y;
 	}
 
-	var followX = clamp(followPosition.m_x, m_viewportMinX + m_viewportHalfSize.m_x, m_viewportMaxX - m_viewportHalfSize.m_x);
-	var followY = clamp(followPosition.m_y, m_viewportMinY + m_viewportHalfSize.m_y, m_viewportMaxY - m_viewportHalfSize.m_y);
+	var followX = clamp(followPositionX, m_viewportMinX + m_viewportHalfSize.m_x, m_viewportMaxX - m_viewportHalfSize.m_x);
+	var followY = clamp(followPositionY, m_viewportMinY + m_viewportHalfSize.m_y, m_viewportMaxY - m_viewportHalfSize.m_y);
 
 	// Desired position
 	var newViewportPosX = followX - m_viewportHalfSize.m_x;

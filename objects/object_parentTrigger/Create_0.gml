@@ -6,7 +6,6 @@ function AddCollisionContext(p_collisionContext)
 
 function DeleteAllCollisionContexts()
 {
-	// TODO: delete all memory by iterating over all elements
 	for(var i = 0; i < ds_list_size(m_collisionContexts); i++)
 	{
 		var collisionContext = ds_list_find_value(m_collisionContexts, i);

@@ -1,1 +1,1 @@
-ds_list_destroy(m_collisionContexts);
+DeleteAllCollisionContexts();

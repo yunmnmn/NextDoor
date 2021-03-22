@@ -64,6 +64,12 @@ function GetViewportHeight()
 function SetViewportFollowInstance(p_instance)
 {
 	m_pan = 0.0;
+	
+	if(m_fromPosition != noone)
+	{
+		delete m_fromPosition;
+		m_fromPosition = noone;
+	}
 	m_fromPosition = new Vector2(GetViewportPositionX(), GetViewportPositionY());
 	
 	m_followInstance = p_instance;
@@ -73,9 +79,21 @@ function SetViewportFollowInstance(p_instance)
 function FollowPosition(p_position)
 {
 	m_pan = 0.0;
+
+	if(m_fromPosition != noone)
+	{
+		delete m_fromPosition;
+		m_fromPosition = noone;
+	}
 	m_fromPosition = new Vector2(GetViewportPositionX(), GetViewportPositionY());
 	
 	DisableFollowingInstance();
+	
+	if(m_followPosition != noone)
+	{
+		delete m_followPosition;
+		m_followPosition = noone;
+	}
 	m_followPosition = p_position;
 }
 
