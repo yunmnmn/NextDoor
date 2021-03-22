@@ -16,7 +16,7 @@ RemindToBuyDrink = function()
 	
 	// Start the monologue
 	var c35_1 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
-	c35_1.AddSubText(new SubText("I'm not going to find any drinks upstairs.", 0.2, true));
+	c35_1.AddSubText(new SubText("I'm not going to find any drinks upstairs.", 0.3, true));
 	RenderText(c35_1);
 	
 	// Set Mimi to idle
@@ -48,7 +48,7 @@ ScaredToGoUpstairs = function()
 	
 	// Start the monologue
 	var c36_1 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-	c36_1.AddSubText(new SubText("I'm not going up there, it give me the creeps.", 0.2, true));
+	c36_1.AddSubText(new SubText("I'm not going up there, it give me the creeps.", 0.3, true));
 	RenderText(c36_1);
 	
 	// Set Mimi to idle

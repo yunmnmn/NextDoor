@@ -15,7 +15,7 @@ function YoungsterStreamsConversation()
 	cb13_2 = function()
 	{	
 		var c13_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c13_2.AddSubText(new SubText("Sounded like it came from upstairs...", 0.2, true));
+		c13_2.AddSubText(new SubText("Sounded like it came from upstairs...", 0.3, true));
 		RenderText(c13_2);
 	}
 	
@@ -30,7 +30,7 @@ function YoungsterStreamsConversation()
 		
 		// Start of the conversation. Doesn't require a function
 		var c13_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb13_2);
-		c13_1.AddSubText(new SubText("What was that sound?", 0.2, true));
+		c13_1.AddSubText(new SubText("What was that?!", 0.6, true));
 		RenderText(c13_1);
 	}
 

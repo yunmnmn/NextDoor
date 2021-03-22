@@ -46,27 +46,27 @@ function MimiConversation()
 	cb1_4 = function()
 	{
 		var c1_4 = new TextContext(sprite_mimiAvatarAngry, true, conversationFinished);
-		c1_4.AddSubText(new SubText("I should give the guy upstairs a piece of my mind!", 0.2, true));
+		c1_4.AddSubText(new SubText("I should give the guy upstairs a piece of my mind!", 0.3, true));
 		RenderText(c1_4);
 	}
 	
 	cb1_3 = function()
 	{
 		var c1_3 = new TextContext(sprite_mimiAvatarAngry, true, cb1_4);
-		c1_3.AddSubText(new SubText("I can't study with this noise all the time!", 0.2, true));
+		c1_3.AddSubText(new SubText("I can't study with this noise all the time!", 0.3, true));
 		RenderText(c1_3);
 	}
 	
 	cb1_2 = function()
 	{		
 		var c1_2 = new TextContext(sprite_mimiAvatarAngry, true, cb1_3);
-		c1_2.AddSubText(new SubText("Oh, come on!", 0.2, true));
+		c1_2.AddSubText(new SubText("Oh, come on!", 0.3, true));
 		RenderText(c1_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
 	var c1_1 = new TextContext(sprite_mimiAvatarNormal, true, cb1_2);
-	c1_1.AddSubText(new SubText("...", 0.6, true));
+	c1_1.AddSubText(new SubText("...", 0.3, true));
 	RenderText(c1_1);
 	
 	// Set the next global state after the animation is finished playing
@@ -113,19 +113,19 @@ function MimiConversation2()
 	cb10_3 = function()
 	{
 		var c10_3 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
-		c10_3.AddSubText(new SubText("I could really use a drink.", 0.2, true));
+		c10_3.AddSubText(new SubText("I could really use a drink.", 0.3, true));
 		RenderText(c10_3);
 	}
 	
 	cb10_2 = function()
 	{
 		var c10_2 = new TextContext(sprite_mimiAvatarNormal, true, cb10_3);
-		c10_2.AddSubText(new SubText("I've been studying for so long...", 0.2, true));
+		c10_2.AddSubText(new SubText("I've been studying for so long...", 0.3, true));
 		RenderText(c10_2);
 	}
 
 	var c10_1 = new TextContext(sprite_mimiAvatarNormal, true, cb10_2);
-	c10_1.AddSubText(new SubText("Phew!", 0.2, true));
+	c10_1.AddSubText(new SubText("Phew!", 0.4, true));
 	RenderText(c10_1);
 }
 

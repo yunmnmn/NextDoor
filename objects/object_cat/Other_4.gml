@@ -10,21 +10,21 @@ CatMeows = function()
 	cb31_3 = function()
 	{
 		var c31_3 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-		c31_3.AddSubText(new SubText("It has a cursed face...", 0.2, true));
+		c31_3.AddSubText(new SubText("It has a cursed face...", 0.3, true));
 		RenderText(c31_3);
 	}
 
 	cb31_2 = function()
 	{
 		var c31_2 = new TextContext(sprite_mimiAvatarScared, true, cb31_3);
-		c31_2.AddSubText(new SubText("Who's cat is this?", 0.2, true));
+		c31_2.AddSubText(new SubText("Who's cat is this?", 0.4, true));
 		RenderText(c31_2);
 	}
 	
 	cb31_1 = function()
 	{
 		var c31_1 = new TextContext(sprite_catAvatar, true, cb31_2);
-		c31_1.AddSubText(new SubText("Meow!", 0.2, true));
+		c31_1.AddSubText(new SubText("Meow!", 0.6, true));
 		RenderText(c31_1);
 	}
 	

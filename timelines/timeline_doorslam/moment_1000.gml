@@ -23,7 +23,7 @@ else
 		}
 		
 		var c16_1 = new TextContext(sprite_mimiAvatarTroubled, true, MonologueFinished);	
-		c16_1.AddSubText(new SubText("Must have been the wind.", 0.6, true));
+		c16_1.AddSubText(new SubText("Must have been the wind.", 0.4, true));
 		RenderText(c16_1);
 		
 		// Back to idle scared

@@ -14,12 +14,12 @@ function NobodyIsHereConversation()
 	cb15_2 = function()
 	{	
 		var c15_2 = new TextContext(sprite_mimiAvatarTroubled, true, conversationFinished);
-		c15_2.AddSubText(new SubText("Nobody's home...", 0.2, true));
+		c15_2.AddSubText(new SubText("Nobody's home...", 0.3, true));
 		RenderText(c15_2);
 	}
 
 	var c15_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb15_2);
-	c15_1.AddSubText(new SubText("That's weird.", 0.6, true));
+	c15_1.AddSubText(new SubText("That's weird.", 0.4, true));
 	RenderText(c15_1);
 }
 
@@ -58,7 +58,7 @@ CannotGoToHallwayUp = function()
 	}
 	// Start the monologue
 	var c32_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-	c32_1.AddSubText(new SubText("Let's look around some more.", 0.2, true));
+	c32_1.AddSubText(new SubText("Let's look around some more.", 0.3, true));
 	RenderText(c32_1);
 	
 	// Set Mimi to IdleScared
@@ -90,7 +90,7 @@ WomenMightBeOutside = function()
 	}
 	// Start the monologue
 	var c33_1 = new TextContext(sprite_mimiAvatarScared, true, conversationFinished);
-	c33_1.AddSubText(new SubText("She could still be in the hallway.", 0.2, true));
+	c33_1.AddSubText(new SubText("She could still be in the hallway.", 0.3, true));
 	RenderText(c33_1);
 	
 	// Set Mimi to IdleScared

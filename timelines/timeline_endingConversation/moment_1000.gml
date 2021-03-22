@@ -18,7 +18,7 @@ if(GetMimiCaught())
 	
 	// Show this text when Mimi did get caught
 	var c38_1 = new TextContext(noone, false, cb38_2);
-	c38_1.AddSubText(new SubText("I escaped just in time...", 0.2, true));
+	c38_1.AddSubText(new SubText("I escaped just in time...", 0.3, true));
 	RenderText(c38_1);
 }
 else
@@ -27,7 +27,7 @@ else
 	cb40_3 = function()
 	{
 		var c40_3 = new TextContext(noone, false, noone);
-		c40_3.AddSubText(new SubText("I'm moving away as fast as I can.", 0.2, true));
+		c40_3.AddSubText(new SubText("I'm moving away as fast as I can.", 0.3, true));
 		c40_3.m_progressable = false;
 		RenderText(c40_3);
 	}
@@ -35,13 +35,13 @@ else
 	cb40_2 = function()
 	{
 		var c40_2 = new TextContext(noone, false, cb40_3);
-		c40_2.AddSubText(new SubText("As if nothing happened, the woman continued to reside nextdoor.", 0.2, true));
+		c40_2.AddSubText(new SubText("As if nothing happened, the woman continued to reside nextdoor.", 0.3, true));
 		RenderText(c40_2)
 	}
 	
 	// Show this text when Mimi did get caught
 	var c40_1 = new TextContext(noone, false, cb40_2);
-	c40_1.AddSubText(new SubText("After that, I passed out...", 0.2, true));
+	c40_1.AddSubText(new SubText("After that, I passed out...", 0.3, true));
 	RenderText(c40_1);
 }
 

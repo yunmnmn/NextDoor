@@ -15,28 +15,28 @@ function MimiConversation()
 	cb4_8 = function()
 	{
 		var c4_8 = new TextContext(sprite_youngsterAvatarNormal, true, conversationFinished);
-		c4_8.AddSubText(new SubText("Doesn't seem to be anyone around today though.", 0.2, true));
+		c4_8.AddSubText(new SubText("Doesn't seem to be anyone around today though.", 0.3, true));
 		RenderText(c4_8);
 	}
 	
 	cb4_7 = function()
 	{
 		var c4_7 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_8);
-		c4_7.AddSubText(new SubText("Sometimes I hear the door opening and closing.", 0.2, true));
+		c4_7.AddSubText(new SubText("Sometimes I hear the door opening and closing.", 0.3, true));
 		RenderText(c4_7);
 	}
 	
 	cb4_6 = function()
 	{
 		var c4_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_7);
-		c4_6.AddSubText(new SubText("I don't think it's empty...", 0.2, true));
+		c4_6.AddSubText(new SubText("I don't think it's empty...", 0.3, true));
 		RenderText(c4_6);
 	}
 	
 	cb4_5 = function()
 	{
 		var c4_5 = new TextContext(sprite_mimiAvatarAngry, true, cb4_6);
-		c4_5.AddSubText(new SubText("Of course they don't complain, if nobody lives there!", 0.2, true));
+		c4_5.AddSubText(new SubText("Of course they don't complain, if nobody lives there!", 0.4, true));
 		RenderText(c4_5);
 			
 		// Play the angry animation
@@ -70,7 +70,7 @@ function MimiConversation()
 		
 		// Walk walking, play line 4.2
 		var c4_4 = new TextContext(sprite_mimiAvatarTroubled, true, cb4_5);
-		c4_4.AddSubText(new SubText("You sure it's not just an empty room?", 0.2, true));
+		c4_4.AddSubText(new SubText("You sure it's not just an empty room?", 0.3, true));
 		c4_4.m_progressable = false;
 		RenderText(c4_4);
 	}
@@ -78,14 +78,14 @@ function MimiConversation()
 	cb4_3 = function()
 	{
 		var c2_3 = new TextContext(sprite_mimiAvatarTroubled, true, walkToYoungster_cb4_4);
-		c2_3.AddSubText(new SubText("Away?!", 0.2, true));
+		c2_3.AddSubText(new SubText("Away?!", 0.6, true));
 		RenderText(c2_3);
 	}
 	
 	cb4_2 = function()
 	{
 		var c4_2 = new TextContext(sprite_youngsterAvatarSmirk, true, cb4_3);
-		c4_2.AddSubText(new SubText("That neighbour seems to be away a lot.", 0.2, true));
+		c4_2.AddSubText(new SubText("That neighbour seems to be away a lot.", 0.3, true));
 		RenderText(c4_2);
 	}
 	
@@ -93,27 +93,27 @@ function MimiConversation()
 	cb4_1 = function()
 	{
 		var c4_1 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_2);
-		c4_1.AddSubText(new SubText("Probably not home...", 0.2, true));
+		c4_1.AddSubText(new SubText("Probably not home...", 0.3, true));
 		RenderText(c4_1)
 	}
 	
 	cb3_3 = function()
 	{
 		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, cb4_1);
-		c2_3.AddSubText(new SubText("Anybody there?", 0.2, true));
+		c2_3.AddSubText(new SubText("Anybody there?", 0.4, true));
 		RenderText(c2_3);
 	}
 	
 	cb3_2 = function()
 	{
 		var c2_2 = new TextContext(sprite_mimiAvatarAngry, true, cb3_3);
-		c2_2.AddSubText(new SubText("Are you home?!", 0.2, true));
+		c2_2.AddSubText(new SubText("Are you home?!", 0.4, true));
 		RenderText(c2_2);
 	}
 
 	// Start of the conversation. Doesn't require a function
 	var c3_1 = new TextContext(sprite_mimiAvatarAngry, true, cb3_2);
-	c3_1.AddSubText(new SubText("Excuse me! ", 0.2, true));
+	c3_1.AddSubText(new SubText("Excuse me! ", 0.4, true));
 
 	// Call the parent text context
 	if(RenderText(c3_1))

@@ -24,7 +24,7 @@ function NoticesMimi()
 		var c19_3 = new TextContext(anim_womanTurnAvatar, false, noone);
 		c19_3.m_avatarYOffset = - 16;
 		c19_3.m_progressable = false;
-		c19_3.AddSubText(new SubText("!", 0.2, true));
+		c19_3.AddSubText(new SubText("!", 0.6, true));
 		c19_3.m_animationCallback = BackToMimi;
 		RenderText(c19_3);
 	}

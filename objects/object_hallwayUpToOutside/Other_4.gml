@@ -42,7 +42,7 @@ CannotGoOutside = function()
 	}
 	// Start the monologue
 	var c28_1 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
-	c28_1.AddSubText(new SubText("I can't be the only one, who's bothered by this music...", 0.2, true));
+	c28_1.AddSubText(new SubText("I can't be the only one, who's bothered by this music...", 0.3, true));
 	RenderText(c28_1);
 	
 	// Set Mimi to idle
@@ -74,7 +74,7 @@ CannotGoOutside2 = function()
 	}
 	// Start the monologue
 	var c29_1 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
-	c29_1.AddSubText(new SubText("I'm not giving up just yet.", 0.2, true));
+	c29_1.AddSubText(new SubText("I'm not giving up just yet.", 0.4, true));
 	RenderText(c29_1);
 	
 	// Set Mimi to idle
