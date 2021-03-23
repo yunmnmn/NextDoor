@@ -46,6 +46,7 @@
     {"id":{"name":"timeline_pulseScreen","path":"timelines/timeline_pulseScreen/timeline_pulseScreen.yy",},"order":7,},
     {"id":{"name":"anim_mimiLeap","path":"sprites/anim_mimiLeap/anim_mimiLeap.yy",},"order":9,},
     {"id":{"name":"background_mimiRoomNight","path":"sprites/background_mimiRoomNight/background_mimiRoomNight.yy",},"order":1,},
+    {"id":{"name":"script_soundFunctions","path":"scripts/script_soundFunctions/script_soundFunctions.yy",},"order":8,},
     {"id":{"name":"foreground_fenceDay","path":"sprites/foreground_fenceDay/foreground_fenceDay.yy",},"order":3,},
     {"id":{"name":"object_curtain","path":"objects/object_curtain/object_curtain.yy",},"order":13,},
     {"id":{"name":"object_outsideLampNearStairs","path":"objects/object_outsideLampNearStairs/object_outsideLampNearStairs.yy",},"order":9,},

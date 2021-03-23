@@ -59,6 +59,9 @@ function MimiConversation()
 	
 	cb1_2 = function()
 	{		
+		// Don't draw the action prompt
+		instance_global.DrawActionPressPrompt(false, 170, 150);
+		
 		var c1_2 = new TextContext(sprite_mimiAvatarAngry, true, cb1_3);
 		c1_2.AddSubText(new SubText("Oh, come on!", 0.3, true));
 		RenderText(c1_2);
@@ -71,6 +74,9 @@ function MimiConversation()
 	
 	// Set the next global state after the animation is finished playing
 	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);	
+	
+	// Draw the action prompt
+	instance_global.DrawActionPressPrompt(true, 175, 150);
 }
 
 MimiComplainsAboutNoise = function()
