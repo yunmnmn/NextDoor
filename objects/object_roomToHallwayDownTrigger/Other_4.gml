@@ -21,6 +21,7 @@ var collisionEvent = function()
 }
 var collisionContext = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext.AllStates();
+collisionContext.m_promptIndex = anim_doorMark;
 AddCollisionContext(collisionContext);
 
 // HACK: prompt the controls

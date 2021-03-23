@@ -48,6 +48,17 @@ for(var i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 		if(!collisionContext.m_executeOnHit)
 		{
 			m_drawButtonPrompt = true;
+			
+			// Draw the prompt set in the CollisionContext
+			if(collisionContext.m_promptIndex != noone)
+			{
+				m_markSpriteIndex = collisionContext.m_promptIndex;
+			}
+			else
+			{
+				// Draw the default prompt
+				m_markSpriteIndex = anim_mark;
+			}
 		}
 		
 		m_elapsedTimeInMiliseconds += DeltaTimeInMiliseconds();

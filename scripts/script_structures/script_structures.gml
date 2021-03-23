@@ -80,6 +80,7 @@ function CollisionContext(p_collisionInstance, p_callback) constructor
 	m_executeOnHit = false;
 	m_persistant = false;
 	m_doNotExecuteOn = false;
+	m_promptIndex = noone;
 	
 	AddGlobalState1 = function(p_globalState1)
 	{
