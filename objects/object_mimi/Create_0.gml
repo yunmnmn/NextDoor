@@ -181,7 +181,7 @@ function PlayFootstepSound()
 	}
 	else // It's outside
 	{
-		// TODO: replace this
+		// TODO: replace this when outside sounds are available
 		var arrayIndex = random(array_length(hallwayWalkSounds));
 		footstepSoundIndex = hallwayWalkSounds[arrayIndex];
 	}
@@ -226,3 +226,7 @@ m_movementState = MimiMovementState.Idle;
 m_cachedPosition = m_position;
 m_cachedDirection = m_direction;
 m_cachedMovementState = m_movementState;
+
+// Create an array of dirty booleans
+m_soundPlayedInImageIndex = false;
+m_cachedFlooredImageIndex = 0.0;

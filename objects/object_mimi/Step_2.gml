@@ -170,10 +170,21 @@ else
 }
 
 // Play sounds here
+// HACK: Avoid playing sounds multiple times in the same image_index
+if(m_cachedFlooredImageIndex != floor(image_index))
+{
+	m_cachedFlooredImageIndex = floor(image_index);
+	m_soundPlayedInImageIndex = false;
+}
+
 if(sprite_index == anim_mimiWalk)
 {
-	if(image_index == 1 || image_index == 5)
+	if(floor(image_index) == 1 || floor(image_index) == 5)
 	{
-		PlayFootstepSound();
+		if(!m_soundPlayedInImageIndex)
+		{
+			PlayFootstepSound();
+			m_soundPlayedInImageIndex = true;
+		}
 	}
 }
