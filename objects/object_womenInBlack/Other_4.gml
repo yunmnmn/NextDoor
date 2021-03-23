@@ -46,6 +46,12 @@ GameEndingRoom = function()
 	// Freeze at the last frame when she's caught
 	PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
 	
+	// Stop the animation of the women
+	image_speed = 0.5;
+	
+	// Stop the women from moving
+	path_speed = 0.3;
+	
 	// Scream dialogue
 	var c39_1 = new TextContext(sprite_mimiAvatarYell, false, noone);
 	c39_1.AddSubText(new SubText("KYAAAH!", 0.6, true));

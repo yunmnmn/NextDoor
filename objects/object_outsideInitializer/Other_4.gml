@@ -13,7 +13,7 @@ var pathLowCallback = function()
 	PlayerSetPath(path_outsideHigh, 1.0);
 }
 
-if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink)
+if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink && GetGlobalGameState() != GlobalGameStates.MimiReturnsFromDrinking)
 {
 	PlayerSetPathEndCallback(path_outsideLow, pathLowCallback, true, PathCallbackType.LowToHigh);
 }
@@ -27,7 +27,7 @@ var pathHighCallback = function()
 	// TODO: test this path set to 1.0
 	PlayerSetPath(path_outsideLow, 1.0);
 }
-if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink)
+if(GetGlobalGameState() != GlobalGameStates.MimiGetsDrink && GetGlobalGameState() != GlobalGameStates.MimiReturnsFromDrinking)
 {
 	PlayerSetPathEndCallback(path_outsideHigh, pathHighCallback, true, PathCallbackType.LowToHigh);
 }
