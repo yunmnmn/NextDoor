@@ -31,6 +31,9 @@ function MimiAndOldtimerConversation()
 		instance_hallwayUpMemory.SetDoorOldtimerVisible(false);
 		instance_hallwayUpMemory.SetOldtimerVisible(false);
 		
+		// Play the Hallway Door Close sound
+		PlaySound(foley_hallwayDoorClose, 100, false);
+		
 		var c8_1 = new TextContext(sprite_mimiAvatarNormal, true, cb8_2);
 		c8_1.AddSubText(new SubText("That is weird and all.", 0.3, true));
 		RenderText(c8_1);

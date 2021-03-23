@@ -1,5 +1,5 @@
 {
-  "compression": 1,
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "foley_appartmentDoorOpen.wav",
-  "duration": 2.507313,
+  "soundFile": "foley_walkingStep3.wav",
+  "duration": 0.636973,
   "parent": {
     "name": "Appartments",
     "path": "folders/Sounds/Foley/Appartments.yy",
   },
   "resourceVersion": "1.0",
-  "name": "foley_appartmentDoorOpen",
+  "name": "foley_walkingStep3",
   "tags": [],
   "resourceType": "GMSound",
 }

@@ -13,8 +13,8 @@
   "soundFile": "foley_appartmentStandUp.wav",
   "duration": 2.507313,
   "parent": {
-    "name": "Foley",
-    "path": "folders/Sounds/Foley.yy",
+    "name": "Appartments",
+    "path": "folders/Sounds/Foley/Appartments.yy",
   },
   "resourceVersion": "1.0",
   "name": "foley_appartmentStandUp",

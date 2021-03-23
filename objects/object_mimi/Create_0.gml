@@ -150,6 +150,45 @@ function MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
 	AddPathCallback(new PathCallback(m_path, pathPosition, snappingCallback, false, PathCallbackType.Both));
 }
 
+function PlayFootstepSound()
+{
+	// Appartment footstep sounds
+	appartmentWalkSounds[0] = foley_appartmentWalkingStep1;
+	appartmentWalkSounds[1] = foley_appartmentWalkingStep2;
+	appartmentWalkSounds[2] = foley_appartmentWalkingStep3;
+	appartmentWalkSounds[3] = foley_appartmentWalkingStep4;
+	appartmentWalkSounds[4] = foley_appartmentWalkingStep5;
+	
+	// Hallway footstep sounds
+	hallwayWalkSounds[0] = foley_hallwayWalkingStep1;
+	hallwayWalkSounds[1] = foley_hallwayWalkingStep2;
+	hallwayWalkSounds[2] = foley_hallwayWalkingStep3;
+	hallwayWalkSounds[3] = foley_hallwayWalkingStep4;
+	hallwayWalkSounds[4] = foley_hallwayWalkingStep5;
+	
+	var footstepSoundIndex = noone;
+	
+	// Play Appartment footsteps
+	if(GetRoomType() == RoomType.Appartment)
+	{
+		var arrayIndex = random(array_length(appartmentWalkSounds));
+		footstepSoundIndex = appartmentWalkSounds[arrayIndex];
+	}
+	else if(GetRoomType() == RoomType.Hallway)
+	{
+		var arrayIndex = random(array_length(hallwayWalkSounds));
+		footstepSoundIndex = hallwayWalkSounds[arrayIndex];
+	}
+	else // It's outside
+	{
+		// TODO: replace this
+		var arrayIndex = random(array_length(hallwayWalkSounds));
+		footstepSoundIndex = hallwayWalkSounds[arrayIndex];
+	}
+	
+	PlaySound(footstepSoundIndex, 10, false);
+}
+
 // Register mimi to the global object
 RegisterPlayerInstance(id);
 

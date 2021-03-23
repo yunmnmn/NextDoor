@@ -168,3 +168,12 @@ else
 	m_cachedDirection = m_direction;
 	m_cachedMovementState = m_movementState;
 }
+
+// Play sounds here
+if(sprite_index == anim_mimiWalk)
+{
+	if(image_index == 1 || image_index == 5)
+	{
+		PlayFootstepSound();
+	}
+}

@@ -20,6 +20,13 @@ enum PlayerControlState
 	Talking,			// When this state is set, the player has no control of Mimi, and is in a talking state
 }
 
+enum RoomType
+{
+	Appartment,
+	Hallway,
+	Outside
+}
+
 // TODO: remove the s
 enum GlobalGameStates
 {

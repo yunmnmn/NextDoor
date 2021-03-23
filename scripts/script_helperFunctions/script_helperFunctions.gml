@@ -69,12 +69,38 @@ function GetPathDistanceFromPixels(p_pathIndex, p_pixels)
 	return onePixel * p_pixels;
 }
 
+// Finds the normalized path position of the path point
 function SnapToClosestPathIndex(p_pathIndex, p_pathPoint)
 {
 	var xPos = path_get_point_x(p_pathIndex, p_pathPoint);
     var yPos = path_get_point_y(p_pathIndex, p_pathPoint);
 	
 	return SnapToClosestPosition(p_pathIndex, xPos, yPos);
+}
+
+// Gets the roomtype
+function GetRoomType()
+{
+	if(	room == room_mimiRoom ||
+		room == room_youngsterRoom ||
+		room == room_testLevel)
+	{
+		return RoomType.Appartment;
+	}
+	else if(room == room_hallwayDown ||
+			room == room_hallwayUp ||
+			room == room_ending)
+	{
+		return RoomType.Hallway;
+	}
+	else if(room = room_outside)
+	{
+		return RoomType.Outside;
+	}
+	else
+	{
+		assert(false, "Not a valid room");
+	}
 }
 
 // Finds the normalized path position from the room position

@@ -1,5 +1,5 @@
 {
-  "compression": 1,
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "foley_appartmentDoorOpen.wav",
-  "duration": 2.507313,
+  "soundFile": "foley_hallwayDoorClose.wav",
+  "duration": 2.211871,
   "parent": {
-    "name": "Appartments",
-    "path": "folders/Sounds/Foley/Appartments.yy",
+    "name": "Foley",
+    "path": "folders/Sounds/Foley.yy",
   },
   "resourceVersion": "1.0",
-  "name": "foley_appartmentDoorOpen",
+  "name": "foley_hallwayDoorClose",
   "tags": [],
   "resourceType": "GMSound",
 }
