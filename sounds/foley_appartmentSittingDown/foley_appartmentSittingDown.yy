@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "foley_appartmentStandUp.wav",
+  "soundFile": "foley_appartmentSittingDown.wav",
   "duration": 2.507313,
   "parent": {
     "name": "MimiRoom",
     "path": "folders/Sounds/Foley/MimiRoom.yy",
   },
   "resourceVersion": "1.0",
-  "name": "foley_appartmentStandUp",
+  "name": "foley_appartmentSittingDown",
   "tags": [],
   "resourceType": "GMSound",
 }
