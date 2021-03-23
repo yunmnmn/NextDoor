@@ -41,6 +41,9 @@ function MimiConversation()
 		// Set the animation speed back when it's finished playing the conversation
 		// Play the sitting animation
 		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
+		
+		// Play the StandUp sound
+		PlaySound(foley_appartmentStandUp, 100, false);
 	}
 	
 	cb1_4 = function()

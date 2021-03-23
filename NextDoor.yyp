@@ -187,6 +187,7 @@
     {"id":{"name":"object_parentObject","path":"objects/object_parentObject/object_parentObject.yy",},"order":2,},
     {"id":{"name":"anim_mimiIdleToScared","path":"sprites/anim_mimiIdleToScared/anim_mimiIdleToScared.yy",},"order":4,},
     {"id":{"name":"foreground_openDoorYoungster","path":"sprites/foreground_openDoorYoungster/foreground_openDoorYoungster.yy",},"order":0,},
+    {"id":{"name":"foley_appartmentStandUp","path":"sounds/foley_appartmentStandUp/foley_appartmentStandUp.yy",},"order":1,},
     {"id":{"name":"anim_youngsterPoint","path":"sprites/anim_youngsterPoint/anim_youngsterPoint.yy",},"order":1,},
     {"id":{"name":"object_textbox","path":"objects/object_textbox/object_textbox.yy",},"order":2,},
     {"id":{"name":"sprite_youngsterAvatarNormal","path":"sprites/sprite_youngsterAvatarNormal/sprite_youngsterAvatarNormal.yy",},"order":0,},

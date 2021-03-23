@@ -17,6 +17,8 @@ var collisionEvent = function()
 		ChangeRoomAndSetPath(room_hallwayDown, path_hallwayDown, pathPosition, false);
 	}
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
+	
+	// Play the door sound
 	PlaySound(foley_appartmentDoorOpen, 1, false);
 }
 var collisionContext = new CollisionContext(GetPlayerInstance(), collisionEvent);

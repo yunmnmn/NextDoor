@@ -269,16 +269,17 @@ function collisionEvent()
 	PlayerPlayAnimation2(PlayerGetIdleSprite(), noone);
 	
 	// Fade, and when finished, load the hallway
+	var fadeEndCallback = function()
 	{
-		var fadeEndCallback = function()
-		{
-			SetControlState(PlayerControlState.PlayerControl);
+		SetControlState(PlayerControlState.PlayerControl);
 			
-			var pathPosition = SnapToClosestPosition(path_youngsterRoom, 1600, 342);
-			ChangeRoomAndSetPath(room_youngsterRoom, path_youngsterRoom, pathPosition, true);
-		}
-		CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
+		var pathPosition = SnapToClosestPosition(path_youngsterRoom, 1600, 342);
+		ChangeRoomAndSetPath(room_youngsterRoom, path_youngsterRoom, pathPosition, true);
 	}
+	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
+	
+	// Play the door sound
+	PlaySound(foley_appartmentDoorOpen, 1, false);
 }
 
 // Third use of the collider

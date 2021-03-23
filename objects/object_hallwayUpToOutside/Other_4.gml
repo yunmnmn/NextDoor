@@ -17,6 +17,9 @@ transitionToOutside = function()
 		ChangeRoomAndSetPath(room_outside, path_outsideHigh, pathPosition, false);
 	}
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
+	
+	// Play the door sound
+	PlaySound(foley_appartmentDoorOpen, 1, false);
 }
 
 var collisionContext1 = new CollisionContext(GetPlayerInstance(), transitionToOutside);
