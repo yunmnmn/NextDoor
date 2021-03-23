@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 4,
-  "bbox_right": 67,
-  "bbox_top": 4,
-  "bbox_bottom": 115,
+  "bbox_left": 0,
+  "bbox_right": 35,
+  "bbox_top": 0,
+  "bbox_bottom": 59,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 72,
-  "height": 120,
+  "width": 36,
+  "height": 60,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,27 +24,27 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"66d53c4f-103e-488f-81a1-9cc1d48e516d","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"66d53c4f-103e-488f-81a1-9cc1d48e516d","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"66d53c4f-103e-488f-81a1-9cc1d48e516d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"07b927ca-831b-41b4-bed6-c72af9ee80e7","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"07b927ca-831b-41b4-bed6-c72af9ee80e7","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"07b927ca-831b-41b4-bed6-c72af9ee80e7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8d07c6cc-e108-4d4d-93dd-71df2795618f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8d07c6cc-e108-4d4d-93dd-71df2795618f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"8d07c6cc-e108-4d4d-93dd-71df2795618f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ae337fc5-f611-4441-a028-3c278904c31b","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae337fc5-f611-4441-a028-3c278904c31b","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"ae337fc5-f611-4441-a028-3c278904c31b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0b91d548-3e38-471c-b102-96e131415999","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0b91d548-3e38-471c-b102-96e131415999","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"0b91d548-3e38-471c-b102-96e131415999","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"aaae7c51-2062-4fc9-9df4-29d3f7193f7d","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aaae7c51-2062-4fc9-9df4-29d3f7193f7d","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"aaae7c51-2062-4fc9-9df4-29d3f7193f7d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bc2360ad-a988-478e-a1b5-8ccbfc0843bc","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bc2360ad-a988-478e-a1b5-8ccbfc0843bc","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"bc2360ad-a988-478e-a1b5-8ccbfc0843bc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"05728e1f-9be7-42cb-bcc8-4aefdcf2dcb1","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"05728e1f-9be7-42cb-bcc8-4aefdcf2dcb1","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"05728e1f-9be7-42cb-bcc8-4aefdcf2dcb1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d0fcf0c8-f4ff-4505-a6be-df59bced68e4","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d0fcf0c8-f4ff-4505-a6be-df59bced68e4","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"d0fcf0c8-f4ff-4505-a6be-df59bced68e4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"65aa1273-224b-4c2b-aed5-440293829e34","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"65aa1273-224b-4c2b-aed5-440293829e34","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"65aa1273-224b-4c2b-aed5-440293829e34","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"807f332e-b61b-4af1-8847-bf046f2c1704","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"807f332e-b61b-4af1-8847-bf046f2c1704","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"807f332e-b61b-4af1-8847-bf046f2c1704","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f1c31492-4d58-4419-a6f8-f227cc207069","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f1c31492-4d58-4419-a6f8-f227cc207069","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"f1c31492-4d58-4419-a6f8-f227cc207069","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ee084948-7813-4908-a5c4-da9cd80d7224","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ee084948-7813-4908-a5c4-da9cd80d7224","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"ee084948-7813-4908-a5c4-da9cd80d7224","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"19cf2bc8-7773-498c-860f-59596f5c417f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"19cf2bc8-7773-498c-860f-59596f5c417f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"LayerId":{"name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","name":"19cf2bc8-7773-498c-860f-59596f5c417f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},
@@ -59,13 +59,13 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1d779eee-80cf-44a1-b333-1a203c651b27","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"66d53c4f-103e-488f-81a1-9cc1d48e516d","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"f9f0b333-0369-40b3-976e-ea9b3403a23b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"07b927ca-831b-41b4-bed6-c72af9ee80e7","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"5aae7034-6825-41ce-a952-8a9423af6d07","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8d07c6cc-e108-4d4d-93dd-71df2795618f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"da64da90-6f49-4ab1-bc8c-70c1185b84b9","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae337fc5-f611-4441-a028-3c278904c31b","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"b5f5c05c-456e-40f2-bd11-e749e12c0750","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0b91d548-3e38-471c-b102-96e131415999","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"45fac42f-828e-4170-8a79-2e81f16050e3","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aaae7c51-2062-4fc9-9df4-29d3f7193f7d","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"c5f042b2-62b7-4795-af91-ca9aca364420","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bc2360ad-a988-478e-a1b5-8ccbfc0843bc","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"14b7e022-ac2e-46d2-b4da-847eda210172","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05728e1f-9be7-42cb-bcc8-4aefdcf2dcb1","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9e76b1bd-3a1a-44c7-ad53-83c15ae0582e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0fcf0c8-f4ff-4505-a6be-df59bced68e4","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c1ebc3a6-5b7d-4cfa-b63a-bcfed5a6d9a2","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"65aa1273-224b-4c2b-aed5-440293829e34","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"5b95dc71-1474-4e2e-a020-206cec1efe92","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"807f332e-b61b-4af1-8847-bf046f2c1704","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4dcdf315-0301-4029-98dd-431d0b852cf0","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f1c31492-4d58-4419-a6f8-f227cc207069","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0ab398d0-1fae-4267-a272-77517c17f4e1","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ee084948-7813-4908-a5c4-da9cd80d7224","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b8bda9dc-228a-44ca-9dc5-ad3bc667eee2","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19cf2bc8-7773-498c-860f-59596f5c417f","path":"sprites/anim_doorMark/anim_doorMark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -78,8 +78,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 36,
-    "yorigin": 120,
+    "xorigin": 18,
+    "yorigin": 60,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"anim_doorMark","path":"sprites/anim_doorMark/anim_doorMark.yy",},
@@ -89,7 +89,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bcaa919f-2bf1-491f-9d47-f1fa95623840","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b8aaf485-8e84-47b0-9025-63e8444bc05f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Additional",

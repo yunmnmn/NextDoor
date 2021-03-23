@@ -69,6 +69,35 @@ function PathCallback(p_pathIndex, p_position, p_callback, p_persistant, p_callb
 	m_callbackType = p_callbackType;
 }
 
+function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex)
+{
+	m_soundIndex = p_soundIndex;
+	m_spriteIndex = p_spriteIndex;
+	m_imageIndex = p_imageIndex;
+	m_persistent = false;
+	m_listener = noone;
+	m_positionX = noone;
+	m_positionY = noone;
+	
+	m_dirty = false;
+	
+	SetPersistent = function(p_persistent)
+	{
+		m_persistent = p_persistent;
+	}
+	
+	SetListener = function(p_listener)
+	{
+		m_listener = p_listener;
+	}
+	
+	SetPosition = function(p_positionX, p_positionY)
+	{
+		m_positionX = p_positionX;
+		m_positionY = p_positionY;
+	}
+}
+
 function CollisionContext(p_collisionInstance, p_callback) constructor
 {
 	m_collisionInstance = p_collisionInstance;

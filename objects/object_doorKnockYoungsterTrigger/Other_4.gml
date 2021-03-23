@@ -285,6 +285,7 @@ function collisionEvent()
 // Third use of the collider
 var collisionContext3 = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext3.AddGlobalState1(GlobalGameStates.MimiEntersYoungstersRoom);
+collisionContext3.m_promptIndex = anim_doorMark;
 AddCollisionContext(collisionContext3);
 
 // HACK: Add a trigger when the door is closed by youngster

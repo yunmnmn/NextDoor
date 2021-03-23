@@ -21,9 +21,9 @@ transitionToOutside = function()
 	// Play the door sound
 	PlaySound(foley_appartmentDoorOpen, 1, false);
 }
-
 var collisionContext1 = new CollisionContext(GetPlayerInstance(), transitionToOutside);
 collisionContext1.m_doNotExecuteOn = true;
+collisionContext1.m_promptIndex = anim_doorMark;
 collisionContext1.AddGlobalState2(GlobalGameStates.MimiGoingToKnockAtNeighbour, GlobalGameStates.MimiWalksToOldtimer);
 AddCollisionContext(collisionContext1);
 

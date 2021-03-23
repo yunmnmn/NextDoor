@@ -19,7 +19,7 @@ function collisionEvent()
 	// Play the door sound
 	PlaySound(foley_appartmentDoorOpen, 1, false);
 }
-
 var collisionContext = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext.AllStates();
+collisionContext.m_promptIndex = anim_doorMark;
 AddCollisionContext(collisionContext);
