@@ -16,6 +16,9 @@ function MimiConversation()
 		
 		// Enable all triggers again
 		SetDisableAllTriggers(false);
+		
+		// Add the option to talk to the ScaredYoungster
+		instance_youngsterOutside.AddTalkingToScaredYoungster();
 	}
 	
 	cb12_7 = function()
