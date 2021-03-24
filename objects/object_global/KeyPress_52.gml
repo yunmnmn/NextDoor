@@ -1,9 +1,6 @@
 // Progress to sequence 4
 if(keyboard_check(vk_shift) && DebugMode())
 {
-	// Follow the player again
-	SetViewportFollowInstance(GetPlayerInstance());
-	
 	if(GetTextboxInstance() != noone)
 	{
 		GetTextboxInstance().Reset();
@@ -12,8 +9,13 @@ if(keyboard_check(vk_shift) && DebugMode())
 	// Set the PlayerPath when all objects are created.
 	var postRoomLoadCallback = function()
 	{
+		// Follow the player again
+		SetViewportFollowInstance(GetPlayerInstance());
+		
 		// Play the Women timeline
 		PlayTimeline(timeline_womenMoves);
+		
+		// Give the player the ControlState
 		SetControlState(PlayerControlState.PlayerControl);
 	}
 	AddPostRoomLoadCallback(postRoomLoadCallback);
