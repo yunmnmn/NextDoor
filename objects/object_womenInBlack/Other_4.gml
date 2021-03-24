@@ -30,6 +30,9 @@ GameEndingRoom = function()
 	// Show this text when Mimi did get caught
 	cb40_1 = function()
 	{
+		// Don't render the fader over the textbox anymore
+		fader.m_overTextbox = false;
+		
 		// Reset the textbox
 		if(GetTextboxInstance() != noone)
 		{
@@ -42,6 +45,7 @@ GameEndingRoom = function()
 	}
 	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), cb40_1);
 	fader.m_deleteAutomatically = false;
+	fader.m_overTextbox = true;
 	
 	// Don't give the control to the player while transitioning
 	SetControlState(PlayerControlState.PlayerNoControl);

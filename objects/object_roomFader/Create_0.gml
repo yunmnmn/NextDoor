@@ -48,5 +48,6 @@ m_alpha = 0.0;
 
 // Added later
 m_deleteAutomatically = true;
+m_overTextbox = false;
 
 m_dirty = false;
