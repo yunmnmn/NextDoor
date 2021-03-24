@@ -18,7 +18,10 @@ GameEndingRoom = function()
 		fader.instance_destroy();
 		
 		// Reset the textbox
-		instance_textbox.Reset();
+		if(GetTextboxInstance() != noone)
+		{
+			GetTextboxInstance().Reset();
+		}
 		
 		// Change to the ending Room
 		ChangeRooms(room_ending);
@@ -28,7 +31,10 @@ GameEndingRoom = function()
 	cb40_1 = function()
 	{
 		// Reset the textbox
-		instance_textbox.Reset();
+		if(GetTextboxInstance() != noone)
+		{
+			GetTextboxInstance().Reset();
+		}
 		
 		var c40_1 = new TextContext(noone, false, transitionToEndingRoom);
 		c40_1.AddSubText(new SubText("After that, I passed out...", 0.3, true));

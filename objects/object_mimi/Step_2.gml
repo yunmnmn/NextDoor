@@ -174,17 +174,55 @@ else
 if(m_cachedFlooredImageIndex != floor(image_index))
 {
 	m_cachedFlooredImageIndex = floor(image_index);
-	m_soundPlayedInImageIndex = false;
+	
+	// Reset all the sound contexts
+	for(var i = 0; i < ds_list_size(m_soundContexts); i++)
+	{
+		var soundContext = ds_list_find_value(m_soundContexts, i);
+		soundContext.m_dirty = false;
+	}
 }
 
-if(sprite_index == anim_mimiWalk)
+// Iterate through all SoundContexts and see if something needs to be played
+for(var i = 0; i < ds_list_size(m_soundContexts);  /*don't iuncrement here*/)
 {
-	if(floor(image_index) == 1 || floor(image_index) == 5)
+	var soundContext = ds_list_find_value(m_soundContexts, i);
+	assert(soundContext != noone, "SoundContext in array is invalid");
+	
+	if(	sprite_index == soundContext.m_spriteIndex &&
+		m_cachedFlooredImageIndex == soundContext.m_imageIndex)
 	{
-		if(!m_soundPlayedInImageIndex)
+		if(soundContext.m_playPredicate() && !soundContext.m_dirty)
 		{
-			PlayFootstepSound();
-			m_soundPlayedInImageIndex = true;
+			var soundIndex = soundContext.m_soundPredicate();
+			
+			// Doesn't have a listener, so play it in general
+			if(soundContext.m_listener == noone)
+			{
+				PlaySound(soundIndex, soundContext.m_priority, soundContext.m_loop);
+			}
+			else
+			{
+				// TODO: play with listener and position
+			}
 		}
+		
+		// Set the dirty flag to true, so the context knows it's already been played
+		soundContext.m_dirty = true;
+		
+		// Delete it if the SoundContext isn't persistent
+		if(!soundContext.m_persistent)
+		{
+			delete soundContext;
+			ds_list_delete(m_pathCallbacks, i);
+		}
+		else
+		{
+			i++;
+		}
+	}
+	else
+	{
+		i++;
 	}
 }

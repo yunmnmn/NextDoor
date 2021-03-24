@@ -3,5 +3,8 @@ if(keyboard_check(vk_shift) && DebugMode())
 {
 	SetGlobalGameState(GlobalGameStates.MimiReturnsFromDrinking);
 	ChangeRoomAndSetPath(room_hallwayDown, path_hallwayDown, 0.45, true);
-	instance_textbox.Reset();
+	if(GetTextboxInstance() != noone)
+	{
+		GetTextboxInstance().Reset();
+	}
 }

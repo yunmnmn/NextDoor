@@ -11,7 +11,10 @@ else if(m_womenAnimationState == WomenScaryAnimationState.NoticeMimi)
 	{
 		m_dirty = true;
 		
-		instance_textbox.Reset();
+		if(GetTextboxInstance() != noone)
+		{
+			GetTextboxInstance().Reset();
+		}
 	
 		var c19_2 = new TextContext(sprite_womanTurnIdleAvatar, false, noone);
 		c19_2.m_avatarYOffset = - 16;

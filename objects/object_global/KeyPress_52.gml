@@ -4,7 +4,10 @@ if(keyboard_check(vk_shift) && DebugMode())
 	// Follow the player again
 	SetViewportFollowInstance(GetPlayerInstance());
 	
-	instance_textbox.Reset();
+	if(GetTextboxInstance() != noone)
+	{
+		GetTextboxInstance().Reset();
+	}
 	
 	// Set the PlayerPath when all objects are created.
 	var postRoomLoadCallback = function()

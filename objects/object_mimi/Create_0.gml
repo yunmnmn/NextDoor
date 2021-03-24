@@ -1,3 +1,6 @@
+
+// -------------------------- Enums colliding event --------------------------
+
 enum MimiMovementState
 {
 	Idle,
@@ -9,6 +12,37 @@ enum Direction
 	Left,
 	Right
 }
+
+// -------------------------- Members--------------------------
+
+m_position = 0.0;
+m_path = noone;
+m_pathSpeed = 0.0;
+
+// Path callbacks
+m_pathCallbacks = ds_list_create();
+
+// SoundContexts
+m_soundContexts = ds_list_create();
+
+// This callback will be called when the animatino is finished
+m_callbackAnimationEnd = noone;
+m_callbackAnimationEndBackwards = noone;
+
+// These variables are set by the player object itself
+m_mirrored = false;
+m_direction = Direction.Right;
+m_movementState = MimiMovementState.Idle;
+
+// Cached position is used to determine the animation to play
+m_cachedPosition = m_position;
+m_cachedDirection = m_direction;
+m_cachedMovementState = m_movementState;
+
+// Create an array of dirty booleans
+m_cachedFlooredImageIndex = 0;
+
+// -------------------------- Functions colliding event --------------------------
 
 function SetPath(p_pathIndex, p_position)
 {	
@@ -150,6 +184,12 @@ function MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
 	AddPathCallback(new PathCallback(m_path, pathPosition, snappingCallback, false, PathCallbackType.Both));
 }
 
+function AddSoundContext(p_soundContext)
+{
+	assert(p_soundContext != noone, "SoundContext is invalid");
+	ds_list_add(m_soundContexts, p_soundContext);
+}
+
 function PlayFootstepSound()
 {
 	// Appartment footstep sounds
@@ -186,7 +226,7 @@ function PlayFootstepSound()
 		footstepSoundIndex = hallwayWalkSounds[arrayIndex];
 	}
 	
-	PlaySound(footstepSoundIndex, 10, false);
+	return footstepSoundIndex;
 }
 
 // Register mimi to the global object
@@ -205,28 +245,29 @@ else
 	SetSpeed(0.15); 
 }
 
-m_position = 0.0;
+var mimiNormalWalkPlayPredicate = function()
+{
+	return !GetMimiCrawling() && !GetMimiScared();
+}
 
-m_path = noone;
-m_pathSpeed = 0.0;
+// -------------------------- Sounds --------------------------
 
-// Path callbacks
-m_pathCallbacks = ds_list_create();
+// Set the SoundContexts for Normal Mimi walking
+{
+	var mimiNormalWalkSoundContext1 = new SoundContext(noone, anim_mimiWalk, 1);
+	mimiNormalWalkSoundContext1.SetPersistent(true);
+	mimiNormalWalkSoundContext1.SetSoundPredicate(PlayFootstepSound);
+	mimiNormalWalkSoundContext1.SetPlayPredicate(mimiNormalWalkPlayPredicate);
+	AddSoundContext(mimiNormalWalkSoundContext1);
 
-// This callback will be called when the animatino is finished
-m_callbackAnimationEnd = noone;
-m_callbackAnimationEndBackwards = noone;
+	var mimiNormalWalkSoundContext5 = new SoundContext(noone, anim_mimiWalk, 5);
+	mimiNormalWalkSoundContext5.SetPersistent(true);
+	mimiNormalWalkSoundContext5.SetSoundPredicate(PlayFootstepSound);
+	mimiNormalWalkSoundContext5.SetPlayPredicate(mimiNormalWalkPlayPredicate);
+	AddSoundContext(mimiNormalWalkSoundContext5);
+}
 
-// These variables are set by the player object itself
-m_mirrored = false;
-m_direction = Direction.Right;
-m_movementState = MimiMovementState.Idle;
-
-// Cached position is used to determine the animation to play
-m_cachedPosition = m_position;
-m_cachedDirection = m_direction;
-m_cachedMovementState = m_movementState;
-
-// Create an array of dirty booleans
-m_soundPlayedInImageIndex = false;
-m_cachedFlooredImageIndex = 0.0;
+// Set the sound for MimiStomping
+var mimiStompSoundContext = new SoundContext(foley_hallwayMimiStomp, anim_mimiAngry, 1);
+mimiStompSoundContext.SetPersistent(true);
+AddSoundContext(mimiStompSoundContext);

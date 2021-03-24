@@ -119,7 +119,10 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 		// Set the slats visible
 		instance_womenSlats.visible = true;
 		
-		instance_textbox.Reset();
+		if(GetTextboxInstance() != noone)
+		{
+			GetTextboxInstance().Reset();
+		}
 		
 		// Play stats animation
 		PlaySlatsAnimation = function()
@@ -187,7 +190,10 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				}
 			
 				// Start of the conversation.
-				instance_textbox.Reset();
+				if(GetTextboxInstance() != noone)
+				{
+					GetTextboxInstance().Reset();
+				}
 				var c23_1 = new TextContext(sprite_mimiAvatarScared, true, cb23_2);
 				c23_1.AddSubText(new SubText("What is she?", 0.4, true));
 				RenderText(c23_1)

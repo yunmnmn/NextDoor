@@ -69,15 +69,27 @@ function PathCallback(p_pathIndex, p_position, p_callback, p_persistant, p_callb
 	m_callbackType = p_callbackType;
 }
 
-function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex)
+function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 {
 	m_soundIndex = p_soundIndex;
+	m_priority = 100;
+	m_loop = false;
 	m_spriteIndex = p_spriteIndex;
 	m_imageIndex = p_imageIndex;
 	m_persistent = false;
 	m_listener = noone;
 	m_positionX = noone;
 	m_positionY = noone;
+	
+	// Set the default predicates
+	m_playPredicate = function()
+	{
+		return true;
+	}
+	m_soundPredicate = function()
+	{
+		return m_soundIndex;
+	}
 	
 	m_dirty = false;
 	
@@ -95,6 +107,26 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex)
 	{
 		m_positionX = p_positionX;
 		m_positionY = p_positionY;
+	}
+	
+	SetPlayPredicate = function(p_predicate)
+	{
+		m_playPredicate = p_predicate;
+	}
+	
+	SetSoundPredicate = function(p_predicate)
+	{
+		m_soundPredicate = p_predicate;
+	}
+	
+	SetPriority = function(p_priority)
+	{
+		m_priority = p_priority;
+	}
+	
+	SetLoop = function(p_loop)
+	{
+		m_loop = p_loop;
 	}
 }
 

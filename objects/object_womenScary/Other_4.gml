@@ -8,7 +8,10 @@ function NoticesMimi()
 {
 	BackToMimi = function()
 	{
-		instance_textbox.Reset();
+		if(GetTextboxInstance() != noone)
+		{
+			GetTextboxInstance().Reset();
+		}
 		
 		SetGlobalGameState(GlobalGameStates.MimiIsShocked);
 		instance_peepholeTrigger.MimiIsSpooked();
@@ -19,7 +22,10 @@ function NoticesMimi()
 		// Freeze at the last turn animation
 		FreezeAnimationAtEnd2(anim_womenTurn);
 		
-		instance_textbox.Reset();
+		if(GetTextboxInstance() != noone)
+		{
+			GetTextboxInstance().Reset();
+		}
 	
 		var c19_3 = new TextContext(anim_womanTurnAvatar, false, noone);
 		c19_3.m_avatarYOffset = - 16;
@@ -38,7 +44,11 @@ function NoticesMimi()
 	PlayAnimation2(anim_womenScrew, PlayTurnAnimation);
 	m_womenAnimationState = WomenScaryAnimationState.NoticeMimi;
 	
-	instance_textbox.Reset();
+	if(GetTextboxInstance() != noone)
+	{
+		GetTextboxInstance().Reset();
+	}
+		
 	var c19_1 = new TextContext(sprite_womenScrewAvatar, false, noone);
 	c19_1.m_progressable = false;
 	c19_1.AddSubText(new SubText("...", 0.2, true));

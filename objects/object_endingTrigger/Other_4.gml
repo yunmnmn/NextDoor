@@ -7,7 +7,10 @@ GameEndingRoom = function()
 		fader.instance_destroy();
 		
 		// Reset the textbox
-		instance_textbox.Reset();
+		if(GetTextboxInstance() != noone)
+		{
+			GetTextboxInstance().Reset();
+		}
 		
 		// Transition to the ending room
 		ChangeRooms(room_ending);

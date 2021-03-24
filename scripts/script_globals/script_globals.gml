@@ -1,5 +1,5 @@
 // Set debug mode or not
-global.m_debug = false;
+global.m_debug = true;
 
 // Default fading speed
 global.m_defaultFadingSpeed = 0.0;
@@ -109,6 +109,11 @@ function GetMimiCrawling()
 function GetControlState()
 {
 	return global.g_playerControlState;
+}
+
+function GetTextboxInstance()
+{
+	return global.g_textboxInstance;
 }
 
 function GetGlobalGameState()
