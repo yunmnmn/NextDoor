@@ -29,7 +29,7 @@ function MimiConversation()
 	cb4_6 = function()
 	{
 		var c4_6 = new TextContext(sprite_youngsterAvatarNormal, true, cb4_7);
-		c4_6.AddSubText(new SubText("I don't think it's empty...", 0.3, true));
+		c4_6.AddSubText(new SubText("No, it isn't empty.", 0.3, true));
 		RenderText(c4_6);
 	}
 	
@@ -85,7 +85,7 @@ function MimiConversation()
 	cb4_2 = function()
 	{
 		var c4_2 = new TextContext(sprite_youngsterAvatarSmirk, true, cb4_3);
-		c4_2.AddSubText(new SubText("That neighbour seems to be away a lot.", 0.3, true));
+		c4_2.AddSubText(new SubText("They seem to be away a lot.", 0.3, true));
 		RenderText(c4_2);
 	}
 	

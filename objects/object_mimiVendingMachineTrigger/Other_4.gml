@@ -235,7 +235,7 @@ function MimiConversation()
 	cb11_13 = function()
 	{
 		var c11_13 = new TextContext(sprite_youngsterAvatarScared, true, cb11_14);
-		c11_13.AddSubText(new SubText("It's weird.", 0.4, true));
+		c11_13.AddSubText(new SubText("It doesn't make any sense.", 0.4, true));
 		RenderText(c11_13);
 	}
 	

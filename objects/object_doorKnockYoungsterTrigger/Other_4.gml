@@ -56,7 +56,7 @@ function MimiAndYoungsterConversation()
 	cb2_8 = function()
 	{
 		var c2_8 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_9);
-		c2_8.AddSubText(new SubText("Maybe you're just too uptight.", 0.3, true));
+		c2_8.AddSubText(new SubText("I bet you're the only one complaining, you're too uptight.", 0.3, true));
 		RenderText(c2_8);
 		
 		var animationEndCallback = function()
@@ -94,21 +94,21 @@ function MimiAndYoungsterConversation()
 	cb2_5 = function()
 	{
 		var c2_5 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_6);
-		c2_5.AddSubText(new SubText("I don't think it's so loud.", 0.3, true));
+		c2_5.AddSubText(new SubText("You call this loud?", 0.3, true));
 		RenderText(c2_5);
 	}
 	
 	cb2_4 = function()
 	{
-		var c2_4 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_5);
-		c2_4.AddSubText(new SubText("I do?", 0.3, true));
+		var c2_4 = new TextContext(sprite_mimiAvatarAngry, true, cb2_5);
+		c2_4.AddSubText(new SubText("You always have it unbearably loud!", 0.4, true));
 		RenderText(c2_4);
 	}
 	
 	cb2_3 = function()
 	{
 		var c2_3 = new TextContext(sprite_mimiAvatarAngry, true, cb2_4);
-		c2_3.AddSubText(new SubText("You always have it unbearably loud!", 0.4, true));
+		c2_3.AddSubText(new SubText("Could you please lower the volume?!", 0.4, true));
 		RenderText(c2_3);
 	}
 	
@@ -117,8 +117,8 @@ function MimiAndYoungsterConversation()
 		instance_hallwayUpMemory.SetDoorYoungsterVisible(true);
 		instance_hallwayUpMemory.SetYoungsterVisible(true);
 		
-		var c2_2 = new TextContext(sprite_mimiAvatarAngry, true, cb2_3);
-		c2_2.AddSubText(new SubText("Could you please lower the volume?!", 0.4, true));
+		var c2_2 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_3);
+		c2_2.AddSubText(new SubText("What do you want?", 0.4, true));
 		RenderText(c2_2);
 	}
 

@@ -56,7 +56,7 @@ function MimiAndOldtimerConversation()
 	cb7_16 = function()
 	{
 		var c8_16 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_17);
-		c8_16.AddSubText(new SubText("If that's all, I still have some laundry to do.", 0.3, true));
+		c8_16.AddSubText(new SubText("If that's all dear, I still have some laundry to do.", 0.3, true));
 		RenderText(c8_16);
 	}
 
@@ -70,14 +70,14 @@ function MimiAndOldtimerConversation()
 	cb7_14 = function()
 	{
 		var c8_14 = new TextContext(sprite_oldtimerAvatarAngry, true, cb7_15);
-		c8_14.AddSubText(new SubText("Very unfriendly.", 0.4, true));
+		c8_14.AddSubText(new SubText("Very unfriendly, if you ask me.", 0.4, true));
 		RenderText(c8_14);
 	}
 
 	cb7_13 = function()
 	{
 		var c8_13 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_14);
-		c8_13.AddSubText(new SubText("They never say hello or anything either.", 0.3, true));
+		c8_13.AddSubText(new SubText("And they never say anything, not even a hello.", 0.3, true));
 		RenderText(c8_13);
 	}
 
@@ -126,7 +126,7 @@ function MimiAndOldtimerConversation()
 	cb7_7 = function()
 	{
 		var c7_7 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_8);
-		c7_7.AddSubText(new SubText("Isn't there still someone else?", 0.3, true));
+		c7_7.AddSubText(new SubText("And there isn't anyone else?", 0.3, true));
 		RenderText(c7_7);
 	}
 	
@@ -140,14 +140,14 @@ function MimiAndOldtimerConversation()
 	cb7_5 = function()
 	{
 		var c7_5 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_6);
-		c7_5.AddSubText(new SubText("Why don't you ask his nextdoor?", 0.3, true));
+		c7_5.AddSubText(new SubText("You should ask his nextdoor?", 0.3, true));
 		RenderText(c7_5);
 	}
 	
 	cb7_4 = function()
 	{
 		var c7_4 = new TextContext(sprite_oldtimerAvatarNormal, true, cb7_5);
-		c7_4.AddSubText(new SubText("I can hear it a little, but our rooms are separated.", 0.3, true));
+		c7_4.AddSubText(new SubText("Well, a little, but our rooms are separated.", 0.3, true));
 		RenderText(c7_4);
 	}
 	

@@ -132,7 +132,7 @@ function MimiConversation2()
 	cb10_2 = function()
 	{
 		var c10_2 = new TextContext(sprite_mimiAvatarNormal, true, cb10_3);
-		c10_2.AddSubText(new SubText("I've been studying for so long...", 0.3, true));
+		c10_2.AddSubText(new SubText("It's already dark.", 0.3, true));
 		RenderText(c10_2);
 	}
 
