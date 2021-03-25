@@ -1,0 +1,1 @@
+instance_outsideMemory.SetLampOutsideNearDoorVisible(false);

@@ -6,7 +6,6 @@ function RegisterPlayerInstance(p_player)
 
 function GetPlayerInstance()
 {
-	assert(global.g_playerInstance != noone, "Player is invalid");
 	return global.g_playerInstance;
 }
 

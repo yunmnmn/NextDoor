@@ -1,11 +1,26 @@
-cb40_3 = function()
+// Set the women in black on the path
+instance_endingWomen.SetPath(path_ending, 0.0, instance_endingWomen.m_endingSpeed);
+// Play the carwling animation
+instance_endingWomen.PlayAnimation(anim_womenWalk, true, noone);
+
+// Play the callback when the women reached the end
+reachedEnd = function()
 {
-	var c40_3 = new TextContext(noone, false, noone);
-	c40_3.AddSubText(new SubText("I'm moving away as fast as I can.", 0.3, true));
-	c40_3.m_progressable = false;
-	RenderText(c40_3);
+	instance_endingWomen.path_speed = 0.0;
+	instance_endingWomen.visible = false;
+	instance_endingWomen.image_speed = 0.0;
 }
-	
-var c40_2 = new TextContext(noone, false, cb40_3);
-c40_2.AddSubText(new SubText("As if nothing happened, the woman continued to reside nextdoor.", 0.3, true));
+instance_endingWomen.AddPathEndCallback(reachedEnd, false);
+
+// Set the viewport speed
+SetViewportFollowSpeed(0.000048);
+
+// Set the fading speed
+m_fader.SetFadingSpeed(GetDefaultFadingSpeed());
+
+// Start the conversation
+var c40_2 = new TextContext(noone, false, noone);
+c40_2.AddSubText(new SubText("As if nothing happened, the woman continued to reside", 0.2, true));
+c40_2.AddSubText(new SubText("nextdoor.", 0.2, true));
+c40_2.m_progressable = false;
 RenderText(c40_2)

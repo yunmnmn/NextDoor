@@ -1,10 +1,11 @@
 // Going to the ending sequence
 GameEndingRoom = function()
 {		
-	transitionToEndingRoom = function()
+	// Show this text when Mimi espaced
+	escapedDialogue = function()
 	{
-		// Delete the fader
-		fader.instance_destroy();
+		// Don't render over the textbox over it anymore	
+		fader.m_overTextbox = false;
 		
 		// Reset the textbox
 		if(GetTextboxInstance() != noone)
@@ -12,19 +13,7 @@ GameEndingRoom = function()
 			GetTextboxInstance().Reset();
 		}
 		
-		// Transition to the ending room
-		ChangeRooms(room_ending);
-	}
-	
-	// Show this text when Mimi espaced
-	escapedDialogue = function()
-	{
-		// Don't render over the textbox anymore	
-		fader.m_overTextbox = false;
-		
-		var c38_1 = new TextContext(noone, false, transitionToEndingRoom);
-		c38_1.AddSubText(new SubText("I escaped just in time...", 0.3, true));
-		RenderText(c38_1);
+		PlayTimeline(timeline_delayedEndingConversation);
 	}
 	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), escapedDialogue);
 	fader.m_deleteAutomatically = false;

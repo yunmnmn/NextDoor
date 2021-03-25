@@ -164,7 +164,7 @@ m_fromPosition = noone;
 RegisterBackgroundInstance(id);
 
 // Fade into the level
-CreateFader(FadeState.FadeIn, GetDefaultFadingSpeed(), noone);
+m_fader = CreateFader(FadeState.FadeIn, GetDefaultFadingSpeed(), noone);
 
 // Set up the viewport
 m_viewport = view_camera[0];

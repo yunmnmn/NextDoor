@@ -11,22 +11,7 @@ GameEndingRoom = function()
 	{
 		return;
 	}
-	
-	transitionToEndingRoom = function()
-	{
-		// Delete the fader
-		fader.instance_destroy();
 		
-		// Reset the textbox
-		if(GetTextboxInstance() != noone)
-		{
-			GetTextboxInstance().Reset();
-		}
-		
-		// Change to the ending Room
-		ChangeRooms(room_ending);
-	}
-	
 	// Show this text when Mimi did get caught
 	cb40_1 = function()
 	{
@@ -39,9 +24,7 @@ GameEndingRoom = function()
 			GetTextboxInstance().Reset();
 		}
 		
-		var c40_1 = new TextContext(noone, false, transitionToEndingRoom);
-		c40_1.AddSubText(new SubText("After that, I passed out...", 0.3, true));
-		RenderText(c40_1);
+		PlayTimeline(timeline_delayedEndingConversation);
 	}
 	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), cb40_1);
 	fader.m_deleteAutomatically = false;
@@ -69,7 +52,11 @@ GameEndingRoom = function()
 	RenderText(c39_1);
 }
 
-var endingCollisionContext = new CollisionContext(GetPlayerInstance(), GameEndingRoom);
-endingCollisionContext.AddGlobalState1(GlobalGameStates.MimiGetsChased);
-endingCollisionContext.ExecuteOnHit();
-AddCollisionContext(endingCollisionContext);
+// TODO: move this to another object
+if(room == room_youngsterRoom)
+{
+	var endingCollisionContext = new CollisionContext(GetPlayerInstance(), GameEndingRoom);
+	endingCollisionContext.AddGlobalState1(GlobalGameStates.MimiGetsChased);
+	endingCollisionContext.ExecuteOnHit();
+	AddCollisionContext(endingCollisionContext);
+}
