@@ -7,7 +7,7 @@ m_previousKeyboardKey = noone;
 // Hack: Window focus
 if(mouse_check_button_pressed(mb_any))
 {
-	FocusWindow();
+	 WindowFocus();
 }
 
 // Check if a new controller has been plugged in
@@ -16,82 +16,82 @@ RegisterController();
 if(gamepad_button_check_pressed(m_controllerIndex, gp_face1))
 {
 	m_currentControllerKey = gp_face1;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_face2))
 {
 	m_currentControllerKey = gp_face2;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_face3))
 {
 	m_currentControllerKey = gp_face3;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_face4))
 {
 	m_currentControllerKey = gp_face4;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderl))
 {
 	m_currentControllerKey = gp_shoulderl;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderlb))
 {
 	m_currentControllerKey = gp_shoulderlb;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderr))
 {
 	m_currentControllerKey = gp_shoulderr;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_shoulderrb))
 {
 	m_currentControllerKey = gp_shoulderrb;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_select))
 {
 	m_currentControllerKey = gp_select;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_start))
 {
 	m_currentControllerKey = gp_start;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_stickl))
 {
 	m_currentControllerKey = gp_stickl;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_stickr))
 {
 	m_currentControllerKey = gp_stickr;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_padu))
 {
 	m_currentControllerKey = gp_padu;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_padd))
 {
 	m_currentControllerKey = gp_padd;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_padl))
 {
 	m_currentControllerKey = gp_padl;
-	FocusWindow();
+	WindowFocus();
 }
 else if(gamepad_button_check_pressed(m_controllerIndex, gp_padr))
 {
 	m_currentControllerKey = gp_padr;
-	FocusWindow();
+	WindowFocus();
 }
 
 // Check if the axis are different
