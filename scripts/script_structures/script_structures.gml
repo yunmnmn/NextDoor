@@ -9,6 +9,10 @@ function Vector2(p_x, p_y) constructor
         m_x += p_other.m_x;
         m_y += p_other.m_y;
     }
+	
+	Free = function()
+	{
+	}
 }
 
 // SubTextContext is used 
@@ -17,6 +21,10 @@ function SubText(p_text, p_playSpeed, p_newLine) constructor
 	m_text = p_text;
 	m_playSpeed = p_playSpeed;
 	m_newLine= p_newLine;
+	
+	Free = function()
+	{
+	}
 }
 
 // TextContext is used to chain texts
@@ -67,6 +75,10 @@ function PathCallback(p_pathIndex, p_position, p_callback, p_persistant, p_callb
 	m_callback = p_callback;
 	m_persistant = p_persistant;
 	m_callbackType = p_callbackType;
+	
+	Free = function()
+	{
+	}
 }
 
 function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
@@ -127,6 +139,11 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 	SetLoop = function(p_loop)
 	{
 		m_loop = p_loop;
+	}
+	
+	Free = function()
+	{
+		
 	}
 }
 

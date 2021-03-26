@@ -56,6 +56,7 @@ for(var i = 0; i < ds_list_size(m_pathCallbacks); /*don't iuncrement here*/)
 		// Remove the callback if it's not persistant. Add i when something isn't removed
 		if(!pathCallback.m_persistant)
 		{
+			delete pathCallback;
 			ds_list_delete(m_pathCallbacks, i);
 		}
 		else
