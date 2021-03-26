@@ -220,6 +220,12 @@ function GetViewportWidth()
 	return GetBackgroundInstance().GetViewportWidth();
 }
 
+function GetViewportHeight()
+{
+	return GetBackgroundInstance().GetViewportHeight();
+}
+
+
 function PulseScreen(p_magnitude)
 {
 	GetBackgroundInstance().PulseScreen(p_magnitude);
