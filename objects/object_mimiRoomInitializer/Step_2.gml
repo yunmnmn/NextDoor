@@ -22,7 +22,8 @@ if(GetGlobalGameState() == GlobalGameStates.MimiGoingToYoungster)
 		
 		// Play the muffled metal music
 		PlaySound(music_metalMimiRoom, 1, true);
+		//PlaySoundAt(
 		
-		timeline_position = 1700;
+		timeline_position = 1755;
 	}
 }
