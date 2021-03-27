@@ -1,1 +1,0 @@
-PulseScreen(1);

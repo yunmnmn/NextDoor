@@ -19,6 +19,10 @@ if(GetGlobalGameState() == GlobalGameStates.MimiGoingToYoungster)
 		m_pulsed = true;
 		// Play the timeline that pulses the screen with a offset
 		PlayTimeline(timeline_pulseScreen);
+		
+		// Play the muffled metal music
+		PlaySound(music_metalMimiRoom, 1, true);
+		
 		timeline_position = 1800;
 	}
 }
