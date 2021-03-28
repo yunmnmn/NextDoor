@@ -153,7 +153,6 @@ function ExecutePostRoomLoadCallbacks(p_roomInstance)
 	ds_list_clear(global.m_postRoomLoadCallbacks);
 }
 
-// TODO: manage memory
 function AddPostRoomLoadCallback(p_callback)
 {
 	ds_list_add(global.m_postRoomLoadCallbacks, p_callback);

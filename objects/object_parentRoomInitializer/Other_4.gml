@@ -195,5 +195,3 @@ m_rawPositionY = 0.0;
 
 m_desiredX = 0.0;
 m_desiredY = 0.0;
-
-m_room = room;
