@@ -196,5 +196,4 @@ m_rawPositionY = 0.0;
 m_desiredX = 0.0;
 m_desiredY = 0.0;
 
-// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
-ExecutePostRoomLoadCallbacks(id);
+m_room = room;

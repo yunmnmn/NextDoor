@@ -7,10 +7,9 @@ m_startDayNightTransition = false;
 
 //
 m_talkingFinished = false;
+m_cachedDivv = noone;
 
-// Warmup frames
-m_warmupFrames = 0;
-m_pulsed = false;
+audio_falloff_set_model(audio_falloff_linear_distance_clamped);
 
 function StartTransition()
 {
@@ -167,7 +166,14 @@ switch(GetGlobalGameState())
 {
 	case GlobalGameStates.MimiRoomSits:
 		MimiComplainsAboutNoise();
+	case GlobalGameStates.MimiGoingToYoungster:
+		// Start the music
+		m_roomMusic = PlaySound(music_metalMimiRoom, 1, true);
+		SoundGain(m_roomMusic, 1.0, 1.0);
 		break;
 	default:
 		break;
 }
+
+// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
+ExecutePostRoomLoadCallbacks(id);

@@ -131,13 +131,29 @@ function ExecutePostRoomLoadCallbacks(p_roomInstance)
 {
 	for(var i = 0; i < ds_list_size(global.m_postRoomLoadCallbacks); i++)
 	{
-		var pathCallback = ds_list_find_value(global.m_postRoomLoadCallbacks, i);
-		pathCallback(p_roomInstance);
+		var postRoomLoadContext = ds_list_find_value(global.m_postRoomLoadCallbacks, i);
+		if(postRoomLoadContext.m_callback != noone)
+		{
+			postRoomLoadContext.m_callback(p_roomInstance);
+		}
+		
+		if(postRoomLoadContext.m_musicPosition != noone)
+		{
+			if(p_roomInstance.m_roomMusic != noone)
+			{
+				SetSoundPosition(p_roomInstance.m_roomMusic, postRoomLoadContext.m_musicPosition);
+			}
+		}
+		
+		// Clean memory
+		postRoomLoadContext.Free();
+		delete postRoomLoadContext;
 	}
 	
 	ds_list_clear(global.m_postRoomLoadCallbacks);
 }
 
+// TODO: manage memory
 function AddPostRoomLoadCallback(p_callback)
 {
 	ds_list_add(global.m_postRoomLoadCallbacks, p_callback);

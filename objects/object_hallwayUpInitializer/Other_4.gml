@@ -10,3 +10,6 @@ else
 {
 	sprite_index = background_hallwayUpNight;
 }
+
+// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
+ExecutePostRoomLoadCallbacks(id);

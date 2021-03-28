@@ -18,7 +18,8 @@ if(keyboard_check(vk_shift) && DebugMode())
 		// Give the player the ControlState
 		SetControlState(PlayerControlState.PlayerControl);
 	}
-	AddPostRoomLoadCallback(postRoomLoadCallback);
+	var postRoomLoadContext = new PostRoomLoadContext(postRoomLoadCallback);
+	AddPostRoomLoadCallback(postRoomLoadContext);
 	
 	SetGlobalGameState(GlobalGameStates.MimiStandsUpFromAttack);
 	ChangeRoomAndSetPath(room_youngsterRoom, path_youngsterRoom, 0.45, true);

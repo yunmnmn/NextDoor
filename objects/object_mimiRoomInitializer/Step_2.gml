@@ -13,18 +13,25 @@ if(m_startDayNightTransition)
 	}
 }
 
-// Hack: Due to the average delta frame not being calculated yet, use some pre-warm frames
-if(GetGlobalGameState() == GlobalGameStates.MimiGoingToYoungster)
+// Rumble to the beat of the music
+if(m_roomMusic != noone)
 {
-	m_warmupFrames++;
-	if(m_warmupFrames > 10 && !m_pulsed)
+	var musicPosition = GetSoundPosition(m_roomMusic);
+	
+	// NOTE: 1755 is pbm to shake the screen
+	if(m_cachedDivv = noone)
 	{
-		m_pulsed = true;
-		// Play the timeline that pulses the screen with a offset
-		PlayTimeline(timeline_pulseScreen);
-		timeline_position = 1755;
+		m_cachedDivv =  floor(musicPosition * 1000 / 1755);
+	}
+	
+	var divv = floor(musicPosition * 1000 / 1755);
+	if(divv > m_cachedDivv)
+	{
+		// Shake/Pulse the screen
+		PulseScreen(1.0);
+		// Rumble the controller
+		Rumble(0.5, 200);
 		
-		// Play the muffled metal music
-		m_roomMusic = PlaySound(music_metalMimiRoom, 1, true);
+		m_cachedDivv = divv;
 	}
 }

@@ -147,6 +147,16 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 	}
 }
 
+function PostRoomLoadContext(p_callback) constructor
+{
+	m_callback = p_callback;
+	m_musicPosition = noone;
+	
+	Free = function()
+	{
+	}
+}
+
 function CollisionContext(p_collisionInstance, p_callback) constructor
 {
 	m_collisionInstance = p_collisionInstance;

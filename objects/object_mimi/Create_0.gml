@@ -42,6 +42,8 @@ m_cachedMovementState = m_movementState;
 // Create an array of dirty booleans
 m_cachedFlooredImageIndex = 0;
 
+m_cachedFootstepSoundIndex = 0;
+
 // -------------------------- Functions colliding event --------------------------
 
 function SetPath(p_pathIndex, p_position)
@@ -190,7 +192,7 @@ function AddSoundContext(p_soundContext)
 	ds_list_add(m_soundContexts, p_soundContext);
 }
 
-function PlayFootstepSound()
+PlayFootstepSound = function()
 {
 	// Appartment footstep sounds
 	appartmentWalkSounds[0] = foley_appartmentWalkingStep1;
@@ -205,27 +207,37 @@ function PlayFootstepSound()
 	hallwayWalkSounds[2] = foley_hallwayWalkingStep3;
 	hallwayWalkSounds[3] = foley_hallwayWalkingStep4;
 	hallwayWalkSounds[4] = foley_hallwayWalkingStep5;
-	
-	var footstepSoundIndex = noone;
+
+	var array = noone;
 	
 	// Play Appartment footsteps
 	if(GetRoomType() == RoomType.Appartment)
 	{
-		var arrayIndex = random(array_length(appartmentWalkSounds));
-		footstepSoundIndex = appartmentWalkSounds[arrayIndex];
+		array = appartmentWalkSounds;
 	}
 	else if(GetRoomType() == RoomType.Hallway)
 	{
-		var arrayIndex = random(array_length(hallwayWalkSounds));
-		footstepSoundIndex = hallwayWalkSounds[arrayIndex];
+		array = hallwayWalkSounds;
 	}
 	else // It's outside
 	{
-		// TODO: replace this when outside sounds are available
-		var arrayIndex = random(array_length(hallwayWalkSounds));
-		footstepSoundIndex = hallwayWalkSounds[arrayIndex];
+		array = hallwayWalkSounds;
 	}
 	
+	var arrayLength = array_length(array);
+	var arrayIndex = random(arrayLength);
+	
+	// If the footstep sound index is the same ast he last one, change it
+	if(arrayIndex == m_cachedFootstepSoundIndex)
+	{
+		arrayIndex = (arrayIndex + 1) % arrayLength;
+	}
+	
+	// Cache the current footstepindex
+	m_cachedFootstepSoundIndex = arrayIndex
+	
+	// Get the new footstep index
+	var footstepSoundIndex = array[arrayIndex];
 	return footstepSoundIndex;
 }
 

@@ -279,7 +279,7 @@ function collisionEvent()
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 	
 	// Play the door sound
-	PlaySound(foley_appartmentDoorOpen, 1, false);
+	PlaySound(foley_hallwayDoorOpen, 1, false);
 }
 
 // Third use of the collider
