@@ -131,13 +131,8 @@ function MimiConversation()
 
 	cb11_19 = function()
 	{
-		// Play the Youngster gasp animation
-		var animationEndCallback = function()
-		{
-			// Freeze at the last frame
-			instance_youngsterOutside.FreezeAnimationAtEnd(anim_youngsterCornerGasp);
-		};
-		instance_youngsterOutside.PlayAnimation2(anim_youngsterCornerGasp, animationEndCallback);
+		// Flicker the lights, then continue the conversation
+		PlayTimeline(timeline_flickeringLightDoorOn);
 		
 		// Set a point callback when Women passes Mimi, so mimi turns back to idle
 		var womenPassesMimi = function()
@@ -151,26 +146,16 @@ function MimiConversation()
 			PlayerPlayAnimation2(anim_mimiTurnReverse, finishTurning);
 		}
 		instance_womenOutside.AddPathPointCallback(2, womenPassesMimi, false);
-		
-		var c11_19 = new TextContext(sprite_youngsterAvatarGasp, true, cb11_20);
-		c11_19.AddSubText(new SubText("AH!", 0.6, true));
-		RenderText(c11_19);
 	}
 	
 	// HACK: Define this here, because cb11_17 is already referencing it
 	c11_18 = new TextContext(sprite_youngsterAvatarScared, true, cb11_19);
 	cb11_18 = function()
 	{
-		
 		c11_18.AddSubText(new SubText("It's freaking me out...", 0.4, true));
 		if(!m_womenWaiting)
 		{
 			c11_18.m_progressable = false;
-		}
-		else
-		{
-			// Play the blinking light
-			PlayTimeline(timeline_flickeringLightDoorOn);
 		}
 		
 		RenderText(c11_18);
@@ -199,7 +184,7 @@ function MimiConversation()
 			if(GetCurrentTextContext() == c11_18)
 			{	
 				// Play the blinking light
-				PlayTimeline(timeline_flickeringLightDoorOn);
+				c11_18.m_progressable = true;
 			}
 		}
 		instance_womenOutside.AddPathPointCallback(1, BehimdMimi, false);

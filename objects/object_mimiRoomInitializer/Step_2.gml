@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 // Do the transition from day to night
 if(m_startDayNightTransition)
 {
@@ -19,11 +22,9 @@ if(GetGlobalGameState() == GlobalGameStates.MimiGoingToYoungster)
 		m_pulsed = true;
 		// Play the timeline that pulses the screen with a offset
 		PlayTimeline(timeline_pulseScreen);
+		timeline_position = 1755;
 		
 		// Play the muffled metal music
-		PlaySound(music_metalMimiRoom, 1, true);
-		//PlaySoundAt(
-		
-		timeline_position = 1755;
+		m_roomMusic = PlaySound(music_metalMimiRoom, 1, true);
 	}
 }

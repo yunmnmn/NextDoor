@@ -127,12 +127,12 @@ function SetGlobalGameState(p_globalGameState)
 }
 
 // This will be called by the room initializer after all objects are loaded
-function ExecutePostRoomLoadCallbacks()
+function ExecutePostRoomLoadCallbacks(p_roomInstance)
 {
 	for(var i = 0; i < ds_list_size(global.m_postRoomLoadCallbacks); i++)
 	{
 		var pathCallback = ds_list_find_value(global.m_postRoomLoadCallbacks, i);
-		pathCallback();
+		pathCallback(p_roomInstance);
 	}
 	
 	ds_list_clear(global.m_postRoomLoadCallbacks);
@@ -152,6 +152,42 @@ function GetDisableAllTriggers()
 {
 	return global.m_disableAllTriggers;
 }
+
+function GetControllerIndex()
+{
+	return global.m_controllerIndex;
+}
+
+function SetControllerIndex(p_controllerIndex)
+{
+	// Early out if the controller index is the same
+	if(global.m_controllerIndex == p_controllerIndex)
+	{
+		return;
+	}
+	
+	// Set the vibration of the controller to 0 if the controller was ever valid
+	if(global.m_controllerIndex != noone)
+	{
+		gamepad_set_vibration(global.m_controllerIndex, 0.0, 0.0);
+	}
+	
+	global.m_controllerIndex = p_controllerIndex;
+	
+	// Set the deadzone
+	gamepad_set_axis_deadzone(global.m_controllerIndex , 0.4);
+}
+
+function SetControllerVibrationFactor(p_factor)
+{
+	global.m_controllerVibrationFactor = p_factor;
+}
+
+function GetControllerVibrationFactor()
+{
+	return global.m_controllerVibrationFactor;
+}
+
 
 // --- Global variables used to store the game states ---
 
@@ -187,3 +223,7 @@ global.m_mimiCaught = true;
 
 // Disable all triggers for Mimi
 global.m_disableAllTriggers = false;
+
+// Controller index
+global.m_controllerIndex = noone;
+global.m_controllerVibrationFactor = 0.0;

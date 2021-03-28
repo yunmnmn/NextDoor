@@ -84,7 +84,7 @@ function WalkingLeft()
 	}
 	else if(m_controlDevice = ControlDevice.Controller)
 	{
-		return gamepad_button_check(m_controllerIndex, gp_padl) || gamepad_axis_value(m_controllerIndex, gp_axislh) < 0;
+		return gamepad_button_check(GetControllerIndex(), gp_padl) || gamepad_axis_value(GetControllerIndex(), gp_axislh) < 0;
 	}
 	else
 	{
@@ -100,7 +100,7 @@ function WalkingRight()
 	}
 	else if(m_controlDevice = ControlDevice.Controller)
 	{
-		return gamepad_button_check(m_controllerIndex, gp_padr)|| gamepad_axis_value(m_controllerIndex, gp_axislh) > 0;
+		return gamepad_button_check(GetControllerIndex(), gp_padr)|| gamepad_axis_value(GetControllerIndex(), gp_axislh) > 0;
 	}
 	else
 	{
@@ -116,7 +116,7 @@ function ActionKeyPressed()
 	}
 	else if(m_controlDevice == ControlDevice.Controller)
 	{
-		return gamepad_button_check_pressed(m_controllerIndex, gp_face1);
+		return gamepad_button_check_pressed(GetControllerIndex(), gp_face1);
 	}
 	else
 	{
@@ -132,7 +132,7 @@ function ActionKeyHold()
 	}
 	else if(m_controlDevice == ControlDevice.Controller)
 	{
-		return gamepad_button_check(m_controllerIndex, gp_face1);
+		return gamepad_button_check(GetControllerIndex(), gp_face1);
 	}
 	else
 	{
@@ -140,7 +140,6 @@ function ActionKeyHold()
 	}
 }
 
-m_controllerIndex = noone;
 function RegisterController()
 {
 	var padCount = gamepad_get_device_count();
@@ -150,10 +149,9 @@ function RegisterController()
 		if(name != "")
 		{
 			// Set the controller
-			m_controllerIndex = i;
-		
-			// Set the deadzone
-			gamepad_set_axis_deadzone(m_controllerIndex, 0.4);
+			SetControllerIndex(i);
+			
+			// Early out
 			return;
 		}
 	}
@@ -162,7 +160,22 @@ function RegisterController()
 	m_controlDevice = ControlDevice.Keyboard;
 }
 
-
+function Rumble(p_intensity, p_miliseconds)
+{
+	SetControllerVibrationFactor(p_intensity);
+	
+	// Clear all moments in the disableRumble timeline
+	timeline_clear(timeline_disableRumble);
+	
+	// Add the moment to the timeline
+	timeline_moment_add_script(timeline_disableRumble, p_miliseconds, script_disableRumble);
+	
+	// Start the rumble
+	gamepad_set_vibration(GetControllerIndex(), GetControllerVibrationFactor(), GetControllerVibrationFactor());
+	
+	// Play the disable timeline rumble
+	PlayTimeline(timeline_disableRumble);
+}
 
 // ----------- Draw button prompts ---------
 m_buttonFrame = 0;

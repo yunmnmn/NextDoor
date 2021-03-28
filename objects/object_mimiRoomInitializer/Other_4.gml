@@ -5,6 +5,13 @@ m_transition = 0.0;
 m_transitionSpeed = 0.0002;
 m_startDayNightTransition = false;
 
+//
+m_talkingFinished = false;
+
+// Warmup frames
+m_warmupFrames = 0;
+m_pulsed = false;
+
 function StartTransition()
 {
 	m_transition = 0.0;
@@ -74,7 +81,7 @@ function MimiConversation()
 	var c1_1 = new TextContext(sprite_mimiAvatarNormal, true, cb1_2);
 	c1_1.AddSubText(new SubText("...", 0.3, true));
 	RenderText(c1_1);
-	
+
 	// Set the next global state after the animation is finished playing
 	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);	
 	
@@ -164,10 +171,3 @@ switch(GetGlobalGameState())
 	default:
 		break;
 }
-
-//
-m_talkingFinished = false;
-
-// Warmup frames
-m_warmupFrames = 0;
-m_pulsed = false;

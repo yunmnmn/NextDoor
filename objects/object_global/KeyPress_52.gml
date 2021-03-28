@@ -7,7 +7,7 @@ if(keyboard_check(vk_shift) && DebugMode())
 	}
 	
 	// Set the PlayerPath when all objects are created.
-	var postRoomLoadCallback = function()
+	var postRoomLoadCallback = function(p_roomInstance)
 	{
 		// Follow the player again
 		SetViewportFollowInstance(GetPlayerInstance());

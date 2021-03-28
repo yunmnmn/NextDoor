@@ -19,3 +19,6 @@ if(WalkingRight())
 		m_position = clamp(m_position, 0.0, 1.0);
 	}
 }
+
+// Set the audio listener position
+SetAudioListenerPosition(x, y);

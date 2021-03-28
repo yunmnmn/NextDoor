@@ -36,7 +36,7 @@ function ChangeRoomAndSetPath(p_roomInstance, p_path, p_position, p_mirrored)
 	global.m_path = p_path;
 	global.m_position = p_position;
 	global.m_mirrored = p_mirrored;
-	var postRoomLoadCallback = function()
+	var postRoomLoadCallback = function(p_roomInstance)
 	{
 		PlayerSetPath(global.m_path, global.m_position);
 		PlayerSetMirrored(global.m_mirrored);
@@ -51,7 +51,7 @@ function ReloadRoom()
 	room_goto(room);
 	
 	// Set the PlayerPath when all objects are created.
-	var postRoomLoadCallback = function()
+	var postRoomLoadCallback = function(p_roomInstance)
 	{
 		PlayerSetPath(global.m_path, global.m_position);
 	}
