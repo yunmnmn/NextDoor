@@ -78,6 +78,12 @@ function CheckLastControlDevicePressed()
 	}
 }
 
+// Returns wether the controller in in control now
+function IsController()
+{
+	return m_controlDevice == ControlDevice.Controller;
+}
+
 function WalkingLeft()
 {
 	if(m_controlDevice == ControlDevice.Keyboard)
@@ -164,19 +170,33 @@ function RegisterController()
 
 function Rumble(p_intensity, p_miliseconds)
 {
-	SetControllerVibrationFactor(p_intensity);
+	if(IsController())
+	{
+		SetControllerVibrationFactor(p_intensity);
 	
-	// Clear all moments in the disableRumble timeline
-	timeline_clear(timeline_disableRumble);
+		// Clear all moments in the disableRumble timeline
+		timeline_clear(timeline_disableRumble);
 	
-	// Add the moment to the timeline
-	timeline_moment_add_script(timeline_disableRumble, p_miliseconds, script_disableRumble);
+		// Add the moment to the timeline
+		timeline_moment_add_script(timeline_disableRumble, p_miliseconds, script_disableRumble);
 	
-	// Start the rumble
-	gamepad_set_vibration(GetControllerIndex(), GetControllerVibrationFactor(), GetControllerVibrationFactor());
+		// Start the rumble
+		gamepad_set_vibration(GetControllerIndex(), GetControllerVibrationFactor(), GetControllerVibrationFactor());
 	
-	// Play the disable timeline rumble
-	PlayTimeline(timeline_disableRumble);
+		// Play the disable timeline rumble
+		PlayTimeline(timeline_disableRumble);
+	}
+}
+
+function StopRumble()
+{
+	if(IsController())
+	{
+		// Clear all moments in the disableRumble timeline
+		timeline_clear(timeline_disableRumble);
+		
+		gamepad_set_vibration(GetControllerIndex(), 0.0, 0.0);
+	}
 }
 
 // ----------- Draw button prompts ---------

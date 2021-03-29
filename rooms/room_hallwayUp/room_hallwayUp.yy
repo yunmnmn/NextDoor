@@ -44,8 +44,8 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_59C61765","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
-    {"name":"instance_youngster","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
     {"name":"inst_76F2E9E5","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
+    {"name":"instance_youngster","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
     {"name":"instance_women","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
     {"name":"instance_oldtimer","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},
     {"name":"instance_youngsterDoorTrigger","path":"rooms/room_hallwayUp/room_hallwayUp.yy",},

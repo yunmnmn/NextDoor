@@ -1,1 +1,4 @@
-gamepad_set_vibration(GetControllerIndex(), 0.0, 0.0);
+function script_disableRumble()
+{
+	StopRumble();
+}

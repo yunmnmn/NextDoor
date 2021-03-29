@@ -17,3 +17,8 @@ function ActionKeyHold()
 {
 	return instance_global.ActionKeyHold();
 }
+
+function IsController()
+{
+	return instance_global.IsController();
+}

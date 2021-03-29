@@ -25,7 +25,6 @@ function DeltaTimeInMiliseconds()
 }
 
 // Calculate the average delta time over frames
-global.averageDeltaTimeInMiliseconds = noone;
 function AverageDeltaTimeInMiliseconds()
 {
 	if(global.averageDeltaTimeInMiliseconds == noone)

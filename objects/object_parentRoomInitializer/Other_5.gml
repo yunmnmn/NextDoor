@@ -28,3 +28,7 @@ if(m_roomMusic != noone)
 	
 	StopMusic();
 }
+
+// Stop the rumble
+
+gamepad_set_vibration(GetControllerIndex(), 0.0, 0.0);
