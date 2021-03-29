@@ -114,6 +114,6 @@ else
 // -------------------------- Sounds --------------------------
 
 // Set the sound for cat fall
-var catFall = new SoundContext(foley_outsideCatFall, anim_catFall, 1);
+var catFall = new SoundContext(foley_outsideCatFall, anim_catFall, 3);
 catFall.SetPersistent(false);
 AddSoundContext(catFall);

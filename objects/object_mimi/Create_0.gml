@@ -252,7 +252,7 @@ PlayFootstepSound = function()
 RegisterPlayerInstance(id);
 
 // By default, set Mimi into a idle sprite
-PlayAnimation(sprite_mimiIdle, noone);
+id.PlayAnimation(sprite_mimiIdle, noone);
 
 // These variables are set by the instance manager
 if(DebugMode())
@@ -264,9 +264,9 @@ else
 	SetSpeed(0.15); 
 }
 
-var mimiNormalWalkPlayPredicate = function()
+var mimiWalkingPredicate = function()
 {
-	return !GetMimiCrawling() && !GetMimiScared();
+	return !GetMimiCrawling();
 }
 
 // -------------------------- Sounds --------------------------
@@ -276,13 +276,28 @@ var mimiNormalWalkPlayPredicate = function()
 	var mimiNormalWalkSoundContext1 = new SoundContext(noone, anim_mimiWalk, 1);
 	mimiNormalWalkSoundContext1.SetPersistent(true);
 	mimiNormalWalkSoundContext1.SetSoundPredicate(PlayFootstepSound);
-	mimiNormalWalkSoundContext1.SetPlayPredicate(mimiNormalWalkPlayPredicate);
+	mimiNormalWalkSoundContext1.SetPlayPredicate(mimiWalkingPredicate);
 	AddSoundContext(mimiNormalWalkSoundContext1);
 
 	var mimiNormalWalkSoundContext5 = new SoundContext(noone, anim_mimiWalk, 5);
 	mimiNormalWalkSoundContext5.SetPersistent(true);
 	mimiNormalWalkSoundContext5.SetSoundPredicate(PlayFootstepSound);
-	mimiNormalWalkSoundContext5.SetPlayPredicate(mimiNormalWalkPlayPredicate);
+	mimiNormalWalkSoundContext5.SetPlayPredicate(mimiWalkingPredicate);
+	AddSoundContext(mimiNormalWalkSoundContext5);
+}
+
+// Set the SoundContexts for Scared Mimi walking
+{
+	var mimiNormalWalkSoundContext1 = new SoundContext(noone, anim_mimiWalkScared, 1);
+	mimiNormalWalkSoundContext1.SetPersistent(true);
+	mimiNormalWalkSoundContext1.SetSoundPredicate(PlayFootstepSound);
+	mimiNormalWalkSoundContext1.SetPlayPredicate(mimiWalkingPredicate);
+	AddSoundContext(mimiNormalWalkSoundContext1);
+
+	var mimiNormalWalkSoundContext5 = new SoundContext(noone, anim_mimiWalkScared, 5);
+	mimiNormalWalkSoundContext5.SetPersistent(true);
+	mimiNormalWalkSoundContext5.SetSoundPredicate(PlayFootstepSound);
+	mimiNormalWalkSoundContext5.SetPlayPredicate(mimiWalkingPredicate);
 	AddSoundContext(mimiNormalWalkSoundContext5);
 }
 

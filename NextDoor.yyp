@@ -227,6 +227,7 @@
     {"id":{"name":"anim_youngsterPoint","path":"sprites/anim_youngsterPoint/anim_youngsterPoint.yy",},"order":1,},
     {"id":{"name":"foley_hallwayWalkingStep4","path":"sounds/foley_hallwayWalkingStep4/foley_hallwayWalkingStep4.yy",},"order":5,},
     {"id":{"name":"object_textbox","path":"objects/object_textbox/object_textbox.yy",},"order":2,},
+    {"id":{"name":"foley_outsideLampOn","path":"sounds/foley_outsideLampOn/foley_outsideLampOn.yy",},"order":9,},
     {"id":{"name":"foley_hallwayWalkingStep3","path":"sounds/foley_hallwayWalkingStep3/foley_hallwayWalkingStep3.yy",},"order":4,},
     {"id":{"name":"sprite_youngsterAvatarNormal","path":"sprites/sprite_youngsterAvatarNormal/sprite_youngsterAvatarNormal.yy",},"order":0,},
     {"id":{"name":"sprite_placeholderWhite","path":"sprites/sprite_placeholderWhite/sprite_placeholderWhite.yy",},"order":1,},
