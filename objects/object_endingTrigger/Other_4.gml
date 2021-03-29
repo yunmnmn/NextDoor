@@ -14,6 +14,10 @@ GameEndingRoom = function()
 		}
 		
 		PlayTimeline(timeline_delayedEndingConversation);
+		
+		// Set everything to 0.0
+		instance_youngsetRoomWomenOutside.image_speed = 0.0;
+		instance_youngsetRoomWomenOutside.path_speed = 0.0;
 	}
 	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), escapedDialogue);
 	fader.m_deleteAutomatically = false;
@@ -27,6 +31,12 @@ GameEndingRoom = function()
 	
 	// Freeze at the last frame of the crawl animation when mimi hits the ending trigger
 	PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
+	
+	// Slow down the image speed of the women
+	instance_youngsetRoomWomenOutside.image_speed = 0.5;
+	
+	// Slow down the movement of the women
+	instance_youngsetRoomWomenOutside.path_speed = 0.3;
 }
 
 var endingCollisionContext = new CollisionContext(GetPlayerInstance(), GameEndingRoom);

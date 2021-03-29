@@ -2,6 +2,7 @@ m_speed = 1.3;
 m_endingSpeed = 1.0;
 
 m_cachedFootstepSoundIndex = 0;
+m_cachedFootstepSoundIndex2 = 0;
 
 // Don't let Mimi outside anymore
 GameEndingRoom = function()
@@ -24,6 +25,10 @@ GameEndingRoom = function()
 		}
 		
 		PlayTimeline(timeline_delayedEndingConversation);
+		
+		// Set everything to 0.0
+		image_speed = 0.0;
+		path_speed = 0.0;
 	}
 	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), cb40_1);
 	fader.m_deleteAutomatically = false;
@@ -38,10 +43,10 @@ GameEndingRoom = function()
 	// Freeze at the last frame when she's caught
 	PlayerPlayAnimation2(anim_mimiCrawlIdle, noone);
 	
-	// Stop the animation of the women
+	// Slow down the image speed of the women
 	image_speed = 0.5;
 	
-	// Stop the women from moving
+	// Slow down the movement of the women
 	path_speed = 0.3;
 	
 	// Scream dialogue
@@ -116,6 +121,32 @@ PlayFootstepSound = function()
 	return footstepSoundIndex;
 }	
 
+PlayFootstepSoundSpider = function()
+{
+	// Appartment footstep sounds
+	spiderWalkSounds[0] = foley_womenSpiderWalk1;
+	spiderWalkSounds[1] = foley_womenSpiderWalk2;
+	spiderWalkSounds[2] = foley_womenSpiderWalk3;
+	spiderWalkSounds[3] = foley_womenSpiderWalk4;
+	spiderWalkSounds[4] = foley_womenSpiderWalk5;
+	
+	var arrayLength = array_length(spiderWalkSounds);
+	var arrayIndex = random(arrayLength);
+	
+	// If the footstep sound index is the same ast he last one, change it
+	if(arrayIndex == m_cachedFootstepSoundIndex2)
+	{
+		arrayIndex = (arrayIndex + 1) % arrayLength;
+	}
+	
+	// Cache the current footstepindex
+	m_cachedFootstepSoundIndex2 = arrayIndex
+	
+	// Get the new footstep index
+	var footstepSoundIndex = spiderWalkSounds[arrayIndex];
+	return footstepSoundIndex;
+}	
+
 // -------------------------- Sounds --------------------------
 
 // Set the SoundContexts for Normal Women walking
@@ -146,4 +177,27 @@ PlayFootstepSound = function()
 	womenNormalWalkSoundContext6.SetSoundPredicate(PlayFootstepSound);
 	//womenNormalWalkSoundContext5.SetPlayPredicate(mimiWalkingPredicate);
 	AddSoundContext(womenNormalWalkSoundContext6);
+}
+
+// Set the SoundContexts for Spider Women walking
+{
+	var womenSpiderWalkSoundContext1 = new SoundContext(noone, anim_womenCrawl, 1);
+	womenSpiderWalkSoundContext1.SetPersistent(true);
+	womenSpiderWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundSpider);
+	AddSoundContext(womenSpiderWalkSoundContext1);
+
+	var womenSpiderWalkSoundContext3 = new SoundContext(noone, anim_womenCrawl, 3);
+	womenSpiderWalkSoundContext3.SetPersistent(true);
+	womenSpiderWalkSoundContext3.SetSoundPredicate(PlayFootstepSoundSpider);
+	AddSoundContext(womenSpiderWalkSoundContext3);
+	
+	var womenSpiderWalkSoundContext5 = new SoundContext(noone, anim_womenCrawl, 5);
+	womenSpiderWalkSoundContext5.SetPersistent(true);
+	womenSpiderWalkSoundContext5.SetSoundPredicate(PlayFootstepSoundSpider);
+	AddSoundContext(womenSpiderWalkSoundContext5);
+	
+	var womenSpiderWalkSoundContext7 = new SoundContext(noone, anim_womenCrawl, 7);
+	womenSpiderWalkSoundContext7.SetPersistent(true);
+	womenSpiderWalkSoundContext7.SetSoundPredicate(PlayFootstepSoundSpider);
+	AddSoundContext(womenSpiderWalkSoundContext7);
 }
