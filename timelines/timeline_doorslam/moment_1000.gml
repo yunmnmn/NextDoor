@@ -33,4 +33,7 @@ else
 	
 	// Play the sound to slam the door
 	PlaySoundAt(foley_youngsterRoomDoorSlam, 1590, 220, 400, 2000, 1, false, 10.0);
+	
+	// Rumble the controller when the door slams
+	Rumble(0.9, 200);
 }

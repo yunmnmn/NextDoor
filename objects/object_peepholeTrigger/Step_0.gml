@@ -105,6 +105,9 @@ else if(GetGlobalGameState() == GlobalGameStates.WomenLooksAtMimi)
 			SetGlobalGameState(GlobalGameStates.MimiFallsBackwards);
 		}
 		instance_womanScary.PlayAnimation2(anim_womenLook, animationWomenLookFinished);
+		
+		// Rumble the controller when Women turns
+		Rumble(0.4, 200);
 	}
 }
 else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)

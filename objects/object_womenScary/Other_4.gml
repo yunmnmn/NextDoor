@@ -39,6 +39,9 @@ function NoticesMimi()
 		c19_3.AddSubText(new SubText("!", 0.6, true));
 		c19_3.m_animationCallback = BackToMimi;
 		RenderText(c19_3);
+		
+		// Rumble the controller when Women turns
+		Rumble(0.9, 200);
 	}
 	
 	PlayTurnAnimation = function()

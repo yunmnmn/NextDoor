@@ -23,6 +23,9 @@ YoungsterClosesDoor = function()
 	
 	// Play the Youngster Doorslam
 	PlaySoundAt(foley_hallwayYoungsterDoorSlam, 200, 230, 400, 2000, 1, false, 10.0);
+	
+	// Rumble the controller when the Youngster slams the door
+	Rumble(0.9, 200);
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterClosesDoor);
