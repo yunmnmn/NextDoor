@@ -206,6 +206,7 @@
     {"id":{"name":"room_youngsterRoom","path":"rooms/room_youngsterRoom/room_youngsterRoom.yy",},"order":5,},
     {"id":{"name":"script_disableRumble","path":"scripts/script_disableRumble/script_disableRumble.yy",},"order":9,},
     {"id":{"name":"anim_mimiPeepShock","path":"sprites/anim_mimiPeepShock/anim_mimiPeepShock.yy",},"order":12,},
+    {"id":{"name":"music_ambient","path":"sounds/music_ambient/music_ambient.yy",},"order":3,},
     {"id":{"name":"object_parentObject","path":"objects/object_parentObject/object_parentObject.yy",},"order":2,},
     {"id":{"name":"anim_mimiIdleToScared","path":"sprites/anim_mimiIdleToScared/anim_mimiIdleToScared.yy",},"order":4,},
     {"id":{"name":"foreground_openDoorYoungster","path":"sprites/foreground_openDoorYoungster/foreground_openDoorYoungster.yy",},"order":0,},
