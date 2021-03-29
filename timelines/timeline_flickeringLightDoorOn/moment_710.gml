@@ -13,4 +13,4 @@ RenderText(c11_19);
 // Play the ambient sound
 PlayRoomMusic(music_ambient, "Ambient", true, 1.0, true);
 // Set the volume
-SoundGain(GetRoomMusic(), 0.1, 0.1);
+SoundGain(GetRoomMusic(), 1.0, 0.1);

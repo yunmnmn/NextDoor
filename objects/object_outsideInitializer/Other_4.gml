@@ -63,3 +63,11 @@ StopFlickering = function()
 {
 	StopTimeline();
 }
+
+if(GetGlobalGameState() >= GlobalGameStates.MimiChecksOnYoungster)
+{
+	// Play the ambient sound
+	PlayRoomMusic(music_ambient, "Ambient", true, 1.0, true);
+	// Set the volume
+	SoundGain(GetRoomMusic(), 1.0, 0.1);
+}
