@@ -207,6 +207,13 @@ PlayFootstepSound = function()
 	hallwayWalkSounds[2] = foley_hallwayWalkingStep3;
 	hallwayWalkSounds[3] = foley_hallwayWalkingStep4;
 	hallwayWalkSounds[4] = foley_hallwayWalkingStep5;
+	
+	// Outside footstep sounds
+	outsideWalkSounds[0] = foley_outsideWalkingStep1;
+	outsideWalkSounds[1] = foley_outsideWalkingStep2;
+	outsideWalkSounds[2] = foley_outsideWalkingStep3;
+	outsideWalkSounds[3] = foley_outsideWalkingStep4;
+	outsideWalkSounds[4] = foley_outsideWalkingStep5;
 
 	var array = noone;
 	
@@ -221,7 +228,7 @@ PlayFootstepSound = function()
 	}
 	else // It's outside
 	{
-		array = hallwayWalkSounds;
+		array = outsideWalkSounds;
 	}
 	
 	var arrayLength = array_length(array);
@@ -283,3 +290,13 @@ var mimiNormalWalkPlayPredicate = function()
 var mimiStompSoundContext = new SoundContext(foley_hallwayMimiStomp, anim_mimiAngry, 1);
 mimiStompSoundContext.SetPersistent(true);
 AddSoundContext(mimiStompSoundContext);
+
+// Set the sound for Mimi Knocking
+var mimiKnockSoundContext = new SoundContext(foley_hallwayKnocking, anim_mimiKnock, 0);
+mimiKnockSoundContext.SetPersistent(true);
+AddSoundContext(mimiKnockSoundContext);
+
+// Set the sound for Mimi coin
+var mimiCoinContext = new SoundContext(foley_outsideCoin, anim_mimiCoin, 6);
+mimiCoinContext.SetPersistent(true);
+AddSoundContext(mimiCoinContext);

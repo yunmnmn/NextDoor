@@ -20,6 +20,9 @@ YoungsterClosesDoor = function()
 	PlayRoomMusicAt(music_metalHallway, "Metal", true, 200, 230, 400, 2000, 1, true, 1);
 	// Set the volume
 	SoundGain(GetRoomMusic(), 0.6, 1.0);
+	
+	// Play the Youngster Doorslam
+	PlaySoundAt(foley_hallwayYoungsterDoorSlam, 200, 230, 400, 2000, 1, false, 10.0);
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterClosesDoor);

@@ -19,7 +19,7 @@ transitionToOutside = function()
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 	
 	// Play the door sound
-	PlaySound(foley_hallwayDoorOpen, 1, false);
+	PlaySound(foley_hallwayDoorOpen, 10, false);
 }
 var collisionContext1 = new CollisionContext(GetPlayerInstance(), transitionToOutside);
 collisionContext1.m_doNotExecuteOn = true;

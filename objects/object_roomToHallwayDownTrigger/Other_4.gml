@@ -19,7 +19,7 @@ var collisionEvent = function()
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 	
 	// Play the door sound
-	PlaySound(foley_appartmentDoorOpen, 1, false);
+	PlaySound(foley_appartmentDoorOpen, 10.0, false);
 }
 var collisionContext = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext.AllStates();

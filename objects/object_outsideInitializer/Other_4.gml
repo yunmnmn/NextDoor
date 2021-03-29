@@ -64,10 +64,15 @@ StopFlickering = function()
 	StopTimeline();
 }
 
-if(GetGlobalGameState() >= GlobalGameStates.MimiChecksOnYoungster)
+if(GetGlobalGameState() >= GlobalGameStates.MimiGetsDrink)
 {
 	// Play the ambient sound
-	PlayRoomMusic(music_ambient, "Ambient", true, 1.0, true);
+	PlayRoomMusic(music_ambientOutside, "AmbientOutside", true, 1.0, true);
+}
+else if(GetGlobalGameState() >= GlobalGameStates.MimiChecksOnYoungster)
+{
+	// Play the ambient sound
+	PlayRoomMusic(music_ambientScary, "Ambient", true, 1.0, true);
 	// Set the volume
 	SoundGain(GetRoomMusic(), 1.0, 0.1);
 }

@@ -17,7 +17,7 @@ function collisionEvent()
 	CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), fadeEndCallback);
 		
 	// Play the door sound
-	PlaySound(foley_hallwayDoorOpen, 1, false);
+	PlaySound(foley_hallwayDoorOpen, 10.0, false);
 }
 var collisionContext = new CollisionContext(GetPlayerInstance(), collisionEvent);
 collisionContext.AllStates();

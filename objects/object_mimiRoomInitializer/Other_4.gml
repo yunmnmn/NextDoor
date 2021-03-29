@@ -49,7 +49,7 @@ function MimiConversation()
 		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
 		
 		// Play the StandUp sound
-		PlaySound(foley_appartmentStandUp, 100, false);
+		PlaySound(foley_appartmentStandUp, 10.0, false);
 	}
 	
 	cb1_4 = function()
@@ -125,7 +125,7 @@ function MimiConversation2()
 		PlayerPlayAnimation(anim_mimiSit, false, animationEndCallback);
 		
 		// Play the StandUp sound
-		PlaySound(foley_appartmentStandUp, 100, false);
+		PlaySound(foley_appartmentStandUp, 10.0, false);
 	}
 	
 	cb10_3 = function()

@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.3,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "music_ambient.wav",
-  "duration": 230.405,
+  "soundFile": "foley_walkingStep5.wav",
+  "duration": 0.636973,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Appartments",
+    "path": "folders/Sounds/Foley/Appartments.yy",
   },
   "resourceVersion": "1.0",
-  "name": "music_ambient",
+  "name": "foley_walkingStep5",
   "tags": [],
   "resourceType": "GMSound",
 }
