@@ -215,7 +215,7 @@ for(var i = 0; i < ds_list_size(m_soundContexts);  /*don't iuncrement here*/)
 		if(!soundContext.m_persistent)
 		{
 			delete soundContext;
-			ds_list_delete(m_pathCallbacks, i);
+			ds_list_delete(m_soundContexts, i);
 		}
 		else
 		{

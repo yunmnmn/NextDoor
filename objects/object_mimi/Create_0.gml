@@ -39,7 +39,7 @@ m_cachedPosition = m_position;
 m_cachedDirection = m_direction;
 m_cachedMovementState = m_movementState;
 
-// Create an array of dirty booleans
+// Cached floored image index, used to play sounds on image_index
 m_cachedFlooredImageIndex = 0;
 
 m_cachedFootstepSoundIndex = 0;

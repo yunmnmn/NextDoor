@@ -1,6 +1,19 @@
 // Call the parent create(object_parentTrigger)
 event_inherited();
 
+m_pathIndex = noone;
+m_callbackAnimationEnd = noone;
+m_pathCallbacks = ds_list_create();
+
+// SoundContexts
+m_soundContexts = ds_list_create();
+
+// Cached floored image index, used to play sounds on image_index
+m_cachedFlooredImageIndex = 0;
+
+// HACK: define mirrored here
+m_mirrored = false;
+
 // Set the instance on a path
 function SetPath(p_pathIndex, p_position, p_speed)
 {
@@ -82,9 +95,8 @@ function Mirror(p_mirror)
 	}
 }
 
-m_pathIndex = noone;
-m_callbackAnimationEnd = noone;
-m_pathCallbacks = ds_list_create();
-
-// HACK: define mirrored here
-m_mirrored = false;
+function AddSoundContext(p_soundContext)
+{
+	assert(p_soundContext != noone, "SoundContext is invalid");
+	ds_list_add(m_soundContexts, p_soundContext);
+}

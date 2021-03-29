@@ -61,3 +61,10 @@ YoungsterNoticesOldtimer = function()
 var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterNoticesOldtimer);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiWalksToOldtimer);
 AddCollisionContext(collisionContext);
+
+// -------------------------- Sounds --------------------------
+
+// Set the sound for youngster flick
+var youngsterPoint = new SoundContext(foley_hallwayYoungsterPointCloth, anim_youngsterPoint, 1);
+youngsterPoint.SetPersistent(true);
+AddSoundContext(youngsterPoint);

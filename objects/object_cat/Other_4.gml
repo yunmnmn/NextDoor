@@ -26,6 +26,9 @@ CatMeows = function()
 		var c31_1 = new TextContext(sprite_catAvatar, true, cb31_2);
 		c31_1.AddSubText(new SubText("Meow!", 0.6, true));
 		RenderText(c31_1);
+		
+		// Play the meow sound
+		PlaySound(foley_outsideCatMeow, 10, false);
 	}
 	
 	CatAnimationFinished = function()
@@ -107,3 +110,10 @@ else
 {
 	visible = false;
 }
+
+// -------------------------- Sounds --------------------------
+
+// Set the sound for cat fall
+var catFall = new SoundContext(foley_outsideCatFall, anim_catFall, 1);
+catFall.SetPersistent(false);
+AddSoundContext(catFall);

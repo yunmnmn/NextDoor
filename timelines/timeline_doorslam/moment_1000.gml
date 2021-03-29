@@ -30,4 +30,7 @@ else
 		PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
 	}
 	PlayerPlayAnimation2(anim_mimiShock, CallbackWhenShockFinishes);
+	
+	// Play the sound to slam the door
+	PlaySoundAt(foley_youngsterRoomDoorSlam, 1590, 220, 400, 2000, 1, false, 10.0);
 }

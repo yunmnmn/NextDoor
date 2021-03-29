@@ -35,6 +35,9 @@ function YoungsterStreamsConversation()
 	}
 
 	PlayerPlayAnimation2(anim_mimiShock, cb13_1);
+	
+	// Play the Youngster scream
+	PlaySound(foley_hallwayDownYoungsterScream, 10.0, false);
 }
 
 MimiHearsYoungsterScream = function()
