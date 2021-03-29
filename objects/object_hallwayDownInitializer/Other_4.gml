@@ -18,10 +18,8 @@ if(GetGlobalGameState() <= GlobalGameStates.MimiWalksBackToRoom)
 	// Set the volume
 	SoundGain(GetRoomMusic(), 0.3, 0.1);
 }
-else if(GetGlobalGameState() >= GlobalGameStates.MimiReturnsFromDrinking)
+else if(GetGlobalGameState() >= GlobalGameStates.MimiChecksOnYoungster)
 {
-	// Play the ambient sound
-	PlayRoomMusic(music_ambientScary, "Ambient", true, 1.0, true);
-	// Set the volume
-	SoundGain(GetRoomMusic(), 1.0, 0.1);
+	// Play the scary ambience music
+	PlayRoomMusic(music_ambientScary, "AmbientScary", true, 1.0, true);
 }

@@ -32,6 +32,9 @@ function YoungsterStreamsConversation()
 		var c13_1 = new TextContext(sprite_mimiAvatarTroubled, true, cb13_2);
 		c13_1.AddSubText(new SubText("What was that?!", 0.6, true));
 		RenderText(c13_1);
+		
+		// Play the scary ambience room music
+		PlayRoomMusic(music_ambientScary, "AmbientScary", true, 1.0, true);
 	}
 
 	PlayerPlayAnimation2(anim_mimiShock, cb13_1);

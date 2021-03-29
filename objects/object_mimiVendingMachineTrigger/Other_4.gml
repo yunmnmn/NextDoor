@@ -131,6 +131,9 @@ function MimiConversation()
 
 	cb11_19 = function()
 	{
+		// Stop the room music
+		StopRoomMusic();
+		
 		// Flicker the lights, then continue the conversation
 		PlayTimeline(timeline_flickeringLightDoorOn);
 		
@@ -340,9 +343,7 @@ function MimiConversation()
 		FollowPosition(new Vector2(instance_youngsterOutside.x, GetPlayerInstance().y));
 		
 		// Play the ambient sound
-		PlayRoomMusic(music_ambientScary, "Ambient", true, 1.0, true);
-		// Set the volume
-		SoundGain(GetRoomMusic(), 1.0, 0.1);
+		PlayRoomMusic(music_ambientScary, "AmbientScaryExtraGroup", true, 1.0, true);
 	}
 }
 
