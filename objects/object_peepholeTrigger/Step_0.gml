@@ -35,12 +35,15 @@ if(GetGlobalGameState() == GlobalGameStates.MimiIsPeeking)
 	
 	RoomLerp(m_viewportLookPositionOriginX, 0);
 	
-	if(GetViewportPositionX() < 6)
+	if(GetViewportPositionX() < 4)
 	{
 		SetViewportPositionX(0.0);
 		m_lockedToWomen = true;
 		SetGlobalGameState(GlobalGameStates.MimiLocksPeeking);
 		instance_womanScary.NoticesMimi();
+		
+		// Stop the screwing loop sound
+		StopSound(m_screwSound);
 	}
 	
 	var norm = NormalizedViewportPositionToZero(m_viewportLookPositionOriginX - m_viewportFadeThreshold);
@@ -205,6 +208,10 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 			
 			// Delay the carwling back animation slightly
 			PlayTimeline(timeline_mimiCrawlsBack);
+			
+			// Enable updating the Mimi as the audio listener
+			GetPlayerInstance().SetUpdateAudioListener(true);
+			m_updateAudioListener = false;
 		}
 		
 		cb22_2 = function()
@@ -230,6 +237,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 	}
 }
 
-
-
-
+if(m_updateAudioListener)
+{
+	SetAudioListenerPosition(GetViewportPositionX(), GetViewportPositionY());
+}

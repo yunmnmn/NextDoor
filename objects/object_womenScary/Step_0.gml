@@ -1,11 +1,4 @@
-if(m_womenAnimationState == WomenScaryAnimationState.Looping)
-{
-	if(image_index == m_loopAnimationCount)
-	{
-		image_index = 0;
-	}
-}
-else if(m_womenAnimationState == WomenScaryAnimationState.NoticeMimi)
+if(m_womenAnimationState == WomenScaryAnimationState.NoticeMimi)
 {
 	if(image_index >= m_switchAvatarAnimationCount && m_dirty == false)
 	{

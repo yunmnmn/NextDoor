@@ -1,3 +1,27 @@
+// The original position of the viewport when entering the youngster room, and not interacting with the wall trigger
+m_viewportLookPositionOriginX = 0.0;
+m_viewportLookPositionOriginY = 0.0;
+
+// Offset from the origin when the wall should start fading
+m_viewportFadeThreshold = 600.0;
+
+// The position of the viewport when the wall will fade automatically when Mimi looks for the second time
+m_secondPeekViewportPositionX = 640;
+
+m_pan = 0.0;
+m_panSpeed = 0.0002;
+m_panSpeedSecond = 0.0003;
+m_snapbackSpeed = 0.002;
+m_womenCloseToWallFadeSpeed = 0.002;
+
+// List of dirty flags
+m_lockedToWomen = false;
+m_womenPeeps = false;
+m_womenAttacks = false;
+
+m_updateAudioListener = false;
+m_screwSound = noone;
+
 function MimiIsSpooked()
 {
 	finishConverstaion = function()
@@ -58,6 +82,13 @@ function MimiPeepsConversation()
 		var c18_4 = new TextContext(sprite_mimiAvatarEye, true, conversationFinished);
 		c18_4.AddSubText(new SubText("...", 0.2, true));
 		RenderText(c18_4);
+		
+		// Play the screwing sound
+		m_screwSound = PlaySoundAt(foley_womenScrewLoop, 70, 300, 20, 2000, 2.2, true, 10.0);
+		
+		// Disable updating the Mimi as the audio listener
+		GetPlayerInstance().SetUpdateAudioListener(false);
+		m_updateAudioListener = true;
 	}
 	
 	cb18_3 = function()
@@ -113,24 +144,3 @@ MimiPeeps = function()
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiPeeps);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiApproachesHole);
 AddCollisionContext(collisionContext);
-
-// The original position of the viewport when entering the youngster room, and not interacting with the wall trigger
-m_viewportLookPositionOriginX = 0.0;
-m_viewportLookPositionOriginY = 0.0;
-
-// Offset from the origin when the wall should start fading
-m_viewportFadeThreshold = 600.0;
-
-// The position of the viewport when the wall will fade automatically when Mimi looks for the second time
-m_secondPeekViewportPositionX = 640;
-
-m_pan = 0.0;
-m_panSpeed = 0.0002;
-m_panSpeedSecond = 0.0003;
-m_snapbackSpeed = 0.002;
-m_womenCloseToWallFadeSpeed = 0.002;
-
-// List of dirty flags
-m_lockedToWomen = false;
-m_womenPeeps = false;
-m_womenAttacks = false;

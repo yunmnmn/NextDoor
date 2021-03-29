@@ -21,4 +21,7 @@ if(WalkingRight())
 }
 
 // Set the audio listener position
-SetAudioListenerPosition(x, y);
+if(m_upateAudioListener)
+{
+	SetAudioListenerPosition(x, y);
+}

@@ -4,6 +4,12 @@ enum WomenScaryAnimationState
 	NoticeMimi,
 }
 
+m_switchAvatarAnimationCount = 50;
+
+m_dirty = false;
+
+m_womenAnimationState = WomenScaryAnimationState.Looping;
+
 function NoticesMimi()
 {
 	BackToMimi = function()
@@ -55,10 +61,14 @@ function NoticesMimi()
 	RenderText(c19_1);
 }
 
-m_loopAnimationCount = 9;
-m_switchAvatarAnimationCount = 50;
+// -------------------------- Sounds --------------------------
 
-m_dirty = false;
+// Set the sound for the women screwing
+var womenScrews = new SoundContext(foley_womenScrews, anim_womenScrew, 3);
+womenScrews.SetPersistent(false);
+AddSoundContext(womenScrews);
 
-m_womenAnimationState = WomenScaryAnimationState.Looping;
-
+// Set the sound for the women looking
+var womenLooks = new SoundContext(foley_womenLook, anim_womenLook, 1);
+womenLooks.SetPersistent(false);
+AddSoundContext(womenLooks);

@@ -44,6 +44,8 @@ m_cachedFlooredImageIndex = 0;
 
 m_cachedFootstepSoundIndex = 0;
 
+m_upateAudioListener = true;
+
 // -------------------------- Functions colliding event --------------------------
 
 function SetPath(p_pathIndex, p_position)
@@ -246,6 +248,11 @@ PlayFootstepSound = function()
 	// Get the new footstep index
 	var footstepSoundIndex = array[arrayIndex];
 	return footstepSoundIndex;
+}	
+
+function SetUpdateAudioListener(p_enable)
+{
+	m_upateAudioListener = p_enable;
 }
 
 // Register mimi to the global object
@@ -312,6 +319,11 @@ mimiKnockSoundContext.SetPersistent(true);
 AddSoundContext(mimiKnockSoundContext);
 
 // Set the sound for Mimi coin
-var mimiCoinContext = new SoundContext(foley_outsideCoin, anim_mimiCoin, 6);
-mimiCoinContext.SetPersistent(true);
-AddSoundContext(mimiCoinContext);
+var mimiCoinSoundContext = new SoundContext(foley_outsideCoin, anim_mimiCoin, 6);
+mimiCoinSoundContext.SetPersistent(false);
+AddSoundContext(mimiCoinSoundContext);
+
+// Set the sound for Mimi leap
+var mimiLeapSoundContext = new SoundContext(foley_mimiLeap, anim_mimiLeap, 0);
+mimiLeapSoundContext.SetPersistent(false);
+AddSoundContext(mimiLeapSoundContext);

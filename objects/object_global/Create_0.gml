@@ -1,6 +1,8 @@
 // Create a ShadowSurface instance, and set it
 GetShadowSurfaceInstance();
 
+// Set the falloff mode
+audio_falloff_set_model(audio_falloff_linear_distance);
 
 enum ControlDevice
 {

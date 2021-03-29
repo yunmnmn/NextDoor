@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "anim_womenScrew",
-    "path": "sprites/anim_womenScrew/anim_womenScrew.yy",
+    "name": "anim_womenScrewLoop",
+    "path": "sprites/anim_womenScrewLoop/anim_womenScrewLoop.yy",
   },
   "solid": false,
   "visible": true,

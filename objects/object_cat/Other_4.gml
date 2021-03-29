@@ -99,6 +99,7 @@ else
 	}
 }
 
+// Freeze the animation at the start
 image_speed = 0;
 
 // Only be visible from sequence 3 onwards

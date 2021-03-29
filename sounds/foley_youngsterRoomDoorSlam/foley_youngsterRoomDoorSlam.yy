@@ -13,8 +13,8 @@
   "soundFile": "foley_youngsterRoomDoorSlam.wav",
   "duration": 2.507313,
   "parent": {
-    "name": "Foley",
-    "path": "folders/Sounds/Foley.yy",
+    "name": "YoungsterRoom",
+    "path": "folders/Sounds/Foley/YoungsterRoom.yy",
   },
   "resourceVersion": "1.0",
   "name": "foley_youngsterRoomDoorSlam",

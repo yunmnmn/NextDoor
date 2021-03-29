@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "object_parentLightingOnly",
-    "path": "objects/object_parentLightingOnly/object_parentLightingOnly.yy",
+    "name": "object_parentLighting",
+    "path": "objects/object_parentLighting/object_parentLighting.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,7 +25,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_cockroach","path":"objects/object_cockroach/object_cockroach.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"object_cockroach","path":"objects/object_cockroach/object_cockroach.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

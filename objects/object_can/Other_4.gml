@@ -42,6 +42,6 @@ else
 // -------------------------- Sounds --------------------------
 
 // Set the sound for the falling can
-var canSound = new SoundContext(foley_hallwayCan, foreground_can, 1);
-canSound.SetPersistent(false);
-AddSoundContext(canSound);
+var canSoundContext = new SoundContext(foley_hallwayCan, foreground_can, 1);
+canSoundContext.SetPersistent(false);
+AddSoundContext(canSoundContext);

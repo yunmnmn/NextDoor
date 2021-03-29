@@ -9,8 +9,6 @@ m_startDayNightTransition = false;
 m_talkingFinished = false;
 m_cachedDivv = noone;
 
-audio_falloff_set_model(audio_falloff_linear_distance_clamped);
-
 function StartTransition()
 {
 	m_transition = 0.0;
