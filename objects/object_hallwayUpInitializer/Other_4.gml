@@ -15,7 +15,7 @@ else
 if(GetGlobalGameState() <= GlobalGameStates.MimiWalksBackToRoom)
 {
 	// Play the new room music
-	PlayRoomMusicAt(music_metalHallway, "Metal", true, 200, 230, 50, 2000, 2, true, 1);
+	PlayRoomMusicAt(music_metalHallway, "Metal", true, 200, 230, 70, 2000, 1.5, true, 1);
 	// Set the volume
 	SoundGain(GetRoomMusic(), 0.6, 0.1);
 }

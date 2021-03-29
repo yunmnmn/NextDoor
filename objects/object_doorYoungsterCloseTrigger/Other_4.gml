@@ -17,7 +17,7 @@ YoungsterClosesDoor = function()
 	// Register the current room music first
 	RegisterSoundGroupFromMusic(GetRoomMusicGroup(), GetRoomMusic());
 	// Play the new room music
-	PlayRoomMusicAt(music_metalHallway, "Metal", true, 200, 230, 400, 2000, 1, true, 1);
+	PlayRoomMusicAt(music_metalHallway, "Metal", true, 200, 230, 70, 2000, 1.5, true, 1);
 	// Set the volume
 	SoundGain(GetRoomMusic(), 0.6, 1.0);
 	
