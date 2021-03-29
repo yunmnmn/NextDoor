@@ -338,6 +338,11 @@ function MimiConversation()
 		// Pan the camera to the youngster
 		SetViewportFollowSpeed(0.0015);
 		FollowPosition(new Vector2(instance_youngsterOutside.x, GetPlayerInstance().y));
+		
+		// Play the ambient sound
+		PlayRoomMusic(music_ambient, "Ambient", true, 1.0, true);
+		// Set the volume
+		SoundGain(GetRoomMusic(), 1.0, 0.1);
 	}
 }
 
