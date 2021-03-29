@@ -83,7 +83,7 @@ function MimiConversation()
 	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);	
 	
 	// Draw the action prompt
-	instance_global.DrawActionPressPrompt(true, 175, 150);
+	instance_global.DrawActionPressPrompt(true, 578, 480);
 }
 
 MimiComplainsAboutNoise = function()
