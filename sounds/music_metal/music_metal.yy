@@ -1,6 +1,6 @@
 {
   "compression": 1,
-  "volume": 1.0,
+  "volume": 0.1,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "music_metal",
-  "duration": 0.0,
+  "soundFile": "music_metal.wav",
+  "duration": 61.7192879,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

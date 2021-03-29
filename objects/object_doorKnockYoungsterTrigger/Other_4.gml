@@ -120,6 +120,12 @@ function MimiAndYoungsterConversation()
 		var c2_2 = new TextContext(sprite_youngsterAvatarNormal, true, cb2_3);
 		c2_2.AddSubText(new SubText("What do you want?", 0.4, true));
 		RenderText(c2_2);
+		
+		// Play the non muffled metal version
+		var musicPosition = GetSoundPosition(GetBackgroundInstance().m_roomMusic);
+		StopSound(GetBackgroundInstance().m_roomMusic);
+		GetBackgroundInstance().m_roomMusic = PlaySoundAt(music_metal, 200, 230, 400, 2000, 1, true, 1);
+		SetSoundPosition(GetBackgroundInstance().m_roomMusic, musicPosition);
 	}
 
 	// Start of the conversation. Doesn't require a function

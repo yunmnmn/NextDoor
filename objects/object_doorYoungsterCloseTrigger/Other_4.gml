@@ -12,6 +12,12 @@ YoungsterClosesDoor = function()
 	
 	// Add another collision event at the youngsterDoorTrigger
 	instance_youngsterDoorTrigger.AddDialogueAfterYoungsterSlamsDoor();
+	
+	// Play the muffled metal version again
+	var musicPosition = GetSoundPosition(GetBackgroundInstance().m_roomMusic);
+	StopSound(GetBackgroundInstance().m_roomMusic);
+	GetBackgroundInstance().m_roomMusic = PlaySoundAt(music_metalHallway, 200, 230, 400, 2000, 1, true, 1);
+	SetSoundPosition(GetBackgroundInstance().m_roomMusic, musicPosition);
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterClosesDoor);

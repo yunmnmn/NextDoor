@@ -86,6 +86,8 @@ function WomenInBlackConversation()
 		var c5_2 = new TextContext(sprite_youngsterAvatarNormal, true, cb5_3);
 		c5_2.AddSubText(new SubText("?", 0.3, true));
 		RenderText(c5_2);
+		
+		SoundGain(GetBackgroundInstance().m_roomMusic, 1.0, 0.0001);
 	}
 	
 	womenAppearsCallback = function()
@@ -106,6 +108,8 @@ function WomenInBlackConversation()
 	var c5_1 = new TextContext(sprite_womanAvatar, true, womenAppearsCallback);
 	c5_1.AddSubText(new SubText("...", 0.2, true));
 	RenderText(c5_1);
+	
+	SoundGain(GetBackgroundInstance().m_roomMusic, 0.3, 0.0001);
 }
 
 MimiToWomenInBlack = function()
