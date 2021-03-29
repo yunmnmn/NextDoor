@@ -14,10 +14,12 @@ YoungsterClosesDoor = function()
 	instance_youngsterDoorTrigger.AddDialogueAfterYoungsterSlamsDoor();
 	
 	// Play the muffled metal version again
-	var musicPosition = GetSoundPosition(GetBackgroundInstance().m_roomMusic);
-	StopSound(GetBackgroundInstance().m_roomMusic);
-	GetBackgroundInstance().m_roomMusic = PlaySoundAt(music_metalHallway, 200, 230, 400, 2000, 1, true, 1);
-	SetSoundPosition(GetBackgroundInstance().m_roomMusic, musicPosition);
+	// Register the current room music first
+	RegisterSoundGroupFromMusic(GetRoomMusicGroup(), GetRoomMusic());
+	// Play the new room music
+	PlayRoomMusicAt(music_metalHallway, "Metal", true, 200, 230, 400, 2000, 1, true, 1);
+	// Set the volume
+	SoundGain(GetRoomMusic(), 0.6, 1.0);
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), YoungsterClosesDoor);

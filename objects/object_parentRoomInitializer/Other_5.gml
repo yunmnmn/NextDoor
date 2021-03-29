@@ -20,7 +20,11 @@ ds_list_destroy(m_viewportCallbacks);
 
 if(m_roomMusic != noone)
 {
-	m_roomMusicPosition = GetSoundPosition(m_roomMusic);
-	StopSound(m_roomMusic);
-	m_roomMusic = noone;
+	// Register the room music position of necessary
+	if(m_registerSoundPositionOnEnd)
+	{
+		RegisterSoundGroupFromMusic(m_roomMusicGroup, m_roomMusic);
+	}
+	
+	StopMusic();
 }

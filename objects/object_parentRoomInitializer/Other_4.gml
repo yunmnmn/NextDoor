@@ -1,3 +1,34 @@
+m_followInstance = noone;
+m_followPosition = noone;
+m_fromPosition = noone;
+
+m_pan = 0.0;
+
+// By default, the follow speed is instant
+m_followSpeed = 1.0;
+
+m_viewportMinX = 0.0;
+m_viewportMaxX = room_width;
+m_viewportMinY = 0.0;
+m_viewportMaxY = room_height;
+
+m_initialShakeMagnitude = 0.0;
+m_shakeMagnitude = 0.0;
+m_stabilized = 1.0;
+m_stabilizeSpeed = 0.0015;
+
+m_rawPositionX = 0.0;
+m_rawPositionY = 0.0;
+
+m_desiredX = 0.0;
+m_desiredY = 0.0;
+
+// Sounds
+m_roomMusic = noone;
+m_roomMusicPosition = 0.0;
+m_roomMusicGroup = noone;
+m_registerSoundPositionOnEnd = true;
+
 function RestrictViewportX(p_min, p_max)
 {
 	var minn = clamp(p_min, 0, room_width);
@@ -155,10 +186,54 @@ function PulseScreen(p_magnitude)
 	m_stabilized = 0;
 }
 
-// --------- EntryPoint code ---------
+// --------- Music code ---------
 
-m_followPosition = noone;
-m_fromPosition = noone;
+function PlayMusic(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_priority, p_loop)
+{
+	StopMusic();
+	
+	m_roomMusicGroup = p_soundGroupName;
+	m_roomMusic = PlaySound(p_soundIndex, p_priority, p_loop);
+	
+	if(p_getSoundPositionFromGroup)
+	{
+		var soundPosition = GetSoundGroupPosition(p_soundGroupName);
+		if(soundPosition != noone)
+		{
+			SetSoundPosition(m_roomMusic, soundPosition);
+		}
+	}	
+}
+
+function PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority)
+{
+	StopMusic();
+	
+	m_roomMusicGroup = p_soundGroupName;
+	m_roomMusic = PlaySoundAt(p_soundIndex, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority);
+	
+	if(p_getSoundPositionFromGroup)
+	{
+		var soundPosition = GetSoundGroupPosition(p_soundGroupName);
+		if(soundPosition != noone)
+		{
+			SetSoundPosition(m_roomMusic, soundPosition);
+		}
+	}
+}
+
+function StopMusic()
+{
+	if(m_roomMusic != noone)
+	{
+		StopSound(m_roomMusic);
+	}
+	
+	m_roomMusicGroup = noone;
+	m_roomMusic = noone;
+}
+
+// --------- EntryPoint code ---------
 
 // Set the id of the background in the global
 RegisterBackgroundInstance(id);
@@ -173,25 +248,6 @@ m_viewportCallbacks = ds_list_create();
 
 // By defualt, follow the player
 SetViewportFollowInstance(GetPlayerInstance());
-// Also able to follow a position
 
-m_pan = 0.0;
-
-// By default, the follow speed is instant
-m_followSpeed = 1.0;
-
-m_viewportMinX = 0.0;
-m_viewportMaxX = room_width;
-m_viewportMinY = 0.0;
-m_viewportMaxY = room_height;
-
-m_initialShakeMagnitude = 0.0;
-m_shakeMagnitude = 0.0;
-m_stabilized = 1.0;
-m_stabilizeSpeed = 0.0015;
-
-m_rawPositionX = 0.0;
-m_rawPositionY = 0.0;
-
-m_desiredX = 0.0;
-m_desiredY = 0.0;
+// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
+ExecutePostRoomLoadCallbacks(id);

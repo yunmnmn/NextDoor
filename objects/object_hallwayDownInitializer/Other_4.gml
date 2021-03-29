@@ -11,11 +11,10 @@ else
 	sprite_index = background_hallwayDownNight;
 }
 
-if(GetGlobalGameState() <= GlobalGameStates.MimiGoingToYoungster)
+if(GetGlobalGameState() <= GlobalGameStates.MimiWalksBackToRoom)
 {
-	m_roomMusic = PlaySoundAt(music_metalMimiRoom, 200, 0, 400, 2000, 1, true, 1);
-	SoundGain(m_roomMusic, 0.3, 0.1);
+	// Play the new room music
+	PlayRoomMusicAt(music_metalMimiRoom, "Metal", true, 200, 0, 400, 2000, 1, true, 1);
+	// Set the volume
+	SoundGain(GetRoomMusic(), 0.3, 0.1);
 }
-
-// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
-ExecutePostRoomLoadCallbacks(id);

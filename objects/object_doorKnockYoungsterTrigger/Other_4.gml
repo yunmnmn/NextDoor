@@ -122,10 +122,12 @@ function MimiAndYoungsterConversation()
 		RenderText(c2_2);
 		
 		// Play the non muffled metal version
-		var musicPosition = GetSoundPosition(GetBackgroundInstance().m_roomMusic);
-		StopSound(GetBackgroundInstance().m_roomMusic);
-		GetBackgroundInstance().m_roomMusic = PlaySoundAt(music_metal, 200, 230, 400, 2000, 1, true, 1);
-		SetSoundPosition(GetBackgroundInstance().m_roomMusic, musicPosition);
+		// Register the current room music first
+		RegisterSoundGroupFromMusic(GetRoomMusicGroup(), GetRoomMusic());
+		// Play the new room music
+		PlayRoomMusicAt(music_metal, "Metal", true, 200, 230, 400, 2000, 1, true, 1);
+		// Set the volume
+		SoundGain(GetRoomMusic(), 1.0, 1.0);
 	}
 
 	// Start of the conversation. Doesn't require a function

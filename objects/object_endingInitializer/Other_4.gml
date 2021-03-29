@@ -13,6 +13,3 @@ PlayTimeline(timeline_endingConversation);
 var viewportEndPosition = new Vector2(room_width - GetViewportWidth() / 2, 0);
 FollowPositionAndDisable(viewportEndPosition);
 SetViewportFollowSpeed(0.0);
-
-// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
-ExecutePostRoomLoadCallbacks(id);

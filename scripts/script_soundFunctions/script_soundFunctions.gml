@@ -36,3 +36,77 @@ function SetAudioListenerPosition(p_x, p_y)
 	audio_listener_position(p_x, p_y, 0);
 	audio_listener_orientation(0, 0, 1, 0, -1, 0);
 }
+
+function FindSoundGroup(p_soundGroupName)
+{
+	for(var i = 0; i < ds_list_size(global.m_soundGroups); i++)
+	{
+		var soundGroup = ds_list_find_value(global.m_soundGroups, i);
+		if(p_soundGroupName == soundGroup.m_soundGroupName)
+		{
+			return soundGroup;
+		}
+	}
+	
+	return noone;
+}
+
+function RegisterSoundGroupFromMusic(p_soundGroupName, p_soundInstance)
+{
+	var soundPosition = GetSoundPosition(p_soundInstance);
+	RegisterSoundGroup(p_soundGroupName, soundPosition);
+}
+
+function RegisterSoundGroup(p_soundGroupName, p_soundPosition)
+{
+	var soundGroup = FindSoundGroup(p_soundGroupName);
+	
+	if(soundGroup == noone)
+	{
+		soundGroup = new SoundGroup(p_soundGroupName);
+		ds_list_add(global.m_soundGroups, soundGroup);
+	}
+	
+	soundGroup.SetSoundPosition(p_soundPosition);
+}
+
+function GetSoundGroupPosition(p_soundGroupName)
+{
+	var soundGroup = FindSoundGroup(p_soundGroupName);
+	if(soundGroup == noone)
+	{
+		return noone;
+	}
+	
+	return soundGroup.GetSoundPosition();
+}
+
+function GetRoomMusic()
+{
+	return GetBackgroundInstance().m_roomMusic;
+}
+
+function GetRoomMusicGroup()
+{
+	return GetBackgroundInstance().m_roomMusicGroup;
+}
+
+function GetRoomMusicPosition()
+{
+	return GetBackgroundInstance().m_roomMusicPosition;
+}
+
+function PlayRoomMusic(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_priority, p_loop)
+{
+	GetBackgroundInstance().PlayMusic(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_priority, p_loop);
+}
+
+function PlayRoomMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority)
+{
+	GetBackgroundInstance().PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority);
+}
+
+function StopRoomMusic()
+{
+	GetBackgroundInstance().StopMusic();
+}

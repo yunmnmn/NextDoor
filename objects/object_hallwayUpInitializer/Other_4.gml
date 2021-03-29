@@ -12,11 +12,10 @@ else
 }
 
 // Play the music
-if(GetGlobalGameState() <= GlobalGameStates.MimiGoingToKnockAtNeighbour)
+if(GetGlobalGameState() <= GlobalGameStates.MimiWalksBackToRoom)
 {
-	m_roomMusic = PlaySoundAt(music_metalHallway, 200, 230, 400, 2000, 1, true, 1);
-	SoundGain(m_roomMusic, 0.6, 0.1);
+	// Play the new room music
+	PlayRoomMusicAt(music_metalHallway, "Metal", true, 200, 230, 400, 2000, 1, true, 1);
+	// Set the volume
+	SoundGain(GetRoomMusic(), 0.6, 0.1);
 }
-
-// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
-ExecutePostRoomLoadCallbacks(id);

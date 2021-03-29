@@ -167,13 +167,12 @@ switch(GetGlobalGameState())
 	case GlobalGameStates.MimiRoomSits:
 		MimiComplainsAboutNoise();
 	case GlobalGameStates.MimiGoingToYoungster:
-		// Start the music
-		m_roomMusic = PlaySound(music_metalMimiRoom, 1, true);
-		SoundGain(m_roomMusic, 1.0, 1.0);
+	case GlobalGameStates.MimiWalksBackToRoom:
+		// Play the new room music
+		PlayRoomMusic(music_metalMimiRoom, "Metal", true, 1, true);
+		// Set the volume
+		SoundGain(GetRoomMusic(), 1.0, 1.0);
 		break;
 	default:
 		break;
 }
-
-// Call the PostRoomLoad function, might be set from other systems (e.g ChangeRoomAndSetPath())
-ExecutePostRoomLoadCallbacks(id);

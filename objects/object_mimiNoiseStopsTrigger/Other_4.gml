@@ -52,16 +52,15 @@ MimiConversation = function()
 	// Start of the conversation. Doesn't require a function
 	var c9_1 = new TextContext(sprite_mimiAvatarNormal, true, cb9_2);
 	c9_1.AddSubText(new SubText("Hey the music stopped!", 0.4, true));
-
-	// Call the parent text context
-	if(RenderText(c9_1))
-	{
-		// Disable the control the player has
-		SetControlState(PlayerControlState.PlayerNoControl);
-		
-		// Play the idle animation
-		PlayerPlayAnimation(sprite_mimiIdle, true, noone);
-	}
+	RenderText(c9_1);
+	
+	// Disable the control the player has
+	SetControlState(PlayerControlState.PlayerNoControl);		
+	// Play the idle animation
+	PlayerPlayAnimation(sprite_mimiIdle, true, noone);
+	
+	// Stop the music
+	StopRoomMusic();
 }
 
 var collisionContext = new CollisionContext(GetPlayerInstance(), MimiConversation);

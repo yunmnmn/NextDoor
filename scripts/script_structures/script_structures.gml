@@ -150,7 +150,32 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 function PostRoomLoadContext(p_callback) constructor
 {
 	m_callback = p_callback;
-	m_musicPosition = noone;
+	
+	Free = function()
+	{
+	}
+}
+
+// TODO: dleete all soundgroups
+function SoundGroup(p_soundGroupName) constructor
+{
+	m_soundGroupName = p_soundGroupName;
+	m_soundPosition = 0.0;
+	
+	SetSoundPosition = function(p_soundPosition)
+	{
+		m_soundPosition = p_soundPosition;
+	}
+	
+	GetSoundPosition = function()
+	{
+		return m_soundPosition;
+	}
+	
+	GetSoundGroupName = function()
+	{
+		return m_soundGroupName;
+	}
 	
 	Free = function()
 	{

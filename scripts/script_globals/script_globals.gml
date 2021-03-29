@@ -137,14 +137,6 @@ function ExecutePostRoomLoadCallbacks(p_roomInstance)
 			postRoomLoadContext.m_callback(p_roomInstance);
 		}
 		
-		if(postRoomLoadContext.m_musicPosition != noone)
-		{
-			if(p_roomInstance.m_roomMusic != noone)
-			{
-				SetSoundPosition(p_roomInstance.m_roomMusic, postRoomLoadContext.m_musicPosition);
-			}
-		}
-		
 		// Clean memory
 		postRoomLoadContext.Free();
 		delete postRoomLoadContext;
@@ -203,7 +195,6 @@ function GetControllerVibrationFactor()
 	return global.m_controllerVibrationFactor;
 }
 
-
 // --- Global variables used to store the game states ---
 
 // Global game state. Each object will manage its own behaviour depending on this global state
@@ -242,3 +233,6 @@ global.m_disableAllTriggers = false;
 // Controller index
 global.m_controllerIndex = noone;
 global.m_controllerVibrationFactor = 0.0;
+
+// Sound groups
+global.m_soundGroups = ds_list_create();
