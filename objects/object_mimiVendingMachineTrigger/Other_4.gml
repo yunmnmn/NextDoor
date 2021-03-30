@@ -117,6 +117,9 @@ function MimiConversation()
 		
 		// When the women is at the end of the path
 		instance_womenOutside.AddPathEndCallback(cb12_1, false);
+		
+		// Add Tall walking sounds to the women
+		instance_womenOutside.AddTallWalkingSounds();
 	}
 
 	cb11_20 = function()

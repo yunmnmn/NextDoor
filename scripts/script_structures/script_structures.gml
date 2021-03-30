@@ -89,9 +89,11 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 	m_spriteIndex = p_spriteIndex;
 	m_imageIndex = p_imageIndex;
 	m_persistent = false;
-	m_listener = noone;
 	m_positionX = noone;
 	m_positionY = noone;
+	m_playSoundFromInstance = false;
+	
+	m_dirty = false;
 	
 	// Set the default predicates
 	m_playPredicate = function()
@@ -103,22 +105,20 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 		return m_soundIndex;
 	}
 	
-	m_dirty = false;
-	
 	SetPersistent = function(p_persistent)
 	{
 		m_persistent = p_persistent;
-	}
-	
-	SetListener = function(p_listener)
-	{
-		m_listener = p_listener;
 	}
 	
 	SetPosition = function(p_positionX, p_positionY)
 	{
 		m_positionX = p_positionX;
 		m_positionY = p_positionY;
+	}
+	
+	SetPlayFromInstance = function(p_playFromInstance)
+	{
+		m_playSoundFromInstance = p_playFromInstance;
 	}
 	
 	SetPlayPredicate = function(p_predicate)

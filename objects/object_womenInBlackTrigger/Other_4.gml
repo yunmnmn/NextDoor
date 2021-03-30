@@ -109,7 +109,11 @@ function WomenInBlackConversation()
 	c5_1.AddSubText(new SubText("...", 0.2, true));
 	RenderText(c5_1);
 	
+	// Make the music a bit softer
 	SoundGain(GetBackgroundInstance().m_roomMusic, 0.3, 0.0001);
+	
+	// Set the Normal walking sounds for the women
+	instance_women.AddNormalWalkingSounds()
 }
 
 MimiToWomenInBlack = function()

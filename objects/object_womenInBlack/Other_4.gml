@@ -3,6 +3,8 @@ m_endingSpeed = 1.0;
 
 m_cachedFootstepSoundIndex = 0;
 m_cachedFootstepSoundIndex2 = 0;
+m_cachedFootstepSoundIndex3 = 0;
+m_cachedFootstepSoundIndex4 = 0;
 
 // Don't let Mimi outside anymore
 GameEndingRoom = function()
@@ -147,39 +149,120 @@ PlayFootstepSoundSpider = function()
 	return footstepSoundIndex;
 }	
 
+PlayFootstepSoundGiant = function()
+{
+	// Appartment footstep sounds
+	giantWalkSounds[0] = foley_womenGiantWalk1;
+	giantWalkSounds[1] = foley_womenGiantWalk2;
+	giantWalkSounds[2] = foley_womenGiantWalk3;
+	giantWalkSounds[3] = foley_womenGiantWalk4;
+	giantWalkSounds[4] = foley_womenGiantWalk5;
+	
+	var arrayLength = array_length(giantWalkSounds);
+	var arrayIndex = random(arrayLength);
+	
+	// If the footstep sound index is the same ast he last one, change it
+	if(arrayIndex == m_cachedFootstepSoundIndex3)
+	{
+		arrayIndex = (arrayIndex + 1) % arrayLength;
+	}
+	
+	// Cache the current footstepindex
+	m_cachedFootstepSoundIndex3 = arrayIndex
+	
+	// Get the new footstep index
+	var footstepSoundIndex = giantWalkSounds[arrayIndex];
+	return footstepSoundIndex;
+}	
+
+PlayFootstepSoundHallway = function()
+{
+	// Appartment footstep sounds
+	hallwayWalkSounds[0] = foley_womenHallwayWalk1;
+	hallwayWalkSounds[1] = foley_womenHallwayWalk2;
+	hallwayWalkSounds[2] = foley_womenHallwayWalk3;
+	hallwayWalkSounds[3] = foley_womenHallwayWalk4;
+	hallwayWalkSounds[4] = foley_womenHallwayWalk5;
+	
+	var arrayLength = array_length(hallwayWalkSounds);
+	var arrayIndex = random(arrayLength);
+	
+	// If the footstep sound index is the same ast he last one, change it
+	if(arrayIndex == m_cachedFootstepSoundIndex4)
+	{
+		arrayIndex = (arrayIndex + 1) % arrayLength;
+	}
+	
+	// Cache the current footstepindex
+	m_cachedFootstepSoundIndex4 = arrayIndex
+	
+	// Get the new footstep index
+	var footstepSoundIndex = hallwayWalkSounds[arrayIndex];
+	return footstepSoundIndex;
+}	
+
 // -------------------------- Sounds --------------------------
 
 // Set the SoundContexts for Normal Women walking
+function AddNormalWalkingSounds()
 {
 	var womenNormalWalkSoundContext1 = new SoundContext(noone, anim_womenWalk, 1);
 	womenNormalWalkSoundContext1.SetPersistent(true);
 	womenNormalWalkSoundContext1.SetSoundPredicate(PlayFootstepSound);
-	//womenNormalWalkSoundContext1.SetPlayPredicate(mimiWalkingPredicate);
 	AddSoundContext(womenNormalWalkSoundContext1);
 
 	var womenNormalWalkSoundContext6 = new SoundContext(noone, anim_womenWalk, 6);
 	womenNormalWalkSoundContext6.SetPersistent(true);
 	womenNormalWalkSoundContext6.SetSoundPredicate(PlayFootstepSound);
-	//womenNormalWalkSoundContext5.SetPlayPredicate(mimiWalkingPredicate);
 	AddSoundContext(womenNormalWalkSoundContext6);
 }
 
 // Set the SoundContexts for Tall Women walking
+function AddTallWalkingSounds()
 {
-	var womenNormalWalkSoundContext1 = new SoundContext(noone, anim_womenWalkTall, 1);
-	womenNormalWalkSoundContext1.SetPersistent(true);
-	womenNormalWalkSoundContext1.SetSoundPredicate(PlayFootstepSound);
-	//womenNormalWalkSoundContext1.SetPlayPredicate(mimiWalkingPredicate);
-	AddSoundContext(womenNormalWalkSoundContext1);
+	var womenTallWalkSoundContext1 = new SoundContext(noone, anim_womenWalkTall, 1);
+	womenTallWalkSoundContext1.SetPersistent(true);
+	womenTallWalkSoundContext1.SetSoundPredicate(PlayFootstepSound);
+	AddSoundContext(womenTallWalkSoundContext1);
 
-	var womenNormalWalkSoundContext6 = new SoundContext(noone, anim_womenWalkTall, 6);
-	womenNormalWalkSoundContext6.SetPersistent(true);
-	womenNormalWalkSoundContext6.SetSoundPredicate(PlayFootstepSound);
-	//womenNormalWalkSoundContext5.SetPlayPredicate(mimiWalkingPredicate);
-	AddSoundContext(womenNormalWalkSoundContext6);
+	var womenTallWalkSoundContext6 = new SoundContext(noone, anim_womenWalkTall, 6);
+	womenTallWalkSoundContext6.SetPersistent(true);
+	womenTallWalkSoundContext6.SetSoundPredicate(PlayFootstepSound);
+	AddSoundContext(womenTallWalkSoundContext6);
+}
+
+// Set the SoundContexts for Tall Women walking
+function AddGiantWalkingSounds()
+{
+	var womenGiantWalkSoundContext1 = new SoundContext(noone, anim_womenWalkGiant, 1);
+	womenGiantWalkSoundContext1.SetPersistent(true);
+	womenGiantWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundGiant);
+	AddSoundContext(womenGiantWalkSoundContext1);
+
+	var womenGiantWalkSoundContext6 = new SoundContext(noone, anim_womenWalkGiant, 6);
+	womenGiantWalkSoundContext6.SetPersistent(true);
+	womenGiantWalkSoundContext6.SetSoundPredicate(PlayFootstepSoundGiant);
+	AddSoundContext(womenGiantWalkSoundContext6);
+}
+
+// Set the SoundContexts for Hallway Women walking
+function AddHallwayWalkingSounds()
+{
+	var womenHallwayWalkSoundContext1 = new SoundContext(noone, anim_womenWalkHallwayProxy, 1);
+	womenHallwayWalkSoundContext1.SetPersistent(true);
+	womenHallwayWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundHallway);
+	womenHallwayWalkSoundContext1.SetPlayFromInstance(true);
+	AddSoundContext(womenHallwayWalkSoundContext1);
+
+	var womenHallwayWalkSoundContext6 = new SoundContext(noone, anim_womenWalkHallwayProxy, 6);
+	womenHallwayWalkSoundContext6.SetPersistent(true);
+	womenHallwayWalkSoundContext6.SetSoundPredicate(PlayFootstepSoundHallway);
+	womenHallwayWalkSoundContext6.SetPlayFromInstance(true);
+	AddSoundContext(womenHallwayWalkSoundContext6);
 }
 
 // Set the SoundContexts for Spider Women walking
+function AddSpiderWalkingSounds()
 {
 	var womenSpiderWalkSoundContext1 = new SoundContext(noone, anim_womenCrawl, 1);
 	womenSpiderWalkSoundContext1.SetPersistent(true);

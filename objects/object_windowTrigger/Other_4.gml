@@ -51,6 +51,9 @@ MimiFallsBackwards = function()
 			
 			// Advance the Global state
 			SetGlobalGameState(GlobalGameStates.MimiGetsChased);
+			
+			// Set the Women spider sounds
+			instance_youngsetRoomWomenOutside.AddSpiderWalkingSounds();
 		}
 		PlayerMoveAndExecute(2050, 345, 1.0, crawlToPosition);
 	}
@@ -92,6 +95,9 @@ LookOutsideWindow = function()
 	var viewportEndPosition = new Vector2(room_width - (GetViewportWidth() * 0.5), GetPlayerInstance().y);
 	FollowPositionAndDisable(viewportEndPosition);
 	SetViewportFollowSpeed(0.0003);
+	
+	// Add the Giant women footstep sounds
+	instance_youngsetRoomWomenOutside.AddGiantWalkingSounds();
 }
 
 var collisionContext1 = new CollisionContext(GetPlayerInstance(), LookOutsideWindow);

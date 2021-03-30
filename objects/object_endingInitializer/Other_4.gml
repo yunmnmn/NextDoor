@@ -13,3 +13,6 @@ PlayTimeline(timeline_endingConversation);
 var viewportEndPosition = new Vector2(room_width - GetViewportWidth() / 2, 0);
 FollowPositionAndDisable(viewportEndPosition);
 SetViewportFollowSpeed(0.0);
+
+// Play the footstep sounds in the hallway ending
+instance_endingWomen.AddNormalWalkingSounds();

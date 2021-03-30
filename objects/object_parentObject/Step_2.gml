@@ -102,13 +102,30 @@ for(var i = 0; i < ds_list_size(m_soundContexts);  /*don't iuncrement here*/)
 			var soundIndex = soundContext.m_soundPredicate();
 			
 			// Doesn't have a listener, so play it in general
-			if(soundContext.m_listener == noone)
+			if(soundContext.m_positionX == noone && soundContext.m_positionY == noone && soundContext.m_playSoundFromInstance == false)
 			{
 				PlaySound(soundIndex, soundContext.m_priority, soundContext.m_loop);
 			}
 			else
 			{
-				// TODO: play with listener and position
+				var posX = 0.0;
+				var posY = 0.0;
+				if(soundContext.m_playSoundFromInstance)
+				{
+					posX = x;
+					posY = y;
+				}
+				else if(soundContext.m_positionX != noone && soundContext.m_positionY != noone)
+				{
+					posX = soundContext.m_positionX;
+					posY = soundContext.m_positionY;
+				}
+				else
+				{
+					assert(false, "SoundContext can't play SoundAt");
+				}
+				
+				PlaySoundAt(soundIndex, posX, posY, 20, 2000, 2.2, soundContext.m_loop, soundContext.m_priority);
 			}
 		}
 		
