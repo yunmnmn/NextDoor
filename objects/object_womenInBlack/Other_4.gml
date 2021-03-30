@@ -6,6 +6,8 @@ m_cachedFootstepSoundIndex2 = 0;
 m_cachedFootstepSoundIndex3 = 0;
 m_cachedFootstepSoundIndex4 = 0;
 
+m_playSoftFootstepsHallway = false;
+
 // Don't let Mimi outside anymore
 GameEndingRoom = function()
 {	
@@ -184,7 +186,23 @@ PlayFootstepSoundHallway = function()
 	hallwayWalkSounds[3] = foley_womenHallwayWalk4;
 	hallwayWalkSounds[4] = foley_womenHallwayWalk5;
 	
-	var arrayLength = array_length(hallwayWalkSounds);
+	hallwayOutsideWalkSounds[0] = foley_womenHallwayOutsideWalk1;
+	hallwayOutsideWalkSounds[1] = foley_womenHallwayOutsideWalk2;
+	hallwayOutsideWalkSounds[2] = foley_womenHallwayOutsideWalk3;
+	hallwayOutsideWalkSounds[3] = foley_womenHallwayOutsideWalk4;
+	hallwayOutsideWalkSounds[4] = foley_womenHallwayOutsideWalk5;
+	
+	var footstepArray = noone;
+	if(m_playSoftFootstepsHallway)
+	{
+		footstepArray = hallwayOutsideWalkSounds;
+	}
+	else
+	{
+		footstepArray = hallwayWalkSounds;
+	}
+	
+	var arrayLength = array_length(footstepArray);
 	var arrayIndex = random(arrayLength);
 	
 	// If the footstep sound index is the same ast he last one, change it
@@ -197,7 +215,7 @@ PlayFootstepSoundHallway = function()
 	m_cachedFootstepSoundIndex4 = arrayIndex
 	
 	// Get the new footstep index
-	var footstepSoundIndex = hallwayWalkSounds[arrayIndex];
+	var footstepSoundIndex = footstepArray[arrayIndex];
 	return footstepSoundIndex;
 }	
 
@@ -269,18 +287,8 @@ function AddSpiderWalkingSounds()
 	womenSpiderWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundSpider);
 	AddSoundContext(womenSpiderWalkSoundContext1);
 
-	var womenSpiderWalkSoundContext3 = new SoundContext(noone, anim_womenCrawl, 3);
-	womenSpiderWalkSoundContext3.SetPersistent(true);
-	womenSpiderWalkSoundContext3.SetSoundPredicate(PlayFootstepSoundSpider);
-	AddSoundContext(womenSpiderWalkSoundContext3);
-	
 	var womenSpiderWalkSoundContext5 = new SoundContext(noone, anim_womenCrawl, 5);
 	womenSpiderWalkSoundContext5.SetPersistent(true);
 	womenSpiderWalkSoundContext5.SetSoundPredicate(PlayFootstepSoundSpider);
 	AddSoundContext(womenSpiderWalkSoundContext5);
-	
-	var womenSpiderWalkSoundContext7 = new SoundContext(noone, anim_womenCrawl, 7);
-	womenSpiderWalkSoundContext7.SetPersistent(true);
-	womenSpiderWalkSoundContext7.SetSoundPredicate(PlayFootstepSoundSpider);
-	AddSoundContext(womenSpiderWalkSoundContext7);
 }

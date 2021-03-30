@@ -75,3 +75,8 @@ AddSoundContext(womenScrews);
 var womenLooks = new SoundContext(foley_womenLook, anim_womenLook, 1);
 womenLooks.SetPersistent(false);
 AddSoundContext(womenLooks);
+
+// Set the sound for the women looking
+var womenLooks = new SoundContext(foley_womenLimbsExtend, anim_womenScrew, 50);
+womenLooks.SetPersistent(false);
+AddSoundContext(womenLooks);
