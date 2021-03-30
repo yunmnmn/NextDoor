@@ -157,6 +157,7 @@
     {"id":{"name":"anim_holdPromptController","path":"sprites/anim_holdPromptController/anim_holdPromptController.yy",},"order":16,},
     {"id":{"name":"sprite_youngsterCornerIdleShadow","path":"sprites/sprite_youngsterCornerIdleShadow/sprite_youngsterCornerIdleShadow.yy",},"order":3,},
     {"id":{"name":"object_doorYoungsterCloseTrigger","path":"objects/object_doorYoungsterCloseTrigger/object_doorYoungsterCloseTrigger.yy",},"order":7,},
+    {"id":{"name":"Sound70","path":"sounds/Sound70/Sound70.yy",},"order":6,},
     {"id":{"name":"music_metalHallway","path":"sounds/music_metalHallway/music_metalHallway.yy",},"order":2,},
     {"id":{"name":"sprite_youngsterAvatarTerrified","path":"sprites/sprite_youngsterAvatarTerrified/sprite_youngsterAvatarTerrified.yy",},"order":4,},
     {"id":{"name":"foley_womenScrews","path":"sounds/foley_womenScrews/foley_womenScrews.yy",},"order":3,},
