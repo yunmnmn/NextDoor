@@ -9,9 +9,9 @@ instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomenFootsteps, 0.0,
 // Play the walking animation
 instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenWalkHallwayProxy, false, noone);
 
-function StopWalkingInHallway()
+var stopWalkingInHallway = function()
 {
-	// Reset the textbox
+	// Reset the sprites of the women
 	instance_youngsetRoomWomenOutside.image_speed = 0.0;
 	instance_youngsetRoomWomenOutside.path_speed = 0.0;
 	
@@ -32,4 +32,4 @@ function StopWalkingInHallway()
 	PlayerPlayAnimation2(sprite_mimiIdleScared, noone);
 }
 // Set the callback to play the Movie when the women reaches the end of the path
-instance_youngsetRoomWomenOutside.AddPathPointCallback(4, StopWalkingInHallway, false);
+instance_youngsetRoomWomenOutside.AddPathEndCallback(stopWalkingInHallway, false);

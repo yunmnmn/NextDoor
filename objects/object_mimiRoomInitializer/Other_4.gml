@@ -169,7 +169,7 @@ switch(GetGlobalGameState())
 		// Play the new room music
 		PlayRoomMusic(music_metalMimiRoom, "Metal", true, 1, true);
 		// Set the volume
-		SoundGain(GetRoomMusic(), 1.0, 1.0);
+		SoundGain(GetRoomMusic(), 1.0, 500);
 		break;
 	default:
 		break;
