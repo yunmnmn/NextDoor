@@ -20,7 +20,7 @@ MusicStopConversation = function()
 		walkToPosition = function()
 		{			
 			GetPlayerInstance().SetPathSpeed(0.0);
-			//PlayerPlayAnimationBackwards(anim_mimiSit, false, keepSitting);
+			PlayerPlayAnimationBackwards(anim_mimiSit, false, keepSitting);
 			
 			// Play the sitting down sound
 			PlaySound(foley_appartmentSittingDown, 100, false);
