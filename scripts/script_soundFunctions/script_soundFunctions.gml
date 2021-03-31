@@ -91,10 +91,10 @@ function GetRoomMusicGroup()
 	return GetBackgroundInstance().m_roomMusicGroup;
 }
 
-function GetRoomMusicPosition()
-{
-	return GetBackgroundInstance().m_roomMusicPosition;
-}
+//function GetRoomMusicPosition()
+//{
+//	return GetBackgroundInstance().m_roomMusicPosition;
+//}
 
 function PlayRoomMusic(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_priority, p_loop)
 {

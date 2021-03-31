@@ -25,7 +25,7 @@ m_desiredY = 0.0;
 
 // Sounds
 m_roomMusic = noone;
-m_roomMusicPosition = 0.0;
+//m_roomMusicPosition = 0.0;
 m_roomMusicGroup = noone;
 m_registerSoundPositionOnEnd = true;
 
@@ -40,16 +40,16 @@ function RestrictViewportX(p_min, p_max)
 	m_viewportMaxX = maxx;
 }
 
-function RestrictViewportY(p_min, p_max)
-{
-	var minn = clamp(p_min, 0, room_height);
-	var maxx = clamp(p_max, 0, room_height);
+//function RestrictViewportY(p_min, p_max)
+//{
+//	var minn = clamp(p_min, 0, room_height);
+//	var maxx = clamp(p_max, 0, room_height);
 	
-	assert(minn <= maxx, "Min can't be bigger than max")
+//	assert(minn <= maxx, "Min can't be bigger than max")
 
-	m_viewportMinY = minn;
-	m_viewportMaxY = maxx;
-}
+//	m_viewportMinY = minn;
+//	m_viewportMaxY = maxx;
+//}
 
 function SetViewportPositionX(p_positionX)
 {
@@ -58,12 +58,12 @@ function SetViewportPositionX(p_positionX)
 	m_rawPositionX = p_positionX;
 }
 
-function SetViewportPositionY(p_positionY)
-{
-	var positionX = GetViewportPositionX();
-	camera_set_view_pos(m_viewport, positionX, p_positionY);
-	m_rawPositionY = p_positionY;
-}
+//function SetViewportPositionY(p_positionY)
+//{
+//	var positionX = GetViewportPositionX();
+//	camera_set_view_pos(m_viewport, positionX, p_positionY);
+//	m_rawPositionY = p_positionY;
+//}
 
 function SetViewportPosition(p_positionX, p_positionY)
 {

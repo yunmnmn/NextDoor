@@ -22,8 +22,3 @@ function GetCurrentTextContext()
 	assert(global.g_textboxInstance != noone, "No textbox instance is registered");
 	return global.g_textboxInstance.m_textContext;
 }
-
-function DisableAllTriggers(disableTriggers)
-{
-	global.g_textboxInstance.m_disableAllTriggers = disableTriggers;
-}

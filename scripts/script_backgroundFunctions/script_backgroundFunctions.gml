@@ -45,28 +45,20 @@ function ResetBackgroundInstance()
 }
 
 // Returns the BackgroundSpriteIndex
-function GetBackgroundSpriteIndex()
-{
-	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
+//function GetBackgroundSpriteIndex()
+//{
+//	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
 	
-	var backgroundSpriteIndex = GetBackgroundInstance().sprite_index;
-	assert(backgroundSpriteIndex != -1, "This shouldn't be -1, this means that the object did not have a sprite assigned to it");
+//	var backgroundSpriteIndex = GetBackgroundInstance().sprite_index;
+//	assert(backgroundSpriteIndex != -1, "This shouldn't be -1, this means that the object did not have a sprite assigned to it");
 	
-	return backgroundSpriteIndex;
-}
+//	return backgroundSpriteIndex;
+//}
 
-// Returns the Background texture (the one the player sees)
-function GetBackgroundTexture()
-{
-	assert(global.g_backgroundInstance != noone, "backgroundInstance cannot be 0");
-	var backgroundTexture = sprite_get_texture(GetBackgroundSpriteIndex(), 0);
-	return backgroundTexture;
-}
-
-function SetBackgroundSpriteIndex(p_spriteIndex)
-{
-	GetBackgroundInstance().sprite_index = p_spriteIndex;
-}
+//function SetBackgroundSpriteIndex(p_spriteIndex)
+//{
+//	GetBackgroundInstance().sprite_index = p_spriteIndex;
+//}
 
 // -------------- Shadow Map functions --------------
 
@@ -180,20 +172,20 @@ function RescrictViewportX(p_min, p_max)
 	GetBackgroundInstance().RestrictViewportX(p_min, p_max);
 }
 
-function RescrictViewportY(p_min, p_max)
-{
-	GetBackgroundInstance().RestrictViewportY(p_min, p_max);
-}
+//function RescrictViewportY(p_min, p_max)
+//{
+//	GetBackgroundInstance().RestrictViewportY(p_min, p_max);
+//}
 
 function UnrestrictViewportX()
 {
 	GetBackgroundInstance().RestrictViewportX(0, 99999999);
 }
 
-function UnrestrictViewportY()
-{
-	GetBackgroundInstance().RestrictViewportY(0, 99999999);
-}
+//function UnrestrictViewportY()
+//{
+//	GetBackgroundInstance().RestrictViewportY(0, 99999999);
+//}
 
 function GetViewportPositionX()
 {
@@ -205,10 +197,10 @@ function GetViewportPositionY()
 	return GetBackgroundInstance().GetViewportPositionY();
 }
 
-function GetViewportSizeX()
-{
-	return GetBackgroundInstance()
-}
+//function GetViewportSizeX()
+//{
+//	return GetBackgroundInstance()
+//}
 
 function SetViewportPositionX(m_positionX)
 {

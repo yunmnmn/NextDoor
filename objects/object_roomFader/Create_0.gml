@@ -34,12 +34,6 @@ function SetCallback(p_callback)
 	m_callback = p_callback;
 }
 
-// Set the fading color
-function SetFadeColor(p_fadeColor)
-{
-	// TODO:
-}
-
 // Set the default variables
 m_fadeSpeed = 0.0;
 m_callback = noone;

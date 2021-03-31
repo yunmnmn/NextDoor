@@ -43,7 +43,7 @@ function PlayAnimation(p_spriteIndex, p_mirrored, p_callback)
 // Play an animation on the instance
 function PlayAnimation2(p_spriteIndex, p_callback)
 {
-	PlayAnimation(p_spriteIndex, m_mirrored, p_callback);
+	id.PlayAnimation(p_spriteIndex, m_mirrored, p_callback);
 }
 
 // Set a callback when the instance reaches the point
@@ -63,10 +63,10 @@ function AddPathEndCallback(p_callback, p_persistant)
 }
 
 // Set a callback when the instance reaches the beginning of the path
-function AddPathBeginCallback(p_callback, p_persistant)
-{
-	AddPathPointCallback(0, p_callback, p_persistant);
-}
+//function AddPathBeginCallback(p_callback, p_persistant)
+//{
+//	AddPathPointCallback(0, p_callback, p_persistant);
+//}
 
 function FreezeAnimationAtEnd(p_spriteIndex, p_mirrored)
 {

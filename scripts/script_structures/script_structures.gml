@@ -4,12 +4,6 @@ function Vector2(p_x, p_y) constructor
 	m_x = p_x;
 	m_y = p_y;
 	
-	Add = function(p_other)
-	{
-        m_x += p_other.m_x;
-        m_y += p_other.m_y;
-    }
-	
 	Free = function()
 	{
 	}
@@ -110,11 +104,11 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 		m_persistent = p_persistent;
 	}
 	
-	SetPosition = function(p_positionX, p_positionY)
-	{
-		m_positionX = p_positionX;
-		m_positionY = p_positionY;
-	}
+	//SetPosition = function(p_positionX, p_positionY)
+	//{
+	//	m_positionX = p_positionX;
+	//	m_positionY = p_positionY;
+	//}
 	
 	SetPlayFromInstance = function(p_playFromInstance)
 	{
@@ -129,16 +123,6 @@ function SoundContext(p_soundIndex, p_spriteIndex, p_imageIndex) constructor
 	SetSoundPredicate = function(p_predicate)
 	{
 		m_soundPredicate = p_predicate;
-	}
-	
-	SetPriority = function(p_priority)
-	{
-		m_priority = p_priority;
-	}
-	
-	SetLoop = function(p_loop)
-	{
-		m_loop = p_loop;
 	}
 	
 	Free = function()
@@ -172,11 +156,6 @@ function SoundGroup(p_soundGroupName) constructor
 		return m_soundPosition;
 	}
 	
-	GetSoundGroupName = function()
-	{
-		return m_soundGroupName;
-	}
-	
 	Free = function()
 	{
 	}
@@ -205,24 +184,6 @@ function CollisionContext(p_collisionInstance, p_callback) constructor
 		AddGlobalState1(p_globalState1);
 		ds_list_add(m_globalStates, p_globalState2);
 	}
-
-	AddGlobalState3 = function(p_globalState1, p_globalState2, p_globalState3)
-	{
-		AddGlobalState2(p_globalState1, p_globalState2);
-		ds_list_add(m_globalStates, p_globalState3);
-	}
-	
-	AddGlobalState4 = function(p_globalState1, p_globalState2, p_globalState3, p_globalState4)
-	{
-		AddGlobalState3(p_globalState1, p_globalState2, p_globalState3);
-		ds_list_add(m_globalStates, p_globalState4);
-	}
-	
-	AddGlobalState5 = function(p_globalState1, p_globalState2, p_globalState3, p_globalState4, p_globalState5)
-	{
-		AddGlobalState4(p_globalState1, p_globalState2, p_globalState3, p_globalState4);
-		ds_list_add(m_globalStates, p_globalState5);
-	}	
 	
 	AllStates = function()
 	{
