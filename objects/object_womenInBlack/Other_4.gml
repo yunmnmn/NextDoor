@@ -253,13 +253,13 @@ function AddHallwayWalkingSounds()
 {
 	var womenHallwayWalkSoundContext1 = new SoundContext(noone, anim_womenWalkHallwayProxy, 1);
 	womenHallwayWalkSoundContext1.SetPersistent(true);
-	womenHallwayWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundHallway);
+	womenHallwayWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundGiant);
 	womenHallwayWalkSoundContext1.SetPlayFromInstance(instance_youngsetRoomWomenOutside);
 	AddSoundContext(womenHallwayWalkSoundContext1);
 
 	var womenHallwayWalkSoundContext6 = new SoundContext(noone, anim_womenWalkHallwayProxy, 6);
 	womenHallwayWalkSoundContext6.SetPersistent(true);
-	womenHallwayWalkSoundContext6.SetSoundPredicate(PlayFootstepSoundHallway);
+	womenHallwayWalkSoundContext6.SetSoundPredicate(PlayFootstepSoundGiant);
 	womenHallwayWalkSoundContext6.SetPlayFromInstance(instance_youngsetRoomWomenOutside);
 	AddSoundContext(womenHallwayWalkSoundContext6);
 }
