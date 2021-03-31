@@ -85,7 +85,7 @@ WomenMightBeOutside = function()
 		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), WomenMightBeOutside);
-		collisionContext.AddGlobalState1(GlobalGameStates.MimiStandsUpFromAttack);
+		collisionContext.AddGlobalState1(GlobalGameStates.MimiHearsTickingAtWindow);
 		AddCollisionContext(collisionContext);
 	}
 	// Start the monologue
@@ -101,5 +101,5 @@ WomenMightBeOutside = function()
 }
 
 var collisionContext2 = new CollisionContext(GetPlayerInstance(), WomenMightBeOutside);
-collisionContext2.AddGlobalState2(GlobalGameStates.MimiStandsUpFromAttack, GlobalGameStates.MimiHearsTickingAtWindow);
+collisionContext2.AddGlobalState2(GlobalGameStates.MimiHearsTickingAtWindow);
 AddCollisionContext(collisionContext2);

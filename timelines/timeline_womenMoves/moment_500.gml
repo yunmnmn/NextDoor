@@ -11,6 +11,7 @@ instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenWalkHallwayProxy, fals
 
 function StopWalkingInHallway()
 {
+	// Reset the textbox
 	instance_youngsetRoomWomenOutside.image_speed = 0.0;
 	instance_youngsetRoomWomenOutside.path_speed = 0.0;
 	

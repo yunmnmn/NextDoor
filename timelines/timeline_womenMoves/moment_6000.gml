@@ -1,13 +1,6 @@
-// If the current TextContext is occupied, go back a second
-if(GetControlState() != PlayerControlState.PlayerControl)
-{
-	timeline_position = timeline_position - 1000;
-}
-else
-{
-	// Start of the conversation. Doesn't require a function
-	var c24_1 = new TextContext(sprite_mimiAvatarScared, true, noone);	
-	c24_1.AddSubText(new SubText("She's walking through the hallway...", 0.4, true));
-	c24_1.m_progressable = false;
-	RenderText(c24_1);
-}
+// Declare this outside so I can use it in another scope
+c24_1 = new TextContext(sprite_mimiAvatarScared, true, noone);	
+c24_1.AddSubText(new SubText("Where is she going?", 0.4, true));
+c24_1.m_progressable = true;
+RenderText(c24_1);
+
