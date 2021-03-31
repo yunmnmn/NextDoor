@@ -161,6 +161,9 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 					// Hack: move mimi 64 pixels to the left to match the CrawlToIdle animation
 					PlayerSnapToClosestPosition(GetPlayerInstance().x + 64, GetPlayerInstance().y, true);
 					PlayerPlayAnimation2(anim_mimiCrawlToIdle, idleToIdleScared);
+					
+					// Stop the chase music
+					StopRoomMusic();
 				}
 			
 				cb23_6 = function()
@@ -196,9 +199,6 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 					var c23_2 = new TextContext(sprite_mimiAvatarScared, true, cb23_3);
 					c23_2.AddSubText(new SubText("Those limbs...", 0.3, true));
 					RenderText(c23_2);
-					
-					// Stop the background music
-					StopRoomMusic();
 				}
 			
 				// Start of the conversation.
@@ -213,7 +213,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				instance_womenSlats.FreezeAnimationAtEnd2(anim_womenSlats);
 				
 				// Make the sound softer again
-				SoundGain(GetRoomMusic(), 0.0, 500);
+				SoundGain(GetRoomMusic(), 0.0, 1000);
 			}
 			// Start the slats animation
 			instance_womenSlats.PlayAnimation2(anim_womenSlats, animationSlatsFinished);
