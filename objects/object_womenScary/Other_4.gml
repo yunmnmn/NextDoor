@@ -83,5 +83,6 @@ AddSoundContext(womenScrews);
 
 // Set the sound for when the Women is screwing in a loop
 var womenScrews = new SoundContext(foley_womenScrewLoop, anim_womenScrewLoop, 1);
-womenScrews.SetPersistent(false);
+womenScrews.SetPersistent(true);
+womenScrews.SetPlayFromInstance(instance_womanScary);
 AddSoundContext(womenScrews);

@@ -74,6 +74,9 @@ function MimiPeepsConversation()
 		
 		// Draw the hold prompt
 		instance_global.DrawActionHoldPrompt(true, true, 970, 200);
+		
+		// Play the women scre animation
+		instance_womanScary.PlayAnimation2(anim_womenScrewLoop, noone);
 	}
 	
 	cb18_4 = function()
