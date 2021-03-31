@@ -181,13 +181,13 @@ PlayFootstepSoundGiant = function()
 PlayFootstepSoundHallway = function()
 {
 	// Appartment footstep sounds
-	hallwayWalkSounds[0] = foley_womenHallwayWalk1;
-	hallwayWalkSounds[1] = foley_womenHallwayWalk2;
-	hallwayWalkSounds[2] = foley_womenHallwayWalk3;
-	hallwayWalkSounds[3] = foley_womenHallwayWalk4;
-	hallwayWalkSounds[4] = foley_womenHallwayWalk5;
+	hallwayWalkSoundsEcho[0] = foley_womenHallwayWalk1;
+	hallwayWalkSoundsEcho[1] = foley_womenHallwayWalk2;
+	hallwayWalkSoundsEcho[2] = foley_womenHallwayWalk3;
+	hallwayWalkSoundsEcho[3] = foley_womenHallwayWalk4;
+	hallwayWalkSoundsEcho[4] = foley_womenHallwayWalk5;
 	
-	var arrayLength = array_length(hallwayWalkSounds);
+	var arrayLength = array_length(hallwayWalkSoundsEcho);
 	var arrayIndex = floor(random(arrayLength));
 	
 	// If the footstep sound index is the same ast he last one, change it
@@ -200,7 +200,7 @@ PlayFootstepSoundHallway = function()
 	m_cachedFootstepSoundIndex4 = arrayIndex
 	
 	// Get the new footstep index
-	var footstepSoundIndex = hallwayWalkSounds[arrayIndex];
+	var footstepSoundIndex = hallwayWalkSoundsEcho[arrayIndex];
 	return footstepSoundIndex;
 }	
 
@@ -253,13 +253,13 @@ function AddHallwayWalkingSounds()
 {
 	var womenHallwayWalkSoundContext1 = new SoundContext(noone, anim_womenWalkHallwayProxy, 1);
 	womenHallwayWalkSoundContext1.SetPersistent(true);
-	womenHallwayWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundGiant);
+	womenHallwayWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundHallway);
 	womenHallwayWalkSoundContext1.SetPlayFromInstance(instance_youngsetRoomWomenOutside);
 	AddSoundContext(womenHallwayWalkSoundContext1);
 
 	var womenHallwayWalkSoundContext6 = new SoundContext(noone, anim_womenWalkHallwayProxy, 6);
 	womenHallwayWalkSoundContext6.SetPersistent(true);
-	womenHallwayWalkSoundContext6.SetSoundPredicate(PlayFootstepSoundGiant);
+	womenHallwayWalkSoundContext6.SetSoundPredicate(PlayFootstepSoundHallway);
 	womenHallwayWalkSoundContext6.SetPlayFromInstance(instance_youngsetRoomWomenOutside);
 	AddSoundContext(womenHallwayWalkSoundContext6);
 }
