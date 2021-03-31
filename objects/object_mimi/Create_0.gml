@@ -159,8 +159,8 @@ function PlayAnimationBackwards(p_spriteIndex, p_callbackEnd)
 {
 	sprite_index = p_spriteIndex;
 	image_index = sprite_get_number(p_spriteIndex) - 1;
-	image_speed = 1;
-	m_callbackAnimationEndBackwards = p_callbackEnd;
+	image_speed = -1;
+	//m_callbackAnimationEndBackwards = p_callbackEnd;
 }
 
 function MoveAndExecute(p_positionX, p_positionY, p_speed, p_callback)
