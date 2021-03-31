@@ -7,7 +7,7 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 }
 
 // Callback for animation played backwards
-if(m_callbackAnimationEndBackwards)
+if(m_callbackAnimationEndBackwards != noone)
 {
 	if(floor(image_index) == 0)
 	{
