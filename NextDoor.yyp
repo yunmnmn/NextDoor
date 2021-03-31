@@ -3,6 +3,7 @@
     {"id":{"name":"foley_womenHole","path":"sounds/foley_womenHole/foley_womenHole.yy",},"order":6,},
     {"id":{"name":"foreground_youngsterRoomWall","path":"sprites/foreground_youngsterRoomWall/foreground_youngsterRoomWall.yy",},"order":0,},
     {"id":{"name":"sprite_mimiIdle","path":"sprites/sprite_mimiIdle/sprite_mimiIdle.yy",},"order":2,},
+    {"id":{"name":"music_chase","path":"sounds/music_chase/music_chase.yy",},"order":6,},
     {"id":{"name":"anim_mimiCrawl","path":"sprites/anim_mimiCrawl/anim_mimiCrawl.yy",},"order":15,},
     {"id":{"name":"anim_mimiWalk","path":"sprites/anim_mimiWalk/anim_mimiWalk.yy",},"order":0,},
     {"id":{"name":"timeline_womenMoves","path":"timelines/timeline_womenMoves/timeline_womenMoves.yy",},"order":2,},

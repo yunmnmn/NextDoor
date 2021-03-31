@@ -279,6 +279,9 @@ function collisionEvent()
 	// Fade, and when finished, load the hallway
 	var fadeEndCallback = function()
 	{
+		// Fade out the music
+		SoundGain(GetRoomMusic(), 0.0, 500);
+		
 		SetControlState(PlayerControlState.PlayerControl);
 			
 		var pathPosition = SnapToClosestPosition(path_youngsterRoom, 1600, 342);

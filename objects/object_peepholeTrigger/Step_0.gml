@@ -108,6 +108,12 @@ else if(GetGlobalGameState() == GlobalGameStates.WomenLooksAtMimi)
 		
 		// Rumble the controller when Women turns
 		Rumble(0.4, 200);
+		
+		// Play the Chase music
+		PlayRoomMusic(music_chase, "Chase", true, 1.0, true);
+		// Fade it in in 0.2 seconds
+		SoundGain(GetRoomMusic(), 0.0, 0.0);
+		SoundGain(GetRoomMusic(), 0.0, 200);
 	}
 }
 else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
@@ -193,6 +199,9 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 					var c23_2 = new TextContext(sprite_mimiAvatarScared, true, cb23_3);
 					c23_2.AddSubText(new SubText("Those limbs...", 0.3, true));
 					RenderText(c23_2);
+					
+					// Stop the background music
+					StopRoomMusic();
 				}
 			
 				// Start of the conversation.
@@ -205,6 +214,9 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 				RenderText(c23_1)
 			
 				instance_womenSlats.FreezeAnimationAtEnd2(anim_womenSlats);
+				
+				// Make the sound softer again
+				SoundGain(GetRoomMusic(), 0.0, 500);
 			}
 			// Start the slats animation
 			instance_womenSlats.PlayAnimation2(anim_womenSlats, animationSlatsFinished);

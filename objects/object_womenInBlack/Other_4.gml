@@ -234,12 +234,12 @@ function AddTallWalkingSounds()
 // Set the SoundContexts for Tall Women walking
 function AddGiantWalkingSounds()
 {
-	var womenGiantWalkSoundContext1 = new SoundContext(noone, anim_womenWalkGiant, 1);
+	var womenGiantWalkSoundContext1 = new SoundContext(noone, anim_womenWalkGiant, 0);
 	womenGiantWalkSoundContext1.SetPersistent(true);
 	womenGiantWalkSoundContext1.SetSoundPredicate(PlayFootstepSoundGiant);
 	AddSoundContext(womenGiantWalkSoundContext1);
 
-	var womenGiantWalkSoundContext6 = new SoundContext(noone, anim_womenWalkGiant, 6);
+	var womenGiantWalkSoundContext6 = new SoundContext(noone, anim_womenWalkGiant, 5);
 	womenGiantWalkSoundContext6.SetPersistent(true);
 	womenGiantWalkSoundContext6.SetSoundPredicate(PlayFootstepSoundGiant);
 	AddSoundContext(womenGiantWalkSoundContext6);
