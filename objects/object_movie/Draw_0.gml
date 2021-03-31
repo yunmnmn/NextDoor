@@ -20,5 +20,8 @@ if(m_play)
 			m_callback = noone;
 			cachedCallback();
 		}
+		
+		image_speed = 0.0;
+		visible = false;
 	}
 }

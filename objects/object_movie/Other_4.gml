@@ -7,6 +7,7 @@ m_drawFrame = 0;
 m_callback = noone;
 
 m_play = false;
+m_movieSoundDirty = false;
 
 function PlayMovie(p_callback)
 {
@@ -15,7 +16,4 @@ function PlayMovie(p_callback)
 	m_drawFrame = 0;
 	
 	m_callback = p_callback;
-	
-	// Play the movie sound
-	PlaySound(foley_movieSound, 10.0, false);
 }
