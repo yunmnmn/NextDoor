@@ -6,8 +6,6 @@ m_cachedFootstepSoundIndex2 = 0;
 m_cachedFootstepSoundIndex3 = 0;
 m_cachedFootstepSoundIndex4 = 0;
 
-m_playSoftFootstepsHallway = false;
-
 // Don't let Mimi outside anymore
 GameEndingRoom = function()
 {	
@@ -186,23 +184,7 @@ PlayFootstepSoundHallway = function()
 	hallwayWalkSounds[3] = foley_womenHallwayWalk4;
 	hallwayWalkSounds[4] = foley_womenHallwayWalk5;
 	
-	hallwayOutsideWalkSounds[0] = foley_womenHallwayOutsideWalk1;
-	hallwayOutsideWalkSounds[1] = foley_womenHallwayOutsideWalk2;
-	hallwayOutsideWalkSounds[2] = foley_womenHallwayOutsideWalk3;
-	hallwayOutsideWalkSounds[3] = foley_womenHallwayOutsideWalk4;
-	hallwayOutsideWalkSounds[4] = foley_womenHallwayOutsideWalk5;
-	
-	var footstepArray = noone;
-	if(m_playSoftFootstepsHallway)
-	{
-		footstepArray = hallwayOutsideWalkSounds;
-	}
-	else
-	{
-		footstepArray = hallwayWalkSounds;
-	}
-	
-	var arrayLength = array_length(footstepArray);
+	var arrayLength = array_length(hallwayWalkSounds);
 	var arrayIndex = random(arrayLength);
 	
 	// If the footstep sound index is the same ast he last one, change it
@@ -215,7 +197,7 @@ PlayFootstepSoundHallway = function()
 	m_cachedFootstepSoundIndex4 = arrayIndex
 	
 	// Get the new footstep index
-	var footstepSoundIndex = footstepArray[arrayIndex];
+	var footstepSoundIndex = hallwayWalkSounds[arrayIndex];
 	return footstepSoundIndex;
 }	
 
