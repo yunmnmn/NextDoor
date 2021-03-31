@@ -229,3 +229,8 @@ function PulseScreen(p_magnitude)
 {
 	GetBackgroundInstance().PulseScreen(p_magnitude);
 }
+
+function StopPulse()
+{
+	GetBackgroundInstance().StopPulse();
+}

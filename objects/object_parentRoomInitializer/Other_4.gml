@@ -222,6 +222,11 @@ function PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup
 	}
 }
 
+function StopPulse()
+{
+	m_stabilized = 1.0;
+}
+
 function StopMusic()
 {
 	if(m_roomMusic != noone)

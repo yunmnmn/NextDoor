@@ -20,7 +20,6 @@ m_womenPeeps = false;
 m_womenAttacks = false;
 
 m_updateAudioListener = false;
-m_screwSound = noone;
 
 function MimiIsSpooked()
 {
@@ -82,9 +81,6 @@ function MimiPeepsConversation()
 		var c18_4 = new TextContext(sprite_mimiAvatarEye, true, conversationFinished);
 		c18_4.AddSubText(new SubText("...", 0.2, true));
 		RenderText(c18_4);
-		
-		// Play the screwing sound
-		m_screwSound = PlaySoundAt(foley_womenScrewLoop, 70, 300, 20, 2000, 2.2, true, 10.0);
 		
 		// Disable updating the Mimi as the audio listener
 		GetPlayerInstance().SetUpdateAudioListener(false);

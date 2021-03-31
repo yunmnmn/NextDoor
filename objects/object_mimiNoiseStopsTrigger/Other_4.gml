@@ -1,4 +1,4 @@
-MimiConversation = function()
+MusicStopConversation = function()
 {		
 	backToStudying = function()
 	{
@@ -58,12 +58,24 @@ MimiConversation = function()
 	SetControlState(PlayerControlState.PlayerNoControl);		
 	// Play the idle animation
 	PlayerPlayAnimation(sprite_mimiIdle, true, noone);
-	
-	// Stop the music
-	StopRoomMusic();
 }
 
-var collisionContext = new CollisionContext(GetPlayerInstance(), MimiConversation);
+MusicStops = function()
+{
+	// Stop the music
+	StopRoomMusic();
+	
+	// Play the timeline that delays it a bit
+	PlayTimeline(timeline_metalMusicStops);
+	
+	// Stop the screenshake
+	StopPulse();
+	
+	// Stop any controller rumble that's happening
+	StopRumble();
+}
+
+var collisionContext = new CollisionContext(GetPlayerInstance(), MusicStops);
 collisionContext.AddGlobalState1(GlobalGameStates.MimiWalksBackToRoom);
 collisionContext.ExecuteOnHit();
 AddCollisionContext(collisionContext);

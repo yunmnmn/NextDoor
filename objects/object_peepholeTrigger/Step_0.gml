@@ -41,9 +41,6 @@ if(GetGlobalGameState() == GlobalGameStates.MimiIsPeeking)
 		m_lockedToWomen = true;
 		SetGlobalGameState(GlobalGameStates.MimiLocksPeeking);
 		instance_womanScary.NoticesMimi();
-		
-		// Stop the screwing loop sound
-		StopSound(m_screwSound);
 	}
 	
 	var norm = NormalizedViewportPositionToZero(m_viewportLookPositionOriginX - m_viewportFadeThreshold);

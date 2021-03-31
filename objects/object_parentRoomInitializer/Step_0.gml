@@ -59,9 +59,4 @@ if(m_stabilized < 1.0)
 	m_stabilized = clamp(m_stabilized, 0, 1);
 	
 	camera_set_view_pos(m_viewport, m_rawPositionX + shakeOffsetX, m_rawPositionY + shakeOffsetY);
-	
-	//var interpolatedX = lerp(currentViewportPosX, m_rawPositionX, m_stabilized);
-	//var interpolatedY = lerp(currentViewportPosY, m_rawPositionY, m_stabilized);
-
-	//camera_set_view_pos(m_viewport, interpolatedX, interpolatedY);
 }
