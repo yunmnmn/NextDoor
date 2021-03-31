@@ -31,6 +31,9 @@ GameEndingRoom = function()
 		// Set everything to 0.0
 		image_speed = 0.0;
 		path_speed = 0.0;
+		
+		// Fade out the chase music
+		SoundGain(GetRoomMusic(), 0.0, 1000);
 	}
 	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), cb40_1);
 	fader.m_deleteAutomatically = false;

@@ -7,6 +7,7 @@
     {"id":{"name":"anim_mimiCrawl","path":"sprites/anim_mimiCrawl/anim_mimiCrawl.yy",},"order":15,},
     {"id":{"name":"anim_mimiWalk","path":"sprites/anim_mimiWalk/anim_mimiWalk.yy",},"order":0,},
     {"id":{"name":"timeline_womenMoves","path":"timelines/timeline_womenMoves/timeline_womenMoves.yy",},"order":2,},
+    {"id":{"name":"foley_outsideLampOn2","path":"sounds/foley_outsideLampOn2/foley_outsideLampOn2.yy",},"order":10,},
     {"id":{"name":"anim_oldtimerThink","path":"sprites/anim_oldtimerThink/anim_oldtimerThink.yy",},"order":1,},
     {"id":{"name":"sprite_oldtimerAvatarAngry","path":"sprites/sprite_oldtimerAvatarAngry/sprite_oldtimerAvatarAngry.yy",},"order":1,},
     {"id":{"name":"lamp_outsideDoor","path":"sprites/lamp_outsideDoor/lamp_outsideDoor.yy",},"order":7,},

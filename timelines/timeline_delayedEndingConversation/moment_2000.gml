@@ -1,5 +1,8 @@
 transitionToEndingRoom = function()
 {
+	// Stop the room music
+	StopRoomMusic();
+	
 	// Delete the fader
 	fader.instance_destroy();
 		

@@ -18,6 +18,9 @@ GameEndingRoom = function()
 		// Set everything to 0.0
 		instance_youngsetRoomWomenOutside.image_speed = 0.0;
 		instance_youngsetRoomWomenOutside.path_speed = 0.0;
+		
+		// Fade out the chase music
+		SoundGain(GetRoomMusic(), 0.0, 1000);
 	}
 	fader = CreateFader(FadeState.FadeOut, GetDefaultFadingSpeed(), escapedDialogue);
 	fader.m_deleteAutomatically = false;

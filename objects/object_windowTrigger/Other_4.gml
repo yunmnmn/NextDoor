@@ -78,8 +78,19 @@ LookOutsideWindow = function()
 	instance_youngsetRoomWomenOutside.SetPath(path_youngsterRoomWomenOutside, 0.0, 1.0);
 	// Play the walking animation
 	instance_youngsetRoomWomenOutside.PlayAnimation(anim_womenWalkGiant, false, noone);
+	
+	var playChaseMusic = function()
+	{
+		PlayRoomMusic(music_chase, "ChaseEnding", false, 1.0, true);
+		SoundGain(GetRoomMusic(), 0.0, 0.0);
+		// Play the chase music at full volume in 0.2 seconds
+		SoundGain(GetRoomMusic(), 1.0, 200);
+	}
+	// Play the room music when it gets close to the window
+	instance_youngsetRoomWomenOutside.AddPathPointCallback(1, playChaseMusic, false);
+	
 	// Set the callback to play the Movie when the women reaches the end of the path
-	instance_youngsetRoomWomenOutside.AddPathPointCallback(1, PlayWomenClimbMovie, false);
+	instance_youngsetRoomWomenOutside.AddPathEndCallback(PlayWomenClimbMovie, false);
 		
 	// Set the idle animation
 	PlayerPlayAndFreezeAtEnd(sprite_mimiIdleScared, false);
