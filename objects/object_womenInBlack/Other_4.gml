@@ -110,7 +110,7 @@ PlayFootstepSound = function()
 	}
 	
 	var arrayLength = array_length(array);
-	var arrayIndex = random(arrayLength);
+	var arrayIndex = floor(random(arrayLength));
 	
 	// If the footstep sound index is the same ast he last one, change it
 	if(arrayIndex == m_cachedFootstepSoundIndex)
@@ -136,7 +136,7 @@ PlayFootstepSoundSpider = function()
 	spiderWalkSounds[4] = foley_womenSpiderWalk5;
 	
 	var arrayLength = array_length(spiderWalkSounds);
-	var arrayIndex = random(arrayLength);
+	var arrayIndex = floor(random(arrayLength));
 	
 	// If the footstep sound index is the same ast he last one, change it
 	if(arrayIndex == m_cachedFootstepSoundIndex2)
@@ -162,7 +162,7 @@ PlayFootstepSoundGiant = function()
 	giantWalkSounds[4] = foley_womenGiantWalk5;
 	
 	var arrayLength = array_length(giantWalkSounds);
-	var arrayIndex = random(arrayLength);
+	var arrayIndex = floor(random(arrayLength));
 	
 	// If the footstep sound index is the same ast he last one, change it
 	if(arrayIndex == m_cachedFootstepSoundIndex3)
@@ -188,7 +188,7 @@ PlayFootstepSoundHallway = function()
 	hallwayWalkSounds[4] = foley_womenHallwayWalk5;
 	
 	var arrayLength = array_length(hallwayWalkSounds);
-	var arrayIndex = random(arrayLength);
+	var arrayIndex = floor(random(arrayLength));
 	
 	// If the footstep sound index is the same ast he last one, change it
 	if(arrayIndex == m_cachedFootstepSoundIndex4)

@@ -234,7 +234,7 @@ PlayFootstepSound = function()
 	}
 	
 	var arrayLength = array_length(array);
-	var arrayIndex = random(arrayLength);
+	var arrayIndex = floor(random(arrayLength));
 	
 	// If the footstep sound index is the same ast he last one, change it
 	if(arrayIndex == m_cachedFootstepSoundIndex)

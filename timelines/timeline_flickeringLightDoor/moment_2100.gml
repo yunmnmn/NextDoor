@@ -1,2 +1,2 @@
 instance_outsideMemory.SetLampOutsideNearDoorVisible(true);
-timeline_position = random(1500);
+timeline_position = floor(random(1500));
