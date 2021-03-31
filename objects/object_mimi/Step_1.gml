@@ -9,7 +9,7 @@ if(GetControlState() == PlayerControlState.PlayerControl)
 // Callback for animation played backwards
 if(m_callbackAnimationEndBackwards)
 {
-	if(image_index == 0)
+	if(floor(image_index) == 0)
 	{
 		image_index = 0;
 		image_speed = 1;

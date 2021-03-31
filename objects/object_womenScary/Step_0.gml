@@ -1,6 +1,6 @@
 if(m_womenAnimationState == WomenScaryAnimationState.NoticeMimi)
 {
-	if(image_index >= m_switchAvatarAnimationCount && m_dirty == false)
+	if(floor(image_index) >= m_switchAvatarAnimationCount && m_dirty == false)
 	{
 		m_dirty = true;
 		

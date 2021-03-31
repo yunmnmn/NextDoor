@@ -1,7 +1,7 @@
 
 // --- Debug ---
 
-global.m_debug = false;
+global.m_debug = true;
 
 // --- Enums ---
 

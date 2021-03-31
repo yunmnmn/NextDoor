@@ -93,6 +93,7 @@
     {"id":{"name":"path_youngsterRoomWomenFootsteps","path":"paths/path_youngsterRoomWomenFootsteps/path_youngsterRoomWomenFootsteps.yy",},"order":3,},
     {"id":{"name":"script_inputFunctions","path":"scripts/script_inputFunctions/script_inputFunctions.yy",},"order":8,},
     {"id":{"name":"foley_appartmentWalkingStep2","path":"sounds/foley_appartmentWalkingStep2/foley_appartmentWalkingStep2.yy",},"order":3,},
+    {"id":{"name":"timeline_metalMusicStops","path":"timelines/timeline_metalMusicStops/timeline_metalMusicStops.yy",},"order":13,},
     {"id":{"name":"anim_cat","path":"sprites/anim_cat/anim_cat.yy",},"order":2,},
     {"id":{"name":"anim_holdPromptKeyboard","path":"sprites/anim_holdPromptKeyboard/anim_holdPromptKeyboard.yy",},"order":13,},
     {"id":{"name":"anim_mimiCrawlStart","path":"sprites/anim_mimiCrawlStart/anim_mimiCrawlStart.yy",},"order":17,},
@@ -406,7 +407,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.1.542",
+    "IDEVersion": "2.3.2.556",
   },
   "resourceVersion": "1.4",
   "name": "NextDoor",

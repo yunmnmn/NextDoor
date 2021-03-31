@@ -65,7 +65,7 @@ function PlayerPlayAndFreezeAtEnd(p_spriteIndex, p_mirrored)
 {
 	var FreezeAtEnd = function()
 	{
-		GetPlayerInstance().image_index = GetPlayerInstance().image_number - 1;
+		GetPlayerInstance().image_index = floor(GetPlayerInstance().image_number) - 1;
 		GetPlayerInstance().image_speed = 0;
 	}
 	PlayerPlayAnimation(p_spriteIndex, p_mirrored, FreezeAtEnd);
