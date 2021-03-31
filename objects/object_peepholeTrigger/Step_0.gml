@@ -110,7 +110,7 @@ else if(GetGlobalGameState() == GlobalGameStates.WomenLooksAtMimi)
 		PlayRoomMusic(music_chase, "Chase", true, 1.0, true);
 		// Fade it in in 0.2 seconds
 		SoundGain(GetRoomMusic(), 0.0, 0.0);
-		SoundGain(GetRoomMusic(), 0.0, 200);
+		SoundGain(GetRoomMusic(), 1.0, 200);
 	}
 }
 else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
