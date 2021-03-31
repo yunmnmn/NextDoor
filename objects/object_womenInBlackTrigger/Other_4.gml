@@ -87,7 +87,7 @@ function WomenInBlackConversation()
 		c5_2.AddSubText(new SubText("?", 0.3, true));
 		RenderText(c5_2);
 		
-		SoundGain(GetBackgroundInstance().m_roomMusic, 1.0, 0.0001);
+		SoundGain(GetBackgroundInstance().m_roomMusic, 1.0, 500);
 	}
 	
 	womenAppearsCallback = function()
@@ -110,7 +110,7 @@ function WomenInBlackConversation()
 	RenderText(c5_1);
 	
 	// Make the music a bit softer
-	SoundGain(GetBackgroundInstance().m_roomMusic, 0.3, 0.0001);
+	SoundGain(GetBackgroundInstance().m_roomMusic, 0.3, 500);
 	
 	// Set the Normal walking sounds for the women
 	instance_women.AddNormalWalkingSounds()

@@ -347,6 +347,10 @@ function MimiConversation()
 		
 		// Play the ambient sound
 		PlayRoomMusic(music_ambientScary, "AmbientScaryExtraGroup", true, 1.0, true);
+		// Set the sound to 0 first
+		SoundGain(GetRoomMusic(), 0.0, 0);
+		// Fade to full sound in 0.5 seconds
+		SoundGain(GetRoomMusic(), 1.0, 500);
 	}
 }
 
