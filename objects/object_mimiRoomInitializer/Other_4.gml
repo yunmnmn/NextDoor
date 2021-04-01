@@ -168,7 +168,7 @@ switch(GetGlobalGameState())
 	case GlobalGameStates.MimiGoingToYoungster:
 	case GlobalGameStates.MimiWalksBackToRoom:
 		// Play the new room music
-		PlayRoomMusic(music_metalMimiRoom, "Metal", false, 1, true);
+		PlayRoomMusic(music_metalMimiRoom, "Metal", true, 1, true);
 		// Set the volume
 		SoundGain(GetRoomMusic(), 1.0, 500);
 		break;

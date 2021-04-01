@@ -198,10 +198,7 @@ function PlayMusic(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, 
 	if(p_getSoundPositionFromGroup)
 	{
 		var soundPosition = GetSoundGroupPosition(p_soundGroupName);
-		if(soundPosition != noone)
-		{
-			SetSoundPosition(m_roomMusic, soundPosition);
-		}
+		SetSoundPosition(m_roomMusic, soundPosition);
 	}	
 }
 
@@ -215,10 +212,7 @@ function PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup
 	if(p_getSoundPositionFromGroup)
 	{
 		var soundPosition = GetSoundGroupPosition(p_soundGroupName);
-		if(soundPosition != noone)
-		{
-			SetSoundPosition(m_roomMusic, soundPosition);
-		}
+		SetSoundPosition(m_roomMusic, soundPosition);
 	}
 }
 

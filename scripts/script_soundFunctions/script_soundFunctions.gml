@@ -80,7 +80,7 @@ function GetSoundGroupPosition(p_soundGroupName)
 	var soundGroup = FindSoundGroup(p_soundGroupName);
 	if(soundGroup == noone)
 	{
-		return noone;
+		return 0.0;
 	}
 	
 	return soundGroup.GetSoundPosition();
