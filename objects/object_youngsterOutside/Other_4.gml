@@ -40,6 +40,9 @@ talkToScaredYoungster = function()
 	
 	// Disable the control for the player
 	SetControlState(PlayerControlState.PlayerNoControl);
+	
+	// Set Mimi to idle
+	PlayerPlayAnimation2(sprite_mimiIdle, noone);
 }
 
 AddTalkingToScaredYoungster = function()
