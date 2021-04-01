@@ -103,6 +103,10 @@ global.m_defaultFadingSpeed = 0.0005;
 // Average delta in seconds
 global.averageDeltaTimeInMiliseconds = noone;
 
+global.historySize = 32;
+global.fpsHistory = array_create(global.historySize, 0);
+global.frameIndex = 0;
+
 function DebugMode()
 {
 	return global.m_debug;

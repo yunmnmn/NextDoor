@@ -24,18 +24,32 @@ function DeltaTimeInMiliseconds()
 	return delta_time / 1000;
 }
 
-// Calculate the average delta time over frames
+// Calculate the average delta time over frames each frame
 function AverageDeltaTimeInMiliseconds()
 {
-	if(global.averageDeltaTimeInMiliseconds == noone)
+	if(global.frameIndex < global.historySize)
 	{
-		global.averageDeltaTimeInMiliseconds = DeltaTimeInMiliseconds();
+		var current = DeltaTimeInMiliseconds();
+		global.fpsHistory[floor(global.frameIndex)] = DeltaTimeInMiliseconds();
+		global.averageDeltaTimeInMiliseconds = current;
 	}
 	else
 	{
-		var dt = DeltaTimeInMiliseconds();
-		global.averageDeltaTimeInMiliseconds = (dt + global.averageDeltaTimeInMiliseconds) * 0.5;
+		var current = DeltaTimeInMiliseconds();
+		var averageFps = 0;
+		for(var i = 0; i < global.historySize; i++)
+		{
+			averageFps += global.fpsHistory[i];
+		}
+		averageFps += current;
+		averageFps /= global.historySize + 1;
+		
+		global.fpsHistory[floor(global.frameIndex)] = averageFps;
+		
+		global.averageDeltaTimeInMiliseconds = averageFps;
 	}
+	
+	global.frameIndex++;
 }
 
 function GetAverageDeltaTimeInMiliseconds()
