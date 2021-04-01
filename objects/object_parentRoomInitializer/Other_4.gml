@@ -212,7 +212,7 @@ function PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup
 	if(p_getSoundPositionFromGroup)
 	{
 		var soundPosition = GetSoundGroupPosition(p_soundGroupName);
-		SetSoundPosition(m_roomMusic, 1.0);
+		SetSoundPosition(m_roomMusic, soundPosition);
 	}
 }
 
