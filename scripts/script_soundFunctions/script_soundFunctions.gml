@@ -1,7 +1,7 @@
 function PlaySound(p_soundIndex, p_priority, p_loop)
 {
 	assert(p_soundIndex != noone, "Sound is invalid");
-	if(audio_system_is_available())
+	//if(audio_system_is_available())
 	{
 		return audio_play_sound(p_soundIndex, p_priority, p_loop);
 	}
@@ -10,7 +10,7 @@ function PlaySound(p_soundIndex, p_priority, p_loop)
 function PlaySoundAt(p_soundIndex, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority)
 {
 	assert(p_soundIndex != noone, "Sound is invalid");
-	if(audio_system_is_available())
+	//if(audio_system_is_available())
 	{
 		return audio_play_sound_at(p_soundIndex, p_x, p_y, 0, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority);
 	}
@@ -19,7 +19,7 @@ function PlaySoundAt(p_soundIndex, p_x, p_y, p_falloffRef, p_falloffMax, p_fallo
 function StopSound(p_soundInstance)
 {
 	assert(p_soundInstance != noone, "Sound instance is invalid");
-	if(audio_system_is_available())
+	//if(audio_system_is_available())
 	{
 		audio_stop_sound(p_soundInstance);
 	}
@@ -28,7 +28,7 @@ function StopSound(p_soundInstance)
 function SoundGain(p_soundInstance, p_volume, p_time)
 {
 	assert(p_soundInstance != noone, "Sound instance is invalid");
-	if(audio_system_is_available())
+	//if(audio_system_is_available())
 	{
 		audio_sound_gain(p_soundInstance, p_volume, p_time);
 	}
