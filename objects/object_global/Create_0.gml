@@ -81,7 +81,7 @@ function CheckLastControlDevicePressed()
 // Returns wether the controller in in control now
 function IsController()
 {
-	return m_controlDevice == ControlDevice.Controller;
+	return (m_controlDevice == ControlDevice.Controller);
 }
 
 function WalkingLeft()
@@ -175,7 +175,10 @@ function Rumble(p_intensity, p_miliseconds)
 		SetControllerVibrationFactor(p_intensity);
 	
 		// Clear all moments in the disableRumble timeline
-		timeline_clear(timeline_disableRumble);
+		if(timeline_size(timeline_disableRumble) > 0)
+		{
+			timeline_clear(timeline_disableRumble);
+		}
 	
 		// Add the moment to the timeline
 		timeline_moment_add_script(timeline_disableRumble, p_miliseconds, script_disableRumble);
