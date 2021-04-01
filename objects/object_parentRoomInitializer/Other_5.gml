@@ -25,9 +25,9 @@ if(m_roomMusic != noone)
 	{
 		RegisterSoundGroupFromMusic(m_roomMusicGroup, m_roomMusic);
 	}
+	
+	StopMusic();
 }
-
-StopMusic();
 
 // Stop the rumble
 StopRumble();
