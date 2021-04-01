@@ -12,22 +12,25 @@ function PlaySoundAt(p_soundIndex, p_x, p_y, p_falloffRef, p_falloffMax, p_fallo
 
 function StopSound(p_soundInstance)
 {
+	assert(p_soundInstance != noone, "Sound instance is invalid");
 	audio_stop_sound(p_soundInstance);
 }
 
 function SoundGain(p_soundInstance, p_volume, p_time)
 {
-	assert(p_soundInstance != noone, "Sound is invalid");
+	assert(p_soundInstance != noone, "Sound instance is invalid");
 	audio_sound_gain(p_soundInstance, p_volume, p_time);
 }
 
 function GetSoundPosition(p_soundInstance)
 {
+	assert(p_soundInstance != noone, "Sound instance is invalid");
 	return audio_sound_get_track_position(p_soundInstance);
 }
 
 function SetSoundPosition(p_soundInstance, p_time)
 {
+	assert(p_soundInstance != noone, "Sound instance is invalid");
 	audio_sound_set_track_position(p_soundInstance, p_time);
 }
 
@@ -53,6 +56,8 @@ function FindSoundGroup(p_soundGroupName)
 
 function RegisterSoundGroupFromMusic(p_soundGroupName, p_soundInstance)
 {
+	assert(p_soundInstance != noone, "Sound instance is invalid");
+	
 	var soundPosition = GetSoundPosition(p_soundInstance);
 	RegisterSoundGroup(p_soundGroupName, soundPosition);
 }
@@ -98,11 +103,13 @@ function GetRoomMusicGroup()
 
 function PlayRoomMusic(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_priority, p_loop)
 {
+	assert(p_soundIndex != noone, "Sound is invalid");
 	GetBackgroundInstance().PlayMusic(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_priority, p_loop);
 }
 
 function PlayRoomMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority)
 {
+	assert(p_soundIndex != noone, "Sound is invalid");
 	GetBackgroundInstance().PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority);
 }
 
