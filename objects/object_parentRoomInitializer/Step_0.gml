@@ -4,7 +4,7 @@ if(m_followInstance != noone || m_followPosition != noone)
 	var followPositionX = 0;
 	var followPositionY = 0;
 	
-	if(m_followPosition)
+	if(m_followPosition != noone)
 	{
 		followPositionX = m_followPosition.m_x;
 		followPositionY = m_followPosition.m_y;

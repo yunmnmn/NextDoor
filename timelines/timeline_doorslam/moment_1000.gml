@@ -8,8 +8,6 @@ else
 	// Hide the DoorOpen layer
 	instance_doorOpen.visible = false;
 	
-	// TODO: Play a doorslam sound
-	
 	// Disable the player control
 	SetControlState(PlayerControlState.PlayerNoControl);
 	

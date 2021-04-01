@@ -50,7 +50,6 @@ CannotGoToHallwayUp = function()
 		// Give control ba ck to the player again
 		SetControlState(PlayerControlState.PlayerControl);
 		
-		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), CannotGoToHallwayUp);
 		collisionContext.AddGlobalState1(GlobalGameStates.MimiLooksAround);
@@ -82,7 +81,6 @@ WomenMightBeOutside = function()
 		// Give control ba ck to the player again
 		SetControlState(PlayerControlState.PlayerControl);
 		
-		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), WomenMightBeOutside);
 		collisionContext.AddGlobalState1(GlobalGameStates.MimiHearsTickingAtWindow);

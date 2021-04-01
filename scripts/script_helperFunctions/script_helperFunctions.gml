@@ -114,7 +114,8 @@ function SnapToClosestPosition(p_pathIndex, p_positionX, p_positionY)
 	var MimiX = p_positionX;
 	var MimiY = p_positionY;
 	
-	// TODO: find the max float number
+
+	// HACK: Just a very high number
 	var minDistance = 999999999.0;
 	var pointX = 0.0;
 	var pointY = 0.0;

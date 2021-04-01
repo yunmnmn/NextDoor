@@ -37,7 +37,6 @@ CannotGoOutside = function()
 		// Give control ba ck to the player again
 		SetControlState(PlayerControlState.PlayerControl);
 		
-		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), CannotGoOutside);
 		collisionContext.AddGlobalState1(GlobalGameStates.MimiGoingToKnockAtNeighbour);
@@ -69,7 +68,6 @@ CannotGoOutside2 = function()
 		// Give control back to the player again
 		SetControlState(PlayerControlState.PlayerControl);
 		
-		// TODO: make sure this works...
 		// HACK: This must be added again in order for it to be able to trigger again
 		var collisionContext = new CollisionContext(GetPlayerInstance(), CannotGoOutside2);
 		collisionContext.AddGlobalState1(GlobalGameStates.MimiWalksToOldtimer);

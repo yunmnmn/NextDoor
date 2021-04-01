@@ -27,6 +27,6 @@ function SetLampOutsideNearDoorVisible(p_visible)
 	instance_lampOutsideNearDoor.visible = p_visible;
 }
 
-// TODO: add the cat here
+// Can and Cat values
 m_playedCat = false;
 m_talkedToCat = false;
