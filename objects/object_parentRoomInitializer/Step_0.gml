@@ -28,7 +28,7 @@ if(m_followInstance != noone || m_followPosition != noone)
 	m_desiredY = newViewportPosY;
 	
 	// Interpolate between starting position and new one
-	m_pan += m_followSpeed * DeltaTimeInMiliseconds();
+	m_pan += m_followSpeed * GetAverageDeltaTimeInMiliseconds();
 	m_pan = max(min(m_pan, 1.0), 0.0);
 	
 	var interpolatedX = lerp(m_fromPosition.m_x, newViewportPosX, m_pan);
@@ -55,7 +55,7 @@ if(m_stabilized < 1.0)
 	var shakeOffsetY = random_range(-m_shakeMagnitude, m_shakeMagnitude);
 	m_shakeMagnitude = lerp(m_initialShakeMagnitude, 0, m_stabilized);
 	
-	m_stabilized += m_stabilizeSpeed * DeltaTimeInMiliseconds();
+	m_stabilized += m_stabilizeSpeed * GetAverageDeltaTimeInMiliseconds();
 	m_stabilized = clamp(m_stabilized, 0, 1);
 	
 	camera_set_view_pos(m_viewport, m_rawPositionX + shakeOffsetX, m_rawPositionY + shakeOffsetY);

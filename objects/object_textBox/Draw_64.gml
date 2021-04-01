@@ -60,7 +60,7 @@ if(m_textContext != noone)
 		// Only allow progressing when the current TextContext is progressable
 		if(m_textContext.m_progressable)
 		{
-			m_elapsedTimeInMilisecondsMarker += DeltaTimeInMiliseconds();
+			m_elapsedTimeInMilisecondsMarker += GetAverageDeltaTimeInMiliseconds();
 			if(m_elapsedTimeInMilisecondsMarker > 1000.0 / m_markerImageSpeed)
 			{
 				m_elapsedTimeInMilisecondsMarker = 0.0;
@@ -74,7 +74,7 @@ if(m_textContext != noone)
 	// Draw the sprite if it's valid
 	if(m_textContext.m_avatarSpriteIndex != noone)
 	{
-		m_elapsedTimeInMiliseconds += DeltaTimeInMiliseconds();
+		m_elapsedTimeInMiliseconds += GetAverageDeltaTimeInMiliseconds();
 		if(m_elapsedTimeInMiliseconds > 1000.0 / m_textContext.m_avatarImageSpeed)
 		{
 			m_elapsedTimeInMiliseconds = 0.0;

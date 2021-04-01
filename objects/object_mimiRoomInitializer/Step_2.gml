@@ -4,7 +4,7 @@ event_inherited();
 // Do the transition from day to night
 if(m_startDayNightTransition)
 {
-	m_transition += m_transitionSpeed * DeltaTimeInMiliseconds();
+	m_transition += m_transitionSpeed * GetAverageDeltaTimeInMiliseconds();
 	m_transition = clamp(m_transition, 0.0, 1.0);
 	
 	if(m_transition == 1.0)

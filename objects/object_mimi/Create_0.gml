@@ -144,7 +144,7 @@ function SetMirrored(p_mirrored)
 function GetMovementSpeed()
 {
 	var pathLength = path_get_length(m_path);
-	return (1.0 / pathLength) * m_speed * DeltaTimeInMiliseconds();
+	return (1.0 / pathLength) * m_speed * GetAverageDeltaTimeInMiliseconds();
 }
 
 function PlayAnimation(p_spriteIndex, p_callbackEnd)

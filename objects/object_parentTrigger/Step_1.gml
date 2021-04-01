@@ -61,7 +61,7 @@ for(var i = 0; i < ds_list_size(m_collisionContexts); /*don't iuncrement here*/)
 			}
 		}
 		
-		m_elapsedTimeInMiliseconds += DeltaTimeInMiliseconds();
+		m_elapsedTimeInMiliseconds += GetAverageDeltaTimeInMiliseconds();
 		if(m_elapsedTimeInMiliseconds > m_frameTimeInMiliseconds)
 		{
 			m_elapsedTimeInMiliseconds = 0.0;

@@ -1,13 +1,13 @@
 // Show FPS if debug is enabled
 if(DebugMode())
 {
-	draw_text(0, 0, 1000.0 / DeltaTimeInMiliseconds());
+	draw_text(0, 0, 1000.0 / GetAverageDeltaTimeInMiliseconds());
 }
 
 // Increment the frame
 if(m_drawMovingPrompt || m_drawPressPrompt || m_drawHoldPrompt)
 {
-	m_elapsedTimeInMilisecondsMarker += DeltaTimeInMiliseconds();
+	m_elapsedTimeInMilisecondsMarker += GetAverageDeltaTimeInMiliseconds();
 	if(m_elapsedTimeInMilisecondsMarker > 1000.0 / m_buttonImageSpeed)
 	{
 		m_elapsedTimeInMilisecondsMarker = 0.0;

@@ -19,11 +19,11 @@ if(GetGlobalGameState() == GlobalGameStates.MimiIsPeeking)
 	{
 		if(ActionKeyHold())
 		{
-			m_pan += m_panSpeed * DeltaTimeInMiliseconds();
+			m_pan += m_panSpeed * GetAverageDeltaTimeInMiliseconds();
 		}
 		else
 		{
-			m_pan -= m_snapbackSpeed * DeltaTimeInMiliseconds();
+			m_pan -= m_snapbackSpeed * GetAverageDeltaTimeInMiliseconds();
 		}
 	}
 	
@@ -48,7 +48,7 @@ if(GetGlobalGameState() == GlobalGameStates.MimiIsPeeking)
 }
 else if(GetGlobalGameState() == GlobalGameStates.MimiIsShocked)
 {
-	m_pan -= m_snapbackSpeed * DeltaTimeInMiliseconds() * 2.0;
+	m_pan -= m_snapbackSpeed * GetAverageDeltaTimeInMiliseconds() * 2.0;
 	
 	RoomLerp(m_viewportLookPositionOriginX, 0);
 	
@@ -61,11 +61,11 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiPeepsAgain)
 	{
 		if(ActionKeyHold())
 		{
-			m_pan += m_panSpeedSecond * DeltaTimeInMiliseconds();
+			m_pan += m_panSpeedSecond * GetAverageDeltaTimeInMiliseconds();
 		}
 		else
 		{
-			m_pan -= m_snapbackSpeed * DeltaTimeInMiliseconds();
+			m_pan -= m_snapbackSpeed * GetAverageDeltaTimeInMiliseconds();
 		}
 	}
 	
@@ -87,7 +87,7 @@ else if(GetGlobalGameState() == GlobalGameStates.MimiPeepsAgain)
 else if(GetGlobalGameState() == GlobalGameStates.WomenLooksAtMimi)
 {
 	var scalar = instance_wallWithHole.m_scalar;
-	scalar += m_womenCloseToWallFadeSpeed * DeltaTimeInMiliseconds();
+	scalar += m_womenCloseToWallFadeSpeed * GetAverageDeltaTimeInMiliseconds();
 	scalar = max(min(scalar, 1.0), 0.0);
 	
 	instance_wallWithHole.m_scalar = scalar;
@@ -115,7 +115,7 @@ else if(GetGlobalGameState() == GlobalGameStates.WomenLooksAtMimi)
 }
 else if(GetGlobalGameState() == GlobalGameStates.MimiFallsBackwards)
 {	
-	m_pan += m_snapbackSpeed * DeltaTimeInMiliseconds() * 2.0;
+	m_pan += m_snapbackSpeed * GetAverageDeltaTimeInMiliseconds() * 2.0;
 	RoomLerp(m_secondPeekViewportPositionX, m_viewportLookPositionOriginX);
 	
 	var norm = NormalizedViewportPositionToZero(m_viewportLookPositionOriginX - m_viewportFadeThreshold);
