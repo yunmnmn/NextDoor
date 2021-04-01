@@ -38,7 +38,7 @@ function MimiConversation()
 			SetControlState(PlayerControlState.PlayerControl);
 			
 			// Draw the button prompts
-			instance_global.DrawMovingPrompt(true, 175, 124);
+			//instance_global.DrawMovingPrompt(true, 175, 124);
 			
 			m_talkingFinished = true;
 		}
@@ -67,7 +67,7 @@ function MimiConversation()
 	cb1_2 = function()
 	{		
 		// Don't draw the action prompt
-		instance_global.DrawActionPressPrompt(false, 170, 150);
+		//instance_global.DrawActionPressPrompt(false, 170, 150);
 		
 		var c1_2 = new TextContext(sprite_mimiAvatarAngry, true, cb1_3);
 		c1_2.AddSubText(new SubText("Oh, come on!", 0.3, true));
@@ -83,7 +83,7 @@ function MimiConversation()
 	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);	
 	
 	// Draw the action prompt
-	instance_global.DrawActionPressPrompt(true, 578, 430);
+	//instance_global.DrawActionPressPrompt(true, 578, 430);
 }
 
 MimiComplainsAboutNoise = function()
@@ -128,6 +128,7 @@ function MimiConversation2()
 	
 	cb10_3 = function()
 	{
+		var c10_3 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
 		var c10_3 = new TextContext(sprite_mimiAvatarNormal, true, conversationFinished);
 		c10_3.AddSubText(new SubText("I could really use a drink.", 0.3, true));
 		RenderText(c10_3);
