@@ -236,6 +236,5 @@ function DrawActionHoldPrompt(p_draw, p_worldSpace, p_x, p_y)
 	m_holdPromptY = p_y;
 }
 
-
 // Default input device is a keyboard
 m_controlDevice = ControlDevice.Keyboard;
