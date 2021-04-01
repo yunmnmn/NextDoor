@@ -2,6 +2,7 @@
 // --- Debug ---
 
 global.m_debug = true;
+global.m_html = false;
 
 // --- Enums ---
 
@@ -105,6 +106,11 @@ global.averageDeltaTimeInMiliseconds = noone;
 function DebugMode()
 {
 	return global.m_debug;
+}
+
+function HtmlMode()
+{
+	return global.m_html;
 }
 
 function GetDefaultFadingSpeed()

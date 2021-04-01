@@ -4,7 +4,7 @@ transitionToEndingRoom = function()
 	StopRoomMusic();
 	
 	// Delete the fader
-	fader.instance_destroy();
+	instance_destroy(fader, false);
 		
 	// Reset the textbox
 	if(GetTextboxInstance() != noone)
