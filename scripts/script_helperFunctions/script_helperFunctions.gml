@@ -53,7 +53,7 @@ function AverageDeltaTimeInMiliseconds()
 		global.averageDeltaTimeInMiliseconds = averageDelta;
 	}
 	
-	global.frameIndex++;
+	global.frameIndex = (global.frameIndex + 1) % global.historySize;
 }
 
 function GetAverageDeltaTimeInMiliseconds()
