@@ -15,7 +15,7 @@ FollowPositionAndDisable(viewportEndPosition);
 SetViewportFollowSpeed(0.0);
 
 // Play the footstep sounds in the hallway ending
-//instance_endingWomen.AddNormalWalkingSounds();
+instance_endingWomen.AddNormalWalkingSounds();
 
 // Play the scary ambient music
 PlayRoomMusic(music_ambientScary, "EndingAmbient", true, 1.0, false);
