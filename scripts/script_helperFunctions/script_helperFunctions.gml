@@ -26,7 +26,7 @@ function DeltaTimeInMiliseconds()
 
 function GetMinDeltaTimeInMiliseconds()
 {
-	return 1000.0 / global.m_targetRoomSpeed;
+	return 1000.0 / room_speed;
 }
 
 // Calculate the average delta time over frames each frame
