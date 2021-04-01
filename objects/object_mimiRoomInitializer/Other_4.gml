@@ -157,6 +157,7 @@ function MimiGetsDrink()
 	// Play the sitting animation, start it frozen on the first frame
 	PlayerFreezeAnimation(anim_mimiSit, 0, false);
 	
+	
 	MimiConversation2();
 }
 
