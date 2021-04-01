@@ -1,1 +1,1 @@
-StopRoomMusic();
+PlayRoomMusic(music_metalMimiRoom, "Metal", true, 1, true);
