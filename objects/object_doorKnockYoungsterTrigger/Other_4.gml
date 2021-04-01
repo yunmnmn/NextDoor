@@ -125,7 +125,7 @@ function MimiAndYoungsterConversation()
 		// Register the current room music first
 		RegisterSoundGroupFromMusic(GetRoomMusicGroup(), GetRoomMusic());
 		// Play the new room music
-		PlayRoomMusicAt(music_metal, "Metal", true, 200, 230, 400, 2000, 1, true, 1);
+		PlayRoomMusicAt(GetMetal(), "Metal", true, 200, 230, 400, 2000, 1, true, 1);
 		// Set the volume
 		SoundGain(GetRoomMusic(), 1.0, 1.0);
 	}

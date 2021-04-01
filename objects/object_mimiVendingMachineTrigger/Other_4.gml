@@ -346,7 +346,7 @@ function MimiConversation()
 		FollowPosition(new Vector2(instance_youngsterOutside.x, GetPlayerInstance().y));
 		
 		// Play the ambient sound
-		PlayRoomMusic(music_ambientScary, "AmbientScaryExtraGroup", true, 1.0, true);
+		PlayRoomMusic(GetAmbientScary(), "AmbientScaryExtraGroup", true, 1.0, true);
 		// Set the sound to 0 first
 		SoundGain(GetRoomMusic(), 0.0, 0);
 		// Fade to full sound in 0.5 seconds

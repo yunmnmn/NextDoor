@@ -81,7 +81,7 @@ LookOutsideWindow = function()
 	
 	var playChaseMusic = function()
 	{
-		PlayRoomMusic(music_chase, "ChaseEnding", false, 1.0, true);
+		PlayRoomMusic(GetChase(), "ChaseEnding", false, 1.0, true);
 		SoundGain(GetRoomMusic(), 0.0, 0.0);
 		// Play the chase music at full volume in 0.2 seconds
 		SoundGain(GetRoomMusic(), 1.0, 200);

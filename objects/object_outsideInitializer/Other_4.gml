@@ -67,15 +67,15 @@ StopFlickering = function()
 if(GetGlobalGameState() <= GlobalGameStates.MimiWalksBackToRoom)
 {
 	// Play the cicade sound
-	PlayRoomMusic(music_cicade, "AmbientOutsideDay", true, 1.0, true);
+	PlayRoomMusic(GetCicade(), "AmbientOutsideDay", true, 1.0, true);
 }
 else if(GetGlobalGameState() == GlobalGameStates.MimiGetsDrink)
 {
 	// Play the night ambience music
-	PlayRoomMusic(music_ambientOutside, "AmbientOutsideNight", true, 1.0, true);
+	PlayRoomMusic(GetAmbientOutside(), "AmbientOutsideNight", true, 1.0, true);
 }
 else if(GetGlobalGameState() >= GlobalGameStates.MimiChecksOnYoungster)
 {
 	// Play the scary ambience music
-	PlayRoomMusic(music_ambientScary, "AmbientScary", true, 1.0, true);
+	PlayRoomMusic(GetAmbientScary(), "AmbientScary", true, 1.0, true);
 }

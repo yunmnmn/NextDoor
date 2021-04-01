@@ -14,12 +14,12 @@ else
 if(GetGlobalGameState() <= GlobalGameStates.MimiWalksBackToRoom)
 {
 	// Play the new room music
-	PlayRoomMusicAt(music_metalMimiRoom, "Metal", true, 200, 0, 400, 2000, 1, true, 1);
+	PlayRoomMusicAt(GetMetalMimiRoom(), "Metal", true, 200, 0, 400, 2000, 1, true, 1);
 	// Set the volume
 	SoundGain(GetRoomMusic(), 0.3, 0.1);
 }
 else if(GetGlobalGameState() >= GlobalGameStates.MimiChecksOnYoungster)
 {
 	// Play the scary ambience music
-	PlayRoomMusic(music_ambientScary, "AmbientScary", true, 1.0, true);
+	PlayRoomMusic(GetAmbientScary(), "AmbientScary", true, 1.0, true);
 }

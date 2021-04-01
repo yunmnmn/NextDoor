@@ -34,7 +34,7 @@ function YoungsterStreamsConversation()
 		RenderText(c13_1);
 		
 		// Play the scary ambience room music
-		PlayRoomMusic(music_ambientScary, "AmbientScary", true, 1.0, true);
+		PlayRoomMusic(GetAmbientScary(), "AmbientScary", true, 1.0, true);
 		SoundGain(GetRoomMusic(), 0.0, 0.0);
 		SoundGain(GetRoomMusic(), 1.0, 500);
 	}

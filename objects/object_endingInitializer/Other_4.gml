@@ -19,6 +19,6 @@ SetViewportFollowSpeed(0.0);
 instance_endingWomen.AddNormalWalkingSounds();
 
 // Play the scary ambient music
-PlayRoomMusic(music_ambientScary, "EndingAmbient", true, 1.0, false);
+PlayRoomMusic(GetAmbientScary(), "EndingAmbient", true, 1.0, false);
 SoundGain(GetRoomMusic(), 0.0, 0.0);
 SoundGain(GetRoomMusic(), 1.0, 1000);

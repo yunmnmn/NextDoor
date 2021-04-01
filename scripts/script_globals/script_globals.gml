@@ -2,7 +2,7 @@
 // --- Debug ---
 
 global.m_debug = true;
-global.m_html = true;
+global.m_html = !(os_browser == browser_not_a_browser);
 
 global.m_targetRoomSpeed = 60.0;
 
