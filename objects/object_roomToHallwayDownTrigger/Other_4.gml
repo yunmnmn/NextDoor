@@ -29,7 +29,7 @@ AddCollisionContext(collisionContext);
 // HACK: prompt the controls
 if(GetGlobalGameState() == GlobalGameStates.MimiRoomSits)
 {
-	var promptEvent = function()
+	promptEvent = function()
 	{
 		instance_global.DrawActionPressPrompt(true, 709, 52);
 	}
