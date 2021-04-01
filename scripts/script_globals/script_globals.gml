@@ -2,7 +2,7 @@
 // --- Debug ---
 
 global.m_debug = true;
-global.m_html = false;
+global.m_html = true;
 
 // --- Enums ---
 
