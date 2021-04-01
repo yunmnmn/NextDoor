@@ -11,7 +11,7 @@ if(m_drawMovingPrompt || m_drawPressPrompt || m_drawHoldPrompt)
 	if(m_elapsedTimeInMilisecondsMarker > 1000.0 / m_buttonImageSpeed)
 	{
 		m_elapsedTimeInMilisecondsMarker = 0.0;
-		m_buttonFrame = (m_buttonFrame + 1) % 99999999999999;
+		m_buttonFrame = (m_buttonFrame + 1) % 99999;
 	}
 }
 else
