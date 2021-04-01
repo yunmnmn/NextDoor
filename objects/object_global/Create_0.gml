@@ -1,3 +1,6 @@
+// Set Vsync on
+display_reset(8, true);
+
 // Create a ShadowSurface instance, and set it
 GetShadowSurfaceInstance();
 
@@ -241,6 +244,3 @@ function DrawActionHoldPrompt(p_draw, p_worldSpace, p_x, p_y)
 
 // Default input device is a keyboard
 m_controlDevice = ControlDevice.Keyboard;
-
-// Set Vsync on
-display_reset(8, false);

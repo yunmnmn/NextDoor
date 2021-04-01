@@ -1,3 +1,6 @@
+// Set RoomSpeed
+room_speed = global.m_targetRoomSpeed;
+
 m_followInstance = noone;
 m_followPosition = noone;
 m_fromPosition = noone;

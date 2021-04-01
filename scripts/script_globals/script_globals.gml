@@ -4,6 +4,8 @@
 global.m_debug = true;
 global.m_html = true;
 
+global.m_targetRoomSpeed = 60.0;
+
 // --- Enums ---
 
 // Enum to set Mimi's states

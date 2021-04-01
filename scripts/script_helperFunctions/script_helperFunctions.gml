@@ -21,31 +21,36 @@ function GetSpriteSizeX(p_spriteIndex)
 // Returns the delta time in miliseconds rather than the default (microsecond)
 function DeltaTimeInMiliseconds()
 {
-	return delta_time / 1000;
+	return delta_time / 1000.0;
+}
+
+function GetMinDeltaTimeInMiliseconds()
+{
+	return 1000.0 / global.m_targetRoomSpeed;
 }
 
 // Calculate the average delta time over frames each frame
 function AverageDeltaTimeInMiliseconds()
 {
+	var current = max(DeltaTimeInMiliseconds(), GetMinDeltaTimeInMiliseconds());
+	
 	if(global.frameIndex < global.historySize)
 	{
-		var current = DeltaTimeInMiliseconds();
-		global.fpsHistory[floor(global.frameIndex)] = DeltaTimeInMiliseconds();
+		global.fpsHistory[floor(global.frameIndex)] = current;
 		global.averageDeltaTimeInMiliseconds = current;
 	}
 	else
 	{
-		var averageFps = 0;
+		var averageDelta = 0;
 		for(var i = 0; i < global.historySize; i++)
 		{
-			averageFps += global.fpsHistory[i];
+			averageDelta += global.fpsHistory[i];
 		}
-		averageFps += DeltaTimeInMiliseconds();
-		averageFps /= global.historySize + 1;
+		averageDelta += current;
+		averageDelta /= global.historySize + 1;
 		
-		global.fpsHistory[floor(global.frameIndex)] = averageFps;
-		
-		global.averageDeltaTimeInMiliseconds = averageFps;
+		global.fpsHistory[floor(global.frameIndex)] = averageDelta;
+		global.averageDeltaTimeInMiliseconds = averageDelta;
 	}
 	
 	global.frameIndex++;
