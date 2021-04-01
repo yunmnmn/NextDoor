@@ -28,8 +28,8 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"instance_endingInitializer","path":"rooms/room_ending/room_ending.yy",},
     {"name":"instance_endingWomen","path":"rooms/room_ending/room_ending.yy",},
+    {"name":"instance_endingInitializer","path":"rooms/room_ending/room_ending.yy",},
     {"name":"instance_creditsCards","path":"rooms/room_ending/room_ending.yy",},
   ],
   "inheritCreationOrder": false,
