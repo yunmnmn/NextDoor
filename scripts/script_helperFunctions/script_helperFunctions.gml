@@ -35,13 +35,12 @@ function AverageDeltaTimeInMiliseconds()
 	}
 	else
 	{
-		var current = DeltaTimeInMiliseconds();
 		var averageFps = 0;
 		for(var i = 0; i < global.historySize; i++)
 		{
 			averageFps += global.fpsHistory[i];
 		}
-		averageFps += current;
+		averageFps += DeltaTimeInMiliseconds();
 		averageFps /= global.historySize + 1;
 		
 		global.fpsHistory[floor(global.frameIndex)] = averageFps;

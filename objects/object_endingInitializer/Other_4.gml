@@ -10,6 +10,7 @@ m_fader.SetFadingSpeed(0.0);
 PlayTimeline(timeline_endingConversation);
 
 // Move the viewport too
+//FollowPositionAndCallback
 var viewportEndPosition = new Vector2(room_width - GetViewportWidth() / 2, 0);
 FollowPositionAndDisable(viewportEndPosition);
 SetViewportFollowSpeed(0.0);

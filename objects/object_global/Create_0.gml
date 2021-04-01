@@ -243,4 +243,4 @@ function DrawActionHoldPrompt(p_draw, p_worldSpace, p_x, p_y)
 m_controlDevice = ControlDevice.Keyboard;
 
 // Set Vsync on
-display_reset(8, true);
+display_reset(8, false);
