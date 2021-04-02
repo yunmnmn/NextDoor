@@ -112,6 +112,9 @@ global.frameIndex = 0;
 global.audioListenerPositonX = 0.0;
 global.audioListenerPositonY = 0.0;
 
+// SUPER HACK: Check if the buttom prompt at the door already has been shown
+global.m_doorPromptDirty = false;
+
 function DebugMode()
 {
 	return global.m_debug;

@@ -27,8 +27,10 @@ collisionContext.m_promptIndex = anim_doorMark;
 AddCollisionContext(collisionContext);
 
 // HACK: prompt the controls
-if(GetGlobalGameState() == GlobalGameStates.MimiRoomSits)
+if(!global.m_doorPromptDirty)
 {
+	// SUPERHACK: set this to true, so it only shows once
+	global.m_doorPromptDirty = true;
 	promptEvent = function()
 	{
 		instance_global.DrawActionPressPrompt(true, 709, 52);

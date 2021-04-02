@@ -67,7 +67,7 @@ function MimiConversation()
 	cb1_2 = function()
 	{		
 		// Don't draw the action prompt
-		//instance_global.DrawActionPressPrompt(false, 578, 430);
+		instance_global.DrawActionPressPrompt(false, 578, 430);
 		
 		var c1_2 = new TextContext(sprite_mimiAvatarAngry, true, cb1_3);
 		c1_2.AddSubText(new SubText("Oh, come on!", 0.3, true));
@@ -83,7 +83,7 @@ function MimiConversation()
 	SetGlobalGameState(GlobalGameStates.MimiGoingToYoungster);	
 	
 	// Draw the action prompt
-	//instance_global.DrawActionPressPrompt(true, 578, 430);
+	instance_global.DrawActionPressPrompt(true, 578, 430);
 }
 
 MimiComplainsAboutNoise = function()
