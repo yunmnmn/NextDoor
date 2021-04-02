@@ -1,7 +1,7 @@
 
 // --- Debug ---
 
-global.m_debug = false;
+global.m_debug = true;
 global.m_html = !(os_browser == browser_not_a_browser);
 
 global.m_targetRoomSpeed = 60.0;
@@ -108,6 +108,9 @@ global.averageDeltaTimeInMiliseconds = noone;
 global.historySize = 32;
 global.fpsHistory = array_create(global.historySize, 0);
 global.frameIndex = 0;
+
+global.audioListenerPositonX = 0.0;
+global.audioListenerPositonY = 0.0;
 
 function DebugMode()
 {

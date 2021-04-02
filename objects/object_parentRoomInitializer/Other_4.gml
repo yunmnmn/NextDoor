@@ -32,6 +32,11 @@ m_roomMusic = noone;
 m_roomMusicGroup = noone;
 m_registerSoundPositionOnEnd = true;
 
+m_playMusicAtInternal = false;
+m_playMusicAtInternalX = 0.0;
+m_playMusicAtInternalY = 0.0;
+m_playMusicAtInternalMaxDistance = 0.0;
+
 function RestrictViewportX(p_min, p_max)
 {
 	var minn = clamp(p_min, 0, room_width);
@@ -219,6 +224,24 @@ function PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup
 	}
 }
 
+function PlayMusicAtInternal(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_maxDistance, p_loop, p_priority)
+{
+	StopMusic();
+	
+	m_roomMusicGroup = p_soundGroupName;
+	m_roomMusic = PlaySound(p_soundIndex, p_priority, p_loop);
+	m_playMusicAtInternal = true;
+	m_playMusicAtInternalX = p_x;
+	m_playMusicAtInternalY = p_y;
+	m_playMusicAtInternalMaxDistance = p_maxDistance;
+	
+	if(p_getSoundPositionFromGroup)
+	{
+		var soundPosition = GetSoundGroupPosition(p_soundGroupName);
+		SetSoundPosition(m_roomMusic, soundPosition);
+	}
+}
+
 function StopPulse()
 {
 	m_stabilized = 1.0;
@@ -233,6 +256,7 @@ function StopMusic()
 	
 	m_roomMusicGroup = noone;
 	m_roomMusic = noone;
+	m_playMusicAtInternal = false;
 }
 
 // --------- EntryPoint code ---------

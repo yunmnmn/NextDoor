@@ -50,6 +50,9 @@ function SetAudioListenerPosition(p_x, p_y)
 {
 	audio_listener_position(p_x, p_y, 0);
 	audio_listener_orientation(0, 0, 1, 0, -1, 0);
+	
+	global.audioListenerPositonX = p_x;
+	global.audioListenerPositonY = p_y;
 }
 
 function FindSoundGroup(p_soundGroupName)
@@ -123,6 +126,12 @@ function PlayRoomMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromG
 {
 	assert(p_soundIndex != noone, "Sound is invalid");
 	GetBackgroundInstance().PlayMusicAt(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_falloffRef, p_falloffMax, p_falloffFactor, p_loop, p_priority);
+}
+
+function PlayRoomMusicAtInternal(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_maxDistance, p_loop, p_priority)
+{
+	assert(p_soundIndex != noone, "Sound is invalid");
+	GetBackgroundInstance().PlayMusicAtInternal(p_soundIndex, p_soundGroupName, p_getSoundPositionFromGroup, p_x, p_y, p_maxDistance, p_loop, p_priority);
 }
 
 function StopRoomMusic()

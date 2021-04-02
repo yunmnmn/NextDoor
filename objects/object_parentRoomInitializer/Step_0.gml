@@ -60,3 +60,20 @@ if(m_stabilized < 1.0)
 	
 	camera_set_view_pos(m_viewport, m_rawPositionX + shakeOffsetX, m_rawPositionY + shakeOffsetY);
 }
+
+if(m_roomMusic != noone && m_playMusicAtInternal)
+{
+	var distanceX = global.audioListenerPositonX - m_playMusicAtInternalX;
+	var distanceY = global.audioListenerPositonY - m_playMusicAtInternalY;
+	
+	var distance = sqrt((distanceX * distanceX) + (distanceY * distanceY));
+	
+	// Let user set max distance
+	var maxDistance = m_playMusicAtInternalMaxDistance;
+	
+	// Linear interpolate the volume depending on the position of the emitter and listener
+	var normalized = 1.0 - clamp((distance + 0.001) / maxDistance, 0.0, 1.0);
+	
+	// Set the volume
+	SoundGain(m_roomMusic, normalized, 0.0);
+}
