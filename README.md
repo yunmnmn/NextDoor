@@ -5,8 +5,8 @@
 ![NextDoor2](https://user-images.githubusercontent.com/7372028/118670895-f8ae1a80-b831-11eb-9da6-fe3e1aeaa39a.png)
 ![NextDoor3](https://user-images.githubusercontent.com/7372028/118670902-f946b100-b831-11eb-84cf-426329390b33.png)
 
-Short cinematic pixel horror based on Junji Ito's "Mimi No Kaidan" (Mimi's Ghost Stories).
+Short cinematic pixel horror based on Junji Ito's "Mimi No Kaidan" (Mimi's Ghost Stories). Created together with two friends as tribute to Junji Ito's great work.
 
-Created together with two other friends as tribute to Junji Ito's great work.
+Short summary: https://www.pcgamer.com/horror-game-next-door-is-a-loyally-grim-adaptation-of-one-of-junji-itos-best-manga/
 
 Playable here: https://broelbrak.itch.io/nextdoor
